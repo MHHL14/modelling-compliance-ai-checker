@@ -77,6 +77,9 @@ export interface RequirementSet {
   uploads: Upload[];
   lockedAt?: string;
   lockedBy?: string;
+  /** model characteristics used for the set (prototype extension) */
+  tags?: string[];
+  componentKey?: 'rds' | 'mdd' | 'full';
 }
 
 export interface Citation {

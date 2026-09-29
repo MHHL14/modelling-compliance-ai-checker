@@ -213,12 +213,12 @@ export interface DraftResult {
   checkType: string;
 }
 
-const GAP_LOCATION: Record<string, { section: string; quote?: string }> = {
+export const GAP_LOCATION: Record<string, { section: string; quote?: string }> = {
   'REQ-D12b': { section: '4.2', quote: 'Loans with incomplete collateral information were excluded from the RDS.' },
   'REQ-D12c': { section: '4.2', quote: 'Representativeness impact: see §5.1.' },
 };
 
-const GAP_TEXT: Record<string, { rationale: string; mitigation: string }> = {
+export const GAP_TEXT: Record<string, { rationale: string; mitigation: string }> = {
   'REQ-D12b': {
     rationale: 'Both exclusion categories are named, but neither is quantified in number of facilities, share of the population or number of defaults.',
     mitigation: 'Quantify each exclusion in §4.2: number of facilities, share of the population and number of defaults (source: exclusion log).',
@@ -366,7 +366,7 @@ function retrieve2lod(reqId: string, docs: PackageDocument[]): Citation[] {
   }
 }
 
-const MIT_2LOD: Record<string, Mitigation> = {
+export const MIT_2LOD: Record<string, Mitigation> = {
   'REQ-D07': { type: 'remediation', text: 'Align the implemented default flag (rds_build.py L214) with the documented definition (EUR 100 / 1%), rebuild the RDS and quantify the impact on the calibration.' },
   'VAL-02': { type: 'remediation', text: 'Correct MAT_ABS in rds_build.py to EUR 100 and re-run the RDS build; report affected vintages.' },
   'REQ-D21': { type: 'compensating', text: 'Recalibrate MoC category A to the level supported by the sensitivity analysis (~+11%) until the deficiency is remediated.' },
@@ -438,4 +438,26 @@ export function modelSpecificRow1lod(req: Requirement): AssessmentRow {
     mitigation: { type: 'justification', text: 'Explain why this obligation is evidenced outside the RDS documentation component (reference the MDD section), or add a cross-reference.' },
     script: null,
   };
+}
+
+/** Candidate passages for the 2nd line retrieval (filtered later by what is in the package). */
+export function retrievePilotPassages(reqId: string): Citation[] {
+  const base = PILOT.assessment_1lod[reqId]?.citations ?? [];
+  const mdd = { doc: 'EVD-01-MDD', version: '4.0', section: '7.2', quote: 'A MoC of +6% relative is applied to the long-run average default rate' };
+  switch (reqId) {
+    case 'REQ-D21':
+      return [mdd, ...base];
+    case 'REQ-D09':
+      return [{ doc: 'EVD-01-DODMEMO', version: '1.0', section: '3', quote: 'remains in probation for 3 months (12 months for distressed restructurings)' }];
+    case 'VAL-01':
+      return [{ doc: RDS_ID, version: '1.0', section: '8', quote: 'A full rebuild reproduces the RDS row count and default count exactly' }];
+    case 'VAL-02':
+      return [{ doc: RDS_ID, version: '1.0', section: '3.3', quote: 'materiality threshold of EUR 100 absolute and 1% relative' }];
+    case 'VAL-03':
+      return [{ ...mdd, quote: 'A MoC of +6% relative is applied' }, { doc: RDS_ID, version: '1.0', section: '6.2', quote: 'The default flag for 2012–2015 was approximated' }];
+    case 'VAL-04':
+      return [{ doc: RDS_ID, version: '1.0', section: '5.1', quote: 'PSI on loan-to-value bucket, loan age and interest-only share' }];
+    default:
+      return base;
+  }
 }
