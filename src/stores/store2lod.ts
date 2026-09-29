@@ -2,14 +2,13 @@
 // 2nd line store. Never imports the 1st line store; 1st line content only arrives via imported packages.
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
-import { applicableDocs } from '@/lib/applicability';
-import { genericEvidenceDoc, genericRequirements, genericRow } from '@/lib/ai/generic';
-import { pilotRow2lod } from '@/lib/ai/pilot';
+import { assess2lod, findingTemplate, getScenario } from '@/lib/scenario/engine';
+import { historicBlindRows, historicFindings, historicPackage, HISTORY } from '@/lib/scenario/history';
+import type { Component } from '@/lib/scenario/types';
 import { nowISO } from '@/lib/clock';
-import { manifest, seal } from '@/lib/packages';
 import { uid } from '@/lib/rng';
-import { getModel, LIBRARY_BASE_VERSION, PERSONAS, PILOT, PILOT_MODEL_ID, PILOT_VAL_REQS, requirementSetIdFor } from '@/lib/seed';
-import type { AssessmentRow, AssessmentRun, Finding, Model, Requirement, ResponsePackage, RowDecision, SubmissionPackage, Verdict } from '@/lib/types';
+import { getModel, PERSONAS } from '@/lib/seed';
+import type { AssessmentRow, AssessmentRun, Finding, Requirement, ResponsePackage, RowDecision, SubmissionPackage, Verdict } from '@/lib/types';
 import { logAudit } from './storeAudit';
 
 const ME = PERSONAS['2lod'].name;
@@ -21,6 +20,8 @@ export interface Review {
   snapshotId: string;
   modelId: string;
   importedAt: string;
+  updatedAt: string;
+  completedAt?: string;
   sha256: string;
   pkg: SubmissionPackage;
   status: ReviewStatus;
@@ -34,23 +35,11 @@ export interface Review {
   opinion?: { rating: OpinionRating; rationale: string; conditions: string[]; issuedAt?: string; drafted: boolean };
 }
 
-export function validationLayerFor(model: Model): Requirement[] {
-  if (model.id === PILOT_MODEL_ID) return PILOT_VAL_REQS;
-  const valDocs = applicableDocs(model).filter((d) => d.type === 'validation_standard');
-  const base: Requirement[] = [
-    {
-      id: 'VAL-01', text: 'Validation independently replicates the model development data set from source data.', source_doc: 'INT-VAL-GEN', article: 'MV-STD-001 §5.1',
-      category: 'validation', check_type: 'script', applicability_rationale: `Tier ${model.tier} model – replication required.`, layer: '2lod',
-    },
-  ];
-  valDocs.slice(1, 4).forEach((d, i) => {
-    const topic = d.key_topics[i % d.key_topics.length] ?? 'validation scope';
-    base.push({
-      id: `VAL-${String(i + 2).padStart(2, '0')}`, text: `${topic.charAt(0).toUpperCase()}${topic.slice(1)} is tested and documented according to ${d.reference}.`,
-      source_doc: d.id, article: d.reference, category: 'validation', check_type: 'ai+script', applicability_rationale: `${d.title} applies to this model.`, layer: '2lod',
-    });
-  });
-  return base;
+const LABEL_TO_COMPONENT: Record<string, Component> = { 'RDS documentation': 'rds', 'Methodology (MDD)': 'mdd', 'Full model': 'full' };
+
+export function reviewScenario(r: { modelId: string; pkg: SubmissionPackage }) {
+  const comp = r.pkg.requirementSet.componentKey ?? LABEL_TO_COMPONENT[r.pkg.requirementSet.component] ?? 'full';
+  return getScenario(r.modelId, comp, r.pkg.requirementSet.tags);
 }
 
 export function reviewRequirements(r: Review): Requirement[] {
@@ -69,58 +58,39 @@ function nextFindingId(r: Review) {
   return uid('F');
 }
 
-// ---- Seed: one already-imported submission package for MDL-04 (spec 7) ----
-async function buildSeedReview(): Promise<Review> {
-  const model = getModel('MDL-04')!;
-  const reqs = genericRequirements(model, 'full');
-  const doc = genericEvidenceDoc(model, reqs);
-  const matrix = reqs.map((r, i) => {
-    const row = genericRow(model, r, i);
-    const decision: RowDecision =
-      row.verdict === 'not_found'
-        ? { by: 'Lotte Jansen', at: '2027-04-21T15:10:00', decision: 'edited', finalVerdict: 'partial', reason: 'Evidence in SHAP explainability annex (not linked to run).' }
-        : { by: 'Lotte Jansen', at: '2027-04-21T15:10:00', decision: 'accepted', reason: row.confidence === 'high' ? undefined : 'Reviewed.' };
-    return { ...row, decision };
-  });
-  const pkg = await seal<SubmissionPackage>({
-    manifest: manifest({
-      packageType: 'submission', packageId: 'SUB-MDL-04-20270422', modelId: 'MDL-04', createdAt: '2027-04-22T11:05:00',
-      createdBy: 'Lotte Jansen (Model Developer, SME Credit Risk Modelling)', line: '1lod', libraryVersion: LIBRARY_BASE_VERSION,
-      requirementSetId: requirementSetIdFor('MDL-04'), documentVersions: { [doc.id]: '1.0' },
-    }),
-    requirementSet: {
-      id: requirementSetIdFor('MDL-04'), modelId: 'MDL-04', component: 'Full model', libraryVersion: LIBRARY_BASE_VERSION,
-      requirementIds: reqs.map((r) => r.id), excluded: [], addedDocuments: [], uploads: [], lockedAt: '2027-04-15T10:00:00', lockedBy: 'Lotte Jansen',
-    },
-    requirements: reqs,
-    documents: [{ id: doc.id, version: doc.version, title: doc.title, sections: doc.sections }],
-    matrix1lod: matrix,
-    statement: 'I confirm this self-assessment reflects the model documentation as submitted.',
-  });
-  const validationLayer = validationLayerFor(model);
-  const all = [...reqs, ...validationLayer];
-  const rows = all.map((r, i) => genericRow(model, r, i, ':2lod'));
-  const run: AssessmentRun = {
-    id: 'RUN-2L-0388', line: '2lod', modelId: 'MDL-04', requirementSetId: pkg.manifest.requirementSetId, libraryVersion: LIBRARY_BASE_VERSION,
-    documentVersions: pkg.manifest.documentVersions, startedAt: '2027-05-06T08:55:00', provider: 'simulated',
-    inputsSummary: `Inputs: ${pkg.documents.length} document, ${all.length} requirements. 1st line conclusions: not provided (independence).`,
-    rows: rows.map((r) => ({ ...r, decision: { by: ME, at: '2027-05-08T10:00:00', decision: 'accepted' } })),
-  };
-  return {
-    snapshotId: pkg.manifest.packageId, modelId: 'MDL-04', importedAt: '2027-04-22T14:40:00', sha256: pkg.manifest.sha256, pkg,
-    status: 'in_review', validationLayer, scopingChallenges: [], run, revealedAt: '2027-06-03T09:30:00',
-    findings: [
-      {
-        id: 'F-01', modelId: 'MDL-04', snapshotId: pkg.manifest.packageId, requirementRefs: [reqs[3]?.id ?? 'G04-04'], severity: 'medium',
-        title: 'Monotonic-constraint evidence not linked to SHAP explanations',
-        observation: 'The SHAP explainability annex is referenced but not included in the submission package; monotonic constraints are asserted without test evidence.',
-        impact: 'Explainability of the gradient boosting model cannot be independently confirmed.',
-        challenge: 'Please provide the monotonicity test results per constrained feature.', owner: model.owner_1lod, deadline: '2027-09-30',
-        status: 'draft', aiDrafted: true, kind: 'finding',
+// ---- Seed: two completed reviews and MDL-04 in review (spec 5.8) ----
+async function buildSeedReviews(): Promise<Record<string, Review>> {
+  const out: Record<string, Review> = {};
+  for (const spec of HISTORY) {
+    const pkg = await historicPackage(spec);
+    const sc = getScenario(spec.modelId, spec.component);
+    const rows = historicBlindRows(spec, pkg);
+    const completed = spec.status === 'completed';
+    const findings = completed ? historicFindings(spec) : [];
+    const high = findings.filter((f) => f.severity === 'high');
+    out[pkg.manifest.packageId] = {
+      snapshotId: pkg.manifest.packageId, modelId: spec.modelId, importedAt: spec.submittedAt, updatedAt: spec.closedAt ?? spec.blindRunAt,
+      completedAt: completed ? spec.closedAt : undefined, sha256: pkg.manifest.sha256, pkg, status: completed ? 'opinion_issued' : 'in_review',
+      validationLayer: sc.validationLayer, scopingChallenges: [],
+      run: {
+        id: `RUN-2L-${spec.modelId.slice(4)}${spec.blindRunAt.slice(2, 4)}`, line: '2lod', modelId: spec.modelId, requirementSetId: pkg.manifest.requirementSetId,
+        libraryVersion: pkg.manifest.libraryVersion, documentVersions: pkg.manifest.documentVersions, startedAt: spec.blindRunAt, provider: 'simulated',
+        inputsSummary: `Inputs: ${pkg.documents.length} documents, ${rows.length} requirements. 1st line conclusions: not provided (independence).`, rows,
       },
-    ],
-    findingExports: [], responseImports: [],
-  };
+      revealedAt: spec.revealedAt,
+      findings,
+      findingExports: completed ? [{ packageId: `FND-${spec.modelId}-${spec.revealedAt!.slice(0, 10).replace(/-/g, '')}`, sha256: '', at: spec.revealedAt!, findingIds: findings.map((f) => f.id) }] : [],
+      responseImports: [],
+      opinion: completed
+        ? {
+            rating: high.length ? 'fit_with_conditions' : 'fit', drafted: true, issuedAt: spec.opinionAt,
+            conditions: high.map((f) => `${f.id} — ${f.title}: remediation to be completed and evidenced by ${f.deadline}.`),
+            rationale: `Independent validation of ${getModel(spec.modelId)?.name} (${spec.cycle}) against the frozen submission ${pkg.manifest.packageId}. All findings were remediated and closed.`,
+          }
+        : undefined,
+    };
+  }
+  return out;
 }
 
 interface State2 {
@@ -133,7 +103,7 @@ interface State2 {
   addScopingChallenge: (id: string, req: Requirement, note: string) => string;
   runBlind: (id: string) => void;
   decide: (id: string, reqIds: string[], d: Omit<RowDecision, 'by' | 'at'>) => void;
-  reveal: (id: string) => void;
+  reveal: (id: string) => boolean;
   draftFindingFromRow: (id: string, reqId: string, context: { category: string; lodReason?: string }) => string;
   updateFinding: (id: string, findingId: string, p: Partial<Finding>) => void;
   deleteFinding: (id: string, findingId: string) => void;
@@ -151,7 +121,7 @@ export const use2lod = create<State2>()(
   persist(
     (set, get) => {
       const patch = (id: string, fn: (r: Review) => Partial<Review>) =>
-        set((s) => (s.reviews[id] ? { reviews: { ...s.reviews, [id]: { ...s.reviews[id], ...fn(s.reviews[id]) } } } : s));
+        set((s) => (s.reviews[id] ? { reviews: { ...s.reviews, [id]: { ...s.reviews[id], ...fn(s.reviews[id]), updatedAt: nowISO() } } } : s));
       const rev = (id: string) => get().reviews[id];
 
       return {
@@ -161,8 +131,8 @@ export const use2lod = create<State2>()(
           if (get().seeded || seeding) return;
           seeding = true;
           try {
-            const r = await buildSeedReview();
-            set((s) => ({ seeded: true, reviews: { [r.snapshotId]: r, ...s.reviews } }));
+            const seed = await buildSeedReviews();
+            set((s) => ({ seeded: true, reviews: { ...seed, ...s.reviews } }));
           } finally {
             seeding = false;
           }
@@ -174,10 +144,10 @@ export const use2lod = create<State2>()(
             logAudit({ line: '2lod', modelId: pkg.manifest.modelId, type: 'Submission package re-imported', detail: `${id} already imported — no changes (idempotent).` });
             return { created: false, snapshotId: id };
           }
-          const model = getModel(pkg.manifest.modelId);
           const review: Review = {
-            snapshotId: id, modelId: pkg.manifest.modelId, importedAt: nowISO(), sha256, pkg, status: 'imported',
-            validationLayer: model ? validationLayerFor(model) : [], scopingChallenges: [], findings: [], findingExports: [], responseImports: [],
+            snapshotId: id, modelId: pkg.manifest.modelId, importedAt: nowISO(), updatedAt: nowISO(), sha256, pkg, status: 'imported',
+            validationLayer: getModel(pkg.manifest.modelId) ? reviewScenario({ modelId: pkg.manifest.modelId, pkg }).validationLayer : [],
+            scopingChallenges: [], findings: [], findingExports: [], responseImports: [],
           };
           set((s) => ({ reviews: { ...s.reviews, [id]: review } }));
           logAudit({
@@ -207,9 +177,9 @@ export const use2lod = create<State2>()(
         },
         runBlind: (id) => {
           const r = rev(id);
-          const model = getModel(r.modelId)!;
+          const sc = reviewScenario(r);
           const reqs = reviewRequirements(r);
-          const rows = reqs.map((req, i) => (r.modelId === PILOT_MODEL_ID ? pilotRow2lod(req, r.pkg.documents) : genericRow(model, req, i, ':2lod')));
+          const rows = reqs.map((req) => assess2lod(sc, req, r.pkg.documents));
           const run: AssessmentRun = {
             id: uid('RUN-2L'), line: '2lod', modelId: r.modelId, requirementSetId: r.pkg.manifest.requirementSetId, libraryVersion: r.pkg.manifest.libraryVersion,
             documentVersions: r.pkg.manifest.documentVersions, startedAt: nowISO(), provider: 'simulated',
@@ -232,23 +202,26 @@ export const use2lod = create<State2>()(
           });
         },
         reveal: (id) => {
+          const cur = rev(id);
+          if (!cur?.run || cur.revealedAt || cur.run.rows.some((x) => !x.decision)) return false;
           const at = nowISO();
           patch(id, () => ({ revealedAt: at }));
           const r = rev(id);
           logAudit({ line: '2lod', modelId: r.modelId, type: 'Reveal 1st line matrix', detail: `1st line matrix of ${id} revealed at ${at.slice(11, 16)}. Blind assessments (run ${r.run?.id ?? '—'}, ${r.run?.startedAt.slice(0, 16).replace('T', ' ') ?? '—'}) locked.` });
+          return true;
         },
         draftFindingFromRow: (id, reqId, ctx) => {
           const r = rev(id);
           const existing = r.findings.find((f) => f.requirementRefs.includes(reqId) && f.kind !== 'scoping_gap');
           if (existing) return existing.id;
-          const seed = r.modelId === PILOT_MODEL_ID ? PILOT.draft_findings_2lod.find((f) => f.requirement.split(' / ').includes(reqId)) : undefined;
+          const seed = findingTemplate(reviewScenario(r), reqId);
           const req = reviewRequirements(r).find((x) => x.id === reqId);
           const row = r.run?.rows.find((x) => x.requirementId === reqId);
           const owner = getModel(r.modelId)?.owner_1lod ?? '1st line';
           const f: Finding = seed
             ? {
-                id: seed.id, modelId: r.modelId, snapshotId: id, requirementRefs: seed.requirement.split(' / '), severity: seed.severity, title: seed.title,
-                observation: seed.observation, impact: seed.impact, challenge: seed.challenge, owner: seed.owner, deadline: seed.deadline, status: 'draft', aiDrafted: true, kind: 'finding',
+                id: seed.id ?? nextFindingId(r), modelId: r.modelId, snapshotId: id, requirementRefs: seed.requirementRefs, severity: seed.severity, title: seed.title,
+                observation: seed.observation, impact: seed.impact, challenge: seed.challenge, owner, deadline: seed.deadline, status: 'draft', aiDrafted: true, kind: 'finding',
                 evidenceQuotes: [
                   ...(row?.citations.map((c) => `${c.doc} v${c.version} §${c.section}: “${c.quote}”`) ?? []),
                   ...(row?.script ? [`Script ${row.script.id}: ${row.script.detail}`] : []),
@@ -310,7 +283,7 @@ export const use2lod = create<State2>()(
         },
       };
     },
-    { name: 'mcw-store2lod', version: 1, storage: createJSONStorage(() => localStorage) },
+    { name: 'mcw-store2lod', version: 2, storage: createJSONStorage(() => localStorage) },
   ),
 );
 
