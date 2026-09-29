@@ -7,15 +7,15 @@ import { AiDraftBadge, MitigationBadge, ScriptBadge } from '@/components/common/
 import { ConfidenceWhy } from '@/components/common/ConfidenceWhy';
 import { DocumentPane, type Highlight } from '@/components/common/DocumentPane';
 import { Banner, Card, PageHeader } from '@/components/common/ui-bits';
-import { PilotOnly } from '@/components/dev/PilotOnly';
-import { useModelCtx } from '@/components/dev/useModelCtx';
+import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle } from '@/components/ui/sheet';
-import { generateSectionText, RDS_ID, RDS_TITLE, rdsSections, type DraftResult, type DraftStatus, type GeneratedSection } from '@/lib/ai/pilot';
+import { sectionText } from '@/lib/scenario/engine';
+import type { DraftResult, DraftStatus, GeneratedSection } from '@/lib/scenario/types';
 import { generateText, simulateRun } from '@/lib/ai/provider';
 import { fmtDateTime } from '@/lib/clock';
-import { PILOT_SHARED_REQS } from '@/lib/seed';
+import { allCaseRequirements } from '@/stores/store1lod';
 import { cn } from '@/lib/utils';
 import { use1lod } from '@/stores/store1lod';
 
@@ -27,20 +27,26 @@ const STATUS: Record<DraftStatus, { label: string; cls: string; bar: string }> =
 };
 
 export default function DraftPage() {
-  const { id } = useParams<{ id: string }>();
-  const { model, work, pilot } = useModelCtx(id);
+  const { caseId } = useParams<{ caseId: string }>();
+  const { id, uc: work, sc, readOnly: completed, model } = useCaseCtx(caseId);
   const s = use1lod();
   const [active, setActive] = useState<string | null>(null);
   const [gen, setGen] = useState<{ reqId: string; loading: boolean; result?: GeneratedSection; provider?: string } | null>(null);
   const [showAddressed, setShowAddressed] = useState(false);
 
-  const version = work?.draftVersion ?? '0.7';
+  const version = work?.draftVersion ?? sc?.document.draftVersion ?? '0.9';
   const check = work?.draftCheck;
   const stale = !!check && check.version !== version;
   const results = useMemo(() => check?.results ?? [], [check]);
   const doc = useMemo(
-    () => ({ id: RDS_ID, title: `${RDS_TITLE}${version === '0.7' ? ' — draft' : ''}`, version, sections: rdsSections(version), aiBlocks: work?.aiBlocks[version] }),
-    [version, work?.aiBlocks],
+    () => ({
+      id: sc?.document.id ?? '',
+      title: `${sc?.document.title ?? ''}${version === sc?.document.draftVersion ? ' — draft' : ''}`,
+      version,
+      sections: sc?.document.versions[version] ?? [],
+      aiBlocks: work?.aiBlocks[version],
+    }),
+    [version, work?.aiBlocks, sc],
   );
   const highlights: Highlight[] = useMemo(() => {
     if (stale) return [];
@@ -52,10 +58,9 @@ export default function DraftPage() {
     return hs;
   }, [results, active, stale]);
 
-  if (!model || !work) return null;
-  if (!pilot) return <PilotOnly stage="Draft check" modelId={id} />;
+  if (!model || !work || !sc) return null;
 
-  const reqById = new Map(PILOT_SHARED_REQS.map((r) => [r.id, r]));
+  const reqById = new Map(allCaseRequirements(work).map((r) => [r.id, r]));
   const count = (st: DraftStatus) => results.filter((r) => r.status === st).length;
   const order: DraftStatus[] = ['addressed', 'partial', 'gap', 'not_in_draft'];
   const gaps = [...results.filter((r) => r.status === 'gap'), ...results.filter((r) => r.status === 'not_in_draft')];
@@ -65,16 +70,16 @@ export default function DraftPage() {
   const addressed = results.filter((r) => r.status === 'addressed' && r.checkType === 'ai' && !r.aiDrafted);
 
   async function rerun() {
-    await simulateRun({ title: `Draft check · RDS v${version}`, total: PILOT_SHARED_REQS.length, scripts: 1 });
+    await simulateRun({ title: `Draft check · v${version}`, total: reqById.size, scripts: 1 });
     s.runDraftCheck(id);
     toast.success(`Draft check complete on v${version}`, { description: 'Sandbox result — no status, no sign-off.' });
   }
 
   async function generate(r: DraftResult) {
     setGen({ reqId: r.requirementId, loading: true });
-    const sim = generateSectionText(r.requirementId, r.mitigation?.text);
+    const sim = sectionText(sc!, r.requirementId, r.mitigation?.text);
     const req = reqById.get(r.requirementId);
-    const section = rdsSections(version).find((x) => x.section === sim.section);
+    const section = sc!.document.versions[version]?.find((x) => x.section === sim.section);
     const prompt = `Requirement ${req?.id}: ${req?.text} (${req?.article}).\nCurrent draft section §${sim.section} "${section?.heading}": ${section?.text}\nGap: ${r.rationale}\nAvailable facts from sources ${sim.sources.join(', ')}: ${sim.text.replace(/\{\{|\}\}/g, '')}\nWrite the paragraph to insert in §${sim.section}.`;
     const res = await generateText('generate_section', prompt, () => sim.text);
     setGen({ reqId: r.requirementId, loading: false, result: { ...sim, text: res.text }, provider: res.provider });
@@ -122,7 +127,7 @@ export default function DraftPage() {
             <p className="text-xs text-ink-2">{r.mitigation.text}</p>
           </div>
         )}
-        {(r.status === 'gap' || r.status === 'partial') && (
+        {!completed && (r.status === 'gap' || r.status === 'partial') && (
           <Button
             size="sm"
             variant="outline"
@@ -144,7 +149,7 @@ export default function DraftPage() {
       <PageHeader
         eyebrow={`Stage 2 · Draft check · ${model.id}`}
         title="Draft check"
-        subtitle="Check a draft of the RDS documentation against the requirement set while you write it."
+        subtitle={`Check a draft of “${sc.document.title}” against the requirement set while you write it.`}
         actions={
           <>
             <Select value={version} onValueChange={(v) => s.setDraftVersion(id, v)}>
@@ -152,13 +157,15 @@ export default function DraftPage() {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="0.7">Draft v0.7</SelectItem>
-                <SelectItem value="1.0">Final v1.0 (approved 12 Jun 2027)</SelectItem>
+                <SelectItem value={sc.document.draftVersion}>Draft v{sc.document.draftVersion}</SelectItem>
+                <SelectItem value={sc.document.finalVersion}>Final v{sc.document.finalVersion} (approved)</SelectItem>
               </SelectContent>
             </Select>
-            <Button onClick={rerun}>
-              <Play aria-hidden /> Re-run check
-            </Button>
+            {!completed && (
+              <Button onClick={rerun} disabled={!work.lockedAt && !work.generatedAt}>
+                <Play aria-hidden /> {check ? 'Re-run check' : 'Run check'}
+              </Button>
+            )}
           </>
         }
       />
@@ -174,7 +181,7 @@ export default function DraftPage() {
         <Card className="overflow-hidden">
           <div className="flex items-center justify-between border-b border-line px-4 py-2 text-xs text-ink-2">
             <span>
-              {RDS_ID} · v{version}
+              {sc.document.id} · v{version}
             </span>
             <span className="flex items-center gap-3">
               <span className="flex items-center gap-1">
@@ -208,7 +215,18 @@ export default function DraftPage() {
               ))}
             </div>
           </Card>
-          {!stale && (
+          {!check && (
+            <Card className="p-6 text-center text-sm text-ink-2">
+              <p className="font-medium text-ink">No check run yet</p>
+              <p className="mt-1">{work.generatedAt ? 'Run the check to see which requirements the draft already addresses.' : 'Generate the requirement set in Scoping first.'}</p>
+              {work.generatedAt && !completed && (
+                <Button className="mt-3" onClick={rerun}>
+                  <Play aria-hidden /> Run check
+                </Button>
+              )}
+            </Card>
+          )}
+          {check && !stale && (
             <>
               {gaps.map((r) => (
                 <Card_ key={r.requirementId} r={r} />

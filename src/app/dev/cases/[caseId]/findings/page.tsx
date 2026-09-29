@@ -7,8 +7,7 @@ import { SeverityBadge } from '@/components/common/badges';
 import { FileDrop } from '@/components/common/FileDrop';
 import { PackageImport, VerificationCard } from '@/components/common/PackageImport';
 import { Card, Dl, EmptyState, PageHeader } from '@/components/common/ui-bits';
-import { PilotOnly } from '@/components/dev/PilotOnly';
-import { useModelCtx } from '@/components/dev/useModelCtx';
+import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -95,11 +94,10 @@ function FindingCard({ f, modelId, readOnly }: { f: Finding; modelId: string; re
 }
 
 export default function FindingsPage() {
-  const { id } = useParams<{ id: string }>();
-  const { model, work, pilot } = useModelCtx(id);
+  const { caseId } = useParams<{ caseId: string }>();
+  const { id, uc: work, sc, readOnly: completed, model } = useCaseCtx(caseId);
   const s = use1lod();
-  if (!model || !work) return null;
-  if (!pilot) return <PilotOnly stage="Findings" modelId={id} />;
+  if (!model || !work || !sc) return null;
   const pending = work.findings.filter((f) => f.response && f.status === 'issued');
 
   async function exportResponses() {
@@ -107,8 +105,8 @@ export default function FindingsPage() {
     const pkg = await seal<ResponsePackage>({
       manifest: manifest({
         packageType: 'response',
-        packageId: packageId('response', id, work!.responseExports.length + 1),
-        modelId: id,
+        packageId: packageId('response', work!.modelId, work!.responseExports.length + 1),
+        modelId: work!.modelId,
         createdBy: PERSONAS['1lod'].name,
         line: '1lod',
         libraryVersion: work!.run?.libraryVersion ?? LIBRARY_BASE_VERSION,
@@ -154,22 +152,22 @@ export default function FindingsPage() {
           )}
         </div>
         <div className="space-y-4">
-          <Card className="p-4">
+          {!completed && <Card className="p-4">
             <p className="mb-3 text-sm font-semibold">Import findings package</p>
             <PackageImport
               type="findings"
-              expectedModelId={id}
-              demoFile={`FND-${id}-20270614.rcc.json`}
+              expectedModelId={work.modelId}
+              demoFile={work.modelId === 'MDL-01' ? 'FND-MDL-01-20270614.rcc.json' : undefined}
               onVerified={(pkg, sha) => {
                 const n = s.importFindings(id, { packageId: pkg.manifest.packageId, sha256: sha, createdBy: pkg.manifest.createdBy, createdAt: pkg.manifest.createdAt, opinionSummary: pkg.opinionSummary }, pkg.findings);
                 return n ? `${n} issued finding(s) imported.` : 'Already imported — nothing changed (idempotent).';
               }}
             />
-          </Card>
+          </Card>}
           {work.importedFindingPackages.map((p) => (
             <VerificationCard
               key={p.packageId}
-              m={{ packageType: 'findings', packageId: p.packageId, modelId: id, createdAt: p.createdAt, createdBy: p.createdBy, line: '2lod', libraryVersion: work.run?.libraryVersion ?? '3.2', requirementSetId: work.reqSetId, documentVersions: {}, schemaVersion: '1.0', sha256: p.sha256 }}
+              m={{ packageType: 'findings', packageId: p.packageId, modelId: work.modelId, createdAt: p.createdAt, createdBy: p.createdBy, line: '2lod', libraryVersion: work.run?.libraryVersion ?? '3.2', requirementSetId: work.reqSetId, documentVersions: {}, schemaVersion: '1.0', sha256: p.sha256 }}
               note={p.opinionSummary ? <span><strong>Validation opinion:</strong> {p.opinionSummary}</span> : `Imported ${fmtDateTime(p.at)}`}
             />
           ))}

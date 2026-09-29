@@ -1,6 +1,6 @@
 'use client';
 import { CheckCheck, Search } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import { AiDraftBadge, Chip, ConfidencePill, HumanDecisionBadge, MitigationBadge, VerdictBadge } from '@/components/common/badges';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -30,10 +30,13 @@ export interface AssessmentQueueProps extends Omit<RowDetailProps, 'row' | 'requ
   decisionLabel?: string;
   /** rows that need attention regardless of their decision (e.g. library changed) */
   flagged?: (row: AssessmentRow) => boolean;
+  /** group rows under a header, for example by source document */
+  groupBy?: (req: Requirement | undefined) => string;
 }
 
 export function AssessmentQueue(props: AssessmentQueueProps) {
-  const { rows, requirements, rowBadges, toolbar, initialFilter = 'attention', readOnly, onDecide, decisionLabel = 'Your decision', flagged } = props;
+  const { rows, requirements, rowBadges, toolbar, initialFilter = 'attention', readOnly, onDecide, decisionLabel = 'Your decision', flagged, groupBy } = props;
+  const [grouped, setGrouped] = useState(!!groupBy);
   const attention = (r: AssessmentRow) => (needsAttention(r) && !r.decision) || !!flagged?.(r);
   const [filter, setFilter] = useState<QueueFilter>(initialFilter);
   const [q, setQ] = useState('');
@@ -115,6 +118,11 @@ export function AssessmentQueue(props: AssessmentQueueProps) {
               <Search className="absolute top-1/2 left-2 size-3.5 -translate-y-1/2 text-ink-3" aria-hidden />
               <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search requirement" className="h-8 w-44 pl-7" aria-label="Search requirements" />
             </div>
+            {groupBy && (
+              <Chip active={grouped} onClick={() => setGrouped(!grouped)}>
+                Group by source document
+              </Chip>
+            )}
             {!readOnly && (
               <Button variant="outline" size="sm" disabled={bulkCandidates.length === 0} onClick={() => setBulkOpen(true)}>
                 <CheckCheck aria-hidden /> Bulk accept high-confidence ({bulkCandidates.length})
@@ -135,12 +143,21 @@ export function AssessmentQueue(props: AssessmentQueueProps) {
               </tr>
             </thead>
             <tbody>
-              {visible.map((r) => {
+              {(grouped && groupBy ? [...visible].sort((a, b) => groupBy(reqById.get(a.requirementId)).localeCompare(groupBy(reqById.get(b.requirementId)))) : visible).map((r, i, arr) => {
                 const req = reqById.get(r.requirementId);
                 const active = r.requirementId === selectedId;
+                const key = grouped && groupBy ? groupBy(req) : '';
+                const newGroup = grouped && groupBy && (i === 0 || groupBy(reqById.get(arr[i - 1].requirementId)) !== key);
                 return (
+                  <Fragment key={r.requirementId}>
+                  {newGroup && (
+                    <tr className="bg-bg/80">
+                      <td colSpan={5} className="px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-ink-2">
+                        {key} <span className="ml-1 font-normal normal-case">({arr.filter((x) => groupBy!(reqById.get(x.requirementId)) === key).length})</span>
+                      </td>
+                    </tr>
+                  )}
                   <tr
-                    key={r.requirementId}
                     onClick={() => openRow(r.requirementId)}
                     className={cn('cursor-pointer border-b border-line/70 align-top transition-colors last:border-0', active ? 'bg-green-50' : 'hover:bg-bg')}
                   >
@@ -173,6 +190,7 @@ export function AssessmentQueue(props: AssessmentQueueProps) {
                     <td className="px-2 py-2.5">{r.mitigation ? <MitigationBadge type={r.mitigation.type} compact /> : <span className="text-xs text-ink-3">—</span>}</td>
                     <td className="px-3 py-2.5">{r.decision ? <DecisionCell d={r.decision} /> : <AiDraftBadge />}</td>
                   </tr>
+                  </Fragment>
                 );
               })}
               {visible.length === 0 && (

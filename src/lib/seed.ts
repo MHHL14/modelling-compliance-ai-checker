@@ -57,3 +57,10 @@ export const UPLOAD_EVIDENCE: Record<string, { docId: string; title: string; ver
     ],
   },
 };
+
+/** Group label for a requirement in assessment queues: its source document. */
+export function sourceGroup(r: Requirement | undefined): string {
+  if (!r) return 'Other';
+  if (r.layer === 'model_specific') return 'Model-specific requirements';
+  return getDocument(r.source_doc)?.title ?? r.source_doc;
+}

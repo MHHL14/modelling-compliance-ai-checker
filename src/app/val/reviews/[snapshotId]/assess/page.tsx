@@ -10,6 +10,7 @@ import { Banner, Card, EmptyState, PageHeader } from '@/components/common/ui-bit
 import { useReviewCtx } from '@/components/val/useReviewCtx';
 import { Button } from '@/components/ui/button';
 import { simulateRun } from '@/lib/ai/provider';
+import { sourceGroup } from '@/lib/seed';
 import { fmtDateTime } from '@/lib/clock';
 import { exportSheets } from '@/lib/excel';
 import { matrixRows } from '@/lib/matrix';
@@ -94,6 +95,7 @@ export default function BlindAssess() {
             initialFilter="all"
             readOnly={locked}
             readOnlyReason="Blind assessments are locked after the reveal."
+            groupBy={sourceGroup}
             decisionLabel="Validator conclusion"
             decisionTitle="Validator decision (your own conclusion)"
             onDecide={(ids, d) => {

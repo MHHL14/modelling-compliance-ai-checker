@@ -1,127 +1,76 @@
 'use client';
-import { AlertTriangle, Boxes, Inbox, Search, Send } from 'lucide-react';
+import { ArrowRight, List, Play, Plus } from 'lucide-react';
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
-import { Chip, FamilyBadge, PilotBadge } from '@/components/common/badges';
-import { Card, Kpi, PageHeader } from '@/components/common/ui-bits';
-import { currentStageLabel, inventoryOpenFindings, lifecycleTone, openGaps } from '@/components/dev/modelStatus';
-import { Input } from '@/components/ui/input';
-import { applicableDocs } from '@/lib/applicability';
+import { useState } from 'react';
+import { Chip } from '@/components/common/badges';
+import { EmptyState } from '@/components/common/ui-bits';
+import { UseCaseCard } from '@/components/common/UseCaseCard';
+import { CASE_STAGES, caseSegments, caseStageLabel } from '@/components/dev/caseProgress';
+import { COMPONENT_LABEL } from '@/lib/ai/generic';
 import { can } from '@/lib/permissions';
-import { MODELS, PERSONAS } from '@/lib/seed';
-import { cn } from '@/lib/utils';
+import { getModel, MODELS, PERSONAS } from '@/lib/seed';
 import { use1lod } from '@/stores/store1lod';
 
-const FAMILIES = [
-  ['all', 'All'],
-  ['statistical', 'Statistical'],
-  ['ml', 'ML'],
-  ['genai', 'GenAI'],
-  ['expert', 'Expert'],
-] as const;
+type F = 'in_progress' | 'submitted' | 'completed';
 
 export default function DevHome() {
-  const works = use1lod((s) => (can('1lod', 'read:store1lod') ? s.models : {}));
-  const [family, setFamily] = useState<string>('all');
-  const [mine, setMine] = useState(false);
-  const [q, setQ] = useState('');
+  const cases = use1lod((s) => (can('1lod', 'read:store1lod') ? s.cases : {}));
+  const [filter, setFilter] = useState<F>('in_progress');
+  const list = Object.values(cases).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+  const bucket = (c: (typeof list)[number]): F => (c.status === 'completed' ? 'completed' : c.submission ? 'submitted' : 'in_progress');
+  const last = list.find((c) => c.status === 'active' && !c.submission) ?? list.find((c) => c.status === 'active');
   const me = PERSONAS['1lod'];
-
-  const rows = useMemo(
-    () =>
-      MODELS.filter((m) => family === 'all' || m.model_family === family)
-        .filter((m) => !mine || m.owner_1lod === me.unit)
-        .filter((m) => {
-          const ql = q.trim().toLowerCase();
-          return !ql || `${m.id} ${m.name} ${m.portfolio} ${m.regulatory_use}`.toLowerCase().includes(ql);
-        }),
-    [family, mine, q, me.unit],
-  );
-
-  const findingsFor = (id: string) => {
-    const w = works[id];
-    const received = w?.findings.filter((f) => f.status !== 'closed').length ?? 0;
-    return received + inventoryOpenFindings(MODELS.find((m) => m.id === id)!);
-  };
-  const totalGaps = Object.values(works).reduce((a, w) => a + openGaps(w), 0);
-  const awaiting = MODELS.filter((m) => m.lifecycle_stage.startsWith('Validation')).length + Object.values(works).filter((w) => w.submission && !w.findings.length).length;
-  const received = Object.values(works).reduce((a, w) => a + w.findings.length, 0);
+  const shown = list.filter((c) => bucket(c) === filter);
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Good morning' : hour < 18 ? 'Good afternoon' : 'Good evening';
 
   return (
-    <div>
-      <PageHeader
-        eyebrow="Model Development – 1st line"
-        title="My models"
-        subtitle={`${me.name} · ${me.role}, ${me.unit}. Model inventory with regulatory scope computed from the requirement library.`}
-      />
-      <div className="mb-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <Kpi label="Models in scope" value={MODELS.length} hint="Model inventory" icon={<Boxes className="size-4" aria-hidden />} />
-        <Kpi label="Open gaps" value={totalGaps} hint="Partial, non-compliant or not found (final)" tone="warn" icon={<AlertTriangle className="size-4" aria-hidden />} />
-        <Kpi label="Awaiting validation" value={awaiting} hint="Submitted to the 2nd line" icon={<Send className="size-4" aria-hidden />} />
-        <Kpi label="Findings received" value={received} hint="Imported findings packages" tone={received ? 'bad' : 'default'} icon={<Inbox className="size-4" aria-hidden />} />
+    <div className="mx-auto max-w-[1200px]">
+      <h1 className="text-2xl font-semibold tracking-tight">{greeting}, {me.name.split(' ')[0]}</h1>
+      <p className="mt-1 text-sm text-ink-2">{me.role}, {me.unit}</p>
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <Link href="/dev/new" className="rounded-[12px] border-2 border-green-600 bg-white p-5 transition-shadow hover:shadow-md focus-visible:outline-green-600">
+          <Plus className="size-6 text-green-600" aria-hidden />
+          <p className="mt-2 text-lg font-semibold">New use case</p>
+          <p className="text-sm text-ink-2">Describe your model and start scoping</p>
+        </Link>
+        {last ? (
+          <Link href={`/dev/cases/${encodeURIComponent(last.caseId)}`} className="rounded-[12px] border border-line bg-white p-5 transition-shadow hover:shadow-md focus-visible:outline-green-600">
+            <Play className="size-6 text-ink-2" aria-hidden />
+            <p className="mt-2 text-lg font-semibold">Continue where you left off</p>
+            <p className="text-sm text-ink-2">{getModel(last.modelId)?.name} · {caseStageLabel(last)}</p>
+          </Link>
+        ) : (
+          <div className="rounded-[12px] border border-dashed border-line bg-white/60 p-5 text-sm text-ink-2">Your active use case will appear here.</div>
+        )}
       </div>
-      <Card>
-        <div className="flex flex-wrap items-center gap-2 border-b border-line px-4 py-3">
-          {FAMILIES.map(([k, l]) => (
-            <Chip key={k} active={family === k} onClick={() => setFamily(k)} count={k === 'all' ? MODELS.length : MODELS.filter((m) => m.model_family === k).length}>
-              {l}
-            </Chip>
-          ))}
-          <span className="mx-1 h-5 w-px bg-line" aria-hidden />
-          <Chip active={mine} onClick={() => setMine(!mine)}>
-            Owned by my team
+      <div className="mt-8 flex flex-wrap items-center gap-2">
+        <h2 className="mr-2 text-lg font-semibold">Your use cases</h2>
+        {(['in_progress', 'submitted', 'completed'] as F[]).map((f) => (
+          <Chip key={f} active={filter === f} onClick={() => setFilter(f)} count={list.filter((c) => bucket(c) === f).length}>
+            {f === 'in_progress' ? 'In progress' : f === 'submitted' ? 'Submitted' : 'Completed'}
           </Chip>
-          <div className="relative ml-auto">
-            <Search className="absolute top-1/2 left-2 size-3.5 -translate-y-1/2 text-ink-3" aria-hidden />
-            <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search models" className="h-8 w-56 pl-7" aria-label="Search models" />
-          </div>
+        ))}
+        <Link href="/dev/inventory" className="ml-auto flex items-center gap-1 text-sm text-green-800 hover:underline">
+          <List className="size-4" aria-hidden /> Full model inventory ({MODELS.length}) <ArrowRight className="size-3.5" aria-hidden />
+        </Link>
+      </div>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {shown.map((c) => {
+          const m = getModel(c.modelId)!;
+          return (
+            <UseCaseCard key={c.caseId} href={`/dev/cases/${encodeURIComponent(c.caseId)}`} title={m.name} subtitle={`${c.cycle} · ${COMPONENT_LABEL[c.component]}`}
+              family={m.model_family} stage={caseStageLabel(c)} completed={c.status === 'completed'} states={caseSegments(c)} labels={CASE_STAGES} updatedAt={c.updatedAt} />
+          );
+        })}
+      </div>
+      {shown.length === 0 && (
+        <div className="mt-4">
+          <EmptyState title={filter === 'in_progress' ? 'Start your first use case' : 'Nothing here yet'}>
+            {filter === 'in_progress' ? 'Choose one of the 20 models in the inventory and take it through scoping, draft check, self-assessment and submission.' : 'Use cases move here as they progress.'}
+          </EmptyState>
         </div>
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[980px] text-sm">
-            <thead>
-              <tr className="border-b border-line bg-bg/70 text-left text-xs font-medium uppercase tracking-wide text-ink-2">
-                <th className="px-4 py-2">ID</th>
-                <th className="px-2 py-2">Model</th>
-                <th className="px-2 py-2">Regulatory use</th>
-                <th className="px-2 py-2">Family</th>
-                <th className="px-2 py-2">Tier</th>
-                <th className="px-2 py-2">Lifecycle stage</th>
-                <th className="px-2 py-2 text-right">Applicable docs</th>
-                <th className="px-4 py-2 text-right">Open findings</th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((m) => {
-                const stage = currentStageLabel(m, works[m.id]);
-                return (
-                  <tr key={m.id} className={cn('border-b border-line/70 last:border-0 hover:bg-bg', m.pilot && 'bg-yellow-100/30')}>
-                    <td className="px-4 py-2.5 font-mono text-xs font-semibold text-green-800">{m.id}</td>
-                    <td className="px-2 py-2.5">
-                      <Link href={`/dev/models/${m.id}`} className="font-medium text-ink hover:text-green-800 hover:underline">
-                        {m.name}
-                      </Link>
-                      {m.pilot && <span className="ml-2 align-middle"><PilotBadge /></span>}
-                      <div className="text-xs text-ink-2">{m.portfolio}</div>
-                    </td>
-                    <td className="px-2 py-2.5 text-ink-2">{m.regulatory_use}</td>
-                    <td className="px-2 py-2.5">
-                      <FamilyBadge family={m.model_family} />
-                    </td>
-                    <td className="px-2 py-2.5">
-                      <span className="rounded bg-bg px-1.5 py-0.5 text-xs font-semibold">T{m.tier}</span>
-                    </td>
-                    <td className="px-2 py-2.5">
-                      <span className={cn('rounded-full px-2 py-0.5 text-xs font-medium', lifecycleTone(stage))}>{stage}</span>
-                    </td>
-                    <td className="px-2 py-2.5 text-right tabular-nums">{applicableDocs(m).length}</td>
-                    <td className="px-4 py-2.5 text-right tabular-nums">{findingsFor(m.id) || <span className="text-ink-3">0</span>}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </Card>
+      )}
     </div>
   );
 }

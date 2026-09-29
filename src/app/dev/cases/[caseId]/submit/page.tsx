@@ -6,9 +6,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { VerdictBadge } from '@/components/common/badges';
 import { Banner, Card, CardHeader, PageHeader } from '@/components/common/ui-bits';
-import { buildSubmission, SIGN_OFF } from '@/components/dev/buildSubmission';
-import { PilotOnly } from '@/components/dev/PilotOnly';
-import { useModelCtx } from '@/components/dev/useModelCtx';
+import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -17,28 +15,28 @@ import { fmtDateTime } from '@/lib/clock';
 import { shortHash } from '@/lib/hash';
 import { downloadJson, fileNameFor } from '@/lib/packages';
 import { can, INDEPENDENCE_TOOLTIP } from '@/lib/permissions';
-import { RDS_ID } from '@/lib/ai/pilot';
 import type { Verdict } from '@/lib/types';
 import { finalVerdict, use1lod } from '@/stores/store1lod';
 
+const SIGN_OFF = 'I confirm this self-assessment reflects the model documentation as submitted.';
 const ORDER: Verdict[] = ['compliant', 'partial', 'non_compliant', 'not_found', 'not_applicable'];
 
 export default function SubmitPage() {
-  const { id } = useParams<{ id: string }>();
-  const { model, work, pilot } = useModelCtx(id);
+  const { caseId } = useParams<{ caseId: string }>();
+  const { id, uc: work, sc, readOnly: completed, model } = useCaseCtx(caseId);
   const record = use1lod((s) => s.recordSubmission);
+  const buildSubmission = use1lod((s) => s.buildSubmission);
   const [signed, setSigned] = useState(false);
-  if (!model || !work) return null;
-  if (!pilot) return <PilotOnly stage="Submit" modelId={id} />;
+  if (!model || !work || !sc) return null;
 
   const rows = work.run?.rows ?? [];
   const undecided = rows.filter((r) => !r.decision);
   const missingMit = rows.filter((r) => ['partial', 'non_compliant'].includes(finalVerdict(r)) && !r.mitigation && !r.decision?.reason);
-  const docVersions = [`${RDS_ID} v1.0`, ...work.evidenceDocs.map((d) => `${d.id} v${d.version}`)];
+  const docVersions = [`${sc.document.id} v${sc.document.finalVersion}`, ...work.evidenceDocs.map((d) => `${d.id} v${d.version}`)];
   const checks = [
-    { ok: !!work.lockedAt, label: 'Requirement set locked', detail: work.lockedAt ? `${work.reqSetId} v${work.setVersion} · ${fmtDateTime(work.lockedAt)}` : 'Lock the set in Scoping', href: `/dev/models/${id}/scope` },
-    { ok: rows.length > 0 && undecided.length === 0, label: 'All rows decided', detail: undecided.length ? `${undecided.length} row(s) without a human decision: ${undecided.map((r) => r.requirementId).join(', ')}` : `${rows.length}/${rows.length}`, href: `/dev/models/${id}/assess` },
-    { ok: missingMit.length === 0, label: 'All non-compliant / partial rows have a mitigation or justification', detail: missingMit.length ? missingMit.map((r) => r.requirementId).join(', ') : 'OK', href: `/dev/models/${id}/assess` },
+    { ok: !!work.lockedAt, label: 'Requirement set locked', detail: work.lockedAt ? `${work.reqSetId} v${work.setVersion} · ${fmtDateTime(work.lockedAt)}` : 'Lock the set in Scoping', href: `/dev/cases/${encodeURIComponent(id)}/scope` },
+    { ok: rows.length > 0 && undecided.length === 0, label: 'All rows decided', detail: undecided.length ? `${undecided.length} row(s) without a human decision: ${undecided.map((r) => r.requirementId).join(', ')}` : `${rows.length}/${rows.length}`, href: `/dev/cases/${encodeURIComponent(id)}/assess` },
+    { ok: missingMit.length === 0, label: 'All non-compliant / partial rows have a mitigation or justification', detail: missingMit.length ? missingMit.map((r) => r.requirementId).join(', ') : 'OK', href: `/dev/cases/${encodeURIComponent(id)}/assess` },
     { ok: true, label: 'Document versions frozen', detail: docVersions.join(' · ') },
   ];
   const allOk = checks.every((c) => c.ok);
@@ -46,7 +44,7 @@ export default function SubmitPage() {
   async function freeze() {
     if (!can('1lod', 'export:submission')) return;
     await simulateShort('Freezing and exporting submission package', ['Freezing 1st line matrix…', 'Bundling locked requirement set and document text…', 'Computing SHA-256…'], 1500);
-    const pkg = await buildSubmission(work!);
+    const pkg = await buildSubmission(id);
     const fileName = fileNameFor(pkg.manifest);
     const json = JSON.stringify(pkg);
     downloadJson(fileName, pkg);
@@ -80,7 +78,7 @@ export default function SubmitPage() {
                   <TooltipContent className="max-w-xs">{INDEPENDENCE_TOOLTIP}</TooltipContent>
                 </Tooltip>
                 <Button asChild variant="ghost">
-                  <Link href={`/dev/models/${id}/findings`}>Go to Findings</Link>
+                  <Link href={`/dev/cases/${encodeURIComponent(id)}/findings`}>Go to Findings</Link>
                 </Button>
               </div>
             </div>
@@ -116,7 +114,7 @@ export default function SubmitPage() {
           </Card>
           <Card className="p-5">
             <label className="flex items-start gap-3 text-sm">
-              <Checkbox checked={signed} onCheckedChange={(v) => setSigned(!!v)} className="mt-0.5" disabled={!allOk} />
+              <Checkbox checked={signed} onCheckedChange={(v) => setSigned(!!v)} className="mt-0.5" disabled={!allOk || completed} />
               <span>
                 <strong>Sign-off.</strong> {SIGN_OFF}
                 <span className="block text-xs text-ink-2">Sanne de Vries, Model Developer, Retail Credit Risk Modelling</span>

@@ -8,46 +8,44 @@ import { AssessmentQueue } from '@/components/assessment/AssessmentQueue';
 import { FileDrop, readTextIfPossible } from '@/components/common/FileDrop';
 import { RunInspector } from '@/components/common/RunInspector';
 import { Banner, Card, PageHeader } from '@/components/common/ui-bits';
-import { PilotOnly } from '@/components/dev/PilotOnly';
-import { useModelCtx } from '@/components/dev/useModelCtx';
+import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { AiProviderBadgeLight } from '@/components/common/AiProviderBadgeLight';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { EVIDENCE_AFFECTS } from '@/lib/ai/pilot';
+import { COMPONENT_LABEL } from '@/lib/ai/generic';
+import { affectedBy } from '@/lib/scenario/engine';
 import { simulateRun, simulateShort } from '@/lib/ai/provider';
 import { fmtDateTime, nowISO } from '@/lib/clock';
 import { exportSheets } from '@/lib/excel';
 import { matrixRows } from '@/lib/matrix';
 import { can } from '@/lib/permissions';
 import { uid } from '@/lib/rng';
-import { PILOT } from '@/lib/seed';
+import { PILOT, sourceGroup } from '@/lib/seed';
 import type { AssessmentRow, Upload } from '@/lib/types';
-import { allModelRequirements, finalVerdict, use1lod } from '@/stores/store1lod';
+import { allCaseRequirements, finalVerdict, use1lod } from '@/stores/store1lod';
 import { logAudit } from '@/stores/storeAudit';
 import { useLibrary } from '@/stores/storeLibrary';
 
-const DEMO_EVIDENCE = PILOT.upload_examples.filter((u) => u.kind === 'evidence').map((u) => u.name);
 
 export default function AssessPage() {
-  const { id } = useParams<{ id: string }>();
-  const { model, work, pilot, docs } = useModelCtx(id);
+  const { caseId } = useParams<{ caseId: string }>();
+  const { id, uc: work, sc, readOnly: completed, model, docs } = useCaseCtx(caseId);
   const s = use1lod();
   const libVersion = useLibrary((l) => (can('1lod', 'read:library') ? l.version : '3.2'));
   const [selected, setSelected] = useState<string | null>(null);
   const [scriptDialog, setScriptDialog] = useState<AssessmentRow | null>(null);
   const [justification, setJustification] = useState<AssessmentRow | null>(null);
 
-  if (!model || !work) return null;
-  if (!pilot) return <PilotOnly stage="Self-assessment" modelId={id} />;
+  if (!model || !work || !sc) return null;
 
   const run = work.run;
-  const reqs = allModelRequirements(work);
+  const reqs = allCaseRequirements(work);
   const rows = run?.rows ?? [];
   const decided = rows.filter((r) => r.decision).length;
   const gaps = rows.filter((r) => ['partial', 'non_compliant', 'not_found'].includes(finalVerdict(r))).length;
   const remaining = rows.length - decided;
-  const readOnly = !!work.submission;
+  const readOnly = !!work.submission || completed;
   const libChanged = run && libVersion !== run.libraryVersion;
   const changedIds = libChanged ? PILOT.library_change.changes.map((c) => c.id) : [];
 
@@ -66,11 +64,11 @@ export default function AssessPage() {
   async function uploadEvidence(file: File, rowId: string) {
     const text = await readTextIfPossible(file);
     const upload: Upload = { id: uid('UPL'), name: file.name, size: file.size, kind: 'evidence', uploadedAt: nowISO(), mime: file.type };
-    const affects = EVIDENCE_AFFECTS[file.name] ?? [];
+    const affects = affectedBy(sc!, file.name);
     await simulateShort(`Uploading ${file.name}`, ['Registering file…', 'Extracting text (simulated)…', 'Retrieving passages…', affects.length ? `Re-assessing ${affects.join(', ')}…` : 'Matching against open rows…'], 2000);
-    const done = s.uploadEvidence(id, upload, text, rowId);
+    const done = s.uploadEvidence(id, upload, text, true);
     if (done.includes(rowId)) {
-      const nr = use1lod.getState().models[id]?.run?.rows.find((r) => r.requirementId === rowId);
+      const nr = use1lod.getState().cases[id]?.run?.rows.find((r) => r.requirementId === rowId);
       toast.success(`${rowId} re-assessed: ${nr?.verdict.replace('_', ' ')} · ${nr?.confidence} confidence`, { description: nr?.citations[0] ? `New citation ${nr.citations[0].doc} §${nr.citations[0].section}` : undefined });
     } else if (done.length) {
       toast.success(`Evidence registered — re-assessed ${done.join(', ')}`);
@@ -88,7 +86,7 @@ export default function AssessPage() {
           size="sm"
           variant="outline"
           onClick={() => {
-            logAudit({ line: '1lod', modelId: id, type: 'Task created', detail: `Remediation task for ${row.requirementId}: ${row.mitigation!.text}` });
+            logAudit({ line: '1lod', modelId: work!.modelId, type: 'Task created', detail: `Remediation task for ${row.requirementId}: ${row.mitigation!.text}` });
             toast.success('Task created in team backlog', { description: `${row.requirementId} · owner ${model!.owner_1lod} · due before submission of v1.1` });
           }}
         >
@@ -109,7 +107,7 @@ export default function AssessPage() {
           size="sm"
           variant="outline"
           onClick={() => {
-            logAudit({ line: '1lod', modelId: id, type: 'Linked to MoC register', detail: `${row.requirementId} linked to MoC register entry MOC-PDMORT-A-03 (category A).` });
+            logAudit({ line: '1lod', modelId: work!.modelId, type: 'Linked to MoC register', detail: `${row.requirementId} linked to MoC register entry MOC-PDMORT-A-03 (category A).` });
             toast.success('Linked to MoC register', { description: 'Entry MOC-PDMORT-A-03 · category A · PD-MORT-NL v4' });
           }}
         >
@@ -135,9 +133,9 @@ export default function AssessPage() {
         <FileDrop compact label="Drop evidence file (re-assesses this row)" onFiles={(f) => uploadEvidence(f[0], row.requirementId)} />
         <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
           <span className="text-ink-3">Demo files:</span>
-          {DEMO_EVIDENCE.map((n) => (
-            <button key={n} type="button" className="text-green-800 hover:underline" onClick={() => uploadEvidence(new File([new Uint8Array(n.startsWith('MDD') ? 2_411_724 : 356_352)], n, { type: 'application/pdf' }), row.requirementId)}>
-              {n}
+          {sc!.evidenceFiles.map((f) => (
+            <button key={f.name} type="button" className="text-green-800 hover:underline" onClick={() => uploadEvidence(new File([new Uint8Array(f.sizeKb * 1024)], f.name, { type: 'application/pdf' }), row.requirementId)}>
+              {f.name}
             </button>
           ))}
         </div>
@@ -163,7 +161,7 @@ export default function AssessPage() {
         ],
       },
     ]);
-    logAudit({ line: '1lod', modelId: id, type: 'Matrix exported', detail: `1st line matrix exported to Excel (${rows.length} rows).` });
+    logAudit({ line: '1lod', modelId: work!.modelId, type: 'Matrix exported', detail: `1st line matrix exported to Excel (${rows.length} rows).` });
   }
 
   return (
@@ -173,14 +171,14 @@ export default function AssessPage() {
         title="Self-assessment"
         subtitle={
           <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>RDS documentation v1.0</span>·<span>{work.reqSetId}</span>·<span>library v{run?.libraryVersion ?? '3.2'}</span>·<AiProviderBadgeLight />
+            <span>{sc.document.title} v{sc.document.finalVersion}</span>·<span>{work.reqSetId}</span>·<span>library v{run?.libraryVersion ?? '3.2'}</span>·<AiProviderBadgeLight />
             {run && <span className="text-ink-3">run {run.id} · {fmtDateTime(run.startedAt)}</span>}
           </span>
         }
         actions={
           <>
             {run && <RunInspector run={run} docs={docs} row={rows.find((r) => r.requirementId === selected)} requirement={reqs.find((r) => r.id === selected)} />}
-            {!readOnly && !run && (
+            {!readOnly && !run && work.lockedAt && (
               <Button onClick={runAssessment}>
                 <Play aria-hidden /> Run assessment
               </Button>
@@ -220,7 +218,7 @@ export default function AssessPage() {
       <div className="mb-4 space-y-2">
         {!work.lockedAt && (
           <Banner tone="warn" icon={<Lock className="size-4" aria-hidden />}>
-            Requirement set {work.reqSetId} is not locked yet. <Link href={`/dev/models/${id}/scope`} className="font-medium underline">Lock it in Scoping</Link> — submission requires a locked set, and model-specific requirements are added to the run on lock.
+            Requirement set {work.reqSetId} is not locked yet. <Link href={`/dev/cases/${encodeURIComponent(id)}/scope`} className="font-medium underline">Lock it in Scoping</Link> — submission requires a locked set, and model-specific requirements are added to the run on lock.
           </Banner>
         )}
         {libChanged && (
@@ -265,6 +263,7 @@ export default function AssessPage() {
             onClearDecision={(rid) => s.clearDecision(id, rid)}
             mitigationAction={mitigationAction}
             detailExtras={detailExtras}
+            groupBy={sourceGroup}
             flagged={(r) => changedIds.includes(r.requirementId)}
             rowBadges={(r) =>
               changedIds.includes(r.requirementId) ? <span className="rounded bg-amber-100 px-1.5 text-[11px] font-medium text-amber">Needs review — library changed</span> : r.reassessedAt ? <span className="rounded bg-blue-100 px-1.5 text-[11px] text-blue">Re-assessed</span> : null
@@ -273,7 +272,15 @@ export default function AssessPage() {
           />
         </>
       ) : (
-        <Card className="p-10 text-center text-sm text-ink-2">No assessment run yet. Click “Run assessment”.</Card>
+        <Card className="p-10 text-center text-sm text-ink-2">
+          <p className="font-medium text-ink">No assessment run yet</p>
+          <p className="mt-1">{work.lockedAt ? 'Run the assessment: the AI drafts an assessment for every requirement in the locked set; you decide on each row.' : 'Lock the requirement set in Scoping first.'}</p>
+          {work.lockedAt && !readOnly && (
+            <Button className="mt-3" onClick={runAssessment}>
+              <Play aria-hidden /> Run assessment
+            </Button>
+          )}
+        </Card>
       )}
 
       <Dialog open={!!scriptDialog} onOpenChange={(o) => !o && setScriptDialog(null)}>
@@ -283,7 +290,7 @@ export default function AssessPage() {
             <DialogDescription>{scriptDialog?.mitigation?.text}</DialogDescription>
           </DialogHeader>
           <Banner tone="warn">
-            The code repository <span className="font-mono">rds-mort-nl</span> is not linked to this workspace, so the script cannot run here. Request the link; the script result will appear as a grey “Script” check on the row.
+            The code repository is not linked to this workspace, so the script cannot run here. Request the link; the script result will appear as a grey “Script” check on the row.
           </Banner>
           <DialogFooter>
             <Button variant="outline" onClick={() => setScriptDialog(null)}>
@@ -291,7 +298,7 @@ export default function AssessPage() {
             </Button>
             <Button
               onClick={() => {
-                logAudit({ line: '1lod', modelId: id, type: 'Repository link requested', detail: `Link to rds-mort-nl requested to run ${scriptDialog?.mitigation?.text.match(/\b(CC|VR)-\d+/)?.[0]} for ${scriptDialog?.requirementId}.` });
+                logAudit({ line: '1lod', modelId: work!.modelId, type: 'Repository link requested', detail: `Link to the code repository requested to run ${scriptDialog?.mitigation?.text.match(/\b(CC|VR)-\d+/)?.[0]} for ${scriptDialog?.requirementId}.` });
                 toast('Repository link requested', { description: 'IT change request CHG-48213 created.' });
                 setScriptDialog(null);
               }}
@@ -309,7 +316,7 @@ export default function AssessPage() {
           </DialogHeader>
           <div className="ai-block rounded-r px-3 py-2 text-sm">
             {justification &&
-              `${reqs.find((r) => r.id === justification.requirementId)?.text.replace(/\.$/, '')}: this obligation is evidenced outside the RDS documentation component. The PD add-on is applied at the calibration stage and documented in the MDD calibration chapter (§7); the RDS scope is limited to data construction and quality.`}
+              `${reqs.find((r) => r.id === justification.requirementId)?.text.replace(/\.$/, '')}: this obligation is evidenced outside the ${COMPONENT_LABEL[work.component]} component. It is implemented and documented in the related model documentation, which is referenced from the assessed document; the scope of this component does not cover it.`}
           </div>
           <DialogFooter>
             <Button
