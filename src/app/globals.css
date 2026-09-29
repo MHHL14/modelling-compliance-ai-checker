@@ -1,26 +1,146 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:is(.dark *));
+
+/* Design tokens (spec section 10) */
+@theme {
+  --color-green-900: #003b3b;
+  --color-green-800: #004c4c;
+  --color-green-600: #00716b;
+  --color-green-500: #00857a;
+  --color-green-100: #d9efec;
+  --color-green-50: #eef8f6;
+  --color-yellow: #ffd200;
+  --color-yellow-100: #fff6cc;
+  --color-yellow-ink: #6b5800;
+  --color-ink: #1c2b2b;
+  --color-ink-2: #4b5c5c;
+  --color-ink-3: #637373;
+  --color-line: #dfe6e5;
+  --color-bg: #f5f7f7;
+  --color-red: #c0392b;
+  --color-red-100: #fbe7e4;
+  --color-amber: #b86e00;
+  --color-amber-100: #fff0d6;
+  --color-blue: #1d5fa8;
+  --color-blue-100: #e3eefb;
+  --color-script: #e9e9e9;
+  --color-lod2: #2d3e50;
+  --color-audit: #4b5563;
+  --radius-card: 12px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-heading: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #f5f7f7;
+  --foreground: #1c2b2b;
+  --card: #ffffff;
+  --card-foreground: #1c2b2b;
+  --popover: #ffffff;
+  --popover-foreground: #1c2b2b;
+  --primary: #00716b;
+  --primary-foreground: #ffffff;
+  --secondary: #eef8f6;
+  --secondary-foreground: #003b3b;
+  --muted: #eef2f2;
+  --muted-foreground: #4b5c5c;
+  --accent: #eef8f6;
+  --accent-foreground: #003b3b;
+  --destructive: #c0392b;
+  --border: #dfe6e5;
+  --input: #cfd9d8;
+  --ring: #00716b;
+  --chart-1: #00716b;
+  --chart-2: #b86e00;
+  --chart-3: #c0392b;
+  --chart-4: #7a8a8a;
+  --chart-5: #1d5fa8;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1c2b2b;
+  --sidebar-primary: #00716b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eef8f6;
+  --sidebar-accent-foreground: #003b3b;
+  --sidebar-border: #dfe6e5;
+  --sidebar-ring: #00716b;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
   }
 }
+@layer base {
+  :focus-visible {
+    outline: 2px solid #00716b;
+    outline-offset: 2px;
+  }
+  html, body { overflow-x: hidden; }
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.doc-serif { font-family: Georgia, "Times New Roman", serif; }
+mark.cite { background: #ffe98a; color: inherit; padding: 0 1px; border-radius: 2px; }
+mark.cite-active { background: #ffd200; box-shadow: 0 0 0 2px #ffd200; }
+mark.gap { background: #fbe7e4; color: #8e2a20; text-decoration: underline wavy #c0392b; text-underline-offset: 3px; padding: 0 1px; }
+.ai-block { background: #e3eefb; border-left: 3px solid #1d5fa8; }
+.script-num { background: #e9e9e9; border-bottom: 1px dotted #4b5c5c; padding: 0 2px; border-radius: 2px; font-variant-numeric: tabular-nums; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff !important; }
+  .print-area { box-shadow: none !important; border: none !important; }
+  @page { margin: 16mm; }
 }

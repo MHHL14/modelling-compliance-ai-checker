@@ -1,0 +1,35 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 424 >>
+stream
+BT /F1 16 Tf 60 780 Td (ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt)) Tj ET
+BT /F1 10 Tf 60 750 Td (Obligation: the institution shall apply a PD add-on of 5% until the definition-of-default remediation is completed.) Tj ET
+BT /F1 10 Tf 60 734 Td (Limitation: the model shall not be applied to buy-to-let mortgages.) Tj ET
+BT /F1 8 Tf 60 60 Td (Prototype - illustrative, fictional content. Not an official document.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000715 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+785
+%%EOF

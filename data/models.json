@@ -1,0 +1,712 @@
+[
+ {
+  "id": "MDL-01",
+  "name": "PD Residential Mortgages NL (PD-MORT-NL v4)",
+  "risk_type": "Credit risk",
+  "portfolio": "Dutch residential mortgages",
+  "purpose": "12-month PD for IRB capital; secondary use in arrears management",
+  "methodology": "Logistic regression scorecard, calibrated to long-run average on 12-grade master scale",
+  "model_family": "statistical",
+  "regulatory_use": "A-IRB PD",
+  "tier": 1,
+  "lifecycle_stage": "Development – RDS construction",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Retail Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": true,
+  "tags": [
+   "all_models",
+   "capital",
+   "credit",
+   "irb",
+   "irb_pd",
+   "mortgage",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-01-RDS",
+    "title": "Dataset Construction and DQ Assessment – Residential Real Estate Mortgages",
+    "type": "RDS documentation"
+   },
+   {
+    "id": "EVD-01-MDD",
+    "title": "Model Development Document PD-MORT-NL v4",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-01-CODE",
+    "title": "RDS build and estimation code repository",
+    "type": "code"
+   }
+  ]
+ },
+ {
+  "id": "MDL-02",
+  "name": "LGD Residential Mortgages NL",
+  "risk_type": "Credit risk",
+  "portfolio": "Dutch residential mortgages",
+  "purpose": "LGD incl. downturn for IRB capital",
+  "methodology": "Cure-rate and loss-given-liquidation components with NHG and collateral haircuts",
+  "model_family": "statistical",
+  "regulatory_use": "A-IRB LGD",
+  "tier": 1,
+  "lifecycle_stage": "Live – annual validation",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Retail Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "capital",
+   "credit",
+   "irb",
+   "irb_lgd",
+   "mortgage",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-02-RDS",
+    "title": "LGD workout RDS documentation",
+    "type": "RDS documentation"
+   },
+   {
+    "id": "EVD-02-MDD",
+    "title": "MDD LGD Mortgages",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-02-VAL",
+    "title": "Annual validation report 2026",
+    "type": "validation report"
+   }
+  ]
+ },
+ {
+  "id": "MDL-03",
+  "name": "EAD/CCF Retail Revolving (credit cards and overdrafts)",
+  "risk_type": "Credit risk",
+  "portfolio": "Retail revolving exposures",
+  "purpose": "CCF for undrawn limits in IRB capital",
+  "methodology": "Segmented CCF estimation with 12-month fixed horizon",
+  "model_family": "statistical",
+  "regulatory_use": "A-IRB EAD",
+  "tier": 2,
+  "lifecycle_stage": "Pre-submission – 1LoD self-assessment",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Retail Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "capital",
+   "credit",
+   "irb",
+   "irb_ead",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-03-MDD",
+    "title": "MDD CCF Retail Revolving",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-03-RDS",
+    "title": "CCF RDS documentation",
+    "type": "RDS documentation"
+   }
+  ]
+ },
+ {
+  "id": "MDL-04",
+  "name": "PD Retail SME (gradient boosting)",
+  "risk_type": "Credit risk",
+  "portfolio": "SME and self-employed clients",
+  "purpose": "12-month PD for IRB capital",
+  "methodology": "Gradient boosting with monotonic constraints, SHAP explainability, calibration layer",
+  "model_family": "ml",
+  "regulatory_use": "A-IRB PD",
+  "tier": 1,
+  "lifecycle_stage": "Validation – 2LoD review",
+  "ai_act_assessment": "Assess: ML-based system; natural persons (self-employed) in scope may bring Annex III 5(b) into play if used for creditworthiness decisions – high-risk obligations from 2027-12-02.",
+  "owner_1lod": "SME Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "capital",
+   "credit",
+   "irb",
+   "irb_pd",
+   "ml",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "sme"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-04-MDD",
+    "title": "MDD PD Retail SME v2",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-04-XAI",
+    "title": "Explainability and fairness report",
+    "type": "test report"
+   },
+   {
+    "id": "EVD-04-RDS",
+    "title": "SME RDS documentation",
+    "type": "RDS documentation"
+   }
+  ]
+ },
+ {
+  "id": "MDL-05",
+  "name": "LGD Retail SME",
+  "risk_type": "Credit risk",
+  "portfolio": "SME and self-employed clients",
+  "purpose": "LGD incl. downturn for IRB capital",
+  "methodology": "Workout LGD with collateral and guarantee components",
+  "model_family": "statistical",
+  "regulatory_use": "A-IRB LGD",
+  "tier": 2,
+  "lifecycle_stage": "Change – material change application",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "SME Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "capital",
+   "credit",
+   "irb",
+   "irb_lgd",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "sme",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-05-MDD",
+    "title": "MDD LGD Retail SME",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-05-CHG",
+    "title": "Change classification memo",
+    "type": "change memo"
+   }
+  ]
+ },
+ {
+  "id": "MDL-06",
+  "name": "PD Corporates (mid-market)",
+  "risk_type": "Credit risk",
+  "portfolio": "Corporate clients up to EUR 500m revenue",
+  "purpose": "12-month PD for IRB capital and credit approval",
+  "methodology": "Shadow-rating scorecard: financials + qualitative assessment, expert overrides",
+  "model_family": "statistical",
+  "regulatory_use": "IRB PD (corporates)",
+  "tier": 1,
+  "lifecycle_stage": "Live – monitoring",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Wholesale Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "capital",
+   "corporate",
+   "credit",
+   "credit_origination",
+   "irb",
+   "irb_pd",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-06-MDD",
+    "title": "MDD Corporate Rating Model",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-06-MON",
+    "title": "Quarterly monitoring report Q2 2026",
+    "type": "monitoring report"
+   }
+  ]
+ },
+ {
+  "id": "MDL-07",
+  "name": "IFRS 9 ECL – Residential Mortgages",
+  "risk_type": "Credit risk",
+  "portfolio": "Dutch residential mortgages",
+  "purpose": "Lifetime and 12-month ECL for provisioning",
+  "methodology": "PIT PD term structures, LGD with forward-looking HPI, three macro scenarios",
+  "model_family": "statistical",
+  "regulatory_use": "IFRS 9",
+  "tier": 1,
+  "lifecycle_stage": "Live – annual review",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "IFRS 9 Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "credit",
+   "ifrs9",
+   "mortgage",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-07-MDD",
+    "title": "IFRS 9 Mortgages methodology document",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-07-OVL",
+    "title": "Management overlay memo",
+    "type": "memo"
+   }
+  ]
+ },
+ {
+  "id": "MDL-08",
+  "name": "IFRS 9 ECL – Corporates",
+  "risk_type": "Credit risk",
+  "portfolio": "Corporate and institutional clients",
+  "purpose": "Lifetime and 12-month ECL for provisioning",
+  "methodology": "TTC-to-PIT conversion of rating PDs, sector-specific macro linkages",
+  "model_family": "statistical",
+  "regulatory_use": "IFRS 9",
+  "tier": 1,
+  "lifecycle_stage": "Development – methodology",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "IFRS 9 Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "corporate",
+   "credit",
+   "ifrs9",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-08-MDD",
+    "title": "IFRS 9 Corporates methodology (draft)",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-09",
+  "name": "IFRS 9 SICR and Staging",
+  "risk_type": "Credit risk",
+  "portfolio": "All IFRS 9 portfolios",
+  "purpose": "Stage allocation (1/2/3)",
+  "methodology": "Relative PD thresholds, backstops (30 dpd, forbearance, watchlist)",
+  "model_family": "expert",
+  "regulatory_use": "IFRS 9",
+  "tier": 2,
+  "lifecycle_stage": "Live – annual review",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "IFRS 9 Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "credit",
+   "ifrs9",
+   "personal_data",
+   "risk_reporting"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-09-MDD",
+    "title": "SICR methodology document",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-10",
+  "name": "Macroeconomic Scenario and Satellite Models",
+  "risk_type": "Enterprise risk",
+  "portfolio": "Bank-wide",
+  "purpose": "Macro scenarios and PD/LGD satellite models for IFRS 9 FLI, stress testing and ICAAP",
+  "methodology": "Vector autoregression for scenarios; panel regressions for satellite models",
+  "model_family": "statistical",
+  "regulatory_use": "Stress testing / IFRS 9 / ICAAP",
+  "tier": 1,
+  "lifecycle_stage": "Live – annual review",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Enterprise Stress Testing",
+  "validator_2lod": "Model Validation – Enterprise Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "credit",
+   "icaap",
+   "ifrs9",
+   "risk_reporting",
+   "statistical",
+   "stress_test"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-10-MDD",
+    "title": "Scenario and satellite model documentation",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-11",
+  "name": "IRRBB – Mortgage Prepayment",
+  "risk_type": "Interest rate risk",
+  "portfolio": "Dutch residential mortgages",
+  "purpose": "Prepayment assumptions for EVE/NII and hedging",
+  "methodology": "Multinomial logit on refinancing incentive, seasoning, penalty-free allowance",
+  "model_family": "statistical",
+  "regulatory_use": "IRRBB",
+  "tier": 1,
+  "lifecycle_stage": "Pre-submission – 1LoD self-assessment",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "ALM Modelling",
+  "validator_2lod": "Model Validation – Market & ALM",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "irrbb",
+   "mortgage",
+   "personal_data",
+   "retail",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-11-MDD",
+    "title": "Prepayment model documentation",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-12",
+  "name": "IRRBB – Non-Maturity Deposits",
+  "risk_type": "Interest rate risk",
+  "portfolio": "Retail and SME savings and current accounts",
+  "purpose": "Behavioural repricing and replicating portfolio",
+  "methodology": "Volume and rate pass-through models, stable/core split",
+  "model_family": "statistical",
+  "regulatory_use": "IRRBB",
+  "tier": 1,
+  "lifecycle_stage": "Live – monitoring",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "ALM Modelling",
+  "validator_2lod": "Model Validation – Market & ALM",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "irrbb",
+   "retail",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-12-MDD",
+    "title": "NMD model documentation",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-13",
+  "name": "Market Risk – Expected Shortfall (IMA)",
+  "risk_type": "Market risk",
+  "portfolio": "Trading book",
+  "purpose": "Own funds requirements for market risk",
+  "methodology": "Historical-simulation expected shortfall with liquidity horizons; NMRF stress scenarios",
+  "model_family": "statistical",
+  "regulatory_use": "Market risk IMA",
+  "tier": 1,
+  "lifecycle_stage": "Change – CRR3 migration",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Market Risk Modelling",
+  "validator_2lod": "Model Validation – Market & ALM",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "capital",
+   "market",
+   "market_ima",
+   "risk_reporting",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-13-MDD",
+    "title": "ES model documentation",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-13-BT",
+    "title": "Backtesting and PLA report",
+    "type": "test report"
+   }
+  ]
+ },
+ {
+  "id": "MDL-14",
+  "name": "Derivatives Valuation and XVA",
+  "risk_type": "Market risk",
+  "portfolio": "OTC derivatives",
+  "purpose": "Fair value, CVA/FVA and prudent valuation adjustments",
+  "methodology": "Monte Carlo exposure simulation, Hull-White rates model",
+  "model_family": "statistical",
+  "regulatory_use": "Valuation",
+  "tier": 2,
+  "lifecycle_stage": "Live – annual review",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Front Office Quants",
+  "validator_2lod": "Model Validation – Market & ALM",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "market",
+   "risk_reporting",
+   "statistical",
+   "valuation"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-14-MDD",
+    "title": "XVA methodology document",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-15",
+  "name": "AML Transaction Monitoring",
+  "risk_type": "Financial crime",
+  "portfolio": "Retail and business payments",
+  "purpose": "Generate alerts on potentially unusual transactions",
+  "methodology": "Rules-based scenarios with ML alert-prioritisation layer",
+  "model_family": "ml",
+  "regulatory_use": "AML",
+  "tier": 1,
+  "lifecycle_stage": "Validation – 2LoD review",
+  "ai_act_assessment": "Assess: ML prioritisation layer is an AI system; not an Annex III high-risk use for private AML – general AI governance and Art. 4 AI literacy apply.",
+  "owner_1lod": "FEC Analytics",
+  "validator_2lod": "Model Validation – Financial Crime",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "aml",
+   "ml",
+   "personal_data"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-15-MDD",
+    "title": "TM scenario and tuning documentation",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-15-ATL",
+    "title": "Above/below-the-line testing report",
+    "type": "test report"
+   }
+  ]
+ },
+ {
+  "id": "MDL-16",
+  "name": "AML Customer Risk Rating",
+  "risk_type": "Financial crime",
+  "portfolio": "All clients",
+  "purpose": "Customer risk classification for CDD intensity",
+  "methodology": "Weighted risk-factor scoring (geography, product, channel, behaviour)",
+  "model_family": "expert",
+  "regulatory_use": "AML",
+  "tier": 2,
+  "lifecycle_stage": "Live – monitoring",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "FEC Analytics",
+  "validator_2lod": "Model Validation – Financial Crime",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "aml",
+   "personal_data"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-16-MDD",
+    "title": "CRR methodology document",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-17",
+  "name": "Payments Fraud Detection",
+  "risk_type": "Fraud",
+  "portfolio": "Card and instant payments",
+  "purpose": "Real-time fraud scoring and blocking",
+  "methodology": "Gradient boosting on transaction and device features, real-time scoring",
+  "model_family": "ml",
+  "regulatory_use": "Fraud / PSD2 TRA",
+  "tier": 2,
+  "lifecycle_stage": "Live – monitoring",
+  "ai_act_assessment": "Assess: AI system; fraud detection is explicitly excluded from Annex III 5(b) – not high-risk; transparency and AI governance apply.",
+  "owner_1lod": "Fraud Analytics",
+  "validator_2lod": "Model Validation – Financial Crime",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "fraud",
+   "ml",
+   "personal_data"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-17-MDD",
+    "title": "Fraud model documentation",
+    "type": "MDD"
+   },
+   {
+    "id": "EVD-17-MON",
+    "title": "Fraud model monitoring dashboard export",
+    "type": "monitoring report"
+   }
+  ]
+ },
+ {
+  "id": "MDL-18",
+  "name": "Mortgage Acceptance Scorecard",
+  "risk_type": "Credit risk",
+  "portfolio": "New Dutch mortgage applications",
+  "purpose": "Accept/refer/decline in mortgage origination",
+  "methodology": "Application scorecard (logistic regression) with affordability rules",
+  "model_family": "statistical",
+  "regulatory_use": "Credit origination",
+  "tier": 1,
+  "lifecycle_stage": "Development – RDS construction",
+  "ai_act_assessment": "Assess: creditworthiness of natural persons (Annex III 5(b)); if classified as AI system → high-risk obligations from 2027-12-02. Document classification explicitly.",
+  "owner_1lod": "Retail Credit Risk Modelling",
+  "validator_2lod": "Model Validation – Credit Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "credit",
+   "credit_origination",
+   "mortgage",
+   "mortgage_origination",
+   "natural_person_credit",
+   "personal_data",
+   "retail",
+   "statistical"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-18-MDD",
+    "title": "Acceptance scorecard development document (draft)",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-19",
+  "name": "Climate Transition Risk – Mortgages and Corporates",
+  "risk_type": "Climate risk",
+  "portfolio": "Mortgages (energy labels) and corporates (sector emissions)",
+  "purpose": "Climate stress test and ICAAP add-on",
+  "methodology": "Scenario-based PD/LGD shocks via energy label and sector transition pathways",
+  "model_family": "statistical",
+  "regulatory_use": "Stress testing / ICAAP",
+  "tier": 2,
+  "lifecycle_stage": "Development – methodology",
+  "ai_act_assessment": "Assess: statistical model with fixed logic – likely outside AI system definition; document the reasoning.",
+  "owner_1lod": "Sustainability Risk Modelling",
+  "validator_2lod": "Model Validation – Enterprise Risk",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "climate",
+   "corporate",
+   "credit",
+   "icaap",
+   "mortgage",
+   "risk_reporting",
+   "statistical",
+   "stress_test"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-19-MDD",
+    "title": "Climate transition risk methodology (draft)",
+    "type": "MDD"
+   }
+  ]
+ },
+ {
+  "id": "MDL-20",
+  "name": "GenAI Credit Memo Assistant",
+  "risk_type": "Model / AI risk",
+  "portfolio": "Corporate lending",
+  "purpose": "Drafts credit memo sections from client financials for credit analysts",
+  "methodology": "Third-party LLM with retrieval over internal credit files; human review mandatory",
+  "model_family": "genai",
+  "regulatory_use": "None (internal productivity)",
+  "tier": 3,
+  "lifecycle_stage": "Pre-submission – 1LoD self-assessment",
+  "ai_act_assessment": "Assess: AI system (GPAI-based, bank as deployer); supports but does not decide creditworthiness of legal persons – not Annex III; Art. 4 and Art. 50 considerations apply.",
+  "owner_1lod": "Wholesale Credit Analytics",
+  "validator_2lod": "Model Validation – AI",
+  "pilot": false,
+  "tags": [
+   "all_models",
+   "credit",
+   "genai",
+   "third_party_ai"
+  ],
+  "evidence_documents": [
+   {
+    "id": "EVD-20-UC",
+    "title": "GenAI use-case approval form",
+    "type": "use-case form"
+   },
+   {
+    "id": "EVD-20-EVAL",
+    "title": "LLM evaluation and hallucination test report",
+    "type": "test report"
+   }
+  ]
+ }
+]

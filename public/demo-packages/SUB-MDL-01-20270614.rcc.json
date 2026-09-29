@@ -1,0 +1,1028 @@
+{
+  "manifest": {
+    "packageType": "submission",
+    "packageId": "SUB-MDL-01-20270614",
+    "modelId": "MDL-01",
+    "createdBy": "Sanne de Vries",
+    "line": "1lod",
+    "libraryVersion": "3.2",
+    "requirementSetId": "RS-2027-014",
+    "documentVersions": {
+      "EVD-01-RDS": "1.0",
+      "EVD-01-MDD": "4.0"
+    },
+    "createdAt": "2027-06-14T14:52:57.759",
+    "schemaVersion": "1.0",
+    "sha256": "770d8df252e4c821ee350ebaecddecfdb3f1dccf8b6ebb9690fe1de6d3df38b9"
+  },
+  "requirementSet": {
+    "id": "RS-2027-014",
+    "modelId": "MDL-01",
+    "component": "RDS documentation",
+    "libraryVersion": "3.2",
+    "requirementIds": [
+      "REQ-D01",
+      "REQ-D02",
+      "REQ-D07",
+      "REQ-D08",
+      "REQ-D09",
+      "REQ-D12a",
+      "REQ-D12b",
+      "REQ-D12c",
+      "REQ-D15",
+      "REQ-D18",
+      "REQ-D19",
+      "REQ-D21",
+      "REQ-D22",
+      "REQ-D25",
+      "REQ-D26",
+      "REQ-D30",
+      "REQ-D31",
+      "REQ-G01",
+      "MS-01"
+    ],
+    "excluded": [],
+    "addedDocuments": [
+      {
+        "docId": "EXT-EBA-VALHB",
+        "reason": "Validation expectations for RDS representativeness and reproducibility tests"
+      }
+    ],
+    "uploads": [
+      {
+        "id": "UPL-MUMOC5GRRL5A",
+        "name": "ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt).pdf",
+        "size": 13,
+        "kind": "requirement_source",
+        "uploadedAt": "2027-06-14T14:50:13.803",
+        "mime": "application/pdf",
+        "extractedRequirements": [
+          {
+            "id": "MS-01",
+            "text": "Obligation: the institution shall apply a PD add-on of 5% until the definition-of-default remediation is completed.",
+            "source_doc": "UPLOAD:ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt).pdf",
+            "article": "ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt)",
+            "category": "governance",
+            "check_type": "ai",
+            "applicability_rationale": "Extracted from uploaded supervisory decision; applies to MDL-01 specifically.",
+            "layer": "model_specific",
+            "origin": "upload"
+          },
+          {
+            "id": "MS-02",
+            "text": "Limitation: the model shall not be applied to buy-to-let mortgages.",
+            "source_doc": "UPLOAD:ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt).pdf",
+            "article": "ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt)",
+            "category": "governance",
+            "check_type": "ai",
+            "applicability_rationale": "Extracted from uploaded supervisory decision; applies to MDL-01 specifically.",
+            "layer": "model_specific",
+            "origin": "upload"
+          }
+        ]
+      },
+      {
+        "id": "UPL-MUMOETKVYHQW",
+        "name": "MDD PD-MORT-NL v4.pdf",
+        "size": 2411724,
+        "kind": "evidence",
+        "uploadedAt": "2027-06-14T14:52:18.367",
+        "mime": "application/pdf"
+      }
+    ],
+    "lockedAt": "2027-06-14T14:50:26.026",
+    "lockedBy": "Sanne de Vries"
+  },
+  "requirements": [
+    {
+      "id": "REQ-D01",
+      "text": "The RDS covers at least 5 years of historical data for retail PD estimation.",
+      "source_doc": "EXT-CRR-IRB",
+      "article": "CRR Art. 180(2)(e)",
+      "category": "data",
+      "check_type": "ai+script",
+      "applicability_rationale": "Retail PD model; observation period set in RDS.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D02",
+      "text": "The observation period covers a representative mix of good and bad years, including a downturn.",
+      "source_doc": "EXT-ECB-GIM",
+      "article": "ECB guide to internal models – credit risk, LRA calibration",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "PD calibrated to long-run average; window choice documented in RDS.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D07",
+      "text": "Default is defined as > 90 dpd above the materiality threshold (EUR 100 absolute and 1% relative) or unlikeliness to pay.",
+      "source_doc": "EXT-RTS-MAT",
+      "article": "CRR Art. 178; RTS 2018/171; EBA/GL/2016/07",
+      "category": "data",
+      "check_type": "ai+script",
+      "applicability_rationale": "IRB model; default flag constructed in RDS.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D08",
+      "text": "Unlikeliness-to-pay triggers are documented and applied consistently.",
+      "source_doc": "EXT-EBA-DOD",
+      "article": "EBA/GL/2016/07 section 5",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Default flag construction.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D09",
+      "text": "Probation (cure) periods are applied before a facility returns to non-default status.",
+      "source_doc": "EXT-EBA-DOD",
+      "article": "EBA/GL/2016/07 section 7",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Default flag construction, multiple defaults.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D12a",
+      "text": "Every exclusion from the RDS has a documented reason.",
+      "source_doc": "EXT-EBA-PDLGD",
+      "article": "EBA/GL/2017/16 – data requirements",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Exclusions applied in RDS.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D12b",
+      "text": "Every exclusion is quantified (facilities, share of population, defaults).",
+      "source_doc": "EXT-EBA-PDLGD",
+      "article": "EBA/GL/2017/16 – data requirements",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Exclusions applied in RDS.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D12c",
+      "text": "The impact of exclusions on representativeness is analysed.",
+      "source_doc": "EXT-EBA-PDLGD",
+      "article": "EBA/GL/2017/16 – representativeness",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Exclusions applied in RDS.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D15",
+      "text": "The RDS is representative of the current portfolio (risk drivers and default-rate levels).",
+      "source_doc": "EXT-CRR-IRB",
+      "article": "CRR Art. 179(1)(d); EBA/GL/2017/16",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Material change; portfolio composition shifted since v3.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D18",
+      "text": "Data quality is assessed on completeness, accuracy, consistency and timeliness.",
+      "source_doc": "INT-STD-DQ",
+      "article": "MRM-STD-022 §3; BCBS 239 principles 3–5",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "All model RDS components.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D19",
+      "text": "Lineage from source systems to the RDS is documented for every variable.",
+      "source_doc": "INT-POL-DATA",
+      "article": "DATA-POL-001 §5",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "All model RDS components.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D21",
+      "text": "Data deficiencies are identified and linked to a Margin of Conservatism category.",
+      "source_doc": "EXT-CRR-IRB",
+      "article": "CRR Art. 179(1)(f); EBA/GL/2017/16 section 4.4; CRM-STD-101",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "IRB model with known data deficiencies.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D22",
+      "text": "Treatment of missing values and outliers is documented and justified.",
+      "source_doc": "EXT-EBA-PDLGD",
+      "article": "EBA/GL/2017/16 – data requirements",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "RDS variables with missing values.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D25",
+      "text": "Personal data use is minimised and covered by a DPIA.",
+      "source_doc": "EXT-GDPR",
+      "article": "GDPR Art. 5(1)(c) and 35; PRIV-POL-001",
+      "category": "governance",
+      "check_type": "ai",
+      "applicability_rationale": "RDS contains personal data.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D26",
+      "text": "Protected attributes are excluded and proxy variables are screened.",
+      "source_doc": "INT-POL-CREDIT",
+      "article": "CR-POL-001 §9 (fair treatment)",
+      "category": "data",
+      "check_type": "ai",
+      "applicability_rationale": "Retail customers; candidate variables include postcode.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D30",
+      "text": "The RDS build is reproducible from versioned code.",
+      "source_doc": "INT-STD-DOC",
+      "article": "MRM-STD-021 §4.2",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "applicability_rationale": "All models.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-D31",
+      "text": "Expert judgement applied in data treatment is documented and approved.",
+      "source_doc": "INT-STD-EJ",
+      "article": "MRM-STD-023 §2",
+      "category": "governance",
+      "check_type": "ai",
+      "applicability_rationale": "Expert adjustments in default-flag approximation.",
+      "layer": "shared"
+    },
+    {
+      "id": "REQ-G01",
+      "text": "The document follows the RDS template and is version-controlled with approvals.",
+      "source_doc": "INT-STD-DOC",
+      "article": "MRM-STD-021 §2",
+      "category": "documentation",
+      "check_type": "ai",
+      "applicability_rationale": "All model documentation.",
+      "layer": "shared"
+    },
+    {
+      "id": "MS-01",
+      "text": "Obligation: the institution shall apply a PD add-on of 5% until the definition-of-default remediation is completed.",
+      "source_doc": "UPLOAD:ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt).pdf",
+      "article": "ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt)",
+      "category": "governance",
+      "check_type": "ai",
+      "applicability_rationale": "Extracted from uploaded supervisory decision; applies to MDL-01 specifically.",
+      "layer": "model_specific",
+      "origin": "upload"
+    }
+  ],
+  "documents": [
+    {
+      "id": "EVD-01-RDS",
+      "version": "1.0",
+      "title": "Dataset Construction and DQ Assessment – Residential Real Estate Mortgages",
+      "sections": [
+        {
+          "section": "1",
+          "heading": "Purpose and scope",
+          "text": "This document describes the construction of the reference data set (RDS) for the PD-MORT-NL v4 model and the assessment of its data quality. It follows the RDS template of MRM-STD-021 and was approved by the Head of Retail Credit Risk Modelling on 12 June 2027 (document version 1.0)."
+        },
+        {
+          "section": "2.1",
+          "heading": "Observation period",
+          "text": "The reference data set covers monthly snapshots from January 2012 to December 2024, totalling 9.6 million account-months for 780,000 unique facilities."
+        },
+        {
+          "section": "2.2",
+          "heading": "Choice of observation window",
+          "text": "The window was chosen to maximise the available history after the migration to the current mortgage administration system in 2011. It includes the 2012–2013 housing market downturn and the low-default period 2016–2021."
+        },
+        {
+          "section": "3.3",
+          "heading": "Default definition",
+          "text": "A facility is flagged as defaulted when it is more than 90 days past due above a materiality threshold of EUR 100 absolute and 1% relative, or when an unlikeliness-to-pay trigger is met."
+        },
+        {
+          "section": "3.4",
+          "heading": "Unlikeliness-to-pay triggers",
+          "text": "UTP triggers comprise distressed restructuring, forced sale of the collateral, bankruptcy of the obligor and specific credit risk adjustments. Triggers are sourced from the arrears management system and applied at obligor level."
+        },
+        {
+          "section": "4.1",
+          "heading": "Data sources and lineage",
+          "text": "All 38 candidate variables are sourced from the mortgage administration system, the arrears management system and the collateral valuation database. Lineage from source table to RDS field is documented in Annex A for every variable."
+        },
+        {
+          "section": "4.2",
+          "heading": "Exclusions",
+          "text": "Loans with incomplete collateral information were excluded from the RDS (3,412 facilities, 0.4% of the population; 61 defaults). Facilities originated under the former brand portfolio were excluded (1,208 facilities, 0.15%; 9 defaults) because origination data is unavailable. The combined exclusions affect the long-run default rate by +0.01pp."
+        },
+        {
+          "section": "4.3",
+          "heading": "Missing values and outliers",
+          "text": "Missing values for debt-to-income at origination (2.3%) are imputed with the segment median; outliers in indexed LTV above 250% are capped. Both treatments are justified in Annex C."
+        },
+        {
+          "section": "5.1",
+          "heading": "Representativeness",
+          "text": "Population stability between the RDS and the current portfolio was assessed using the PSI on loan-to-value bucket, loan age and interest-only share (PSI 0.04–0.06). Annex B adds a comparison of the full LTV distribution."
+        },
+        {
+          "section": "5.3",
+          "heading": "Impact of exclusions",
+          "text": "Excluded loans show a comparable LTV distribution to retained loans (PSI 0.03) and a comparable default rate (0.47% vs 0.45%); the exclusions are therefore not expected to affect representativeness."
+        },
+        {
+          "section": "6.1",
+          "heading": "Data quality assessment",
+          "text": "Completeness and accuracy were assessed for all 38 variables using the DQ rules of MRM-STD-022. Consistency was checked across the three source systems. All critical data elements pass the thresholds."
+        },
+        {
+          "section": "6.2",
+          "heading": "Data deficiencies",
+          "text": "The default flag for 2012–2015 was approximated from arrears data prior to the implementation of the new definition of default. Probation periods could not be reconstructed for this period."
+        },
+        {
+          "section": "7",
+          "heading": "Personal data and fair treatment",
+          "text": "The RDS contains personal data processed under the legal obligation of the CRR; a DPIA was completed (DPIA-2026-118). Nationality and gender are excluded. Postcode was assessed as a potential proxy and is only used at regional level within the house-price index."
+        },
+        {
+          "section": "8",
+          "heading": "Reproducibility",
+          "text": "The RDS is built by versioned code in repository rds-mort-nl (tag v4.0.0). A full rebuild reproduces the RDS row count and default count exactly."
+        }
+      ]
+    },
+    {
+      "id": "EVD-01-MDD",
+      "version": "4.0",
+      "title": "Model Development Document PD-MORT-NL v4",
+      "sections": [
+        {
+          "section": "7.2",
+          "heading": "Margin of Conservatism",
+          "text": "The approximation of the default flag for 2012–2015 is treated as a category A data deficiency. A MoC of +6% relative is applied to the long-run average default rate."
+        }
+      ]
+    }
+  ],
+  "matrix1lod": [
+    {
+      "requirementId": "REQ-D01",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "2.1",
+          "quote": "monthly snapshots from January 2012 to December 2024"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "good"
+        },
+        "notes": {
+          "verifiability": "Script CC-01 confirmed 2012-01 to 2024-12 on the RDS table."
+        }
+      },
+      "confidence": "high",
+      "rationale": "13 years of history documented and confirmed by a deterministic check on the RDS table.",
+      "mitigation": null,
+      "script": {
+        "id": "CC-01",
+        "result": "pass",
+        "detail": "min(snapshot)=2012-01, max(snapshot)=2024-12 → 13.0 years"
+      },
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D02",
+      "verdict": "partial",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "2.2",
+          "quote": "includes the 2012–2013 housing market downturn"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "weak",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "coverage": "Downturn mentioned, but no analysis of why the mix of good and bad years is representative of the long run."
+        }
+      },
+      "confidence": "medium",
+      "rationale": "The window includes a downturn, but the document does not demonstrate that the share of bad years is representative for long-run average calibration.",
+      "mitigation": {
+        "type": "remediation",
+        "text": "Add a comparison of the observed default rate per year against a longer macro series (e.g. HPI and unemployment 2000–2024) to justify representativeness of the window."
+      },
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:39.259",
+        "decision": "accepted",
+        "reason": "Remediation planned: macro comparison to be added in v1.1."
+      }
+    },
+    {
+      "requirementId": "REQ-D07",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "3.3",
+          "quote": "more than 90 days past due above a materiality threshold of EUR 100 absolute and 1% relative"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "bad"
+        },
+        "notes": {
+          "verifiability": "Code repository not linked to this run; implementation of the threshold cannot be confirmed."
+        }
+      },
+      "confidence": "low",
+      "rationale": "The documented definition matches CRR Art. 178 and RTS 2018/171. Confidence is lowered because only the documentation was assessed.",
+      "mitigation": {
+        "type": "verification",
+        "text": "Link repository rds-mort-nl and run script check CC-03 (materiality threshold in default-flag code)."
+      },
+      "script": null,
+      "decision": {
+        "decision": "accepted",
+        "reason": "Documentation matches regulation; code check out of scope for RDS document.",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:16.958"
+      }
+    },
+    {
+      "requirementId": "REQ-D08",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "3.4",
+          "quote": "UTP triggers comprise distressed restructuring, forced sale of the collateral, bankruptcy"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "UTP triggers listed and applied at obligor level.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D09",
+      "verdict": "not_found",
+      "citations": [],
+      "confidenceFactors": {
+        "levels": {
+          "match": "bad",
+          "coverage": "bad",
+          "location": "bad",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "match": "No passage on probation or cure periods for the period after 2016.",
+          "consistency": "§6.2 states probation periods could not be reconstructed for 2012–2015 only."
+        }
+      },
+      "confidence": "low",
+      "rationale": "The document is silent on probation periods after 2016. Evidence may exist in the Definition of Default implementation memo.",
+      "mitigation": {
+        "type": "verification",
+        "text": "Upload the DoD implementation memo (CR-STD-110 implementation) or add a paragraph describing the probation logic after 2016."
+      },
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:39.259",
+        "decision": "edited",
+        "finalVerdict": "compliant",
+        "reason": "Probation logic described in DoD implementation memo (uploaded)."
+      }
+    },
+    {
+      "requirementId": "REQ-D12a",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "4.2",
+          "quote": "Loans with incomplete collateral information were excluded"
+        },
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "4.2",
+          "quote": "origination data is unavailable"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "A reason is documented for both exclusion categories.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D12b",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "4.2",
+          "quote": "3,412 facilities, 0.4% of the population; 61 defaults"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Both exclusions quantified in facilities, share and defaults.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D12c",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "5.3",
+          "quote": "comparable default rate (0.47% vs 0.45%)"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "weak",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "location": "Evidence in §5.3 instead of the template location §4.2."
+        }
+      },
+      "confidence": "medium",
+      "rationale": "Impact on representativeness analysed on LTV distribution and default rate.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:39.259",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D15",
+      "verdict": "partial",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "5.1",
+          "quote": "PSI on loan-to-value bucket, loan age and interest-only share"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "weak",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "coverage": "Risk-driver distributions covered; default-rate levels between RDS and current portfolio not compared."
+        }
+      },
+      "confidence": "medium",
+      "rationale": "Representativeness is shown for three risk drivers and the LTV distribution, but not for default-rate levels.",
+      "mitigation": {
+        "type": "remediation",
+        "text": "Add a comparison of default rates per segment between the RDS and the most recent 3 years of the current portfolio."
+      },
+      "script": null,
+      "decision": {
+        "decision": "edited",
+        "finalVerdict": "compliant",
+        "reason": "LTV comparison added in Annex B",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:38.253"
+      }
+    },
+    {
+      "requirementId": "REQ-D18",
+      "verdict": "partial",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "6.1",
+          "quote": "Completeness and accuracy were assessed for all 38 variables"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "weak",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "coverage": "Timeliness dimension not addressed."
+        }
+      },
+      "confidence": "medium",
+      "rationale": "Three of four DQ dimensions assessed; timeliness missing.",
+      "mitigation": {
+        "type": "remediation",
+        "text": "Add refresh-lag analysis per source system (timeliness dimension of MRM-STD-022)."
+      },
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:39.259",
+        "decision": "accepted",
+        "reason": "Timeliness analysis to be added in v1.1."
+      }
+    },
+    {
+      "requirementId": "REQ-D19",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "4.1",
+          "quote": "Lineage from source table to RDS field is documented in Annex A for every variable"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Lineage documented for all 38 variables.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D21",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-MDD",
+          "version": "4.0",
+          "section": "7.2",
+          "quote": "treated as a category A data deficiency. A MoC of +6% relative is applied to the long-run average default rate"
+        },
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "6.2",
+          "quote": "The default flag for 2012–2015 was approximated"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "weak",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "location": "Link to MoC category found in the MDD (§7.2), not in the RDS document itself.",
+          "verifiability": "Documentation only — quantification of the +6% not re-performed in this run."
+        }
+      },
+      "confidence": "medium",
+      "rationale": "The deficiency identified in RDS §6.2 is linked to MoC category A with a quantified +6% relative add-on in MDD §7.2.",
+      "mitigation": null,
+      "script": null,
+      "reassessedAt": "2027-06-14T14:52:20.373",
+      "decision": {
+        "decision": "accepted",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:30.153"
+      }
+    },
+    {
+      "requirementId": "REQ-D22",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "4.3",
+          "quote": "imputed with the segment median"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Missing value and outlier treatment documented and justified in Annex C.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D25",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "7",
+          "quote": "a DPIA was completed (DPIA-2026-118)"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Legal basis and DPIA referenced.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D26",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "7",
+          "quote": "Postcode was assessed as a potential proxy"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Protected attributes excluded; proxy screening documented for postcode.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D30",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "8",
+          "quote": "A full rebuild reproduces the RDS row count and default count exactly"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Build is versioned and reproducible.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "REQ-D31",
+      "verdict": "partial",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "6.2",
+          "quote": "approximated from arrears data"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "weak",
+          "coverage": "weak",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "coverage": "The approximation is an expert judgement; approval and challenge are not documented."
+        }
+      },
+      "confidence": "low",
+      "rationale": "Expert judgement in the default-flag approximation is described but its approval is not documented.",
+      "mitigation": {
+        "type": "remediation",
+        "text": "Record the approximation in the expert judgement log with approver and date (MRM-STD-023)."
+      },
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:39.259",
+        "decision": "accepted",
+        "reason": "EJ log entry to be added."
+      }
+    },
+    {
+      "requirementId": "REQ-G01",
+      "verdict": "compliant",
+      "citations": [
+        {
+          "doc": "EVD-01-RDS",
+          "version": "1.0",
+          "section": "1",
+          "quote": "approved by the Head of Retail Credit Risk Modelling on 12 June 2027"
+        }
+      ],
+      "confidenceFactors": {
+        "levels": {
+          "match": "good",
+          "coverage": "good",
+          "location": "good",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {}
+      },
+      "confidence": "high",
+      "rationale": "Template followed; version and approval recorded.",
+      "mitigation": null,
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-13T09:41:00",
+        "decision": "accepted"
+      }
+    },
+    {
+      "requirementId": "MS-01",
+      "verdict": "not_found",
+      "citations": [],
+      "confidenceFactors": {
+        "levels": {
+          "match": "bad",
+          "coverage": "bad",
+          "location": "bad",
+          "consistency": "good",
+          "verifiability": "weak"
+        },
+        "notes": {
+          "match": "No passage in the RDS document addresses this obligation."
+        }
+      },
+      "confidence": "low",
+      "rationale": "The RDS document does not address this model-specific obligation; evidence is expected outside the RDS (e.g. MDD calibration chapter or model use policy).",
+      "mitigation": {
+        "type": "justification",
+        "text": "Explain why this obligation is evidenced outside the RDS documentation component (reference the MDD section), or add a cross-reference."
+      },
+      "script": null,
+      "decision": {
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T14:52:39.259",
+        "decision": "edited",
+        "finalVerdict": "not_applicable",
+        "reason": "Evidenced outside the RDS component: PD add-on applied at calibration (MDD §7)."
+      }
+    }
+  ],
+  "statement": "I confirm this self-assessment reflects the model documentation as submitted."
+}

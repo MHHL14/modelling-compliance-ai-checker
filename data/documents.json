@@ -1,0 +1,1785 @@
+[
+ {
+  "id": "EXT-CRR-IRB",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "Capital Requirements Regulation – IRB approach (Part Three, Title II, Chapter 3, Art. 142–191)",
+  "issuer": "EU",
+  "reference": "Regulation (EU) No 575/2013 as amended by Regulation (EU) 2024/1623 (CRR3)",
+  "version_date": "CRR3 applicable from 2025-01-01",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "rating systems",
+   "data requirements (Art. 179–181)",
+   "definition of default (Art. 178)",
+   "use test (Art. 144)",
+   "validation (Art. 185)",
+   "PD/LGD input floors",
+   "roll-out and permanent partial use"
+  ],
+  "extraction_priority": "high",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2013/575/oj",
+  "notes": null
+ },
+ {
+  "id": "EXT-CRR-MKT",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "Capital Requirements Regulation – Market risk alternative internal model approach (Part Three, Title IV, Chapter 1b)",
+  "issuer": "EU",
+  "reference": "Regulation (EU) No 575/2013 as amended by Regulation (EU) 2024/1623 (CRR3)",
+  "version_date": "EU application of FRTB own-funds requirements postponed – verify current date",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "market_ima"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "expected shortfall",
+   "non-modellable risk factors",
+   "backtesting",
+   "P&L attribution",
+   "desk-level approval"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-CRR-PV",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "Capital Requirements Regulation – Prudent valuation (Art. 34 and 105)",
+  "issuer": "EU",
+  "reference": "Regulation (EU) No 575/2013",
+  "version_date": "Consolidated",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "valuation"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "prudent valuation",
+   "valuation adjustments"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-CRD-101",
+  "category": "external",
+  "type": "eu_directive",
+  "title": "Capital Requirements Directive – ongoing review of internal approaches (Art. 101) and supervisory benchmarking (Art. 78)",
+  "issuer": "EU",
+  "reference": "Directive 2013/36/EU as amended by Directive (EU) 2024/1619 (CRD6)",
+  "version_date": "Consolidated",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irb",
+    "market_ima"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "ongoing review of permission",
+   "benchmarking"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-RTS-MAT",
+  "category": "external",
+  "type": "eu_delegated_reg",
+  "title": "RTS on the materiality threshold for credit obligations past due",
+  "issuer": "European Commission",
+  "reference": "Commission Delegated Regulation (EU) 2018/171",
+  "version_date": "2018",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irb",
+    "ifrs9"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "absolute and relative materiality threshold",
+   "days past due counting"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-RTS-ASSESS",
+  "category": "external",
+  "type": "eu_delegated_reg",
+  "title": "RTS on the assessment methodology for compliance with the IRB approach",
+  "issuer": "European Commission",
+  "reference": "Commission Delegated Regulation (EU) 2022/439",
+  "version_date": "2022",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "assessment of rating systems",
+   "data quality",
+   "validation function",
+   "use test"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-RTS-DLGD",
+  "category": "external",
+  "type": "eu_delegated_reg",
+  "title": "RTS specifying the nature, severity and duration of an economic downturn",
+  "issuer": "European Commission",
+  "reference": "Commission Delegated Regulation (EU) 2021/930",
+  "version_date": "2021",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irb_lgd",
+    "irb_ead"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "downturn identification",
+   "macroeconomic indicators"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-RTS-MMC",
+  "category": "external",
+  "type": "eu_delegated_reg",
+  "title": "RTS on assessing the materiality of extensions and changes of the IRB and AMA",
+  "issuer": "European Commission",
+  "reference": "Commission Delegated Regulation (EU) No 529/2014",
+  "version_date": "2014 (check for CRR3 successor RTS)",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "material vs non-material change",
+   "ex-ante / ex-post notification"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": "CRR3 mandates updated RTS on model changes; verify whether a successor has been adopted."
+ },
+ {
+  "id": "EXT-RTS-IRRBB-SOT",
+  "category": "external",
+  "type": "eu_delegated_reg",
+  "title": "RTS on supervisory outlier tests for IRRBB",
+  "issuer": "European Commission",
+  "reference": "Commission Delegated Regulation (EU) 2024/856",
+  "version_date": "2024",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "irrbb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "EVE and NII outlier tests",
+   "behavioural assumptions"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-AIACT",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "Artificial Intelligence Act",
+  "issuer": "EU",
+  "reference": "Regulation (EU) 2024/1689 as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI)",
+  "version_date": "Annex III high-risk obligations apply from 2027-12-02; Art. 50 transparency from 2026-08-02",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "ml",
+    "genai",
+    "natural_person_credit"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "AI system definition",
+   "Annex III 5(b) creditworthiness of natural persons",
+   "risk management",
+   "data governance (Art. 10)",
+   "human oversight",
+   "transparency (Art. 50)",
+   "AI literacy (Art. 4)"
+  ],
+  "extraction_priority": "high",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+  "notes": null
+ },
+ {
+  "id": "EXT-GDPR",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "General Data Protection Regulation",
+  "issuer": "EU",
+  "reference": "Regulation (EU) 2016/679",
+  "version_date": "2016",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "personal_data"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "lawful basis",
+   "data minimisation",
+   "DPIA (Art. 35)",
+   "automated decision-making (Art. 22)"
+  ],
+  "extraction_priority": "medium",
+  "source_url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+  "notes": null
+ },
+ {
+  "id": "EXT-AMLR",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "Anti-Money Laundering Regulation (single rulebook)",
+  "issuer": "EU",
+  "reference": "Regulation (EU) 2024/1624",
+  "version_date": "Applies from 2027-07-10",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "aml"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "customer due diligence",
+   "risk-based approach",
+   "transaction monitoring",
+   "customer risk assessment"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-PSD2-RTS",
+  "category": "external",
+  "type": "eu_delegated_reg",
+  "title": "RTS on strong customer authentication – transaction monitoring mechanisms",
+  "issuer": "European Commission",
+  "reference": "Commission Delegated Regulation (EU) 2018/389 (under PSD2, Directive (EU) 2015/2366)",
+  "version_date": "2018",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "fraud"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "transaction monitoring (Art. 2)",
+   "risk-based exemptions (TRA)",
+   "fraud rate calculation"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-MCD",
+  "category": "external",
+  "type": "eu_directive",
+  "title": "Mortgage Credit Directive – creditworthiness assessment",
+  "issuer": "EU",
+  "reference": "Directive 2014/17/EU (Art. 18–20)",
+  "version_date": "2014",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "mortgage_origination"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "creditworthiness assessment",
+   "verification of information",
+   "non-discrimination"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-DORA",
+  "category": "external",
+  "type": "eu_regulation",
+  "title": "Digital Operational Resilience Act",
+  "issuer": "EU",
+  "reference": "Regulation (EU) 2022/2554",
+  "version_date": "Applies from 2025-01-17",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "third_party_ai"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "ICT third-party risk",
+   "register of information",
+   "ICT risk management"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-WWFT",
+  "category": "external",
+  "type": "national_law",
+  "title": "Wet ter voorkoming van witwassen en financieren van terrorisme (Wwft)",
+  "issuer": "NL",
+  "reference": "Wwft",
+  "version_date": "Consolidated",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "aml"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "customer due diligence",
+   "unusual transaction reporting"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-DNB-WWFT",
+  "category": "external",
+  "type": "supervisory_guidance",
+  "title": "DNB Guidance on the Wwft and the Sanctions Act",
+  "issuer": "De Nederlandsche Bank",
+  "reference": "DNB Leidraad Wwft en Sw",
+  "version_date": "Latest DNB version",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "aml"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "transaction monitoring expectations",
+   "risk-based customer assessment"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-DOD",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on the application of the definition of default",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2016/07",
+  "version_date": "2016 (applies from 2021-01-01)",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "irb",
+    "ifrs9"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "days past due",
+   "unlikeliness to pay",
+   "probation periods",
+   "consistency across entities"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-PDLGD",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on PD estimation, LGD estimation and the treatment of defaulted exposures",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2017/16",
+  "version_date": "2017 (applies from 2021-01-01)",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "irb_pd",
+    "irb_lgd"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "RDS and data requirements",
+   "representativeness",
+   "risk differentiation",
+   "calibration to long-run average",
+   "margin of conservatism",
+   "ELBE and LGD in-default"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-DLGD",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines for the estimation of LGD appropriate for an economic downturn",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2019/03",
+  "version_date": "2019",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "irb_lgd"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "downturn LGD approaches",
+   "reference value"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-CRM",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on credit risk mitigation for institutions applying the IRB approach with own LGD estimates",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2020/05",
+  "version_date": "2020",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "irb_lgd"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "recognition of collateral",
+   "guarantees in LGD"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-ECL",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on credit institutions' credit risk management practices and accounting for expected credit losses",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2017/06",
+  "version_date": "2017",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "ifrs9"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "ECL methodology governance",
+   "forward-looking information",
+   "SICR"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-LOM",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on loan origination and monitoring",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2020/06",
+  "version_date": "2020",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "credit_origination",
+    "mortgage_origination"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "creditworthiness assessment",
+   "automated models in credit decisioning",
+   "model explainability"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-ST",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on institutions' stress testing",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2018/04",
+  "version_date": "2018",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "stress_test",
+    "icaap"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "scenario design",
+   "methodologies",
+   "governance"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-IRRBB",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on IRRBB and CSRBB",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2022/14",
+  "version_date": "2022",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "irrbb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "behavioural assumptions",
+   "prepayment",
+   "non-maturity deposits",
+   "model validation"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-ESG",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on the management of ESG risks",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2025/01",
+  "version_date": "Applies from 2026-01-11 (non-SNCI)",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "climate"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "materiality assessment",
+   "measurement methodologies",
+   "transition planning"
+  ],
+  "extraction_priority": "medium",
+  "source_url": "https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/sustainable-finance/guidelines-management-esg-risks",
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-ESGSA",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on environmental scenario analysis",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2025/04",
+  "version_date": "2025",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "climate"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "scenario analysis",
+   "climate stress testing methodology"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-OUTS",
+  "category": "external",
+  "type": "eba_guideline",
+  "title": "Guidelines on outsourcing arrangements",
+  "issuer": "EBA",
+  "reference": "EBA/GL/2019/02",
+  "version_date": "2019",
+  "binding_level": "comply_or_explain",
+  "applicability": {
+   "any": [
+    "third_party_ai"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "critical outsourcing",
+   "due diligence",
+   "exit strategies"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-VALHB",
+  "category": "external",
+  "type": "eba_report",
+  "title": "Supervisory handbook on the validation of IRB rating systems",
+  "issuer": "EBA",
+  "reference": "EBA supervisory handbook (2023)",
+  "version_date": "2023",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "validation scope",
+   "independence",
+   "validation tests"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-EBA-MLIRB",
+  "category": "external",
+  "type": "eba_report",
+  "title": "Follow-up report on machine learning for IRB models",
+  "issuer": "EBA",
+  "reference": "EBA report (2023)",
+  "version_date": "2023",
+  "binding_level": "reference",
+  "applicability": {
+   "any": [],
+   "all": [
+    "irb",
+    "ml"
+   ]
+  },
+  "key_topics": [
+   "explainability",
+   "overfitting",
+   "use of ML in IRB"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-ECB-GIM",
+  "category": "external",
+  "type": "ecb_guide",
+  "title": "ECB guide to internal models",
+  "issuer": "ECB Banking Supervision",
+  "reference": "Version 4.0",
+  "version_date": "2025-07-28",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "irb",
+    "market_ima"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "overarching principles",
+   "data governance",
+   "MRM framework",
+   "credit risk: DoD and parameter estimation",
+   "machine learning expectations",
+   "market risk under CRR3",
+   "implementation of material changes within three months"
+  ],
+  "extraction_priority": "high",
+  "source_url": "https://www.bankingsupervision.europa.eu/ecb/pub/pdf/ssm.supervisory_guide202507.en.pdf",
+  "notes": null
+ },
+ {
+  "id": "EXT-ECB-VALREP",
+  "category": "external",
+  "type": "ecb_instruction",
+  "title": "Instructions for reporting the validation results of internal models (credit risk)",
+  "issuer": "ECB Banking Supervision",
+  "reference": "Validation reporting instructions and templates",
+  "version_date": "2019 (templates updated periodically)",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "standard validation tests",
+   "reporting templates",
+   "test thresholds"
+  ],
+  "extraction_priority": "high",
+  "source_url": "https://www.bankingsupervision.europa.eu/activities/internal_models/omm/html/index.en.html",
+  "notes": null
+ },
+ {
+  "id": "EXT-ECB-ICAAP",
+  "category": "external",
+  "type": "ecb_guide",
+  "title": "ECB Guide to the internal capital adequacy assessment process (ICAAP)",
+  "issuer": "ECB Banking Supervision",
+  "reference": "ECB ICAAP Guide",
+  "version_date": "2018",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "icaap",
+    "stress_test"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "capital adequacy perspectives",
+   "stress testing",
+   "risk quantification"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-ECB-CE",
+  "category": "external",
+  "type": "ecb_guide",
+  "title": "ECB Guide on climate-related and environmental risks",
+  "issuer": "ECB Banking Supervision",
+  "reference": "ECB C&E Guide",
+  "version_date": "2020",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "climate"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "risk management",
+   "stress testing",
+   "disclosure"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-IFRS9",
+  "category": "external",
+  "type": "accounting_standard",
+  "title": "IFRS 9 Financial Instruments – impairment (Section 5.5)",
+  "issuer": "IASB",
+  "reference": "IFRS 9 as endorsed in the EU",
+  "version_date": "Consolidated",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "ifrs9"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "12-month vs lifetime ECL",
+   "SICR",
+   "forward-looking information",
+   "staging"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-IFRS13",
+  "category": "external",
+  "type": "accounting_standard",
+  "title": "IFRS 13 Fair Value Measurement",
+  "issuer": "IASB",
+  "reference": "IFRS 13 as endorsed in the EU",
+  "version_date": "Consolidated",
+  "binding_level": "binding_law",
+  "applicability": {
+   "any": [
+    "valuation"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "fair value hierarchy",
+   "valuation techniques"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-BCBS239",
+  "category": "external",
+  "type": "international_standard",
+  "title": "Principles for effective risk data aggregation and risk reporting",
+  "issuer": "Basel Committee",
+  "reference": "BCBS 239",
+  "version_date": "2013",
+  "binding_level": "supervisory_expectation",
+  "applicability": {
+   "any": [
+    "risk_reporting"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "data accuracy and integrity",
+   "completeness",
+   "lineage"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "EXT-SR117",
+  "category": "external",
+  "type": "international_reference",
+  "title": "Supervisory Guidance on Model Risk Management",
+  "issuer": "Federal Reserve / OCC",
+  "reference": "SR 11-7",
+  "version_date": "2011",
+  "binding_level": "reference",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "model definition",
+   "development, implementation and use",
+   "validation",
+   "governance"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": "US guidance; used as industry reference for MRM good practice."
+ },
+ {
+  "id": "EXT-PRA-SS123",
+  "category": "external",
+  "type": "international_reference",
+  "title": "Model risk management principles for banks",
+  "issuer": "PRA (UK)",
+  "reference": "SS1/23",
+  "version_date": "2023",
+  "binding_level": "reference",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "model identification and tiering",
+   "governance",
+   "model development",
+   "independent validation",
+   "risk mitigants"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": "UK guidance; used as industry reference for MRM good practice."
+ },
+ {
+  "id": "INT-POL-MRM",
+  "category": "internal",
+  "type": "policy",
+  "title": "Model Risk Management Policy",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-POL-001",
+  "version_date": "v5.0 (2026-03)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "model definition",
+   "roles 1LoD/2LoD/3LoD",
+   "tiering",
+   "lifecycle gates",
+   "approval authorities"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-DATA",
+  "category": "internal",
+  "type": "policy",
+  "title": "Data Management and Governance Policy",
+  "issuer": "Chief Data Office",
+  "reference": "DATA-POL-001",
+  "version_date": "v3.2 (2025-11)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "data ownership",
+   "critical data elements",
+   "lineage"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-CREDIT",
+  "category": "internal",
+  "type": "policy",
+  "title": "Credit Risk Policy",
+  "issuer": "Credit Risk Management",
+  "reference": "CR-POL-001",
+  "version_date": "v8.1 (2026-01)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "credit"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "credit risk appetite",
+   "rating assignment",
+   "overrides"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-AI",
+  "category": "internal",
+  "type": "policy",
+  "title": "Responsible AI Policy",
+  "issuer": "AI Governance Office",
+  "reference": "AI-POL-001",
+  "version_date": "v2.0 (2026-05)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "ml",
+    "genai"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "AI inventory",
+   "AI Act classification",
+   "human oversight",
+   "fairness",
+   "transparency"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-PRIV",
+  "category": "internal",
+  "type": "policy",
+  "title": "Privacy and Data Protection Policy",
+  "issuer": "Privacy Office",
+  "reference": "PRIV-POL-001",
+  "version_date": "v4.0 (2025-09)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "personal_data"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "DPIA",
+   "purpose limitation",
+   "retention"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-FEC",
+  "category": "internal",
+  "type": "policy",
+  "title": "Financial Economic Crime Policy",
+  "issuer": "Financial Crime Compliance",
+  "reference": "FEC-POL-001",
+  "version_date": "v6.0 (2026-02)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "aml",
+    "fraud"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "CDD",
+   "transaction monitoring",
+   "risk-based approach"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-CLIM",
+  "category": "internal",
+  "type": "policy",
+  "title": "Climate and Environmental Risk Policy",
+  "issuer": "Sustainability Risk",
+  "reference": "CER-POL-001",
+  "version_date": "v2.1 (2026-01)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "climate"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "materiality assessment",
+   "risk integration"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-POL-TPR",
+  "category": "internal",
+  "type": "policy",
+  "title": "Third-Party and Outsourcing Risk Policy",
+  "issuer": "Operational Risk",
+  "reference": "TPR-POL-001",
+  "version_date": "v3.0 (2025-06)",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "third_party_ai"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "vendor due diligence",
+   "exit plans",
+   "DORA register"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-INV",
+  "category": "internal",
+  "type": "standard",
+  "title": "Model Inventory and Tiering Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-010",
+  "version_date": "v2.3",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "model identification",
+   "materiality x complexity tiering",
+   "inventory fields"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-DEV",
+  "category": "internal",
+  "type": "standard",
+  "title": "Model Development Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-020",
+  "version_date": "v4.1",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "methodology selection",
+   "benchmarking",
+   "sensitivity analysis",
+   "limitations log"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-DOC",
+  "category": "internal",
+  "type": "standard",
+  "title": "Model Documentation Standard (incl. MDD and RDS templates)",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-021",
+  "version_date": "v3.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "mandatory sections",
+   "RDS documentation template",
+   "reproducibility"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-DQ",
+  "category": "internal",
+  "type": "standard",
+  "title": "Data Quality Standard for Models",
+  "issuer": "Chief Data Office / MRM",
+  "reference": "MRM-STD-022",
+  "version_date": "v2.2",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "DQ dimensions",
+   "DQ assessment",
+   "deficiency log"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-EJ",
+  "category": "internal",
+  "type": "standard",
+  "title": "Expert Judgement Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-023",
+  "version_date": "v1.4",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "documentation of judgement",
+   "challenge",
+   "approval"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-IMPL",
+  "category": "internal",
+  "type": "standard",
+  "title": "Model Implementation and Testing Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-030",
+  "version_date": "v2.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "implementation testing",
+   "UAT",
+   "parallel run",
+   "production reconciliation"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-MON",
+  "category": "internal",
+  "type": "standard",
+  "title": "Model Monitoring Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-040",
+  "version_date": "v3.1",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "KPIs and thresholds",
+   "annual review",
+   "triggers"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-CHG",
+  "category": "internal",
+  "type": "standard",
+  "title": "Model Change and Regulatory Notification Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-STD-050",
+  "version_date": "v2.4",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "change classification",
+   "regulatory notification",
+   "ECB application readiness"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-IRB",
+  "category": "internal",
+  "type": "standard",
+  "title": "IRB Rating System Standard (PD, LGD, EAD/CCF estimation)",
+  "issuer": "Credit Risk Modelling (1LoD) / MRM",
+  "reference": "CRM-STD-100",
+  "version_date": "v5.2",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "RDS construction",
+   "risk differentiation",
+   "calibration",
+   "master scale",
+   "floors"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-MOC",
+  "category": "internal",
+  "type": "standard",
+  "title": "Margin of Conservatism Standard",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "CRM-STD-101",
+  "version_date": "v2.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "MoC categories A/B/C",
+   "quantification",
+   "MoC monitoring"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-DOD",
+  "category": "internal",
+  "type": "standard",
+  "title": "Definition of Default Standard",
+  "issuer": "Credit Risk Management",
+  "reference": "CR-STD-110",
+  "version_date": "v3.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "irb",
+    "ifrs9"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "dpd counting",
+   "materiality thresholds",
+   "UTP triggers",
+   "probation"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-IFRS9",
+  "category": "internal",
+  "type": "standard",
+  "title": "IFRS 9 ECL Methodology Standard",
+  "issuer": "Finance / Credit Risk Modelling",
+  "reference": "FIN-STD-200",
+  "version_date": "v4.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "ifrs9"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "PD/LGD/EAD term structures",
+   "SICR criteria",
+   "forward-looking scenarios",
+   "overlays"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-ST",
+  "category": "internal",
+  "type": "standard",
+  "title": "Stress Testing and Scenario Modelling Standard",
+  "issuer": "Enterprise Risk Management",
+  "reference": "ERM-STD-300",
+  "version_date": "v2.2",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "stress_test",
+    "icaap",
+    "climate"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "scenario design",
+   "satellite models",
+   "governance"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-IRRBB",
+  "category": "internal",
+  "type": "standard",
+  "title": "IRRBB Behavioural Modelling Standard",
+  "issuer": "ALM / Treasury Risk",
+  "reference": "ALM-STD-400",
+  "version_date": "v2.1",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "irrbb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "prepayment",
+   "NMD replicating portfolio",
+   "behavioural assumptions"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-MKT",
+  "category": "internal",
+  "type": "standard",
+  "title": "Market Risk and Valuation Model Standard",
+  "issuer": "Market Risk Management",
+  "reference": "MR-STD-500",
+  "version_date": "v3.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "market_ima",
+    "valuation"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "ES methodology",
+   "risk factor modellability",
+   "valuation adjustments",
+   "XVA"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-FEC",
+  "category": "internal",
+  "type": "standard",
+  "title": "Financial Crime Model Standard",
+  "issuer": "Financial Crime Compliance / MRM",
+  "reference": "FEC-STD-600",
+  "version_date": "v1.8",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "aml",
+    "fraud"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "scenario tuning",
+   "above/below-the-line testing",
+   "alert quality",
+   "model coverage"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-ML",
+  "category": "internal",
+  "type": "standard",
+  "title": "Machine Learning Model Standard",
+  "issuer": "AI Governance Office / MRM",
+  "reference": "AI-STD-700",
+  "version_date": "v1.3",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "ml"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "explainability",
+   "fairness and bias testing",
+   "feature governance",
+   "drift monitoring"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-GENAI",
+  "category": "internal",
+  "type": "standard",
+  "title": "Generative AI Use Standard",
+  "issuer": "AI Governance Office",
+  "reference": "AI-STD-710",
+  "version_date": "v1.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "genai"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "use-case approval",
+   "prompt and model versioning",
+   "hallucination testing",
+   "human-in-the-loop",
+   "output labelling"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-STD-ACC",
+  "category": "internal",
+  "type": "standard",
+  "title": "Credit Acceptance and Scorecard Standard",
+  "issuer": "Retail Credit Risk",
+  "reference": "CR-STD-120",
+  "version_date": "v2.5",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "credit_origination",
+    "mortgage_origination"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "cut-offs",
+   "reject inference",
+   "overrides",
+   "non-discrimination"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-VAL-GEN",
+  "category": "internal",
+  "type": "validation_standard",
+  "title": "Model Validation Standard",
+  "issuer": "Model Validation (2LoD)",
+  "reference": "MV-STD-001",
+  "version_date": "v4.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "validation scope by tier",
+   "independence",
+   "conceptual soundness",
+   "replication",
+   "validation opinion"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-VAL-FIND",
+  "category": "internal",
+  "type": "validation_standard",
+  "title": "Validation Findings and Rating Standard",
+  "issuer": "Model Validation (2LoD)",
+  "reference": "MV-STD-002",
+  "version_date": "v2.1",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "finding severity",
+   "remediation deadlines",
+   "closure evidence"
+  ],
+  "extraction_priority": "medium",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-VAL-TEST",
+  "category": "internal",
+  "type": "validation_standard",
+  "title": "Validation Testing Handbook (statistical tests and thresholds)",
+  "issuer": "Model Validation (2LoD)",
+  "reference": "MV-HB-003",
+  "version_date": "v3.2",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "statistical",
+    "ml"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "discrimination (AUC/Gini)",
+   "calibration (binomial, Jeffreys)",
+   "stability (PSI)",
+   "backtesting"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-VAL-IRB",
+  "category": "internal",
+  "type": "validation_standard",
+  "title": "IRB Validation Standard (incl. ECB validation reporting)",
+  "issuer": "Model Validation (2LoD)",
+  "reference": "MV-STD-010",
+  "version_date": "v3.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "irb"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "initial and annual validation",
+   "ECB templates",
+   "MoC review"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-VAL-AI",
+  "category": "internal",
+  "type": "validation_standard",
+  "title": "AI and ML Validation Standard",
+  "issuer": "Model Validation (2LoD)",
+  "reference": "MV-STD-020",
+  "version_date": "v1.2",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "ml",
+    "genai"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "explainability testing",
+   "bias testing",
+   "LLM evaluation and hallucination testing",
+   "robustness"
+  ],
+  "extraction_priority": "high",
+  "source_url": null,
+  "notes": null
+ },
+ {
+  "id": "INT-GOV-MRC",
+  "category": "internal",
+  "type": "governance",
+  "title": "Model Risk Committee – Terms of Reference",
+  "issuer": "Model Risk Management (2LoD)",
+  "reference": "MRM-GOV-001",
+  "version_date": "v2.0",
+  "binding_level": "internal_mandatory",
+  "applicability": {
+   "any": [
+    "all_models"
+   ],
+   "all": []
+  },
+  "key_topics": [
+   "approval authorities",
+   "escalation",
+   "conditions tracking"
+  ],
+  "extraction_priority": "low",
+  "source_url": null,
+  "notes": null
+ }
+]

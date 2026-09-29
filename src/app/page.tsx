@@ -1,103 +1,83 @@
-import Image from "next/image";
+'use client';
+import { ArrowRight, BookOpen, ClipboardCheck, FlaskConical, ShieldCheck } from 'lucide-react';
+import Link from 'next/link';
+import { LineBadge } from '@/components/common/badges';
+import { LogoMark } from '@/components/shell/Logo';
+import { AiProviderBadge, PrototypeFlag } from '@/components/shell/WorkspaceShell';
+import { cn } from '@/lib/utils';
 
-export default function Home() {
+const CARDS = [
+  {
+    href: '/dev', line: '1lod' as const, title: 'Model Development – 1st line', persona: 'Sanne de Vries', role: 'Model Developer, Retail Credit Risk Modelling',
+    header: 'bg-green-800', icon: FlaskConical, purpose: 'Scope, draft-check, self-assess and submit models against the locked requirement set.',
+  },
+  {
+    href: '/val', line: '2lod' as const, title: 'Model Validation – 2nd line', persona: 'Pieter Bakker', role: 'Validator, Model Validation – Credit Risk',
+    header: 'bg-lod2', icon: ShieldCheck, purpose: 'Independent blind assessment, comparison with the 1st line, findings and validation opinion.',
+  },
+  {
+    href: '/library', line: 'library' as const, title: 'Requirement Library', persona: 'Fatima El Amrani', role: 'Library Owner, Model Risk Management',
+    header: 'bg-green-800 border-b-4 border-yellow', icon: BookOpen, purpose: 'Regulatory and internal documents, requirements, candidate requirements and change impact.',
+  },
+  {
+    href: '/audit', line: 'audit' as const, title: 'Audit (read-only)', persona: 'Internal Audit', role: '3rd line of defence',
+    header: 'bg-audit', icon: ClipboardCheck, purpose: 'Read-only audit trail across both lines: runs, decisions, packages, reveals and publications.',
+  },
+];
+
+export default function Landing() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-bg">
+      <header className="bg-green-900 text-white">
+        <div className="mx-auto flex h-14 max-w-[1200px] items-center gap-3 px-4">
+          <LogoMark />
+          <span className="text-[15px] font-semibold">Model Compliance Workbench</span>
+          <div className="ml-auto flex items-center gap-2.5">
+            <PrototypeFlag />
+            <AiProviderBadge />
+          </div>
         </div>
+      </header>
+      <main className="mx-auto max-w-[1200px] px-4 py-10">
+        <h1 className="text-3xl font-semibold tracking-tight text-ink">Choose workspace</h1>
+        <p className="mt-2 max-w-3xl text-ink-2">
+          AI drafts requirement sets, documentation text, filled matrices and findings — always with a cited source passage, an explained confidence and a proposed mitigating measure.
+          Humans decide. The 1st and 2nd line work in strictly separated workspaces and exchange only verified package files.
+        </p>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {CARDS.map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="group overflow-hidden rounded-[12px] border border-line bg-white shadow-sm transition-shadow hover:shadow-md focus-visible:outline-green-600"
+            >
+              <div className={cn('flex items-center justify-between px-5 py-4 text-white', c.header)}>
+                <span className="flex items-center gap-2.5">
+                  <c.icon className="size-5" aria-hidden />
+                  <span className="text-lg font-semibold">{c.title}</span>
+                </span>
+                <LineBadge line={c.line} />
+              </div>
+              <div className="px-5 py-4">
+                <p className="text-sm text-ink-2">{c.purpose}</p>
+                <div className="mt-4 flex items-center justify-between">
+                  <div className="text-sm">
+                    <div className="font-medium text-ink">{c.persona}</div>
+                    <div className="text-xs text-ink-2">{c.role} · fictional persona</div>
+                  </div>
+                  <span className="flex items-center gap-1 text-sm font-medium text-green-600 group-hover:gap-2 transition-all">
+                    Enter <ArrowRight className="size-4" aria-hidden />
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-6 rounded-lg border border-[#f0e19a] bg-yellow-100 px-4 py-3 text-sm text-yellow-ink">
+          <strong>Demo only</strong> — in production the workspace follows from your SSO entitlements; users cannot switch between lines.
+        </div>
+        <p className="mt-10 text-center text-xs text-ink-3">Prototype with illustrative, fictional data. Not affiliated with any bank.</p>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+{
+  "manifest": {
+    "packageType": "response",
+    "packageId": "RSP-MDL-01-20270614",
+    "modelId": "MDL-01",
+    "createdBy": "Sanne de Vries",
+    "line": "1lod",
+    "libraryVersion": "3.2",
+    "requirementSetId": "RS-2027-014",
+    "documentVersions": {
+      "EVD-01-RDS": "1.0",
+      "EVD-01-MDD": "4.0"
+    },
+    "createdAt": "2027-06-14T14:55:40.975",
+    "schemaVersion": "1.0",
+    "sha256": "7b0caa8feeb249ca7351a02a3a444bd3241bf30ef213038d37623791dcf644be"
+  },
+  "responses": [
+    {
+      "findingId": "F-07",
+      "plan": "Correct MAT_ABS in rds_build.py to EUR 100 (1% relative unchanged), rebuild the RDS for all vintages 2012–2024 and quantify the PD impact per rating grade. Owner: Sanne de Vries. Target date: 2027-09-15.",
+      "evidence": []
+    }
+  ]
+}
