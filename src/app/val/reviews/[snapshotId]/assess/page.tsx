@@ -72,6 +72,11 @@ export default function BlindAssess() {
       <Banner tone="blind" icon={<EyeOff className="size-4" aria-hidden />} className="mb-4">
         <strong>Blind mode — 1st line conclusions are hidden until you reveal them.</strong> The run receives only the frozen evidence documents and the requirement set (shared + validation layer).
       </Banner>
+      {run && !locked && run.rows.some((r) => !r.decision) && (
+        <Banner tone="warn" className="mb-4">
+          Decide every row before the reveal ({run.rows.filter((r) => r.decision).length}/{run.rows.length} decided). Bulk accept is available for high-confidence compliant rows after a sample check.
+        </Banner>
+      )}
       {locked && (
         <Banner tone="info" icon={<Lock className="size-4" aria-hidden />} className="mb-4">
           1st line matrix revealed {fmtDateTime(review.revealedAt)} — your blind assessments are locked.

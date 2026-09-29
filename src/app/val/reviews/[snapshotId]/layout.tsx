@@ -16,9 +16,9 @@ export default function ReviewLayout({ children }: { children: React.ReactNode }
     { key: 'overview', label: 'Overview', href: base, status: 'optional', note: 'Snapshot & manifest' },
     { key: 'scope', label: 'Scope', href: `${base}/scope`, status: review.run ? 'done' : 'current', note: `${review.validationLayer.length} validation-layer reqs` },
     { key: 'assess', label: 'Blind assessment', href: `${base}/assess`, status: review.revealedAt ? 'done' : review.run ? 'current' : 'todo', note: review.run ? `${decided}/${review.run.rows.length} decided` : 'Not run' },
-    { key: 'compare', label: 'Compare', href: `${base}/compare`, status: review.revealedAt ? 'done' : 'todo', note: review.revealedAt ? '1st line matrix revealed' : '1st line matrix hidden' },
+    { key: 'compare', label: 'Compare', href: `${base}/compare`, status: review.revealedAt ? 'done' : 'todo', note: review.revealedAt ? '1st line matrix revealed' : review.run && decided < review.run.rows.length ? 'Decide every row first' : '1st line matrix hidden' },
     { key: 'findings', label: 'Findings', href: `${base}/findings`, status: review.findingExports.length ? 'done' : review.findings.length ? 'current' : 'todo', note: `${review.findings.length - issued} draft · ${issued} issued` },
-    { key: 'opinion', label: 'Opinion', href: `${base}/opinion`, status: review.opinion?.issuedAt ? 'done' : 'todo', note: review.opinion?.issuedAt ? 'Issued' : 'Not issued' },
+    { key: 'opinion', label: 'Opinion', href: `${base}/opinion`, status: review.opinion?.issuedAt ? 'done' : review.findingExports.length ? 'current' : 'todo', note: review.opinion?.issuedAt ? 'Issued' : 'Not issued' },
   ];
   return (
     <DocViewerProvider docs={docs}>

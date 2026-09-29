@@ -27,6 +27,7 @@ export default function Compare() {
   const rows = useMemo(() => (review?.revealedAt && review.run ? triage(reqs, review.pkg.matrix1lod, review.run.rows) : []), [review, reqs]);
   if (!review) return null;
   const base = `/val/reviews/${encodeURIComponent(id)}`;
+  const undecided = review.run ? review.run.rows.filter((r) => !r.decision).length : 0;
 
   if (!review.revealedAt) {
     return (
@@ -39,13 +40,13 @@ export default function Compare() {
           icon={<Eye className="size-5" aria-hidden />}
           title="Reveal 1st line matrix"
           actions={
-            review.run ? (
+            review.run && undecided === 0 ? (
               <Button className="bg-lod2 hover:bg-lod2/90" onClick={() => setConfirm(true)}>
                 <Eye aria-hidden /> Reveal 1st line matrix
               </Button>
             ) : (
               <Button asChild variant="outline">
-                <Link href={`${base}/assess`}>Run the blind assessment first</Link>
+                <Link href={`${base}/assess`}>{review.run ? `Decide the remaining ${undecided} rows first` : 'Run the blind assessment first'}</Link>
               </Button>
             )
           }
@@ -67,9 +68,10 @@ export default function Compare() {
               <Button
                 className="bg-lod2 hover:bg-lod2/90"
                 onClick={() => {
-                  s.reveal(id);
+                  const ok = s.reveal(id);
                   setConfirm(false);
-                  toast('1st line matrix revealed — event logged in the audit trail');
+                  if (ok) toast('1st line matrix revealed — event logged in the audit trail');
+                  else toast.error('Every row needs your decision before the reveal.');
                 }}
               >
                 Reveal and lock blind assessments
