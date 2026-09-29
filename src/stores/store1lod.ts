@@ -339,6 +339,7 @@ export const use1lod = create<State1>()(
             excluded: Object.entries(c.excludedReasons).map(([id, reason]) => ({ id, reason })),
             addedDocuments: c.addedDocuments.map((d) => ({ docId: d.docId, reason: d.reason })), uploads: c.uploads,
             lockedAt: c.lockedAt, lockedBy: c.lockedBy, run: c.run!, sc, packageId: newPackageId('submission', c.modelId),
+            extraDocs: c.evidenceDocs.map((d) => ({ id: d.id, version: d.version, title: d.title, sections: d.sections })),
           });
         },
         recordSubmission: (caseId, s) => {

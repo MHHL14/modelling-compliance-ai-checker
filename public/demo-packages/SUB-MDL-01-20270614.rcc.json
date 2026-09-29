@@ -3,6 +3,7 @@
     "packageType": "submission",
     "packageId": "SUB-MDL-01-20270614",
     "modelId": "MDL-01",
+    "createdAt": "2027-06-14T16:12:19.475",
     "createdBy": "Sanne de Vries",
     "line": "1lod",
     "libraryVersion": "3.2",
@@ -11,14 +12,26 @@
       "EVD-01-RDS": "1.0",
       "EVD-01-MDD": "4.0"
     },
-    "createdAt": "2027-06-14T14:52:57.759",
     "schemaVersion": "1.0",
-    "sha256": "770d8df252e4c821ee350ebaecddecfdb3f1dccf8b6ebb9690fe1de6d3df38b9"
+    "sha256": "50c168e75048ab6efae457e1561d2a242aef75788403f1a1968676ef7167f13d"
   },
   "requirementSet": {
     "id": "RS-2027-014",
     "modelId": "MDL-01",
     "component": "RDS documentation",
+    "componentKey": "rds",
+    "tags": [
+      "all_models",
+      "capital",
+      "credit",
+      "irb",
+      "irb_pd",
+      "mortgage",
+      "personal_data",
+      "retail",
+      "risk_reporting",
+      "statistical"
+    ],
     "libraryVersion": "3.2",
     "requirementIds": [
       "REQ-D01",
@@ -50,11 +63,11 @@
     ],
     "uploads": [
       {
-        "id": "UPL-MUMOC5GRRL5A",
+        "id": "UPL-94444",
         "name": "ECB decision ECB-SSM-2025-NL-ABC-123 (excerpt).pdf",
-        "size": 13,
+        "size": 184320,
         "kind": "requirement_source",
-        "uploadedAt": "2027-06-14T14:50:13.803",
+        "uploadedAt": "2027-06-14T16:10:24.436",
         "mime": "application/pdf",
         "extractedRequirements": [
           {
@@ -82,15 +95,15 @@
         ]
       },
       {
-        "id": "UPL-MUMOETKVYHQW",
+        "id": "UPL-65608",
         "name": "MDD PD-MORT-NL v4.pdf",
-        "size": 2411724,
+        "size": 2411520,
         "kind": "evidence",
-        "uploadedAt": "2027-06-14T14:52:18.367",
+        "uploadedAt": "2027-06-14T16:11:25.590",
         "mime": "application/pdf"
       }
     ],
-    "lockedAt": "2027-06-14T14:50:26.026",
+    "lockedAt": "2027-06-14T16:10:36.100",
     "lockedBy": "Sanne de Vries"
   },
   "requirements": [
@@ -410,9 +423,9 @@
         "detail": "min(snapshot)=2012-01, max(snapshot)=2024-12 → 13.0 years"
       },
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -446,10 +459,10 @@
       },
       "script": null,
       "decision": {
-        "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:39.259",
         "decision": "accepted",
-        "reason": "Remediation planned: macro comparison to be added in v1.1."
+        "reason": "Remediation planned: macro comparison to be added in v1.1.",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -486,7 +499,7 @@
         "decision": "accepted",
         "reason": "Documentation matches regulation; code check out of scope for RDS document.",
         "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:16.958"
+        "at": "2027-06-14T16:11:24.677"
       }
     },
     {
@@ -515,9 +528,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -545,11 +558,11 @@
       },
       "script": null,
       "decision": {
-        "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:39.259",
         "decision": "edited",
         "finalVerdict": "compliant",
-        "reason": "Probation logic described in DoD implementation memo (uploaded)."
+        "reason": "Probation logic described in DoD implementation memo (uploaded).",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -584,9 +597,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -615,9 +628,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -648,9 +661,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:39.259",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -688,7 +701,7 @@
         "finalVerdict": "compliant",
         "reason": "LTV comparison added in Annex B",
         "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:38.253"
+        "at": "2027-06-14T16:11:30.429"
       }
     },
     {
@@ -722,10 +735,10 @@
       },
       "script": null,
       "decision": {
-        "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:39.259",
         "decision": "accepted",
-        "reason": "Timeliness analysis to be added in v1.1."
+        "reason": "Timeliness analysis to be added in v1.1.",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -754,9 +767,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -793,11 +806,11 @@
       "rationale": "The deficiency identified in RDS §6.2 is linked to MoC category A with a quantified +6% relative add-on in MDD §7.2.",
       "mitigation": null,
       "script": null,
-      "reassessedAt": "2027-06-14T14:52:20.373",
+      "reassessedAt": "2027-06-14T16:11:27.602",
       "decision": {
         "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:30.153"
+        "at": "2027-06-14T16:11:29.096"
       }
     },
     {
@@ -826,9 +839,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -857,9 +870,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -888,9 +901,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -919,9 +932,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -955,10 +968,10 @@
       },
       "script": null,
       "decision": {
-        "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:39.259",
         "decision": "accepted",
-        "reason": "EJ log entry to be added."
+        "reason": "EJ log entry to be added.",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -987,9 +1000,9 @@
       "mitigation": null,
       "script": null,
       "decision": {
+        "decision": "accepted",
         "by": "Sanne de Vries",
-        "at": "2027-06-13T09:41:00",
-        "decision": "accepted"
+        "at": "2027-06-14T16:11:31.239"
       }
     },
     {
@@ -1016,11 +1029,11 @@
       },
       "script": null,
       "decision": {
-        "by": "Sanne de Vries",
-        "at": "2027-06-14T14:52:39.259",
         "decision": "edited",
         "finalVerdict": "not_applicable",
-        "reason": "Evidenced outside the RDS component: PD add-on applied at calibration (MDD §7)."
+        "reason": "Evidenced outside the assessed component.",
+        "by": "Sanne de Vries",
+        "at": "2027-06-14T16:11:31.239"
       }
     }
   ],

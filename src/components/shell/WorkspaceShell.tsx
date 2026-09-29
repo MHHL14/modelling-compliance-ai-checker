@@ -16,8 +16,8 @@ import { cn } from '@/lib/utils';
 import { LogoMark } from './Logo';
 
 const WS: Record<Workspace, { name: string; header: string; nav: { href: string; label: string; exact?: boolean }[] }> = {
-  '1lod': { name: 'Model Development', header: 'bg-green-800', nav: [{ href: '/dev', label: 'My models' }] },
-  '2lod': { name: 'Model Validation', header: 'bg-lod2', nav: [{ href: '/val', label: 'Validation inbox' }] },
+  '1lod': { name: 'Model Development', header: 'bg-green-800', nav: [{ href: '/dev', label: 'Your use cases' }] },
+  '2lod': { name: 'Model Validation', header: 'bg-lod2', nav: [{ href: '/val', label: 'Your reviews' }] },
   library: {
     name: 'Requirement Library',
     header: 'bg-green-800 border-b-4 border-yellow',

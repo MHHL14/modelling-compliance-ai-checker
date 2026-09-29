@@ -1,7 +1,7 @@
 import { COMPONENT_LABEL } from '../ai/generic';
 import { manifest, seal } from '../packages';
 import { getModel, LIBRARY_BASE_VERSION, PERSONAS, requirementSetIdFor } from '../seed';
-import type { AssessmentRow, AssessmentRun, Finding, Requirement, SubmissionPackage, Upload } from '../types';
+import type { AssessmentRow, AssessmentRun, Finding, PackageDocument, Requirement, SubmissionPackage, Upload } from '../types';
 import { assess1lod, assess2lod, getScenario, scriptedDecision } from './engine';
 import type { Component, Scenario } from './types';
 
@@ -67,14 +67,17 @@ export async function buildSubmissionPackage(input: {
   modelId: string; component: Component; tags: string[]; reqSetId: string; requirements: Requirement[];
   excluded: { id: string; reason: string }[]; addedDocuments: { docId: string; reason: string }[]; uploads: Upload[];
   lockedAt?: string; lockedBy?: string; run: AssessmentRun; sc: Scenario; evidenceDocIds?: string[]; packageId: string; createdAt?: string;
+  /** uploaded evidence that is not one of the scenario's evidence files */
+  extraDocs?: (PackageDocument & { title: string })[];
 }): Promise<SubmissionPackage> {
   const { sc } = input;
   const evidence = sc.evidenceFiles.filter((f) => !input.evidenceDocIds || input.evidenceDocIds.includes(f.doc.id)).filter((f) => input.uploads.some((u) => u.name === f.name));
+  const extra = (input.extraDocs ?? []).filter((d) => !evidence.some((f) => f.doc.id === d.id));
   return seal<SubmissionPackage>({
     manifest: manifest({
       packageType: 'submission', packageId: input.packageId, modelId: input.modelId, createdAt: input.createdAt,
       createdBy: PERSONAS['1lod'].name, line: '1lod', libraryVersion: input.run.libraryVersion, requirementSetId: input.reqSetId,
-      documentVersions: { [sc.document.id]: sc.document.finalVersion, ...Object.fromEntries(evidence.map((f) => [f.doc.id, f.doc.version])) },
+      documentVersions: { [sc.document.id]: sc.document.finalVersion, ...Object.fromEntries(evidence.map((f) => [f.doc.id, f.doc.version])), ...Object.fromEntries(extra.map((d) => [d.id, d.version])) },
     }),
     requirementSet: {
       id: input.reqSetId, modelId: input.modelId, component: COMPONENT_LABEL[input.component], componentKey: input.component, tags: input.tags,
@@ -85,6 +88,7 @@ export async function buildSubmissionPackage(input: {
     documents: [
       { id: sc.document.id, version: sc.document.finalVersion, title: sc.document.title, sections: sc.document.versions[sc.document.finalVersion] },
       ...evidence.map((f) => ({ id: f.doc.id, version: f.doc.version, title: f.doc.title, sections: f.doc.sections })),
+      ...extra.map((d) => ({ id: d.id, version: d.version, title: d.title, sections: d.sections })),
     ],
     matrix1lod: input.run.rows,
     statement: 'I confirm this self-assessment reflects the model documentation as submitted.',

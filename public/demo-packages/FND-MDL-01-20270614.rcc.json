@@ -11,9 +11,9 @@
       "EVD-01-RDS": "1.0",
       "EVD-01-MDD": "4.0"
     },
-    "createdAt": "2027-06-14T14:54:49.589",
+    "createdAt": "2027-06-14T16:13:34.120",
     "schemaVersion": "1.0",
-    "sha256": "3385b62b4c3cbeb5bac33188f78b015c2359989f88f37ef45f3c9328b91bfee3"
+    "sha256": "631b242e149787dfe78c900808d60565033f67fa6203d1fc693ede939d71075f"
   },
   "findings": [
     {
@@ -38,7 +38,7 @@
         "EVD-01-RDS v1.0 §3.3: “more than 90 days past due above a materiality threshold of EUR 100 absolute and 1% relative”",
         "Script CC-03: rds_build.py L214: MAT_ABS = 250 (documented: 100)"
       ],
-      "issuedAt": "2027-06-14T14:54:48.180"
+      "issuedAt": "2027-06-14T16:13:32.908"
     },
     {
       "id": "F-03",
@@ -62,7 +62,7 @@
         "EVD-01-MDD v4.0 §7.2: “A MoC of +6% relative is applied to the long-run average default rate”",
         "EVD-01-RDS v1.0 §6.2: “The default flag for 2012–2015 was approximated”"
       ],
-      "issuedAt": "2027-06-14T14:54:48.883"
+      "issuedAt": "2027-06-14T16:13:33.513"
     }
   ]
 }

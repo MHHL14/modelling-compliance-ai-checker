@@ -203,7 +203,7 @@ export default function AssessPage() {
                   <DropdownMenuItem
                     onSelect={() => {
                       const n = s.fastForward(id);
-                      toast.success(`Fast-forward: ${n} row(s) decided`, { description: 'Scripted decisions applied (decisions_1lod_scripted).' });
+                      toast.success(`Fast-forward: ${n} row(s) decided`, { description: 'Scripted demo decisions applied to the remaining rows.' });
                     }}
                   >
                     <FastForward aria-hidden /> Fast-forward remaining rows
@@ -254,6 +254,7 @@ export default function AssessPage() {
             requirements={reqs}
             selectedId={selected}
             onSelect={setSelected}
+            initialFilter={readOnly ? 'all' : 'attention'}
             readOnly={readOnly}
             readOnlyReason="Matrix frozen after submission."
             onDecide={(ids, d) => {

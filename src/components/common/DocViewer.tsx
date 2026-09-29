@@ -52,7 +52,7 @@ export const useDocViewer = () => useContext(DocViewerContext);
 
 export function CitationQuote({ c, all, docTitle }: { c: Citation; all?: Citation[]; docTitle?: string }) {
   const { open, docs } = useDocViewer();
-  const title = docTitle ?? docs.find((d) => d.id === c.doc)?.title ?? c.doc;
+  const title = docTitle ?? (docs.find((d) => d.id === c.doc && d.version === c.version) ?? docs.find((d) => d.id === c.doc))?.title ?? c.doc;
   return (
     <button
       type="button"

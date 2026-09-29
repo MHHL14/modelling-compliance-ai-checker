@@ -8,21 +8,32 @@ import type { AuditEvent, Line } from '@/lib/types';
 
 // Historical events so the audit trail is never empty (spec 8.14).
 const SEED_EVENTS: AuditEvent[] = [
-  { id: 'AE-0001', at: '2027-04-18T09:12:00', line: 'library', actor: 'Fatima El Amrani', type: 'Library version published', detail: 'Requirement library v3.2 published (trigger: EBA/GL/2025/01 ESG, internal MRM-POL-001 v5.0).' },
-  { id: 'AE-0002', at: '2027-04-22T14:40:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-04', type: 'Submission package imported', detail: 'SUB-MDL-04-20270422 imported · integrity verified · RS-2027-024 · library v3.2.' },
-  { id: 'AE-0003', at: '2027-05-02T10:03:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Requirement set proposed', detail: 'AI generated requirement set RS-2027-014 for component “RDS documentation”: 18 proposed, 7 not applicable.' },
-  { id: 'AE-0004', at: '2027-05-02T10:26:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Requirements accepted', detail: '14 high-confidence requirements accepted after opening a sample of 3.' },
-  { id: 'AE-0005', at: '2027-05-06T08:55:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-04', type: 'Blind assessment run', detail: 'Blind 2nd line assessment run on SUB-MDL-04-20270422 (1st line conclusions: not provided).' },
-  { id: 'AE-0006', at: '2027-05-14T15:31:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Draft check run', detail: 'Sandbox draft check on RDS v0.5 (no status, no sign-off).' },
-  { id: 'AE-0007', at: '2027-05-20T11:18:00', line: 'library', actor: 'Fatima El Amrani', type: 'Candidate requirement approved', detail: 'Candidate from “Supervisory letter IRB roll-out 2027” approved as library requirement REQ-G07.' },
-  { id: 'AE-0008', at: '2027-05-28T13:47:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Draft check run', detail: 'Sandbox draft check on RDS v0.7: 2 gaps (REQ-D12b, REQ-D12c).' },
-  { id: 'AE-0009', at: '2027-06-03T09:30:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-04', type: 'Reveal 1st line matrix', detail: '1st line matrix revealed after blind assessment (blind assessments locked).' },
-  { id: 'AE-0010', at: '2027-06-12T15:02:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Document version registered', detail: 'RDS documentation v1.0 registered (approved 12 June 2027 by Head of Retail Credit Risk Modelling).' },
-  { id: 'AE-0011', at: '2027-06-12T16:05:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Assessment run', detail: 'Self-assessment run RUN-1L-0412 on RDS v1.0 · RS-2027-014 · library v3.2 · provider simulated · 18 requirements.' },
-  { id: 'AE-0012', at: '2027-06-13T09:41:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-01', type: 'Rows accepted', detail: '10 rows accepted (REQ-D01, D08, D12a, D12b, D19, D22, D25, D26, D30, G01).' },
-  { id: 'AE-0013', at: '2027-06-13T11:20:00', line: 'audit', actor: 'Internal Audit', type: 'Audit trail reviewed', detail: 'Quarterly sample review of model compliance audit trail (Q2 2027).' },
-  { id: 'AE-0014', at: '2027-06-13T14:08:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-04', type: 'Finding drafted', detail: 'Draft finding on monotonic-constraint evidence for SHAP explanations (not issued).' },
-  { id: 'AE-0015', at: '2027-06-13T16:52:00', line: 'library', actor: 'Fatima El Amrani', type: 'Library change drafted', detail: 'Draft v3.3 prepared: ECB guide to internal models v4.0 (credit risk chapter) and CRR3.' },
+  // MDL-02 — annual validation 2026 (completed)
+  { id: 'AE-0001', at: '2026-05-04T09:00:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-02', type: 'Use case created', detail: 'LGD Residential Mortgages NL · Full model · Annual validation 2026.' },
+  { id: 'AE-0002', at: '2026-05-11T11:30:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-02', type: 'Requirement set locked', detail: 'RS-2027-022 locked · library v3.2.' },
+  { id: 'AE-0003', at: '2026-06-12T10:15:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-02', type: 'Submission package exported', detail: 'SUB-MDL-02-20260612 frozen and exported.' },
+  { id: 'AE-0004', at: '2026-06-19T09:00:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-02', type: 'Blind assessment run', detail: 'Blind 2nd line run on SUB-MDL-02-20260612 (1st line conclusions: not provided).' },
+  { id: 'AE-0005', at: '2026-06-26T11:00:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-02', type: 'Reveal 1st line matrix', detail: '1st line matrix revealed after blind assessment (blind assessments locked).' },
+  { id: 'AE-0006', at: '2026-07-10T14:00:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-02', type: 'Validation opinion issued', detail: 'Opinion “fit with conditions” issued for SUB-MDL-02-20260612.' },
+  { id: 'AE-0007', at: '2026-09-18T15:30:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-02', type: 'Finding closed', detail: 'All findings for SUB-MDL-02-20260612 closed after verification of remediation.' },
+  // MDL-07 — annual review 2026 (completed)
+  { id: 'AE-0008', at: '2026-09-01T09:10:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-07', type: 'Use case created', detail: 'IFRS 9 ECL – Residential Mortgages · Full model · Annual review 2026.' },
+  { id: 'AE-0009', at: '2026-09-30T11:00:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-07', type: 'Submission package exported', detail: 'SUB-MDL-07-20260930 frozen and exported.' },
+  { id: 'AE-0010', at: '2026-10-07T09:30:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-07', type: 'Blind assessment run', detail: 'Blind 2nd line run on SUB-MDL-07-20260930 (1st line conclusions: not provided).' },
+  { id: 'AE-0011', at: '2026-10-14T10:00:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-07', type: 'Reveal 1st line matrix', detail: '1st line matrix revealed after blind assessment (blind assessments locked).' },
+  { id: 'AE-0012', at: '2026-11-05T14:00:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-07', type: 'Validation opinion issued', detail: 'Opinion “fit with conditions” issued for SUB-MDL-07-20260930.' },
+  { id: 'AE-0013', at: '2026-12-02T15:00:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-07', type: 'Finding closed', detail: 'All findings for SUB-MDL-07-20260930 closed after verification of remediation.' },
+  // MDL-04 — initial validation 2027 (in progress)
+  { id: 'AE-0014', at: '2027-03-01T09:00:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-04', type: 'Use case created', detail: 'PD Retail SME (gradient boosting) · Full model · Initial validation 2027.' },
+  { id: 'AE-0015', at: '2027-03-15T10:00:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-04', type: 'Requirement set locked', detail: 'RS-2027-024 locked · library v3.2.' },
+  { id: 'AE-0016', at: '2027-04-22T11:05:00', line: '1lod', actor: 'Sanne de Vries', modelId: 'MDL-04', type: 'Submission package exported', detail: 'SUB-MDL-04-20270422 frozen and exported.' },
+  { id: 'AE-0017', at: '2027-04-22T14:40:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-04', type: 'Submission package imported', detail: 'SUB-MDL-04-20270422 imported · integrity verified · RS-2027-024 · library v3.2.' },
+  { id: 'AE-0018', at: '2027-05-06T08:55:00', line: '2lod', actor: 'Pieter Bakker', modelId: 'MDL-04', type: 'Blind assessment run', detail: 'Blind 2nd line run on SUB-MDL-04-20270422 (1st line conclusions: not provided).' },
+  // Library and audit
+  { id: 'AE-0019', at: '2027-04-18T09:12:00', line: 'library', actor: 'Fatima El Amrani', type: 'Library version published', detail: 'Requirement library v3.2 published (trigger: EBA/GL/2025/01 ESG, internal MRM-POL-001 v5.0).' },
+  { id: 'AE-0020', at: '2027-05-20T11:18:00', line: 'library', actor: 'Fatima El Amrani', type: 'Candidate requirement approved', detail: 'Candidate from “Supervisory letter IRB roll-out 2027” approved as library requirement REQ-G07.' },
+  { id: 'AE-0021', at: '2027-06-13T11:20:00', line: 'audit', actor: 'Internal Audit', type: 'Audit trail reviewed', detail: 'Quarterly sample review of model compliance audit trail (Q2 2027).' },
+  { id: 'AE-0022', at: '2027-06-13T16:52:00', line: 'library', actor: 'Fatima El Amrani', type: 'Library change drafted', detail: 'Draft v3.3 prepared: ECB guide to internal models v4.0 (credit risk chapter) and CRR3.' },
 ];
 
 interface AuditState {
@@ -42,7 +53,7 @@ export const useAudit = create<AuditState>()(
           ],
         })),
     }),
-    { name: 'mcw-storeAudit', version: 1, storage: createJSONStorage(() => localStorage) },
+    { name: 'mcw-storeAudit', version: 2, storage: createJSONStorage(() => localStorage) },
   ),
 );
 

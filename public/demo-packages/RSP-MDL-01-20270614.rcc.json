@@ -11,14 +11,14 @@
       "EVD-01-RDS": "1.0",
       "EVD-01-MDD": "4.0"
     },
-    "createdAt": "2027-06-14T14:55:40.975",
+    "createdAt": "2027-06-14T16:14:00.706",
     "schemaVersion": "1.0",
-    "sha256": "7b0caa8feeb249ca7351a02a3a444bd3241bf30ef213038d37623791dcf644be"
+    "sha256": "8326a759b93a053466fa0cafce1c72bacfbd62ad06a804b33188962ac91f0b7f"
   },
   "responses": [
     {
       "findingId": "F-07",
-      "plan": "Correct MAT_ABS in rds_build.py to EUR 100 (1% relative unchanged), rebuild the RDS for all vintages 2012–2024 and quantify the PD impact per rating grade. Owner: Sanne de Vries. Target date: 2027-09-15.",
+      "plan": "Correct MAT_ABS in rds_build.py to EUR 100, rebuild the RDS for all vintages 2012–2024 and quantify the PD impact per rating grade by 2027-09-15.",
       "evidence": []
     }
   ]
