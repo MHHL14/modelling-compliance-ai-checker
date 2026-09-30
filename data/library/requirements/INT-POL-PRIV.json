@@ -1,0 +1,469 @@
+{
+  "docId": "INT-POL-PRIV",
+  "requirements": [
+    {
+      "id": "PRIV-POL-001-4.2a",
+      "article": "PRIV-POL-001 §4.2; GDPR Art. 5(1)(b)",
+      "chapter": "Principles of processing",
+      "text": "The purposes of processing personal data in the model are specified, explicit and recorded in the Record of Processing.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-4.2b",
+      "article": "PRIV-POL-001 §4.2; GDPR Art. 6(4)",
+      "chapter": "Principles of processing",
+      "text": "Where personal data collected for another purpose are reused for model development, a documented compatibility assessment under Art. 6(4) GDPR or a separate lawful basis exists.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-4.3",
+      "article": "PRIV-POL-001 §4.3; GDPR Art. 5(1)(c)",
+      "chapter": "Principles of processing",
+      "text": "Every personal data attribute used in the model is justified by its relevance to the model purpose (data minimisation).",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-5.1",
+      "article": "PRIV-POL-001 §5.1; GDPR Art. 6(1)",
+      "chapter": "Lawful basis",
+      "text": "The processing of personal data for the model has a documented lawful basis under Art. 6(1) GDPR recorded before processing starts.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-5.2",
+      "article": "PRIV-POL-001 §5.2; GDPR Art. 6(1)(f)",
+      "chapter": "Lawful basis",
+      "text": "Where legitimate interests are relied upon, a documented legitimate interest assessment demonstrates purpose, necessity and balancing against data subjects' rights.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-5.3",
+      "article": "PRIV-POL-001 §5.3; GDPR Art. 9; AI Act Art. 10(5)",
+      "chapter": "Lawful basis",
+      "text": "Special categories of personal data are not used for model development or scoring unless an Art. 9(2) GDPR exception applies and the Privacy Office has approved it, or, for bias detection in high-risk AI, Art. 10(5) AI Act conditions are met.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-6.2",
+      "article": "PRIV-POL-001 §6.2; GDPR Art. 30",
+      "chapter": "Records of processing",
+      "text": "The model is linked to its processing activities in the Record of Processing, and the Model Inventory or AI Inventory records that reference.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-7.2",
+      "article": "PRIV-POL-001 §7.2; GDPR Art. 35(1) and 35(3)(a)",
+      "chapter": "Data protection impact assessment",
+      "text": "A DPIA is performed before processing for every model that scores or classifies natural persons for decisions, uses ML or generative AI on personal data, or is Tier 1.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-7.3",
+      "article": "PRIV-POL-001 §7.3; GDPR Art. 35(7)",
+      "chapter": "Data protection impact assessment",
+      "text": "The DPIA describes the processing and purposes, assesses necessity and proportionality and the risks to data subjects, and sets out the mitigating measures.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-7.4",
+      "article": "PRIV-POL-001 §7.4; GDPR Art. 35(2) and 36",
+      "chapter": "Data protection impact assessment",
+      "text": "The DPO's advice on the DPIA is documented, and residual high risk triggers prior consultation of the Autoriteit Persoonsgegevens before processing.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-7.5",
+      "article": "PRIV-POL-001 §7.5",
+      "chapter": "Data protection impact assessment",
+      "text": "The DPIA is reviewed on every material change, including new personal data attributes in a new model version, and at least every three years.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0)."
+    },
+    {
+      "id": "PRIV-POL-001-8.1",
+      "article": "PRIV-POL-001 §8.1; GDPR Art. 22(1) and 22(2)",
+      "chapter": "Automated decision-making",
+      "text": "Decisions based solely on automated processing with legal or similarly significant effects on natural persons are taken only where necessary for a contract, authorised by law or based on explicit consent.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-8.2",
+      "article": "PRIV-POL-001 §8.2; GDPR Art. 22(3)",
+      "chapter": "Automated decision-making",
+      "text": "For automated individual decisions, a documented process allows the data subject to obtain human intervention by competent staff with authority to change the decision, to express their view and to contest it.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-8.3",
+      "article": "PRIV-POL-001 §8.3; GDPR Art. 22; CJEU C-634/21 (SCHUFA)",
+      "chapter": "Automated decision-making",
+      "text": "A model score playing a determining role in a decision with legal or similarly significant effects is treated as an automated individual decision, also where a third party formally takes the decision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal provision authored; CJEU judgment of 7 December 2023, C-634/21, checked."
+    },
+    {
+      "id": "PRIV-POL-001-8.4",
+      "article": "PRIV-POL-001 §8.4; GDPR Art. 13(2)(f), 14(2)(g) and 15(1)(h)",
+      "chapter": "Automated decision-making",
+      "text": "Data subjects are informed of automated decision-making and receive meaningful information about the logic involved and the significance and envisaged consequences.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-8.5",
+      "article": "PRIV-POL-001 §8.5",
+      "chapter": "Automated decision-making",
+      "text": "Human reviewers in a decision process have access to the main drivers of the model output and the authority to deviate from it, and override rates are monitored.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0)."
+    },
+    {
+      "id": "PRIV-POL-001-9.1",
+      "article": "PRIV-POL-001 §9.1; GDPR Art. 4(5), 25 and 89(1)",
+      "chapter": "Personal data in model development",
+      "text": "Model development and validation use pseudonymised data, with direct identifiers replaced by keyed tokens whose keys are held by a separate data custodian, unless identifying data are approved by the Privacy Office.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-9.2",
+      "article": "PRIV-POL-001 §9.2",
+      "chapter": "Personal data in model development",
+      "text": "Re-identification of pseudonymised development data occurs only for a documented, Privacy Office-approved purpose and is logged.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0)."
+    },
+    {
+      "id": "PRIV-POL-001-9.3",
+      "article": "PRIV-POL-001 §9.3; GDPR Art. 32",
+      "chapter": "Personal data in model development",
+      "text": "Development data sets containing personal data are held only in approved secure analytics environments with role-based access.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-9.4",
+      "article": "PRIV-POL-001 §9.4",
+      "chapter": "Personal data in model development",
+      "text": "Production personal data are used in test environments only when masked, pseudonymised or replaced by synthetic data, unless approved by the Privacy Office.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0)."
+    },
+    {
+      "id": "PRIV-POL-001-9.5",
+      "article": "PRIV-POL-001 §9.5",
+      "chapter": "Personal data in model development",
+      "text": "The RDS documentation lists the personal data attributes used, their purpose in the model, the lawful basis, the pseudonymisation applied and the retention period.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0)."
+    },
+    {
+      "id": "PRIV-POL-001-10.2",
+      "article": "PRIV-POL-001 §10.2; GDPR Art. 5(1)(e)",
+      "chapter": "Retention",
+      "text": "Reference data sets and development snapshots containing personal data are retained no longer than the model's period of use plus five years after decommissioning, unless approved by the Privacy Office.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-10.3",
+      "article": "PRIV-POL-001 §10.3; Wwft Art. 33; AMLR Art. 77",
+      "chapter": "Retention",
+      "text": "Customer due diligence and transaction records are retained for five years after the end of the business relationship or occasional transaction.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide record-keeping obligation; evidenced in the Bank's records retention schedule, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to data processed under anti-money laundering obligations.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision authored; Wwft Art. 33 and AMLR Art. 77 retention references to be confirmed against consolidated texts."
+    },
+    {
+      "id": "PRIV-POL-001-10.4",
+      "article": "PRIV-POL-001 §10.4; GDPR Art. 5(1)(e)",
+      "chapter": "Retention",
+      "text": "At the end of the retention period personal data are deleted or irreversibly anonymised, and deletion is evidenced.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    },
+    {
+      "id": "PRIV-POL-001-12.2",
+      "article": "PRIV-POL-001 §12.2; GDPR Chapter V (Art. 44–49)",
+      "chapter": "Processors and international transfers",
+      "text": "Transfers of personal data outside the EEA, including to third-party AI services, are based on an adequacy decision or appropriate safeguards and a documented transfer impact assessment.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (PRIV-POL-001 v4.0); GDPR article references checked."
+    }
+  ]
+}

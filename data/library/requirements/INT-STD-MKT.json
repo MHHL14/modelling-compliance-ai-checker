@@ -1,0 +1,645 @@
+{
+  "docId": "INT-STD-MKT",
+  "requirements": [
+    {
+      "id": "MR-STD-500-4.1",
+      "article": "MR-STD-500 §4.1",
+      "chapter": "Model approval",
+      "text": "Every pricing and risk model is registered in the model inventory and tiered under MRM-STD-010 before use, with IMA models classified Tier 1.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-4.2",
+      "article": "MR-STD-500 §4.2",
+      "chapter": "Model approval",
+      "text": "No model is used for official valuation or capital before Model Risk Committee approval after independent validation, and new products are not traded without an approved or temporarily approved model.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-4.3",
+      "article": "MR-STD-500 §4.3",
+      "chapter": "Model approval",
+      "text": "IMA model changes and extensions are classified under the applicable RTS on materiality of changes, and changes requiring prior supervisory approval are not implemented before approval.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). The RTS on materiality of changes to market risk internal models under CRR3 is not cited by number; confirm the applicable delegated regulation."
+    },
+    {
+      "id": "MR-STD-500-4.4",
+      "article": "MR-STD-500 §4.4",
+      "chapter": "Model approval",
+      "text": "The trading desk structure for IMA eligibility is documented and approved, including business strategy, risk limits and the model assigned to each desk.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Organisational requirement on the trading desk structure; evidenced in the approved trading desk policy, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-5.1",
+      "article": "MR-STD-500 §5.1; CRR Part Three Title IV Chapter 1b",
+      "chapter": "Expected shortfall",
+      "text": "ES is calculated daily at the 97.5th percentile, one-tailed, for each IMA trading desk and for all IMA desks together.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). EU application date of the IMA own funds requirements has been postponed; confirm current date for transitional use of VaR/SVaR models."
+    },
+    {
+      "id": "MR-STD-500-5.2",
+      "article": "MR-STD-500 §5.2",
+      "chapter": "Expected shortfall",
+      "text": "ES uses a ten-day base horizon scaled to the prescribed liquidity horizons, and the mapping of risk factors to liquidity horizon categories is documented.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-5.3",
+      "article": "MR-STD-500 §5.3",
+      "chapter": "Expected shortfall",
+      "text": "ES is calibrated to a twelve-month stress period identified from data back to at least 2007 using a reduced risk factor set explaining at least 75% of full ES, reviewed quarterly.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-5.4",
+      "article": "MR-STD-500 §5.4",
+      "chapter": "Expected shortfall",
+      "text": "Market data time series are updated at least monthly, and proxies and data filling methods are documented with their impact on ES assessed quarterly.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-5.5",
+      "article": "MR-STD-500 §5.5",
+      "chapter": "Expected shortfall",
+      "text": "Material non-linear positions are fully revalued, and any sensitivity- or grid-based approximation is justified by quantitative evidence of accuracy.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-6.1",
+      "article": "MR-STD-500 §6.1; RTS on risk factor modellability",
+      "chapter": "Non-modellable risk factors",
+      "text": "The risk factor eligibility test is performed at least quarterly for every risk factor based on verifiable real price observations over the preceding twelve months.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). RFET per the RTS on the criteria for assessing modellability of risk factors (Delegated Regulation (EU) 2022/2060)."
+    },
+    {
+      "id": "MR-STD-500-6.2",
+      "article": "MR-STD-500 §6.2",
+      "chapter": "Non-modellable risk factors",
+      "text": "Non-modellable risk factors are capitalised through a stress scenario risk measure calibrated at least as prudently as ES under the stress period, with calibration and correlation assumptions documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-6.3",
+      "article": "MR-STD-500 §6.3",
+      "chapter": "Non-modellable risk factors",
+      "text": "The use of external data vendors for real price observations is documented, including controls over completeness and verification of the data.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-7.1",
+      "article": "MR-STD-500 §7.1",
+      "chapter": "Default risk charge",
+      "text": "The DRC model measures default and migration-to-default losses over one year at the 99.9th percentile assuming constant positions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-7.2",
+      "article": "MR-STD-500 §7.2",
+      "chapter": "Default risk charge",
+      "text": "DRC default correlations are estimated from equity prices or credit spreads over at least ten years including the stress period, with the factor structure documented.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-7.3",
+      "article": "MR-STD-500 §7.3",
+      "chapter": "Default risk charge",
+      "text": "DRC PDs are consistent with IRB PDs where available, floored at 0.03%, and the source of each PD is documented.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-8.1",
+      "article": "MR-STD-500 §8.1; CRR Art. 325bf; RTS on back-testing and PLA",
+      "chapter": "Back-testing and PLA",
+      "text": "Each IMA desk is back-tested daily at the 99th and 97.5th percentile VaR; a desk with more than twelve or thirty overshootings respectively in 250 business days leaves the IMA.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). Thresholds consistent with CRR3 Art. 325bf and Delegated Regulation (EU) 2022/2059."
+    },
+    {
+      "id": "MR-STD-500-8.2",
+      "article": "MR-STD-500 §8.2",
+      "chapter": "Back-testing and PLA",
+      "text": "Firm-wide back-testing at the 99th percentile is performed daily and overshootings determining the multiplier add-on are reported to the Market Risk Committee.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-8.3",
+      "article": "MR-STD-500 §8.3; CRR Art. 325bg; RTS on back-testing and PLA",
+      "chapter": "Back-testing and PLA",
+      "text": "The PLA test is performed quarterly per desk using Spearman correlation and the Kolmogorov-Smirnov statistic, with red-zone desks capitalised under the standardised approach.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). PLA metrics per Delegated Regulation (EU) 2022/2059."
+    },
+    {
+      "id": "MR-STD-500-8.4",
+      "article": "MR-STD-500 §8.4",
+      "chapter": "Back-testing and PLA",
+      "text": "HPL-RTPL differences are analysed at risk factor level, and every structural difference is recorded and addressed through a remediation plan.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IMA own funds models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-9.1",
+      "article": "MR-STD-500 §9.1",
+      "chapter": "Valuation models",
+      "text": "Pricing models are calibrated to observable market instruments where available, with daily monitoring of calibration errors against thresholds and escalation of breaches.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-9.2",
+      "article": "MR-STD-500 §9.2",
+      "chapter": "Valuation models",
+      "text": "The model documentation states model limitations and resulting usage restrictions on products, parameter ranges and maturities.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-9.3",
+      "article": "MR-STD-500 §9.3; IFRS 13",
+      "chapter": "Valuation models",
+      "text": "Valuation inputs are classified by IFRS 13 fair value hierarchy level, and day-one profit on instruments with significant unobservable inputs is deferred.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). Fair value hierarchy per IFRS 13 (paraphrased; no IFRS text quoted)."
+    },
+    {
+      "id": "MR-STD-500-9.4",
+      "article": "MR-STD-500 §9.4",
+      "chapter": "Valuation models",
+      "text": "XVA exposure simulation uses risk-neutral calibration consistent with trade pricing, reflects netting and collateral agreements, and captures material wrong-way risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-9.5",
+      "article": "MR-STD-500 §9.5",
+      "chapter": "Valuation models",
+      "text": "CVA uses market-implied PDs and LGDs from CDS or documented and validated proxy curves for counterparties without liquid CDS.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-9.6",
+      "article": "MR-STD-500 §9.6",
+      "chapter": "Valuation models",
+      "text": "The FVA funding curve and the treatment of the DVA-FVA overlap are documented and approved by the Valuation Committee.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-9.7",
+      "article": "MR-STD-500 §9.7",
+      "chapter": "Valuation models",
+      "text": "Model reserves for known model limitations are quantified, documented and reviewed at least quarterly.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-10.1",
+      "article": "MR-STD-500 §10.1; CRR Art. 105(8)",
+      "chapter": "IPV and prudent valuation",
+      "text": "Market prices and model inputs are verified at least monthly by Product Control independently of the risk-taking units, with differences above thresholds adjusted and reported.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of Product Control under the independent price verification process; evidenced in IPV reports, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-10.2",
+      "article": "MR-STD-500 §10.2; CRR Art. 34; Delegated Regulation (EU) 2016/101",
+      "chapter": "IPV and prudent valuation",
+      "text": "AVAs are calculated for all fair-valued positions at a 90% level of certainty under Delegated Regulation (EU) 2016/101 and deducted from CET1.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide prudent valuation obligation; evidenced in the prudent valuation framework and own funds reporting, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    },
+    {
+      "id": "MR-STD-500-10.3",
+      "article": "MR-STD-500 §10.3; Delegated Regulation (EU) 2016/101 Art. 11",
+      "chapter": "IPV and prudent valuation",
+      "text": "The model risk AVA is estimated from the range of valuations produced by plausible alternative models or calibrations, or by an approved and documented expert-based approach.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0). Model risk AVA per Art. 11 of Delegated Regulation (EU) 2016/101."
+    },
+    {
+      "id": "MR-STD-500-10.4",
+      "article": "MR-STD-500 §10.4",
+      "chapter": "IPV and prudent valuation",
+      "text": "Model risk identified in open validation findings is reflected in the model risk AVA or a model reserve until the finding is closed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation and XVA models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (MR-STD-500 v3.0)."
+    }
+  ]
+}

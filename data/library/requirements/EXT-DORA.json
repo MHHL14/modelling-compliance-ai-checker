@@ -1,0 +1,318 @@
+{
+  "docId": "EXT-DORA",
+  "requirements": [
+    {
+      "id": "DORA-28-1-a",
+      "article": "DORA Art. 28(1)(a)",
+      "chapter": "ICT third-party risk management (Art. 28)",
+      "text": "The institution manages ICT third-party risk as an integral part of ICT risk and remains fully responsible for compliance with DORA and financial services law when using a third-party AI model or AI service.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Responsibility for ICT third-party risk is an institution-wide obligation evidenced in the ICT risk management framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com). ICT services include software and data services provided on an ongoing basis (Art. 3(21)), covering hosted or API-based AI models."
+    },
+    {
+      "id": "DORA-28-2",
+      "article": "DORA Art. 28(2)",
+      "chapter": "ICT third-party risk management (Art. 28)",
+      "text": "The institution adopts and regularly reviews a strategy on ICT third-party risk, including a policy on the use of ICT services supporting critical or important functions, as part of its ICT risk management framework.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The ICT third-party risk strategy is an institution-level policy evidenced in the ICT risk management framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com). Policy content detailed in Commission Delegated Regulation (EU) 2024/1773."
+    },
+    {
+      "id": "DORA-28-3-reg",
+      "article": "DORA Art. 28(3), first and second subparagraphs",
+      "chapter": "Register of information",
+      "text": "The contractual arrangement for the third-party AI model or service is recorded in the register of information maintained at entity, sub-consolidated and consolidated levels, distinguishing services that support critical or important functions.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The register of information is an institution-level register maintained by third-party risk management, not model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com). Templates in Commission Implementing Regulation (EU) 2024/2956; the register is reported at least yearly and made available on request."
+    },
+    {
+      "id": "DORA-28-3-inf",
+      "article": "DORA Art. 28(3), fourth subparagraph",
+      "chapter": "Register of information",
+      "text": "The institution informs the competent authority in a timely manner of any planned contractual arrangement for ICT services supporting critical or important functions, and when a function has become critical or important.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Informing the competent authority of planned ICT arrangements is a supervisory notification by the institution.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com)."
+    },
+    {
+      "id": "DORA-28-4-a",
+      "article": "DORA Art. 28(4)(a)",
+      "chapter": "Pre-contractual assessment",
+      "text": "Before contracting, the institution assesses whether the ICT arrangement for the AI model or service covers a critical or important function.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The pre-contractual criticality assessment is evidenced in the third-party risk management and procurement records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com)."
+    },
+    {
+      "id": "DORA-28-4-c",
+      "article": "DORA Art. 28(4)(c) and 29(1)",
+      "chapter": "Pre-contractual assessment",
+      "text": "Before contracting, the institution identifies and assesses all relevant risks of the arrangement, including whether it would contribute to ICT concentration risk as referred to in Art. 29.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The pre-contractual risk assessment is evidenced in the third-party risk management and procurement records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com). Concentration risk is relevant for widely used foundation-model and cloud providers."
+    },
+    {
+      "id": "DORA-28-4-d",
+      "article": "DORA Art. 28(4)(d)",
+      "chapter": "Pre-contractual assessment",
+      "text": "Before contracting, the institution undertakes due diligence on the prospective ICT third-party service provider and ensures its suitability throughout the selection and assessment process.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Due diligence on ICT third-party providers is evidenced in procurement and third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com)."
+    },
+    {
+      "id": "DORA-28-7",
+      "article": "DORA Art. 28(7)",
+      "chapter": "Contractual provisions (Art. 30)",
+      "text": "The contractual arrangement can be terminated in the circumstances of Art. 28(7)(a)-(d), including significant breach by the provider, weaknesses in its ICT risk management, or impediments to effective supervision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Termination rights are contractual provisions evidenced in the ICT services agreement, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com)."
+    },
+    {
+      "id": "DORA-28-8",
+      "article": "DORA Art. 28(8)",
+      "chapter": "Exit strategies",
+      "text": "For ICT services supporting critical or important functions, the institution has an exit strategy with comprehensive, documented and sufficiently tested exit plans, alternative solutions and transition plans.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com). For AI models: fallback model or manual process, portability of training data, features and model artefacts."
+    },
+    {
+      "id": "DORA-30-2",
+      "article": "DORA Art. 30(1)-(2)",
+      "chapter": "Contractual provisions (Art. 30)",
+      "text": "The written contract for the AI model or service contains the Art. 30(2) key provisions, including a clear description of services, subcontracting conditions, service levels, incident assistance and cooperation with competent authorities.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The key contractual provisions are evidenced in the ICT services agreement, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Art. 30(2)(a)-(i) from knowledge of the Regulation text; list is well established."
+    },
+    {
+      "id": "DORA-30-2-b",
+      "article": "DORA Art. 30(2)(b)",
+      "chapter": "Contractual provisions (Art. 30)",
+      "text": "The contract specifies the locations where the services are provided and where data, including training and inference data, are processed and stored, and requires advance notice of any change of location.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Service and data location clauses are contractual provisions evidenced in the ICT services agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "From knowledge of Art. 30(2)(b)."
+    },
+    {
+      "id": "DORA-30-2-d",
+      "article": "DORA Art. 30(2)(d)",
+      "chapter": "Contractual provisions (Art. 30)",
+      "text": "The contract ensures access, recovery and return, in an easily accessible format, of personal and non-personal data processed by the provider in the event of insolvency, resolution, discontinuation or termination.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Data access, recovery and return clauses are contractual provisions evidenced in the ICT services agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "From knowledge of Art. 30(2)(d)."
+    },
+    {
+      "id": "DORA-30-3-a",
+      "article": "DORA Art. 30(3)(a)",
+      "chapter": "Contractual provisions (Art. 30)",
+      "text": "For services supporting critical or important functions, the contract includes full service level descriptions with precise quantitative and qualitative performance targets, enabling monitoring and corrective action.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Service level descriptions are contractual provisions evidenced in the ICT services agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "From knowledge of Art. 30(3)(a). For AI models, targets can include model performance and availability metrics."
+    },
+    {
+      "id": "DORA-30-3-e",
+      "article": "DORA Art. 30(3)(e)",
+      "chapter": "Contractual provisions (Art. 30)",
+      "text": "For services supporting critical or important functions, the contract grants the institution, its auditors and the competent authority unrestricted rights of access, inspection and audit.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Access, inspection and audit rights are contractual provisions evidenced in the ICT services agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "From knowledge of Art. 30(3)(e)."
+    },
+    {
+      "id": "DORA-8-5",
+      "article": "DORA Art. 8(5)-(6)",
+      "chapter": "ICT risk management of models",
+      "text": "The institution identifies and documents all processes dependent on the third-party AI model or service, identifies interconnections with providers supporting critical or important functions, and keeps these inventories up to date.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Inventories of ICT-dependent processes and interconnections are institution-level registers maintained under the ICT risk management framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2022/2554 (Art. 8 and 28 via digital-operational-resilience-act.com)."
+    }
+  ]
+}

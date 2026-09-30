@@ -1,0 +1,469 @@
+{
+  "docId": "INT-STD-DOD",
+  "requirements": [
+    {
+      "id": "CR-STD-110-4.1",
+      "article": "CR-STD-110 §4.1",
+      "chapter": "General principles",
+      "text": "The same definition of default is applied across the IRB approach, IFRS 9 Stage 3, non-performing exposure reporting and credit risk management, in all Group entities.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide requirement on the consistent application of the default definition; evidenced in the Bank's default definition framework and group implementation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-4.2",
+      "article": "CR-STD-110 §4.2; CRR Art. 178(1)",
+      "chapter": "General principles",
+      "text": "Default is identified at obligor level for all exposure classes, and all credit obligations of a defaulted obligor are flagged as defaulted.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-4.3",
+      "article": "CR-STD-110 §4.3",
+      "chapter": "General principles",
+      "text": "Joint credit obligations and contagion between connected obligors are treated in accordance with section 8 of EBA/GL/2016/07.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-4.5",
+      "article": "CR-STD-110 §4.5",
+      "chapter": "General principles",
+      "text": "The date of default is the first day on which any default criterion is met and is recorded for every default event.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-5.1",
+      "article": "CR-STD-110 §5.1",
+      "chapter": "Past-due criterion",
+      "text": "Days past due are counted from the first day on which both the absolute and the relative materiality components are exceeded, and reset when either is no longer exceeded.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-5.2",
+      "article": "CR-STD-110 §5.2; RTS 2018/171",
+      "chapter": "Past-due criterion",
+      "text": "The materiality threshold is EUR 100 and 1% for retail exposures and EUR 500 and 1% for non-retail exposures.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; thresholds consistent with RTS 2018/171 and pilot REQ-D07 (retail EUR 100 / 1%)."
+    },
+    {
+      "id": "CR-STD-110-5.3",
+      "article": "CR-STD-110 §5.3",
+      "chapter": "Past-due criterion",
+      "text": "The absolute component is compared with the sum of all past due amounts of the obligor, and the relative component is that sum divided by the obligor's total on-balance-sheet exposure.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-5.5",
+      "article": "CR-STD-110 §5.5",
+      "chapter": "Past-due criterion",
+      "text": "Where the repayment schedule is changed, days past due are counted on the modified schedule, and forbearance changes are assessed for distressed restructuring.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-5.6",
+      "article": "CR-STD-110 §5.6",
+      "chapter": "Past-due criterion",
+      "text": "Technical past due is recognised only in the situations defined as technical past due in EBA/GL/2016/07, and each case is documented and corrected within 30 days.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-6.1",
+      "article": "CR-STD-110 §6.1; CRR Art. 178(3)",
+      "chapter": "Unlikeliness to pay",
+      "text": "Non-accrued status, specific credit risk adjustments (including Stage 3), sale at a credit-related loss above 5%, distressed restructuring with DFO above 1%, bankruptcy and forced sale of collateral lead to default automatically.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; triggers consistent with CRR Art. 178(3) and EBA/GL/2016/07 section 5, and with the UTP triggers of the pilot RDS."
+    },
+    {
+      "id": "CR-STD-110-6.2",
+      "article": "CR-STD-110 §6.2",
+      "chapter": "Unlikeliness to pay",
+      "text": "Additional UTP indicators (such as fraud, significant income or cash-flow decline, covenant breach, multiple forbearance) lead to a case-by-case assessment completed within 30 days of detection.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-6.3",
+      "article": "CR-STD-110 §6.3",
+      "chapter": "Unlikeliness to pay",
+      "text": "Each UTP trigger and indicator is mapped to source-system fields, and the outcome of each case-by-case assessment is recorded with its rationale.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-6.4",
+      "article": "CR-STD-110 §6.4",
+      "chapter": "Unlikeliness to pay",
+      "text": "The diminished financial obligation is calculated as the relative reduction in net present value of expected cash flows caused by the restructuring, discounted at the original effective interest rate.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-7.1",
+      "article": "CR-STD-110 §7.1",
+      "chapter": "Return to non-default status",
+      "text": "An obligor returns to non-default status only after at least three months without any default trigger and an assessment that the improvement in credit quality is factual and permanent.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-7.2",
+      "article": "CR-STD-110 §7.2",
+      "chapter": "Return to non-default status",
+      "text": "After a distressed restructuring, the probation period is at least 12 months, and return requires a material payment, no amount past due and no concerns about full repayment.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-7.3",
+      "article": "CR-STD-110 §7.3",
+      "chapter": "Return to non-default status",
+      "text": "The probation start date and status are recorded for every default event.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-7.4",
+      "article": "CR-STD-110 §7.4",
+      "chapter": "Return to non-default status",
+      "text": "Re-default rates of obligors returned to non-default status are analysed at least annually by default trigger, and longer probation periods are proposed where cure is not permanent.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Periodic review of the Bank-wide default definition; evidenced in the annual default definition review, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-8.1",
+      "article": "CR-STD-110 §8.1",
+      "chapter": "Multiple defaults",
+      "text": "Where an obligor defaults again within 12 months of returning to non-default status, both events are treated as a single default starting on the first date of default for risk parameter estimation.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-8.2",
+      "article": "CR-STD-110 §8.2",
+      "chapter": "Multiple defaults",
+      "text": "The RDS identifies and links multiple default events, and the number of merged default events is reported in the RDS documentation.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-9.1",
+      "article": "CR-STD-110 §9.1",
+      "chapter": "Default flag in models",
+      "text": "The RDS default flag is constructed in accordance with CR-STD-110, including materiality thresholds, UTP triggers, probation periods and the treatment of multiple defaults.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-9.2",
+      "article": "CR-STD-110 §9.2",
+      "chapter": "Default flag in models",
+      "text": "The default flag construction in the RDS code is reconciled with the production default flag for the periods in which both are available, and differences are explained.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-9.3",
+      "article": "CR-STD-110 §9.3",
+      "chapter": "Default flag in models",
+      "text": "For periods before 1 January 2016 the approximation of the default flag from arrears and restructuring data is documented and its effect on default rates quantified.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-9.4",
+      "article": "CR-STD-110 §9.4",
+      "chapter": "Default flag in models",
+      "text": "Periods for which the default flag could not be reconstructed with probation periods are stated in the RDS documentation together with the treatment applied.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-10.2",
+      "article": "CR-STD-110 §10.2",
+      "chapter": "Governance and monitoring",
+      "text": "The default flags used for IRB and IFRS 9 purposes are reconciled quarterly between the risk and finance systems.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide reconciliation between risk and finance systems; evidenced in quarterly reconciliation reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    },
+    {
+      "id": "CR-STD-110-10.3",
+      "article": "CR-STD-110 §10.3",
+      "chapter": "Governance and monitoring",
+      "text": "A change to the definition of default is assessed as a change to all IRB rating systems under MRM-STD-050 and Commission Delegated Regulation (EU) No 529/2014.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide change governance for the default definition; evidenced in the change assessment for the definition of default, not in the documentation of an individual model.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-110 v3.0) text authored for the library."
+    }
+  ]
+}

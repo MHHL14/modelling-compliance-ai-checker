@@ -1,0 +1,527 @@
+{
+  "docId": "INT-STD-EJ",
+  "requirements": [
+    {
+      "id": "REQ-D31",
+      "article": "MRM-STD-023 §2",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Expert judgement applied in data treatment is documented and approved.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (fixed id, text and article); MRM-STD-023 v1.4 §2.1–2.2, with data treatment types in §3.1."
+    },
+    {
+      "id": "MRM-STD-023-2.1",
+      "article": "MRM-STD-023 §2.1",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Expert judgement applied in model design, calibration, overrides and overlays is documented and approved before the affected model or output is used.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.1."
+    },
+    {
+      "id": "MRM-STD-023-2.2a",
+      "article": "MRM-STD-023 §2.2",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "The model has an expert judgement log, stored with the model documentation, in which every instance of expert judgement is recorded with its type, life cycle stage and affected data, segment or parameter.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.2."
+    },
+    {
+      "id": "MRM-STD-023-2.2b",
+      "article": "MRM-STD-023 §2.2(d)",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Each expert judgement log entry records the rationale, the evidence relied on and the alternatives considered and rejected.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.2(d)."
+    },
+    {
+      "id": "MRM-STD-023-2.2c",
+      "article": "MRM-STD-023 §2.2(e)",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Each expert judgement log entry records the quantified impact on the model output, or a qualitative assessment with the reason quantification is not possible.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.2(e)."
+    },
+    {
+      "id": "MRM-STD-023-2.2d",
+      "article": "MRM-STD-023 §2.2(g)-(h)",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Each expert judgement log entry records the proposer, the approver and the date of approval.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.2(g)-(h)."
+    },
+    {
+      "id": "MRM-STD-023-2.2e",
+      "article": "MRM-STD-023 §2.2(i)",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Each expert judgement log entry records a review date and the conditions under which the judgement expires.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.2(i)."
+    },
+    {
+      "id": "MRM-STD-023-2.3",
+      "article": "MRM-STD-023 §2.3",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "The rationale for each expert judgement is specific enough for a knowledgeable third party to understand it and replicate its effect; unsupported references to business experience are not sufficient.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.3."
+    },
+    {
+      "id": "MRM-STD-023-2.4",
+      "article": "MRM-STD-023 §2.4",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Expert judgement is approved at the level set by its materiality: Model Owner (low), Model Owner and head of development (medium), Model Risk Committee after Model Validation review (high).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.4."
+    },
+    {
+      "id": "MRM-STD-023-2.5",
+      "article": "MRM-STD-023 §2.5",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "The proposer of an expert judgement is not its sole approver.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.5."
+    },
+    {
+      "id": "MRM-STD-023-2.6",
+      "article": "MRM-STD-023 §2.6",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Where expert judgement is elicited from a panel, the panel composition, elicitation method, individual contributions and aggregation of opinions are documented.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.6."
+    },
+    {
+      "id": "MRM-STD-023-2.7",
+      "article": "MRM-STD-023 §2.7",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "The expert judgement log is referenced in the MDD and, for judgements in data treatment, in the RDS documentation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.7."
+    },
+    {
+      "id": "MRM-STD-023-2.8",
+      "article": "MRM-STD-023 §2.8",
+      "chapter": "Documentation and approval of expert judgement",
+      "text": "Each expert judgement is reviewed at least at each annual model review and when new data could replace it, and withdrawn judgements are recorded in the log.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §2.8."
+    },
+    {
+      "id": "MRM-STD-023-3.2a",
+      "article": "MRM-STD-023 §3.2",
+      "chapter": "Types of expert judgement",
+      "text": "Expert judgement in data treatment that addresses a data deficiency is cross-referenced to the data deficiency log of MRM-STD-022.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.2."
+    },
+    {
+      "id": "MRM-STD-023-3.2b",
+      "article": "MRM-STD-023 §3.2; CRR Art. 179(1)(f)",
+      "chapter": "Types of expert judgement",
+      "text": "Expert judgement in data treatment addressing a data deficiency is linked to the assessment of the related margin of conservatism under CRM-STD-101.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models used for own funds requirements only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.2."
+    },
+    {
+      "id": "MRM-STD-023-3.3",
+      "article": "MRM-STD-023 §3.3",
+      "chapter": "Types of expert judgement",
+      "text": "Expert judgement in model design (segmentation, forced inclusion or exclusion of risk drivers, qualitative modules and weights, functional form, calibration target) is justified in the MDD.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.3."
+    },
+    {
+      "id": "MRM-STD-023-3.4a",
+      "article": "MRM-STD-023 §3.4; CRR Art. 172(3)",
+      "chapter": "Types of expert judgement",
+      "text": "Overrides of model outputs are permitted only within a documented override policy specifying permitted reasons, maximum permitted change, required evidence and authority levels.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.4."
+    },
+    {
+      "id": "MRM-STD-023-3.4b",
+      "article": "MRM-STD-023 §3.4; CRR Art. 172(3)",
+      "chapter": "Types of expert judgement",
+      "text": "Each override records the reason code, the supporting evidence and the approver.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.4."
+    },
+    {
+      "id": "MRM-STD-023-3.5a",
+      "article": "MRM-STD-023 §3.5",
+      "chapter": "Types of expert judgement",
+      "text": "An overlay addresses a specific identified model limitation, is quantified by a documented method and has a plan with target date to remove the limitation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.5."
+    },
+    {
+      "id": "MRM-STD-023-3.5b",
+      "article": "MRM-STD-023 §3.5",
+      "chapter": "Types of expert judgement",
+      "text": "An overlay in place for more than 24 months triggers a model change assessment under MRM-STD-050.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §3.5."
+    },
+    {
+      "id": "MRM-STD-023-4.1",
+      "article": "MRM-STD-023 §4.1",
+      "chapter": "Materiality",
+      "text": "Each expert judgement is classified as low, medium or high materiality based on its impact on the model output relative to the output without the judgement or the best statistical alternative.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §4.1."
+    },
+    {
+      "id": "MRM-STD-023-4.3",
+      "article": "MRM-STD-023 §4.3",
+      "chapter": "Materiality",
+      "text": "The aggregate effect of all expert judgements in the model is quantified and reported in the MDD, and is approved by the Model Risk Committee if it exceeds the high materiality threshold.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §4.3."
+    },
+    {
+      "id": "MRM-STD-023-4.4",
+      "article": "MRM-STD-023 §4.4",
+      "chapter": "Materiality",
+      "text": "Expert judgement whose impact cannot be quantified is classified as at least medium materiality, and as high materiality for Tier 1 models.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §4.4."
+    },
+    {
+      "id": "MRM-STD-023-5.1",
+      "article": "MRM-STD-023 §5.1",
+      "chapter": "Challenge",
+      "text": "Every expert judgement of medium or high materiality is subject to documented challenge by a person independent of the proposer before approval, with the challenge and resolution recorded in the log.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §5.1."
+    },
+    {
+      "id": "MRM-STD-023-5.4",
+      "article": "MRM-STD-023 §5.4",
+      "chapter": "Challenge",
+      "text": "The effect of material expert judgement is tested, where possible, by sensitivity analysis under reasonable alternative judgements.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §5.4."
+    },
+    {
+      "id": "MRM-STD-023-6.1",
+      "article": "MRM-STD-023 §6.1; CRR Art. 172(3)",
+      "chapter": "Monitoring of overrides and overlays",
+      "text": "Override rates, direction and magnitude are monitored by portfolio, override reason and approving unit at the frequency set in the monitoring plan.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §6.1."
+    },
+    {
+      "id": "MRM-STD-023-6.3",
+      "article": "MRM-STD-023 §6.3",
+      "chapter": "Monitoring of overrides and overlays",
+      "text": "The performance of overridden cases is analysed against non-overridden cases, including realised default rates by original and final grade.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §6.3."
+    },
+    {
+      "id": "MRM-STD-023-6.4",
+      "article": "MRM-STD-023 §6.4",
+      "chapter": "Monitoring of overrides and overlays",
+      "text": "The continued need for each overlay is reassessed at least quarterly for Tier 1 models and semi-annually for other models.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-023 v1.4), §6.4."
+    }
+  ]
+}

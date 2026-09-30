@@ -1,0 +1,361 @@
+{
+  "docId": "EXT-EBA-OUTS",
+  "requirements": [
+    {
+      "id": "EBA-OUTS-26",
+      "article": "EBA/GL/2019/02 para 26 and 28",
+      "chapter": "Outsourcing assessment",
+      "text": "The institution establishes whether the arrangement with the third-party model provider is outsourcing, considering whether the function is performed on a recurrent or ongoing basis and would normally be performed by the institution itself.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The outsourcing qualification assessment is evidenced in the institution's outsourcing register and third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019). Para 28 excludes e.g. market information services and acquisition of goods; a one-off model licence may fall outside, a model-as-a-service arrangement typically not."
+    },
+    {
+      "id": "EBA-OUTS-29",
+      "article": "EBA/GL/2019/02 para 29-31",
+      "chapter": "Outsourcing assessment",
+      "text": "The institution assesses whether the outsourced function is critical or important, in particular whether a defect or failure would materially impair compliance, financial performance, or soundness and continuity of its services.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The criticality assessment of outsourced functions is evidenced in the outsourcing register and third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-33",
+      "article": "EBA/GL/2019/02 para 33",
+      "chapter": "Governance and third-party risk",
+      "text": "The institution identifies, assesses, monitors and manages the risks of all arrangements with third parties, including vendor models that do not qualify as outsourcing.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Management of third-party arrangement risks is an institution-wide process evidenced in the third-party risk management framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-35",
+      "article": "EBA/GL/2019/02 para 35",
+      "chapter": "Governance and third-party risk",
+      "text": "Outsourcing a model-related function does not delegate the management body's responsibilities; the institution remains fully responsible for its regulatory obligations and for overseeing the outsourced critical or important function.",
+      "quote": "The outsourcing of functions cannot result in the delegation of the management body’s responsibilities.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Retention of management body responsibility is a governance principle evidenced in the institution's outsourcing policy.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-48",
+      "article": "EBA/GL/2019/02 para 48-49",
+      "chapter": "Business continuity",
+      "text": "The institution has in place, maintains and periodically tests business continuity plans for outsourced critical or important functions, covering deterioration or failure of the service and insolvency of the provider.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Business continuity plans for outsourced functions are evidenced in the institution's business continuity management framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-52",
+      "article": "EBA/GL/2019/02 para 52-55",
+      "chapter": "Documentation and notification",
+      "text": "The outsourcing arrangement is recorded in an up-to-date register of all outsourcing arrangements, with the minimum information of para 54 and, for critical or important functions, the additional information of para 55.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The outsourcing register is an institution-level register maintained by third-party risk management.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019). For ICT services DORA Art. 28-30 applies since 17 Jan 2025; check the EBA review of these guidelines for alignment with DORA."
+    },
+    {
+      "id": "EBA-OUTS-58",
+      "article": "EBA/GL/2019/02 para 58",
+      "chapter": "Documentation and notification",
+      "text": "The institution informs the competent authority in a timely manner about a planned outsourcing of a critical or important function, or where an outsourced function has become critical or important.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Informing the competent authority of planned critical outsourcing is a supervisory notification by the institution.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-61",
+      "article": "EBA/GL/2019/02 para 61",
+      "chapter": "Pre-outsourcing analysis",
+      "text": "Before entering into the arrangement, the institution assesses criticality, the supervisory conditions, all relevant risks, due diligence on the provider and conflicts of interest.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The pre-outsourcing analysis is evidenced in procurement and third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-64",
+      "article": "EBA/GL/2019/02 para 64-65",
+      "chapter": "Pre-outsourcing analysis",
+      "text": "The institution assesses and documents the impact of the outsourcing on its operational risk, including scenarios of high-severity risk events, and takes that assessment into account in the outsourcing decision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The operational risk assessment of outsourcing is evidenced in third-party and operational risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-66-a",
+      "article": "EBA/GL/2019/02 para 66(a)",
+      "chapter": "Pre-outsourcing analysis",
+      "text": "The risk assessment considers concentration risk from outsourcing to a dominant, not easily substitutable provider and from multiple arrangements with the same or closely connected providers.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Outsourcing concentration risk is assessed at institution level and evidenced in third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-70",
+      "article": "EBA/GL/2019/02 para 69-70",
+      "chapter": "Pre-outsourcing analysis",
+      "text": "For critical or important functions, due diligence confirms the provider has the reputation, expertise, capacity, resources, organisational structure and any required authorisation to perform the function reliably over the contract term.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Due diligence on service providers is evidenced in procurement and third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-75-i",
+      "article": "EBA/GL/2019/02 para 75(i)",
+      "chapter": "Contractual phase",
+      "text": "The outsourcing agreement for a critical or important function sets agreed service levels with precise quantitative and qualitative performance targets that allow timely monitoring and corrective action.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Service levels are contractual provisions evidenced in the outsourcing agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-75-j",
+      "article": "EBA/GL/2019/02 para 75(j)",
+      "chapter": "Contractual phase",
+      "text": "The agreement obliges the provider to report any development that may materially impact its ability to perform the critical or important function, such as changes to the model or its data.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Provider reporting obligations are contractual provisions evidenced in the outsourcing agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019). Model-change example is an interpretation for vendor models."
+    },
+    {
+      "id": "EBA-OUTS-87",
+      "article": "EBA/GL/2019/02 para 75(p) and 87",
+      "chapter": "Contractual phase",
+      "text": "For critical or important functions, the agreement grants the institution and competent authorities full access to relevant premises, systems, data and personnel and unrestricted rights of inspection and audit.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Access, inspection and audit rights are contractual provisions evidenced in the outsourcing agreement.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-100",
+      "article": "EBA/GL/2019/02 para 100",
+      "chapter": "Oversight of outsourced functions",
+      "text": "The institution monitors the provider's performance on an ongoing, risk-based basis and reassesses criticality where the risk, nature or scale of the outsourced function has materially changed.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Ongoing monitoring of the service provider's performance is evidenced in vendor management and third-party risk management records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-106",
+      "article": "EBA/GL/2019/02 para 106",
+      "chapter": "Exit strategies",
+      "text": "The institution has a documented exit strategy for the outsourced critical or important function, consistent with its outsourcing policy and business continuity plans, covering termination, provider failure and deterioration of quality.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The exit strategy for outsourced functions is evidenced in the institution's outsourcing policy and business continuity plans.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    },
+    {
+      "id": "EBA-OUTS-107",
+      "article": "EBA/GL/2019/02 para 107",
+      "chapter": "Exit strategies",
+      "text": "The institution develops comprehensive, documented and, where appropriate, sufficiently tested exit plans and identifies alternative solutions and transition plans to move the function and data without undue disruption.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/02 final report text (25 Feb 2019)."
+    }
+  ]
+}

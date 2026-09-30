@@ -7,7 +7,7 @@ import { useReviewCtx } from '@/components/val/useReviewCtx';
 
 export default function ReviewLayout({ children }: { children: React.ReactNode }) {
   const { snapshotId } = useParams<{ snapshotId: string }>();
-  const { review, model, docs, seeded, id } = useReviewCtx(snapshotId);
+  const { review, model, docs, seeded, ready, id } = useReviewCtx(snapshotId);
   if (!review) return seeded ? <EmptyState title="Review not found">No imported submission package with ID {id} in this workspace.</EmptyState> : null;
   const base = `/val/reviews/${encodeURIComponent(id)}`;
   const decided = review.run?.rows.filter((r) => r.decision).length ?? 0;
@@ -24,7 +24,7 @@ export default function ReviewLayout({ children }: { children: React.ReactNode }
     <DocViewerProvider docs={docs}>
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start">
         <StageRail title={model?.name ?? review.modelId} subtitle={<span className="font-mono">{id}</span>} stages={stages} />
-        <div className="min-w-0 flex-1">{children}</div>
+        <div className="min-w-0 flex-1">{ready ? children : <p className="p-6 text-sm text-ink-2">Loading the documentation library…</p>}</div>
       </div>
     </DocViewerProvider>
   );

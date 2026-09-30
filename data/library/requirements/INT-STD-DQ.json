@@ -1,0 +1,557 @@
+{
+  "docId": "INT-STD-DQ",
+  "requirements": [
+    {
+      "id": "REQ-D18",
+      "article": "MRM-STD-022 §3; BCBS 239 principles 3–5",
+      "chapter": "Data quality dimensions",
+      "text": "Data quality is assessed on completeness, accuracy, consistency and timeliness.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (fixed id, text and article); MRM-STD-022 v2.2 §3.1. BCBS 239 principles 3 (accuracy and integrity), 4 (completeness), 5 (timeliness)."
+    },
+    {
+      "id": "MRM-STD-022-3.2",
+      "article": "MRM-STD-022 §3.2",
+      "chapter": "Data quality dimensions",
+      "text": "Completeness of model data is measured at record level (all in-scope obligors, facilities, defaults and recoveries included) and at attribute level (share of non-missing values per variable).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §3.2."
+    },
+    {
+      "id": "MRM-STD-022-3.3",
+      "article": "MRM-STD-022 §3.3",
+      "chapter": "Data quality dimensions",
+      "text": "Accuracy of model data is measured by reconciliation to source systems or accounting data, comparison with independent sources, and sample-based checks against source documentation.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §3.3."
+    },
+    {
+      "id": "MRM-STD-022-3.4",
+      "article": "MRM-STD-022 §3.4",
+      "chapter": "Data quality dimensions",
+      "text": "Consistency is assessed between the RDS and production input data, over the observation period (including changes in default definition), and as logical consistency between related fields.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §3.4."
+    },
+    {
+      "id": "MRM-STD-022-3.5",
+      "article": "MRM-STD-022 §3.5",
+      "chapter": "Data quality dimensions",
+      "text": "Timeliness is measured as the lag between reference date and data availability and as the currency of periodically refreshed items such as financial statements and collateral values.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §3.5."
+    },
+    {
+      "id": "MRM-STD-022-3.6",
+      "article": "MRM-STD-022 §3.6; CRR Art. 174(b)",
+      "chapter": "Data quality dimensions",
+      "text": "Validity, uniqueness and appropriateness (representativeness for the model's range of application) of the model data are assessed where relevant to the model.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §3.6."
+    },
+    {
+      "id": "MRM-STD-022-4.1",
+      "article": "MRM-STD-022 §4.1",
+      "chapter": "DQ rules and thresholds",
+      "text": "For every critical data element of the model at least one DQ rule is defined for each applicable mandatory dimension, and the reason is recorded where a dimension is not applicable.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §4.1."
+    },
+    {
+      "id": "MRM-STD-022-4.2",
+      "article": "MRM-STD-022 §4.2",
+      "chapter": "DQ rules and thresholds",
+      "text": "The DQ rules for the model's critical data elements are documented in the RDS documentation and recurring checks are implemented in the Group DQ monitoring tool.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §4.2."
+    },
+    {
+      "id": "MRM-STD-022-4.3",
+      "article": "MRM-STD-022 §4.3",
+      "chapter": "DQ rules and thresholds",
+      "text": "Each DQ rule has an amber and a red threshold, at least as strict as the default thresholds of MRM-STD-022 §4.3 unless a justified deviation is approved.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §4.3."
+    },
+    {
+      "id": "MRM-STD-022-4.4a",
+      "article": "MRM-STD-022 §4.4",
+      "chapter": "DQ rules and thresholds",
+      "text": "DQ thresholds for the target variable and its constituents (default flag, default date, realised loss, recovery cash flows, exposure at default) are at least as strict as the default thresholds.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §4.4."
+    },
+    {
+      "id": "MRM-STD-022-4.4b",
+      "article": "MRM-STD-022 §4.4",
+      "chapter": "DQ rules and thresholds",
+      "text": "Accuracy of the default flag in the model data is confirmed by reconciliation of default events to the default register maintained under CR-STD-110.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models with a default-based target variable.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §4.4."
+    },
+    {
+      "id": "MRM-STD-022-4.5",
+      "article": "MRM-STD-022 §4.5",
+      "chapter": "DQ rules and thresholds",
+      "text": "Deviations from the default DQ thresholds are justified in the RDS documentation and approved by the Model Owner, and for less strict thresholds on Tier 1 models also by Model Risk Management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §4.5."
+    },
+    {
+      "id": "MRM-STD-022-5.1",
+      "article": "MRM-STD-022 §5.1",
+      "chapter": "DQ assessment",
+      "text": "A documented DQ assessment is performed on the RDS before development, on every new RDS version used for recalibration, and on the data used for each periodic validation.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.1."
+    },
+    {
+      "id": "MRM-STD-022-5.2",
+      "article": "MRM-STD-022 §5.2",
+      "chapter": "DQ assessment",
+      "text": "The DQ assessment reports the result of each DQ rule per variable and dimension against its thresholds, and the number and share of records excluded from the RDS by reason of exclusion.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.2."
+    },
+    {
+      "id": "MRM-STD-022-5.3",
+      "article": "MRM-STD-022 §5.3",
+      "chapter": "DQ assessment",
+      "text": "Every exclusion of records from the RDS is justified, quantified and assessed for its effect on representativeness; exclusions above 5% of records or exposure in any segment are approved by the Model Owner and reported to Model Validation.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.3."
+    },
+    {
+      "id": "MRM-STD-022-5.4",
+      "article": "MRM-STD-022 §5.4",
+      "chapter": "DQ assessment",
+      "text": "The RDS is reconciled to source systems or accounting data for key amounts (exposure, outstanding balance, losses) and for record counts per reference date.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.4."
+    },
+    {
+      "id": "MRM-STD-022-5.5",
+      "article": "MRM-STD-022 §5.5",
+      "chapter": "DQ assessment",
+      "text": "For Tier 1 models the DQ assessment includes sample-based verification of accuracy against source documentation such as credit files and collateral valuations.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.5."
+    },
+    {
+      "id": "MRM-STD-022-5.6",
+      "article": "MRM-STD-022 §5.6",
+      "chapter": "DQ assessment",
+      "text": "The DQ assessment concludes explicitly whether the data is fit for the intended use and is signed off by the model developer and the Model Owner before the RDS is frozen.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.6."
+    },
+    {
+      "id": "MRM-STD-022-5.7",
+      "article": "MRM-STD-022 §5.7",
+      "chapter": "DQ assessment",
+      "text": "The DQ rules applied to the RDS are also applied to the production input data of the model.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §5.7."
+    },
+    {
+      "id": "MRM-STD-022-6.1",
+      "article": "MRM-STD-022 §6.1",
+      "chapter": "Missing values and outliers",
+      "text": "The treatment of missing values is documented per variable, distinguishing values missing at random, missing for a structural reason and missing because of a data deficiency.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §6.1."
+    },
+    {
+      "id": "MRM-STD-022-6.2",
+      "article": "MRM-STD-022 §6.2",
+      "chapter": "Missing values and outliers",
+      "text": "Imputation of missing values uses a documented, reproducible method; the share of imputed values per variable is reported and the effect of imputation on estimated parameters is assessed.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §6.2."
+    },
+    {
+      "id": "MRM-STD-022-6.3",
+      "article": "MRM-STD-022 §6.3",
+      "chapter": "Missing values and outliers",
+      "text": "Outliers are identified using documented criteria applied consistently between development and production.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §6.3."
+    },
+    {
+      "id": "MRM-STD-022-6.4",
+      "article": "MRM-STD-022 §6.4",
+      "chapter": "Missing values and outliers",
+      "text": "The treatment of outliers (correction, capping, flooring, exclusion) is justified, applied consistently between development and production, and its impact on the model output quantified.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §6.4."
+    },
+    {
+      "id": "MRM-STD-022-6.5",
+      "article": "MRM-STD-022 §6.5",
+      "chapter": "Missing values and outliers",
+      "text": "Missing values and outliers in the target variable are not imputed; affected records are investigated and corrected at source or excluded with justification.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §6.5."
+    },
+    {
+      "id": "MRM-STD-022-7.1",
+      "article": "MRM-STD-022 §7.1",
+      "chapter": "Data deficiencies and MoC",
+      "text": "The model has a data deficiency log recording each identified deficiency with affected variables and segments, DQ dimension, cause, quantified or estimated impact and treatment.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §7.1."
+    },
+    {
+      "id": "MRM-STD-022-7.2",
+      "article": "MRM-STD-022 §7.2",
+      "chapter": "Data deficiencies and MoC",
+      "text": "Each data deficiency is treated by remediation at source, evidenced correction, exclusion, methodological adjustment or recognition in the margin of conservatism, and the treatment is documented.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §7.2."
+    },
+    {
+      "id": "MRM-STD-022-7.3",
+      "article": "MRM-STD-022 §7.3; CRR Art. 179(1)(f); EBA/GL/2017/16 (margin of conservatism)",
+      "chapter": "Data deficiencies and MoC",
+      "text": "Each data deficiency not fully remediated is assessed for inclusion in the margin of conservatism as a category A deficiency under CRM-STD-101, and the log references the MoC component it is mapped to.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models used for own funds requirements only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §7.3."
+    },
+    {
+      "id": "MRM-STD-022-7.4",
+      "article": "MRM-STD-022 §7.4",
+      "chapter": "Data deficiencies and MoC",
+      "text": "Corrections of model data not supported by documented source evidence are treated as expert judgement and documented and approved under MRM-STD-023.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §7.4."
+    },
+    {
+      "id": "MRM-STD-022-7.5",
+      "article": "MRM-STD-022 §7.5",
+      "chapter": "Data deficiencies and MoC",
+      "text": "Each data deficiency has a remediation owner and target date, is closed only on confirmed remediation, and the related MoC component is then reassessed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §7.5."
+    },
+    {
+      "id": "MRM-STD-022-8.3",
+      "article": "MRM-STD-022 §8.3",
+      "chapter": "DQ reporting",
+      "text": "Red DQ threshold breaches on a critical data element of a Tier 1 model are escalated to Model Risk Management within ten business days and reported to the Model Risk Committee.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-022 v2.2), §8.3."
+    }
+  ]
+}

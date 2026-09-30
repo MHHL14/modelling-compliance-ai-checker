@@ -1,0 +1,559 @@
+{
+  "docId": "INT-STD-ACC",
+  "requirements": [
+    {
+      "id": "CR-STD-120-4.1",
+      "article": "CR-STD-120 §4.1",
+      "chapter": "Decision framework",
+      "text": "Each acceptance decision combines policy rules, the application score, the affordability assessment and, for secured credit, the collateral assessment, and all must be passed unless an authorised override applies.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-4.2",
+      "article": "CR-STD-120 §4.2; MCD Art. 18(3); EBA/GL/2020/06",
+      "chapter": "Decision framework",
+      "text": "The creditworthiness assessment relies primarily on the applicant's ability to meet the credit obligations and not predominantly on the value of the collateral.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; consistent with MCD Art. 18(3) and EBA/GL/2020/06 section 5.2."
+    },
+    {
+      "id": "CR-STD-120-4.3",
+      "article": "CR-STD-120 §4.3; EBA/GL/2020/06 section 4.3.4",
+      "chapter": "Decision framework",
+      "text": "The methodology, input data, assumptions and limitations of automated acceptance models are understood, and their outcomes can be explained.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; implements EBA/GL/2020/06 section 4.3.4 (technology-enabled innovation for credit decision-making)."
+    },
+    {
+      "id": "CR-STD-120-4.4",
+      "article": "CR-STD-120 §4.4",
+      "chapter": "Decision framework",
+      "text": "All decision-engine parameters (policy rules, scorecard coefficients, cut-offs, affordability parameters) are version-controlled and changed only through the approval and model change processes.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-5.1",
+      "article": "CR-STD-120 §5.1",
+      "chapter": "Scorecard development",
+      "text": "The scorecard target is 90 days past due or default under CR-STD-110 within a 12-month (consumer) or 24-month (mortgage) performance window, and indeterminate outcomes are documented.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-5.2",
+      "article": "CR-STD-120 §5.2",
+      "chapter": "Scorecard development",
+      "text": "The development sample is drawn from the most recent through-the-door population with complete performance, and its representativeness is demonstrated with the PSI against thresholds of 0.10 and 0.25.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-5.5",
+      "article": "CR-STD-120 §5.5",
+      "chapter": "Scorecard development",
+      "text": "The discriminatory power of the scorecard is measured on an out-of-time sample and assessed against the thresholds of MV-HB-003.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-6.1",
+      "article": "CR-STD-120 §6.1",
+      "chapter": "Reject inference",
+      "text": "Where a scorecard is developed on accepted applications only, reject inference is performed, or its omission is justified by showing that selection bias has an immaterial effect on ranking.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-6.2",
+      "article": "CR-STD-120 §6.2",
+      "chapter": "Reject inference",
+      "text": "The reject inference method and its assumptions are documented and justified.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-6.3",
+      "article": "CR-STD-120 §6.3",
+      "chapter": "Reject inference",
+      "text": "The sensitivity of the scorecard and of expected bad rates per score band to the choice of reject inference method is assessed and reported.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-7.1",
+      "article": "CR-STD-120 §7.1",
+      "chapter": "Cut-off setting",
+      "text": "Cut-offs are based on the expected bad rate per score band, the target approval rate and the risk-adjusted return, within the credit risk appetite and portfolio limits.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-7.2",
+      "article": "CR-STD-120 §7.2",
+      "chapter": "Cut-off setting",
+      "text": "Each cut-off proposal documents the expected approval rate, expected bad rate, expected loss and a swap-set analysis against the current cut-off.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-7.3",
+      "article": "CR-STD-120 §7.3",
+      "chapter": "Cut-off setting",
+      "text": "Cut-offs and referral bands are approved by the Retail Credit Committee before implementation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-7.4",
+      "article": "CR-STD-120 §7.4",
+      "chapter": "Cut-off setting",
+      "text": "Cut-offs are reviewed at least annually and after any material change in the applicant population, the scorecard or the credit risk appetite.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-8.1",
+      "article": "CR-STD-120 §8.1",
+      "chapter": "Affordability",
+      "text": "An affordability assessment is performed for every application, taking into account verified income, existing credit commitments, other fixed expenses and living expenses based on reference budgets.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-8.2",
+      "article": "CR-STD-120 §8.2; MCD Art. 20; EBA/GL/2020/06",
+      "chapter": "Affordability",
+      "text": "Income and relevant financial information are verified using independent sources.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-8.3a",
+      "article": "CR-STD-120 §8.3",
+      "chapter": "Affordability",
+      "text": "Mortgage acceptance applies the loan-to-value, loan-to-income and debt-service-to-income limits set by national law, macroprudential measures and the credit risk appetite.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to mortgage acceptance models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-8.3b",
+      "article": "CR-STD-120 §8.3",
+      "chapter": "Affordability",
+      "text": "For mortgages with an interest rate fixed for less than ten years, debt service is calculated at a stressed interest rate.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to mortgage acceptance models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-8.4",
+      "article": "CR-STD-120 §8.4",
+      "chapter": "Affordability",
+      "text": "Statutory affordability limits are not overridden, and any use of a statutory exception is documented with the justification required by law.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-8.5",
+      "article": "CR-STD-120 §8.5",
+      "chapter": "Affordability",
+      "text": "Affordability parameters, including living expense reference budgets and stress rates, are reviewed and updated at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-9.1",
+      "article": "CR-STD-120 §9.1",
+      "chapter": "Overrides",
+      "text": "Low-side and high-side overrides are applied only by underwriters with delegated authority, using a reason code from a closed list and a written rationale.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-9.2",
+      "article": "CR-STD-120 §9.2",
+      "chapter": "Overrides",
+      "text": "Policy rules marked as non-overridable, including active default, fraud indicators and statutory affordability limits, are never overridden.",
+      "category": "governance",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-9.3",
+      "article": "CR-STD-120 §9.3",
+      "chapter": "Overrides",
+      "text": "The override rate is monitored monthly per product, and a rate above 5% of decisions triggers analysis by the Model Owner and reporting to the Retail Credit Committee.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-9.4",
+      "article": "CR-STD-120 §9.4",
+      "chapter": "Overrides",
+      "text": "The performance of low-side overrides is tracked and compared with the expected bad rate of the scorecard at least annually.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-9.5",
+      "article": "CR-STD-120 §9.5",
+      "chapter": "Overrides",
+      "text": "Override reasons do not relate to protected attributes, and override decisions are included in outcome testing for disparate impact.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-10.1",
+      "article": "CR-STD-120 §10.1",
+      "chapter": "Monitoring",
+      "text": "Front-end monitoring is performed monthly, covering application volumes, approval rates, score and characteristic stability, policy rule hit rates and override rates.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-10.2",
+      "article": "CR-STD-120 §10.2",
+      "chapter": "Monitoring",
+      "text": "Back-end monitoring is performed at least quarterly, covering discriminatory power, observed versus expected bad rates per score band, vintage curves and early delinquency.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-10.3",
+      "article": "CR-STD-120 §10.3",
+      "chapter": "Monitoring",
+      "text": "A red monitoring outcome leads to a remediation plan approved by the Retail Credit Committee within three months.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    },
+    {
+      "id": "CR-STD-120-11.1",
+      "article": "CR-STD-120 §11.1; MCD Art. 18(5)(c)",
+      "chapter": "Customer information",
+      "text": "Declined applicants are informed without delay and, where applicable, that the decision is based on automated processing or on a database consultation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Customer communication obligation of the credit origination process; evidenced in customer notification procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; consistent with MCD Art. 18(5)(c)."
+    },
+    {
+      "id": "CR-STD-120-11.2",
+      "article": "CR-STD-120 §11.2; GDPR Art. 22",
+      "chapter": "Customer information",
+      "text": "Applicants subject to a decision based solely on automated processing can obtain human intervention, express their point of view and contest the decision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to automated decisions on natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CR-STD-120 v2.5) text authored for the library."
+    }
+  ]
+}

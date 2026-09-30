@@ -1,0 +1,416 @@
+{
+  "docId": "INT-GOV-MRC",
+  "requirements": [
+    {
+      "id": "MRM-GOV-001-4.5",
+      "article": "MRM-GOV-001 §4.5",
+      "chapter": "Composition and membership",
+      "text": "An MRC member does not vote on a decision concerning a model that he or she owns, developed or uses as model owner; the conflict is declared and minuted.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Conflict-of-interest rule for Model Risk Committee members; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-5.2",
+      "article": "MRM-GOV-001 §5.2",
+      "chapter": "Meetings, quorum and decision-making",
+      "text": "MRC decisions on a Tier 1 model are taken with a quorum that includes the Head of Model Validation or the named deputy.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Quorum rule of the Model Risk Committee; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-5.3",
+      "article": "MRM-GOV-001 §5.3",
+      "chapter": "Meetings, quorum and decision-making",
+      "text": "The approval request is accompanied by the validation report, validation opinion, 1LoD self-assessment, open findings, known limitations and proposed conditions, distributed at least five business days before the meeting.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Meeting procedure of the Model Risk Committee; evidenced in the committee's meeting papers and secretariat records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-5.5",
+      "article": "MRM-GOV-001 §5.5",
+      "chapter": "Meetings, quorum and decision-making",
+      "text": "Dissenting opinions on MRC decisions are recorded in the minutes with their rationale.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Minuting obligation of the Model Risk Committee; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-5.7",
+      "article": "MRM-GOV-001 §5.7",
+      "chapter": "Meetings, quorum and decision-making",
+      "text": "Minutes recording attendance, conflicts, decisions, conditions and actions are issued within ten business days and retained with the meeting papers for at least ten years.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Minuting and record-retention obligation of the Model Risk Committee secretariat; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-6.1a",
+      "article": "MRM-GOV-001 §6.1(a)",
+      "chapter": "Approval authorities",
+      "text": "The Tier 1 model is approved for use (gate G3) by the MRC, including its conditions of use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-6.1b",
+      "article": "MRM-GOV-001 §6.1(b)",
+      "chapter": "Approval authorities",
+      "text": "The material change to a Tier 1 model, and every model change requiring supervisory permission, is approved by the MRC before submission to the ECB.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-6.1c",
+      "article": "MRM-GOV-001 §6.1(c)",
+      "chapter": "Approval authorities",
+      "text": "Temporary use of a model with a Not fit for purpose opinion is approved only by the MRC and for at most six months.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-6.2",
+      "article": "MRM-GOV-001 §6.2; CRR Art. 189(1)",
+      "chapter": "Approval authorities",
+      "text": "Material aspects of the rating and estimation processes are approved by the Management Board on the recommendation of the MRC.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Management Board; evidenced in Management Board resolutions and the MRC recommendation, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-6.3",
+      "article": "MRM-GOV-001 §6.3",
+      "chapter": "Approval authorities",
+      "text": "The Tier 2 model or material change to it is approved by the Model Approval Panel, whose decision is reported to the MRC at its next meeting.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-6.4",
+      "article": "MRM-GOV-001 §6.4",
+      "chapter": "Approval authorities",
+      "text": "The approval decision states the approved scope of use, the underlying validation opinion, the open findings accepted and any conditions with owners and deadlines.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-7.1",
+      "article": "MRM-GOV-001 §7.1",
+      "chapter": "Conditions tracking",
+      "text": "Every condition attached to an MRC or MAP decision is entered in the conditions register within five business days with identifier, model, condition text, owner and deadline.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the MRC secretariat; evidenced in the institution-wide conditions register, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-7.2",
+      "article": "MRM-GOV-001 §7.2",
+      "chapter": "Conditions tracking",
+      "text": "Closure evidence for each condition is submitted before its deadline; closure of conditions related to validation findings is confirmed by Model Validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-7.3",
+      "article": "MRM-GOV-001 §7.3",
+      "chapter": "Conditions tracking",
+      "text": "The status of all open conditions, including those due within 30 days and overdue, is reported to every MRC meeting.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Reporting obligation of the MRC secretariat; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-7.4",
+      "article": "MRM-GOV-001 §7.4",
+      "chapter": "Conditions tracking",
+      "text": "A condition deadline is extended at most once, by the body that set it, on a written request submitted before the deadline.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Procedural rule of the MRC conditions process; evidenced in the conditions register and committee minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-7.5",
+      "article": "MRM-GOV-001 §7.5",
+      "chapter": "Conditions tracking",
+      "text": "Where a condition is not met, the MRC decides whether the approval remains valid, the scope of use is restricted, compensating measures are required or the approval is withdrawn.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Decision-making obligation of the Model Risk Committee; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-8.1",
+      "article": "MRM-GOV-001 §8.1",
+      "chapter": "Escalation",
+      "text": "Red breaches of the model risk appetite, vetoes of the Chief Risk Officer and supervisory model obligations that cannot be met by their deadline are escalated to the Management Board without delay.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Escalation obligation towards the Management Board; evidenced in escalation reports and Management Board minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-8.2",
+      "article": "MRM-GOV-001 §8.2",
+      "chapter": "Escalation",
+      "text": "Unresolved disagreements between the 1LoD and Model Validation on an opinion or finding severity are decided by the MRC, and the independent validation opinion is recorded unchanged.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Dispute-resolution role of the Model Risk Committee; evidenced in the committee's terms of reference and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-8.3",
+      "article": "MRM-GOV-001 §8.3",
+      "chapter": "Escalation",
+      "text": "High-severity findings and conditions overdue by more than 90 days are escalated to the Management Board with the remediation plan and compensating measures.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Escalation obligation towards the Management Board; evidenced in escalation reports and Management Board minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-GOV-001-9.2",
+      "article": "MRM-GOV-001 §9.2",
+      "chapter": "Reporting and information",
+      "text": "The outcome of every Tier 1 validation and every Not fit for purpose opinion is reported to the MRC.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Reporting obligation of Model Validation to the Model Risk Committee; evidenced in MRC reporting packs and minutes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    }
+  ]
+}

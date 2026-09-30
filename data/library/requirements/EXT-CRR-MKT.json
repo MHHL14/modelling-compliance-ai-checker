@@ -1,0 +1,856 @@
+{
+  "docId": "EXT-CRR-MKT",
+  "requirements": [
+    {
+      "id": "CRR-MKT-104b-1",
+      "article": "CRR Art. 104b(1)",
+      "chapter": "Trading desks",
+      "text": "The institution establishes trading desks and assigns each trading book position to one desk only where the position complies with the desk's business strategy and is managed and monitored consistently.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The establishment of trading desks and position assignment is evidenced in the trading desk structure and trading book policy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Art. 104b is outside Chapter 1b but is a permission condition under Art. 325az(2)(a)."
+    },
+    {
+      "id": "CRR-MKT-325az-2-b",
+      "article": "CRR Art. 325az(2)(b)",
+      "chapter": "Permission and scope",
+      "text": "The institution provides a rationale for including each trading desk in the IMA scope, which is not motivated by the standardised approach yielding lower own funds requirements.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The rationale for the IMA desk scope is part of the institution's permission application to the competent authority.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Motivation restriction in the second subparagraph of Art. 325az(2)."
+    },
+    {
+      "id": "CRR-MKT-325az-4",
+      "article": "CRR Art. 325az(4)",
+      "chapter": "Permission and scope",
+      "text": "The institution immediately notifies the competent authority when a trading desk no longer meets a permission condition and calculates that desk's own funds requirements under the alternative standardised approach until compliance is restored.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Notification of desks no longer meeting permission conditions is an obligation of the institution towards the competent authority.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325az-7",
+      "article": "CRR Art. 325az(7)",
+      "chapter": "Permission and scope",
+      "text": "Material changes and extensions of the IMA, and material changes to the reduced set of modellable risk factors, obtain prior permission; all other changes and extensions are notified.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Prior permission and notification of IMA changes are obligations of the institution towards the competent authority, evidenced in permission records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Materiality criteria in RTS under Art. 325az(8)(a)."
+    },
+    {
+      "id": "CRR-MKT-325ba-1",
+      "article": "CRR Art. 325ba(1)",
+      "chapter": "Own funds requirements",
+      "text": "The IMA own funds requirement equals the higher of previous-day ES plus stress scenario measure, and the multiplication factor times the 60-business-day average ES plus the 60-business-day average stress scenario measure.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325ba-1-own",
+      "article": "CRR Art. 325ba(1), second subparagraph",
+      "chapter": "Own funds requirements",
+      "text": "The institution's own credit spreads are excluded from the ES and stress scenario measures for positions in its own debt instruments.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Added by CRR3."
+    },
+    {
+      "id": "CRR-MKT-325ba-2",
+      "article": "CRR Art. 325ba(2)",
+      "chapter": "Own funds requirements",
+      "text": "The default risk charge equals the higher of the most recent internal default risk model requirement and its average over the preceding 12 weeks.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bb-1",
+      "article": "CRR Art. 325bb(1)",
+      "chapter": "Expected shortfall",
+      "text": "The ES risk measure combines the unconstrained ES across all broad risk factor categories and the sum of the unconstrained ES per broad category with a supervisory correlation ρ = 50 %.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Formula rendered as image in the source; parameter ρ and structure confirmed from the definitions."
+    },
+    {
+      "id": "CRR-MKT-325bc-1-a",
+      "article": "CRR Art. 325bc(1)(a)-(b)",
+      "chapter": "Expected shortfall",
+      "text": "Partial expected shortfall measures are calculated daily at a 97.5th percentile, one-tailed confidence level.",
+      "quote": "at 97,5th percentile, one tailed confidence interval",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bc-1-c",
+      "article": "CRR Art. 325bc(1)(c)",
+      "chapter": "Expected shortfall — liquidity horizons",
+      "text": "Partial ES is scaled from a 10-day base horizon to liquidity horizons of 10, 20, 40, 60 and 120 days, shocking for each horizon only risk factors whose effective liquidity horizon is equal or longer.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Table 1 of Art. 325bc confirmed."
+    },
+    {
+      "id": "CRR-MKT-325bc-2-a",
+      "article": "CRR Art. 325bc(2)(a)",
+      "chapter": "Expected shortfall — reduced set",
+      "text": "The reduced set of modellable risk factors explains at least 75 % of the full-set current ES over the preceding 60 business days; a breach is notified immediately and remedied within two weeks.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Ratio condition is a formula image not in the extracted text; 75 % taken from the Basel standard (MAR33.5) and CRR2 — confirm."
+    },
+    {
+      "id": "CRR-MKT-325bc-2-c",
+      "article": "CRR Art. 325bc(2)(c)",
+      "chapter": "Expected shortfall — stress period",
+      "text": "Stressed ES inputs are calibrated to a continuous 12-month stress period identified to maximise the reduced-set stressed ES, searched over an observation period starting no later than 1 January 2007.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bc-3-c",
+      "article": "CRR Art. 325bc(3)(c)",
+      "chapter": "Expected shortfall — data",
+      "text": "Data inputs for the current-period partial ES measures are calibrated to the preceding 12 months and updated at least monthly.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Criteria on data accuracy and calibration where data are insufficient to follow from the RTS under Art. 325bc(6) (CRR3)."
+    },
+    {
+      "id": "CRR-MKT-325bd-1",
+      "article": "CRR Art. 325bd(1)",
+      "chapter": "Liquidity horizons",
+      "text": "Each risk factor of IMA desk positions is mapped to one broad risk factor category and one broad sub-category of Table 2, which determines its liquidity horizon.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bd-6",
+      "article": "CRR Art. 325bd(6)",
+      "chapter": "Liquidity horizons",
+      "text": "The appropriateness of the risk factor liquidity horizon mapping is verified at least monthly.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325be-1",
+      "article": "CRR Art. 325be(1)",
+      "chapter": "Risk factor eligibility test",
+      "text": "The modellability of all risk factors of positions on IMA desks is assessed, using third-party vendor data only where permitted by the competent authority.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Criteria and frequency in the RFET RTS under Art. 325be(3) (CRR3 mandate); original RTS Delegated Regulation (EU) 2022/2060."
+    },
+    {
+      "id": "CRR-MKT-325be-2",
+      "article": "CRR Art. 325be(2)",
+      "chapter": "Non-modellable risk factors",
+      "text": "Own funds requirements for risk factors assessed as non-modellable are calculated with the stress scenario risk measure of Article 325bk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bk-2",
+      "article": "CRR Art. 325bk(2)",
+      "chapter": "Non-modellable risk factors",
+      "text": "The institution develops appropriate extreme scenarios of future shock for all non-modellable risk factors, to the satisfaction of the competent authority.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Scenario design and aggregation per SSRM RTS under Art. 325bk(3)."
+    },
+    {
+      "id": "CRR-MKT-325bf-1",
+      "article": "CRR Art. 325bf(1)",
+      "chapter": "Back-testing",
+      "text": "The back-testing VaR uses a one-day holding period, shocks only modellable risk factors in the PLA risk factor list, uses current 12-month calibration data and otherwise the ES model assumptions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bf-2",
+      "article": "CRR Art. 325bf(2)",
+      "chapter": "Back-testing",
+      "text": "Daily overshootings are counted per trading desk on both hypothetical and actual changes in portfolio value.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bf-3",
+      "article": "CRR Art. 325bf(3)",
+      "chapter": "Back-testing",
+      "text": "A trading desk meets back-testing requirements if, over the latest 250 business days, it has no more than 12 overshootings at 99 % and no more than 30 at 97.5 %, each on hypothetical and actual P&L.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bf-4",
+      "article": "CRR Art. 325bf(4)(a)-(b)",
+      "chapter": "Back-testing",
+      "text": "Hypothetical changes compare end-of-day value with next-day value assuming unchanged positions; actual changes compare with the actual next-day value excluding fees and commissions.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Technical elements per RTS under Art. 325bf(9)."
+    },
+    {
+      "id": "CRR-MKT-325bf-6",
+      "article": "CRR Art. 325bf(6)",
+      "chapter": "Back-testing — multiplication factor",
+      "text": "The multiplication factor is at least 1.5 plus an add-on from Table 3 (0 below 5 up to 0.50 above 9 overshootings), based on the higher of hypothetical and actual 99 % VaR overshootings over 250 days.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bf-7",
+      "article": "CRR Art. 325bf(7)",
+      "chapter": "Back-testing",
+      "text": "Overshootings are notified to the competent authority with an explanation promptly and no later than five business days after occurrence.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Notification of back-testing overshootings is a supervisory reporting obligation evidenced in regulatory correspondence.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bg-1",
+      "article": "CRR Art. 325bg(1)",
+      "chapter": "P&L attribution",
+      "text": "Each IMA desk demonstrates that risk-theoretical P&L from the risk-measurement model is close or sufficiently close to hypothetical P&L from the pricing model.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). CRR3 wording; test metrics and frequency in the PLA RTS under Art. 325bg(4)."
+    },
+    {
+      "id": "CRR-MKT-325bg-2",
+      "article": "CRR Art. 325bg(2)",
+      "chapter": "P&L attribution",
+      "text": "For desks whose P&L attribution result is only sufficiently close, an additional own funds requirement is calculated for all positions on that desk.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). PLA add-on introduced by CRR3; enters Art. 325ba(3)."
+    },
+    {
+      "id": "CRR-MKT-325bg-3",
+      "article": "CRR Art. 325bg(3)",
+      "chapter": "P&L attribution",
+      "text": "The institution documents a precise list of risk-measurement model risk factors used for back-testing, based on PLA results, and tracks all changes to that list.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bh-1-a",
+      "article": "CRR Art. 325bh(1)(a)",
+      "chapter": "Risk measurement requirements",
+      "text": "The risk-measurement model captures at least the standardised-approach risk factors unless omission has no material PLA impact, and the institution can explain risk factors in pricing but not in risk models.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bh-1-b",
+      "article": "CRR Art. 325bh(1)(b)",
+      "chapter": "Risk measurement requirements",
+      "text": "The risk-measurement model captures nonlinearities of options and other products, as well as correlation risk and basis risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bh-1-c",
+      "article": "CRR Art. 325bh(1)(c)",
+      "chapter": "Risk measurement requirements",
+      "text": "For material interest rate exposures in major currencies, yield curves are modelled with at least six maturity segments and spread risk between imperfectly correlated curves is captured.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bh-1-g",
+      "article": "CRR Art. 325bh(1)(g)",
+      "chapter": "Risk measurement requirements",
+      "text": "Proxies are used only where data are insufficient, show a good track record for the actual position and are appropriately conservative.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bi-1-a",
+      "article": "CRR Art. 325bi(1)(a)",
+      "chapter": "Qualitative requirements",
+      "text": "The internal risk-measurement model is closely integrated into daily risk management and is the basis for reporting risk exposures to senior management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bi-1-b",
+      "article": "CRR Art. 325bi(1)(b)",
+      "chapter": "Qualitative requirements",
+      "text": "An independent risk control unit reporting to senior management designs and implements the IMA models, owns the overall risk management system and produces daily reports on model output and limits.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The organisation and mandate of the independent risk control unit are evidenced in organisational documents, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). CRR3 wording."
+    },
+    {
+      "id": "CRR-MKT-325bi-1-val",
+      "article": "CRR Art. 325bi(1), second subparagraph",
+      "chapter": "Qualitative requirements",
+      "text": "A validation unit separate from the risk control unit performs the initial and ongoing validation of all internal risk-measurement models used in the IMA.",
+      "quote": "shall conduct the initial and ongoing validation of any internal risk-measurement model used in the alternative internal model approach",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The separation of the validation unit from the risk control unit is an organisational requirement evidenced in the validation function's mandate.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Added by CRR3."
+    },
+    {
+      "id": "CRR-MKT-325bi-1-g",
+      "article": "CRR Art. 325bi(1)(g)",
+      "chapter": "Qualitative requirements",
+      "text": "A rigorous stress testing programme, including reverse stress tests, covers the internal models, with results reviewed by senior management at least monthly.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The market risk stress testing programme and its senior management review are evidenced in the institution's stress testing framework and committee minutes.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bi-2",
+      "article": "CRR Art. 325bi(2)",
+      "chapter": "Qualitative requirements",
+      "text": "The overall risk management process is reviewed at least annually, including accuracy and completeness of position data, data proxies and the consistency, timeliness, reliability and independence of data sources.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The annual review of the overall risk management process is an institution-level review evidenced in internal audit reports.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Review scope listed in points (a)–(h); data items in points (e) and (f)."
+    },
+    {
+      "id": "CRR-MKT-325bj-1",
+      "article": "CRR Art. 325bj(1)-(2)",
+      "chapter": "Internal validation",
+      "text": "Internal models are validated by qualified parties independent of development at initial development, after significant changes, periodically, and after significant structural market or portfolio changes.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bj-3",
+      "article": "CRR Art. 325bj(3)",
+      "chapter": "Internal validation",
+      "text": "Validation goes beyond regulatory back-testing and PLA and includes tests of model assumptions, own back-testing relevant to portfolio risks, and hypothetical portfolios covering basis, concentration and proxy risks.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bn-1-a",
+      "article": "CRR Art. 325bn(1)(a)",
+      "chapter": "Default risk charge",
+      "text": "The internal default risk model measures default losses as a 99.9 % value-at-risk over a one-year horizon, with equity default modelled as a price of zero.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). Point (b) for equity default; 60-day equity horizon option in Art. 325bn(3)."
+    },
+    {
+      "id": "CRR-MKT-325bn-1-c",
+      "article": "CRR Art. 325bn(1)(c)",
+      "chapter": "Default risk charge",
+      "text": "Default correlations are based on credit spread or equity price data covering at least 10 years including the ES stress period, and are calibrated to a one-year horizon.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bn-2",
+      "article": "CRR Art. 325bn(2)",
+      "chapter": "Default risk charge",
+      "text": "The default risk charge is calculated at least weekly.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bp-5-a",
+      "article": "CRR Art. 325bp(5)(a)",
+      "chapter": "Default risk charge — PD and LGD",
+      "text": "Default probabilities are floored at 0.03 %, or at 0.01 % for 0 % risk-weighted exposures and 10 % risk-weighted covered bonds.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623). CRR3 floor values."
+    },
+    {
+      "id": "CRR-MKT-325bp-5-c",
+      "article": "CRR Art. 325bp(5)(c)",
+      "chapter": "Default risk charge — PD and LGD",
+      "text": "Default probabilities use at least five years of historical default and default-equivalent price decline data, and are not inferred solely from current market prices.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bp-7",
+      "article": "CRR Art. 325bp(7)",
+      "chapter": "Default risk charge — validation",
+      "text": "Validation of the default risk model verifies correlation and systematic-factor choices, applies stress and sensitivity tests beyond past events, and uses quantitative benchmarks.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    },
+    {
+      "id": "CRR-MKT-325bp-11",
+      "article": "CRR Art. 325bp(11)",
+      "chapter": "Default risk charge — documentation",
+      "text": "Internal models are documented so that correlation and other modelling assumptions are transparent to the competent authority.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629, as amended by Regulation (EU) 2024/1623)."
+    }
+  ]
+}

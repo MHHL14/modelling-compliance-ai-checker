@@ -1,0 +1,1198 @@
+{
+  "docId": "EXT-AIACT",
+  "requirements": [
+    {
+      "id": "AIA-3-1",
+      "article": "AI Act Art. 3(1)",
+      "chapter": "Scope and classification",
+      "text": "The institution assesses and documents whether the model qualifies as an AI system, i.e. a machine-based system that infers from its input how to generate outputs such as predictions, recommendations or decisions.",
+      "quote": "a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Commission Guidelines on the AI system definition (Feb 2025) indicate that simple statistical prediction methods may fall outside; applies to all models in scope of this document, including statistical credit scorecards, because the high-risk items presuppose an AI system."
+    },
+    {
+      "id": "AIA-6-2-AIII-5b",
+      "article": "AI Act Art. 6(2) and Annex III point 5(b)",
+      "chapter": "Scope and classification",
+      "text": "An AI system intended to be used to evaluate the creditworthiness of natural persons or establish their credit score is classified and registered in the model inventory as a high-risk AI system, unless it is used solely for detecting financial fraud.",
+      "quote": "evaluate the creditworthiness of natural persons or establish their credit score",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Fraud-detection exception is part of Annex III 5(b). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-6-3-prof",
+      "article": "AI Act Art. 6(3), third subparagraph",
+      "chapter": "Scope and classification",
+      "text": "The institution does not rely on the Art. 6(3) derogation for an Annex III AI system that performs profiling of natural persons; such a system is always treated as high-risk.",
+      "quote": "an AI system referred to in Annex III shall always be considered to be high-risk where the AI system performs profiling of natural persons",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Credit scoring of natural persons constitutes profiling within the meaning of GDPR Art. 4(4). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-5-1-c",
+      "article": "AI Act Art. 5(1)(c)",
+      "chapter": "Prohibited practices",
+      "text": "The institution does not use AI systems to evaluate or classify natural persons on the basis of social behaviour or personal characteristics where the resulting score leads to detrimental treatment in unrelated contexts or disproportionate to that behaviour.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml",
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning and generative AI systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Prohibitions apply since 2 Feb 2025. Relevant when alternative (non-financial behavioural) data feed credit or pricing models."
+    },
+    {
+      "id": "AIA-25-1",
+      "article": "AI Act Art. 25(1)",
+      "chapter": "Scope and classification",
+      "text": "Where the institution puts its name on, substantially modifies, or changes the intended purpose of a third-party high-risk AI system, it assumes the obligations of a provider under Art. 16.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Allocation of provider obligations to the institution is a legal determination evidenced in the AI governance register and third-party contracts, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": [
+          "natural_person_credit",
+          "third_party_ai"
+        ]
+      },
+      "not_applicable_reason": "Applies to high-risk credit AI systems that use third-party AI models or components only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Covers Art. 25(1)(a)-(c); relevant when a vendor scoring model is retrained or re-purposed in-house. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-25-4",
+      "article": "AI Act Art. 25(4)",
+      "chapter": "Scope and classification",
+      "text": "As provider of a high-risk AI system, the institution specifies in a written agreement with each third party supplying AI systems, tools, services, components or processes used in it the necessary information, capabilities, technical access and assistance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Contractual arrangements with third-party suppliers are evidenced in procurement and third-party risk management records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": [
+          "natural_person_credit",
+          "third_party_ai"
+        ]
+      },
+      "not_applicable_reason": "Applies to high-risk credit AI systems that use third-party AI models or components only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Does not apply to third parties supplying tools under a free and open-source licence (other than GPAI models). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-9-1",
+      "article": "AI Act Art. 9(1)-(2)",
+      "chapter": "Risk management system (Art. 9)",
+      "text": "A risk management system is established, implemented, documented and maintained for the high-risk AI system as a continuous iterative process run throughout its entire lifecycle and regularly reviewed and updated.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Art. 9(10) allows integration into risk management procedures required under other Union law (e.g. CRD Art. 74 governance). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-9-2-ab",
+      "article": "AI Act Art. 9(2)(a)-(b)",
+      "chapter": "Risk management system (Art. 9)",
+      "text": "The risk management system identifies, analyses, estimates and evaluates the known and reasonably foreseeable risks to health, safety or fundamental rights, both under the intended purpose and under reasonably foreseeable misuse.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. For credit scoring the main fundamental-rights risks are discrimination and unjustified exclusion from credit. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-9-2-d",
+      "article": "AI Act Art. 9(2)(d)",
+      "chapter": "Risk management system (Art. 9)",
+      "text": "Appropriate and targeted risk management measures are adopted to address the risks identified under Art. 9(2)(a)-(c).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-9-5",
+      "article": "AI Act Art. 9(5)",
+      "chapter": "Risk management system (Art. 9)",
+      "text": "The residual risk associated with each hazard and the overall residual risk of the high-risk AI system are judged acceptable, and this judgement is documented.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Art. 9(5) also prioritises elimination through design, then mitigation and control, then information and training to deployers. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-9-8",
+      "article": "AI Act Art. 9(6) and 9(8)",
+      "chapter": "Risk management system (Art. 9)",
+      "text": "The high-risk AI system is tested, before being placed on the market or put into service, against prior defined metrics and probabilistic thresholds that are appropriate to its intended purpose.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Testing may take place at any point during development; Art. 60 real-world testing where applicable. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-2-b",
+      "article": "AI Act Art. 10(2)(b)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "Data governance for training, validation and testing data sets covers the data collection processes and the origin of the data and, for personal data, the original purpose of the data collection.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-2-c",
+      "article": "AI Act Art. 10(2)(c)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "The data-preparation processing operations applied to training, validation and testing data, such as annotation, labelling, cleaning, updating, enrichment and aggregation, are defined and documented.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-2-d",
+      "article": "AI Act Art. 10(2)(d)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "The assumptions underlying the data sets are formulated, in particular with respect to the information that the data are supposed to measure and represent.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. For credit scoring this includes the target (default) definition and proxies used for creditworthiness. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-2-f",
+      "article": "AI Act Art. 10(2)(f)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "Training, validation and testing data sets are examined for possible biases likely to negatively affect fundamental rights or lead to prohibited discrimination, especially where outputs influence inputs for future operations.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Feedback loops are relevant for scorecards trained on previously accepted applicants only (reject inference). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-2-g",
+      "article": "AI Act Art. 10(2)(g)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "Appropriate measures are taken to detect, prevent and mitigate the possible biases identified under Art. 10(2)(f).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-3-a",
+      "article": "AI Act Art. 10(3)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "Training, validation and testing data sets are relevant, sufficiently representative and, to the best extent possible, free of errors and complete in view of the intended purpose.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-3-b",
+      "article": "AI Act Art. 10(3)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "Training, validation and testing data sets have appropriate statistical properties, including as regards the persons or groups of persons in relation to whom the system is intended to be used.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-10-5",
+      "article": "AI Act Art. 10(5)",
+      "chapter": "Data and data governance (Art. 10)",
+      "text": "Special categories of personal data are processed for bias detection and correction only where strictly necessary, bias cannot be addressed with other data, and the safeguards of Art. 10(5)(a)-(f) are applied.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Based on original Art. 10(5). The Digital Omnibus (Reg. (EU) 2026/1744) reworks the legal basis for processing special categories for bias detection (new Art. 4a proposed); confirm the article reference and conditions in the consolidated text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-11-1",
+      "article": "AI Act Art. 11(1)",
+      "chapter": "Technical documentation (Art. 11, Annex IV)",
+      "text": "Technical documentation of the high-risk AI system is drawn up before it is placed on the market or put into service, contains at least the elements of Annex IV, and is kept up to date.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Omnibus extends simplified documentation to SMEs/SMCs; not relevant for a large bank. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-AIV-2-b",
+      "article": "AI Act Annex IV point 2(b)",
+      "chapter": "Technical documentation (Art. 11, Annex IV)",
+      "text": "The technical documentation describes the design specifications: the general logic of the system and its algorithms, the key design choices with their rationale and assumptions, what the system optimises for, and the relevance of its parameters.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Annex IV via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-AIV-2-d",
+      "article": "AI Act Annex IV point 2(d)",
+      "chapter": "Technical documentation (Art. 11, Annex IV)",
+      "text": "The technical documentation includes datasheets on the training methodologies and training data sets, covering provenance, scope and main characteristics, how the data were obtained and selected, labelling procedures and data-cleaning methodologies.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Annex IV via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-AIV-2-g",
+      "article": "AI Act Annex IV point 2(g)",
+      "chapter": "Technical documentation (Art. 11, Annex IV)",
+      "text": "The technical documentation describes the validation and testing procedures and data, the metrics for accuracy, robustness and potentially discriminatory impacts, and includes dated and signed test logs and reports.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Annex IV via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-AIV-3",
+      "article": "AI Act Annex IV point 3",
+      "chapter": "Technical documentation (Art. 11, Annex IV)",
+      "text": "The technical documentation describes the capabilities and limitations in performance, including the degrees of accuracy for specific persons or groups, the foreseeable unintended outcomes and sources of risk, and the input data specifications.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Annex IV via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-72-1",
+      "article": "AI Act Art. 72(1)-(3)",
+      "chapter": "Post-market monitoring",
+      "text": "As provider, the institution operates a documented post-market monitoring system, based on a monitoring plan forming part of the technical documentation, that actively collects and analyses performance data throughout the system's lifetime.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Post-market monitoring is excluded from the Art. 17(4) financial-institution QMS derogation. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-12-1",
+      "article": "AI Act Art. 12(1)-(2)",
+      "chapter": "Record-keeping (Art. 12)",
+      "text": "The high-risk AI system technically allows automatic recording of events (logs) over its lifetime, sufficient to identify risk situations or substantial modifications and to support post-market and operational monitoring.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-19-1",
+      "article": "AI Act Art. 19(1)-(2)",
+      "chapter": "Record-keeping (Art. 12)",
+      "text": "As provider, the institution keeps the automatically generated logs under its control for at least six months, as part of the documentation kept under Union financial services law.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Art. 19(2) lets financial institutions keep the logs within their financial-services documentation. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-26-6",
+      "article": "AI Act Art. 26(6)",
+      "chapter": "Record-keeping (Art. 12)",
+      "text": "As deployer, the institution keeps the logs automatically generated by the high-risk AI system, to the extent under its control, for a period appropriate to the intended purpose of at least six months.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. Financial institutions keep these logs as part of documentation under financial services law. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-13-1",
+      "article": "AI Act Art. 13(1)",
+      "chapter": "Transparency and instructions for use (Art. 13)",
+      "text": "The high-risk AI system is designed and developed so that its operation is sufficiently transparent to enable deployers to interpret its output and use it appropriately.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-13-3-b-ii",
+      "article": "AI Act Art. 13(3)(b)(ii) and 15(3)",
+      "chapter": "Transparency and instructions for use (Art. 13)",
+      "text": "The instructions for use declare the level of accuracy, including its metrics, robustness and cybersecurity against which the system has been tested and validated.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-13-3-b-iv",
+      "article": "AI Act Art. 13(3)(b)(iv)",
+      "chapter": "Transparency and instructions for use (Art. 13)",
+      "text": "The instructions for use describe, where applicable, the technical capabilities of the system to provide information relevant to explain its output.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Supports the deployer's explanation duty under Art. 86 and GDPR Art. 15(1)(h). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-13-3-b-v",
+      "article": "AI Act Art. 13(3)(b)(v)",
+      "chapter": "Transparency and instructions for use (Art. 13)",
+      "text": "The instructions for use state, where appropriate, the performance of the system regarding the specific persons or groups of persons on which it is intended to be used.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-14-1",
+      "article": "AI Act Art. 14(1)",
+      "chapter": "Human oversight (Art. 14)",
+      "text": "The high-risk AI system is designed and developed, including with appropriate human-machine interface tools, so that it can be effectively overseen by natural persons while in use.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-14-4-a",
+      "article": "AI Act Art. 14(4)(a)",
+      "chapter": "Human oversight (Art. 14)",
+      "text": "Persons assigned to oversight are enabled to understand the relevant capacities and limitations of the system and to monitor its operation, including detecting and addressing anomalies, dysfunctions and unexpected performance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-14-4-b",
+      "article": "AI Act Art. 14(4)(b)",
+      "chapter": "Human oversight (Art. 14)",
+      "text": "Persons assigned to oversight are enabled to remain aware of the tendency to over-rely on the system's output (automation bias), in particular where it provides recommendations for decisions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-14-4-d",
+      "article": "AI Act Art. 14(4)(d)",
+      "chapter": "Human oversight (Art. 14)",
+      "text": "Persons assigned to oversight are able to decide not to use the system, or to disregard, override or reverse its output, in any particular situation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Credit override process and override monitoring evidence this capability. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-26-2",
+      "article": "AI Act Art. 26(2)",
+      "chapter": "Human oversight (Art. 14)",
+      "text": "As deployer, the institution assigns human oversight to natural persons who have the necessary competence, training and authority, and the necessary support.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-15-1",
+      "article": "AI Act Art. 15(1)",
+      "chapter": "Accuracy, robustness and cybersecurity (Art. 15)",
+      "text": "The high-risk AI system achieves an appropriate level of accuracy, robustness and cybersecurity and performs consistently in those respects throughout its lifecycle.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-15-4",
+      "article": "AI Act Art. 15(4), third subparagraph",
+      "chapter": "Accuracy, robustness and cybersecurity (Art. 15)",
+      "text": "A system that continues to learn after deployment is developed so as to eliminate or reduce the risk of biased outputs influencing input for future operations (feedback loops), with appropriate mitigation measures.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-15-5",
+      "article": "AI Act Art. 15(5)",
+      "chapter": "Accuracy, robustness and cybersecurity (Art. 15)",
+      "text": "The system is resilient against attempts by unauthorised third parties to alter its use, outputs or performance, with measures against data poisoning, model poisoning, adversarial examples and confidentiality attacks.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Link to DORA ICT risk management for implementation controls. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-17-4",
+      "article": "AI Act Art. 17(1) and 17(4)",
+      "chapter": "Quality management and conformity",
+      "text": "As provider, the institution meets the quality management system obligation through its internal governance arrangements under financial services law, and additionally covers risk management, post-market monitoring and serious-incident reporting (Art. 17(1)(g)-(i)).",
+      "quote": "shall be deemed to be fulfilled by complying with the rules on internal governance arrangements or processes pursuant to the relevant Union financial services law",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The quality management system is an institution-wide governance arrangement evidenced in the internal governance framework, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Art. 17(1) and 17(4) checked via artificialintelligenceact.eu. Harmonised standards under Art. 40 are to be taken into account. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-43-2",
+      "article": "AI Act Art. 43(2) and Annex VI",
+      "chapter": "Quality management and conformity",
+      "text": "As provider, the institution completes the conformity assessment procedure based on internal control (Annex VI) before the credit-scoring AI system is placed on the market or put into service.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III points 2-8 follow internal control; no notified body. EU declaration of conformity (Art. 47) and registration (Art. 49) follow. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-49-1",
+      "article": "AI Act Art. 49(1)",
+      "chapter": "Quality management and conformity",
+      "text": "As provider, the institution registers itself and the high-risk AI system in the EU database before placing it on the market or putting it into service.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Registration in the EU database is a regulatory filing by the institution evidenced in the AI Act compliance register, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-73-1",
+      "article": "AI Act Art. 73(1)-(2)",
+      "chapter": "Quality management and conformity",
+      "text": "As provider, the institution reports any serious incident to the market surveillance authority of the Member State where it occurred, no later than 15 days after becoming aware of it.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Serious-incident reporting is an obligation of the institution towards the market surveillance authority, evidenced in incident management records.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Shorter deadlines apply to widespread infringements and death (Art. 73(3)-(4)). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-26-4",
+      "article": "AI Act Art. 26(4)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "To the extent the institution as deployer controls the input data, it ensures that input data are relevant and sufficiently representative in view of the intended purpose of the high-risk AI system.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-26-5",
+      "article": "AI Act Art. 26(5)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "As deployer, the institution monitors the operation of the high-risk AI system on the basis of the instructions for use and, where the use may present a risk, informs the provider and authority and suspends use.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. For financial institutions the monitoring obligation is deemed fulfilled by complying with internal-governance rules under financial services law. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-26-11",
+      "article": "AI Act Art. 26(11)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "As deployer, the institution informs natural persons that they are subject to the use of the high-risk AI system when it makes or assists in making decisions related to them.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Informing affected natural persons is part of the institution's customer disclosure procedures, not of a specific model's documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-86-1",
+      "article": "AI Act Art. 86(1)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "On request, the institution provides an affected person with clear and meaningful explanations of the role of the AI system in the decision-making procedure and of the main elements of a credit decision that significantly affects them.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Applies to decisions with legal or similarly significant effects; complements GDPR Art. 15(1)(h) and 22. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-27-1",
+      "article": "AI Act Art. 27(1)-(2)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "Before first deploying the credit-scoring AI system, the institution performs a fundamental rights impact assessment and updates it whenever any of the assessed elements has changed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu; Art. 27(1) expressly covers deployers of Annex III point 5(b) and (c) systems. May rely on a previous FRIA or provider assessment for similar cases. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-27-1-a-f",
+      "article": "AI Act Art. 27(1)(a)-(f)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "The fundamental rights impact assessment describes the deployment process, period and frequency of use, affected categories of persons, specific risks of harm, human oversight measures, and measures including governance and complaint mechanisms if risks materialise.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. Where a GDPR DPIA covers some elements, the FRIA complements it (Art. 27(4)). Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-27-3",
+      "article": "AI Act Art. 27(3)",
+      "chapter": "Deployer obligations (Art. 26, 27, 86)",
+      "text": "Once the fundamental rights impact assessment has been performed, the institution notifies the market surveillance authority of its results using the AI Office template.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Notification of fundamental rights impact assessment results is a supervisory notification by the institution, evidenced in regulatory correspondence.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems for creditworthiness assessment or credit scoring of natural persons (Annex III point 5(b)) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked via artificialintelligenceact.eu. Annex III high-risk obligations apply from 2 Dec 2027 (Art. 113 as amended by the Digital Omnibus on AI, Reg. (EU) 2026/1744)."
+    },
+    {
+      "id": "AIA-50-1",
+      "article": "AI Act Art. 50(1) and 50(5)",
+      "chapter": "Transparency for generative and interactive AI (Art. 50)",
+      "text": "An AI system intended to interact directly with natural persons, such as a customer chatbot, informs them in a clear and distinguishable manner, at the latest at first interaction, that they are interacting with an AI system unless obvious.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Art. 50 applies from 2 Aug 2026."
+    },
+    {
+      "id": "AIA-50-2",
+      "article": "AI Act Art. 50(2)",
+      "chapter": "Transparency for generative and interactive AI (Art. 50)",
+      "text": "Synthetic audio, image, video or text generated by the AI system is marked in a machine-readable format and detectable as artificially generated or manipulated, as far as technically feasible.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. Applies from 2 Aug 2026; per the Digital Omnibus, systems placed on the market before that date must comply by 2 Dec 2026. Exception for assistive standard editing that does not substantially alter input."
+    },
+    {
+      "id": "AIA-53-GPAI",
+      "article": "AI Act Art. 53(1)(b) and Annex XII",
+      "chapter": "General-purpose AI models",
+      "text": "When integrating a general-purpose AI model into its own AI system, the institution obtains and retains the information and documentation the GPAI model provider must supply under Art. 53(1)(b) and uses it to understand capabilities and limitations.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2024/1689 text. The Art. 53 obligation rests on the GPAI provider (applies since 2 Aug 2025); this item operationalises the downstream provider's side."
+    },
+    {
+      "id": "AIA-4",
+      "article": "AI Act Art. 4",
+      "chapter": "AI literacy (Art. 4)",
+      "text": "The institution takes measures to support an adequate level of AI literacy among staff and other persons dealing with the operation and use of AI systems on its behalf, considering their knowledge, experience and context of use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "AI literacy is an institution-wide training obligation evidenced in HR and training records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "ml",
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning and generative AI systems only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Original Art. 4 (applicable since 2 Feb 2025) required measures to ensure a sufficient level of AI literacy; the Digital Omnibus (Reg. (EU) 2026/1744) rewords this to taking measures that support AI literacy. Confirm final wording in the consolidated text."
+    }
+  ]
+}

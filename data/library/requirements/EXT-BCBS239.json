@@ -1,0 +1,306 @@
+{
+  "docId": "EXT-BCBS239",
+  "requirements": [
+    {
+      "id": "BCBS239-P1-a",
+      "article": "BCBS 239 Principle 1 (Governance)",
+      "chapter": "Overarching governance and infrastructure",
+      "text": "The risk data aggregation and risk reporting capabilities used for the model's outputs are subject to strong governance, approved by the board and senior management and consistent with the bank's other principles and guidance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Governance of risk data aggregation and reporting is an institution-wide framework approved by the board, evidenced in RDARR governance documents.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P1-b",
+      "article": "BCBS 239 Principle 1 (Governance)",
+      "chapter": "Overarching governance and infrastructure",
+      "text": "The risk data aggregation and reporting framework is subject to independent validation by staff with appropriate data, IT and reporting expertise.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Independent validation of the RDARR framework is performed at institution level, evidenced in RDARR validation or audit reports.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P2-a",
+      "article": "BCBS 239 Principle 2 (Data architecture and IT infrastructure)",
+      "chapter": "Overarching governance and infrastructure",
+      "text": "The data architecture and IT infrastructure support risk data aggregation and reporting fully, both in normal times and in times of stress or crisis.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Data architecture and IT infrastructure are institution-wide capabilities evidenced in the data architecture and IT strategy documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P2-b",
+      "article": "BCBS 239 Principle 2 (Data architecture and IT infrastructure)",
+      "chapter": "Overarching governance and infrastructure",
+      "text": "The bank maintains integrated data taxonomies across the group, including metadata on data characteristics and consistent identifiers and naming conventions for legal entities, counterparties, customers and accounts.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Group-wide data taxonomies are an institution-level capability evidenced in the enterprise data dictionary and metadata repository.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P2-c",
+      "article": "BCBS 239 Principle 2 (Data architecture and IT infrastructure)",
+      "chapter": "Overarching governance and infrastructure",
+      "text": "Roles and responsibilities for the ownership and quality of risk data are defined for both business and IT functions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P3-a",
+      "article": "BCBS 239 Principle 3 (Accuracy and integrity)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "Risk data used as model input or output are accurate and reliable and are aggregated largely on an automated basis to minimise the probability of errors.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P3-b",
+      "article": "BCBS 239 Principle 3 (Accuracy and integrity)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "Risk data are reconciled with the bank's source systems, including accounting data where appropriate, to confirm their accuracy.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P3-c",
+      "article": "BCBS 239 Principle 3 (Accuracy and integrity)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "All risk data aggregation processes, automated and manual, are documented and explained, enabling data to be traced from source to report (data lineage).",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level. Lineage expectations elaborated in the ECB Guide on effective risk data aggregation and risk reporting (May 2024)."
+    },
+    {
+      "id": "BCBS239-P3-d",
+      "article": "BCBS 239 Principle 3 (Accuracy and integrity)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "An authoritative source is defined for each type of risk data used by the model.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P3-e",
+      "article": "BCBS 239 Principle 3 (Accuracy and integrity)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "Controls over risk data are as robust as those applied to accounting data, and data quality is measured and monitored against defined accuracy requirements, with manual workarounds documented and controlled.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P4-a",
+      "article": "BCBS 239 Principle 4 (Completeness)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "All material risk data are captured and aggregated across the banking group, by business line, legal entity, asset type, industry and region as relevant to the risk.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P4-b",
+      "article": "BCBS 239 Principle 4 (Completeness)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "Where risk data are not complete, the bank identifies and explains the gaps and assesses their impact on the reliability of the aggregated risk measures.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P5",
+      "article": "BCBS 239 Principle 5 (Timeliness)",
+      "chapter": "Risk data aggregation capabilities",
+      "text": "Aggregated risk data are available in a timely manner, meeting reporting frequency requirements in normal times and in stress or crisis situations.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P7-a",
+      "article": "BCBS 239 Principle 7 (Accuracy)",
+      "chapter": "Risk reporting practices",
+      "text": "Risk reports accurately and precisely convey aggregated risk data and are reconciled and validated before distribution.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P7-b",
+      "article": "BCBS 239 Principle 7 (Accuracy)",
+      "chapter": "Risk reporting practices",
+      "text": "Approximations used in risk reports, including model outputs, scenario analyses and stress test results, are documented, explained and demonstrated to be sufficiently reliable for the decisions they support.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    },
+    {
+      "id": "BCBS239-P8",
+      "article": "BCBS 239 Principle 8 (Comprehensiveness)",
+      "chapter": "Risk reporting practices",
+      "text": "Risk reports cover all material risk areas within the organisation, with depth and scope consistent with the size, complexity and risk profile of the bank.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Coverage of all material risk areas in risk reporting is evidenced in the institution's risk reporting framework, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from BCBS 239 (January 2013), principle level."
+    }
+  ]
+}

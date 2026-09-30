@@ -1,0 +1,560 @@
+{
+  "docId": "INT-STD-DEV",
+  "requirements": [
+    {
+      "id": "MRM-STD-020-4.1",
+      "article": "MRM-STD-020 §4.1",
+      "chapter": "Development planning",
+      "text": "A development plan stating purpose, intended use, scope, applicable requirements, data sources, candidate methodologies, planned tests, timeline and roles is approved by the model owner before development starts.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-4.2",
+      "article": "MRM-STD-020 §4.2",
+      "chapter": "Development planning",
+      "text": "For a Tier 1 model, the development plan is shared with Model Validation before development starts.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-4.3",
+      "article": "MRM-STD-020 §4.3",
+      "chapter": "Development planning",
+      "text": "The applicable requirement set is derived from the requirement library at the start of development and used to plan evidence and documentation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-5.2",
+      "article": "MRM-STD-020 §5.2",
+      "chapter": "Data",
+      "text": "The RDS is signed off by the model owner before model estimation starts, and material RDS changes after sign-off are signed off again.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-5.3",
+      "article": "MRM-STD-020 §5.3",
+      "chapter": "Data",
+      "text": "Development, out-of-sample and out-of-time samples are defined before estimation, and the out-of-time sample is not used for variable selection or parameter estimation.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-5.4",
+      "article": "MRM-STD-020 §5.4",
+      "chapter": "Data",
+      "text": "Candidate variables are assessed for economic rationale, availability at the point of use and stability over time.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-6.1",
+      "article": "MRM-STD-020 §6.1",
+      "chapter": "Methodology selection and alternatives",
+      "text": "At least two alternative methodologies are assessed for a Tier 1 or Tier 2 model against documented criteria including regulatory requirements, data, performance, stability, interpretability and implementation constraints.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-6.2",
+      "article": "MRM-STD-020 §6.2",
+      "chapter": "Methodology selection and alternatives",
+      "text": "The selected methodology is justified against the alternatives; selecting a less transparent method over a comparably performing transparent one requires demonstrated performance gain and additional controls.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-6.3",
+      "article": "MRM-STD-020 §6.3",
+      "chapter": "Methodology selection and alternatives",
+      "text": "The variable selection process is documented, including univariate and multivariate analysis and the treatment of correlated variables, and every final driver has a sign and magnitude consistent with economic intuition.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-6.4",
+      "article": "MRM-STD-020 §6.4",
+      "chapter": "Methodology selection and alternatives",
+      "text": "The risk differentiation and risk quantification steps of the IRB model are documented separately and meet CRR Art. 179 and CRM-STD-100.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-7.1",
+      "article": "MRM-STD-020 §7.1",
+      "chapter": "Assumptions and limitations",
+      "text": "All material model assumptions, on data, driver-target relationships, their stability and the intended use, are identified and assessed for plausibility.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-7.2",
+      "article": "MRM-STD-020 §7.2",
+      "chapter": "Assumptions and limitations",
+      "text": "The model has a limitations log in which each entry states an identifier, description, source, estimated impact, mitigating measure and owner.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-7.3",
+      "article": "MRM-STD-020 §7.3",
+      "chapter": "Assumptions and limitations",
+      "text": "The limitations log is kept up to date, and material limitations are reported to the approval authority at gate G3 and recorded in the model inventory.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-8.1",
+      "article": "MRM-STD-020 §8.1",
+      "chapter": "Performance testing",
+      "text": "Performance is tested on the development, out-of-sample and out-of-time samples for discriminatory power, calibration accuracy and stability, with metrics and thresholds consistent with MV-HB-003.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-8.2",
+      "article": "MRM-STD-020 §8.2",
+      "chapter": "Performance testing",
+      "text": "Performance is tested for the whole model and for each material segment, grade or pool.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-8.3",
+      "article": "MRM-STD-020 §8.3",
+      "chapter": "Performance testing",
+      "text": "Every performance metric outside its threshold is analysed for its cause, recorded in the limitations log and addressed by a proposed mitigating measure.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-9.1",
+      "article": "MRM-STD-020 §9.1",
+      "chapter": "Benchmarking and challenger models",
+      "text": "A Tier 1 model is compared with at least one challenger model or, where a challenger is not feasible, with at least one external or internal benchmark.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-9.2",
+      "article": "MRM-STD-020 §9.2",
+      "chapter": "Benchmarking and challenger models",
+      "text": "A Tier 2 model is compared with at least one benchmark, which may be the previous model version.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-9.3",
+      "article": "MRM-STD-020 §9.3",
+      "chapter": "Benchmarking and challenger models",
+      "text": "Differences between the model and its challenger or benchmark are explained, and the choice of the model is justified where the challenger outperforms it on a material metric.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-10.1",
+      "article": "MRM-STD-020 §10.1",
+      "chapter": "Sensitivity analysis",
+      "text": "Sensitivity analyses cover key assumptions, parameters and input data of a Tier 1 or Tier 2 model, including alternative exclusions, target definitions, calibration windows and expert judgements.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-10.2",
+      "article": "MRM-STD-020 §10.2",
+      "chapter": "Sensitivity analysis",
+      "text": "Sensitivity results are documented with their impact on model output and used to support the quantification of the margin of conservatism under CRM-STD-101.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-11.1",
+      "article": "MRM-STD-020 §11.1",
+      "chapter": "Expert judgement",
+      "text": "Expert judgement in variable selection, segmentation, calibration or overrides is identified, justified and referenced to the expert judgement log under MRM-STD-023.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-11.2",
+      "article": "MRM-STD-020 §11.2",
+      "chapter": "Expert judgement",
+      "text": "The impact of every material expert judgement is quantified through sensitivity analysis.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-12.1",
+      "article": "MRM-STD-020 §12.1",
+      "chapter": "Code and reproducibility",
+      "text": "Estimation and calibration code is held in version control and development results are produced from a tagged code version.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-12.2",
+      "article": "MRM-STD-020 §12.2",
+      "chapter": "Code and reproducibility",
+      "text": "Development code is reviewed by a second developer who did not write it before results are submitted to Model Validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-12.3",
+      "article": "MRM-STD-020 §12.3",
+      "chapter": "Code and reproducibility",
+      "text": "The software environment, including package versions and random seeds, is recorded so that development results can be reproduced.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-13.1",
+      "article": "MRM-STD-020 §13.1",
+      "chapter": "AI and machine learning models",
+      "text": "The ML model documentation covers hyperparameter tuning, measures against overfitting, global and individual explainability, and fairness testing in accordance with AI-STD-700.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine learning models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-14.1",
+      "article": "MRM-STD-020 §14.1",
+      "chapter": "Sign-offs",
+      "text": "Sign-offs of the development plan, the RDS and the final model by the model owner (and, for the final model, the head of the modelling unit) are recorded in the model inventory.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-14.3",
+      "article": "MRM-STD-020 §14.2–14.3",
+      "chapter": "Sign-offs",
+      "text": "The model is submitted to Model Validation only after gate G1 has been passed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-020-15.1",
+      "article": "MRM-STD-020 §15.1",
+      "chapter": "Handover to implementation",
+      "text": "The handover to implementation includes an implementation specification, final coefficients or trained artefacts, test cases and reference outputs from the development environment.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    }
+  ]
+}

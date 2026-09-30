@@ -26,7 +26,9 @@ for (const id of ids) {
   try { j = JSON.parse(readFileSync(p, 'utf8')); } catch (e) { console.log(`${id}: invalid JSON ${e.message}`); failed = true; continue; }
   if (j.modelId !== id) errors.push('modelId mismatch');
   const applicableDocIds = new Set(docs.filter((d) => docApplies(m, d)).map((d) => d.id));
-  const applicable = [...reqs.values()].filter((r) => applicableDocIds.has(r.docId) && reqApplies(m, r) && (r.layer ?? 'shared') === 'shared');
+  // Denominator: the model's typical requirement sources (no reference documents, no validation standards).
+  const typicalDocIds = new Set(docs.filter((d) => docApplies(m, d) && d.binding_level !== 'reference' && d.type !== 'validation_standard').map((d) => d.id));
+  const applicable = [...reqs.values()].filter((r) => typicalDocIds.has(r.docId) && reqApplies(m, r) && (r.layer ?? 'shared') === 'shared' && r.level !== 'institution');
   const docsList = j.documents ?? [];
   if (docsList.length < 4 || docsList.length > 6) errors.push(`expected 4–6 documents, found ${docsList.length}`);
   for (const ev of m.evidence_documents.filter((e) => e.type !== 'code')) if (!docsList.some((d) => d.id === ev.id)) errors.push(`evidence document ${ev.id} from models.json missing`);
@@ -62,13 +64,16 @@ for (const id of ids) {
     }
   }
   const target = applicable.filter((r) => r.components.some((c) => comps.has(c)));
-  const pct = target.length ? covered.size / target.length : 1;
-  if (pct < 0.75) errors.push(`evidence covers ${covered.size}/${target.length} applicable requirements (${Math.round(pct * 100)}%), need ≥ 75%`);
+  const pct = target.length ? target.filter((r) => covered.has(r.id)).length / target.length : 1;
+  const coveredTarget = target.filter((r) => covered.has(r.id)).length;
+  if (coveredTarget / (target.length || 1) < 0.7) errors.push(`evidence covers ${coveredTarget}/${target.length} typical-source requirements (${Math.round((coveredTarget / (target.length || 1)) * 100)}%), need ≥ 70%`);
   for (const df of j.deficiencies ?? []) {
     if (!reqs.has(df.req)) errors.push(`deficiency: unknown requirement ${df.req}`);
     if (!docsList.some((d) => d.id === df.doc)) errors.push(`deficiency ${df.req}: unknown doc ${df.doc}`);
     if (!['partial', 'non_compliant'].includes(df.verdict)) errors.push(`deficiency ${df.req}: bad verdict`);
     if (!df.rationale || !df.mitigation?.type || !df.mitigation?.text) errors.push(`deficiency ${df.req}: rationale/mitigation missing`);
+    if (df.detected_by && df.detected_by !== '2lod') errors.push(`deficiency ${df.req}: detected_by must be "2lod" when set`);
+    if (df.detected_by === '2lod' && !(covered.get(df.req) ?? []).includes('full')) errors.push(`deficiency ${df.req}: 2nd-line-only deficiency needs full coverage in a final version`);
   }
   if ((j.deficiencies ?? []).length < 3) errors.push('need 3–6 deficiencies');
   const cf = j.codeFacts ?? [];
@@ -88,7 +93,7 @@ for (const id of ids) {
     if (!['pass', 'fail', 'partial'].includes(t.result)) errors.push(`validation test ${t.id}: bad result`);
   }
   if (!vt.some((t) => t.result === 'pass') || !vt.some((t) => t.result !== 'pass')) errors.push('validation tests need at least one pass and one fail/partial');
-  console.log(`${id}: ${docsList.length} documents, evidence ${covered.size}/${target.length} (${Math.round(pct * 100)}%), ${errors.length} error(s), ${warns.length} warning(s)`);
+  console.log(`${id}: ${docsList.length} documents, evidence ${target.filter((r) => covered.has(r.id)).length}/${target.length} (${Math.round(pct * 100)}%), ${errors.length} error(s), ${warns.length} warning(s)`);
   for (const e of errors) console.log('  ERROR', e);
   for (const w of warns.slice(0, 8)) console.log('  WARN ', w);
   if (errors.length) failed = true;

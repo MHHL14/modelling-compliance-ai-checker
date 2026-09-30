@@ -1,0 +1,486 @@
+{
+  "docId": "EXT-GDPR",
+  "requirements": [
+    {
+      "id": "GDPR-5-1-a",
+      "article": "GDPR Art. 5(1)(a)",
+      "chapter": "Principles (Art. 5)",
+      "text": "Personal data used for model development and application are processed lawfully, fairly and in a transparent manner in relation to the data subject.",
+      "quote": "processed lawfully, fairly and in a transparent manner in relation to the data subject",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Fairness includes avoiding unjustified discriminatory effects of profiling (Recital 71)."
+    },
+    {
+      "id": "GDPR-5-1-b",
+      "article": "GDPR Art. 5(1)(b)",
+      "chapter": "Principles (Art. 5)",
+      "text": "Personal data are collected for specified, explicit and legitimate purposes and are not further processed, including for model development, in a manner incompatible with those purposes.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "REQ-D25",
+      "article": "GDPR Art. 5(1)(c) and 35; PRIV-POL-001",
+      "chapter": "Principles (Art. 5)",
+      "text": "Personal data use is minimised and covered by a DPIA.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (text and article fixed). Checked against Reg. (EU) 2016/679 text. Covers data minimisation (Art. 5(1)(c)) and the DPIA duty (Art. 35); PRIV-POL-001 is the bank's internal privacy policy reference. Seed rationale: RDS contains personal data."
+    },
+    {
+      "id": "GDPR-5-1-d",
+      "article": "GDPR Art. 5(1)(d)",
+      "chapter": "Principles (Art. 5)",
+      "text": "Personal data are accurate and, where necessary, kept up to date, and inaccurate personal data are erased or rectified without delay.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-5-1-e",
+      "article": "GDPR Art. 5(1)(e)",
+      "chapter": "Principles (Art. 5)",
+      "text": "Personal data in model development and reference data sets are kept in identifiable form no longer than necessary for the purposes, with defined retention periods.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Longer retention is possible for statistical purposes subject to Art. 89(1) safeguards; reconcile with CRR data-history requirements for IRB models."
+    },
+    {
+      "id": "GDPR-5-1-f",
+      "article": "GDPR Art. 5(1)(f)",
+      "chapter": "Principles (Art. 5)",
+      "text": "Personal data are processed with appropriate security, including protection against unauthorised or unlawful processing and accidental loss, using appropriate technical or organisational measures.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Controller-level security of processing obligation; evidenced in the institution's information security framework and controls, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-5-2",
+      "article": "GDPR Art. 5(2)",
+      "chapter": "Principles (Art. 5)",
+      "text": "The controller is responsible for, and able to demonstrate, compliance with the Art. 5(1) principles for processing in the model lifecycle.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Accountability obligation of the controller; evidenced in the institution's data protection governance framework, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-6-1",
+      "article": "GDPR Art. 6(1)",
+      "chapter": "Lawful basis (Art. 6, 9)",
+      "text": "Each processing purpose in the model lifecycle (development, validation, application) has a documented lawful basis under Art. 6(1).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Typical bases: contract (6(1)(b)), legal obligation (6(1)(c)), legitimate interest (6(1)(f)) with balancing test."
+    },
+    {
+      "id": "GDPR-6-4",
+      "article": "GDPR Art. 6(4)",
+      "chapter": "Lawful basis (Art. 6, 9)",
+      "text": "Where personal data collected for another purpose are reused for model development without consent or a legal basis in law, a documented compatibility assessment is performed considering the Art. 6(4)(a)-(e) factors.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-9-1",
+      "article": "GDPR Art. 9(1)-(2)",
+      "chapter": "Lawful basis (Art. 6, 9)",
+      "text": "Special categories of personal data (such as health, ethnic origin, religion) are not processed in model data unless an exception under Art. 9(2) applies and is documented.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Check also inferred special-category data (e.g. from transaction descriptions). AI Act bias-detection basis: see AIA-10-5."
+    },
+    {
+      "id": "GDPR-13-2-f",
+      "article": "GDPR Art. 13(2)(f)",
+      "chapter": "Information and access (Art. 13-15)",
+      "text": "When collecting data from the data subject, the controller informs them of the existence of automated decision-making, including profiling, and gives meaningful information about the logic involved and its significance and envisaged consequences.",
+      "quote": "meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Controller obligation to inform data subjects; evidenced in the institution's privacy notices, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-14-2-g",
+      "article": "GDPR Art. 14(2)(g)",
+      "chapter": "Information and access (Art. 13-15)",
+      "text": "Where model inputs are obtained from other sources (e.g. credit bureaus), the data subject is informed of the automated decision-making, the logic involved and its significance and envisaged consequences.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Controller obligation to inform data subjects; evidenced in the institution's privacy notices, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-15-1-h",
+      "article": "GDPR Art. 15(1)(h)",
+      "chapter": "Information and access (Art. 13-15)",
+      "text": "On an access request, the controller can explain the procedure and principles actually applied in the automated decision about the data subject, in a concise, intelligible form.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Interpretation per CJEU C-203/22 Dun & Bradstreet Austria (27 Feb 2025); trade secrets must be weighed by the authority or court, not used to refuse outright."
+    },
+    {
+      "id": "GDPR-22-1",
+      "article": "GDPR Art. 22(1)-(2)",
+      "chapter": "Automated decision-making (Art. 22)",
+      "text": "A decision producing legal or similarly significant effects, such as refusing credit, is not based solely on automated processing including profiling unless an Art. 22(2) exception (contract, Union or Member State law, explicit consent) applies.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Per CJEU C-634/21 SCHUFA (7 Dec 2023), producing a score can itself be such a decision where a third party draws strongly on it."
+    },
+    {
+      "id": "GDPR-22-3",
+      "article": "GDPR Art. 22(3)",
+      "chapter": "Automated decision-making (Art. 22)",
+      "text": "Where solely automated decisions are taken under Art. 22(2)(a) or (c), the data subject has at least the right to obtain human intervention, to express their point of view and to contest the decision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Controller obligation to safeguard data subject rights; evidenced in customer decision-review and complaints procedures, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-22-4",
+      "article": "GDPR Art. 22(4)",
+      "chapter": "Automated decision-making (Art. 22)",
+      "text": "Automated decisions are not based on special categories of personal data unless Art. 9(2)(a) or (g) applies and suitable measures safeguard the data subject's rights, freedoms and legitimate interests.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-R71",
+      "article": "GDPR Recital 71 (read with Art. 22)",
+      "chapter": "Automated decision-making (Art. 22)",
+      "text": "For profiling, the controller uses appropriate mathematical or statistical procedures, corrects factors resulting in inaccuracies, minimises the risk of errors and prevents discriminatory effects on natural persons.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "mortgage_origination",
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used for automated decisions or profiling concerning natural persons (credit, mortgage origination, fraud) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Recital, not an operative provision; reflected in EDPB-endorsed WP29 guidelines on automated decision-making (WP251rev.01)."
+    },
+    {
+      "id": "GDPR-25-1",
+      "article": "GDPR Art. 25(1)",
+      "chapter": "Data protection by design and by default (Art. 25)",
+      "text": "Appropriate technical and organisational measures, such as pseudonymisation, are designed into the model data pipeline to implement data protection principles effectively, both at design time and during processing.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-25-2",
+      "article": "GDPR Art. 25(2)",
+      "chapter": "Data protection by design and by default (Art. 25)",
+      "text": "By default, only personal data necessary for each specific purpose are processed, as regards amount collected, extent of processing, storage period and accessibility.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. Distinct from REQ-D25: addresses default settings of systems and access to model data."
+    },
+    {
+      "id": "GDPR-28-3",
+      "article": "GDPR Art. 28(1) and 28(3)",
+      "chapter": "Processors and records (Art. 28, 30)",
+      "text": "Where a third-party model or platform provider processes personal data on the institution's behalf, it provides sufficient guarantees and is bound by a written contract containing the Art. 28(3) terms.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Controller obligation concerning processor contracts; evidenced in the data processing agreements and third-party management records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models where a third party processes personal data on the institution's behalf only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-30-1",
+      "article": "GDPR Art. 30(1)",
+      "chapter": "Processors and records (Art. 28, 30)",
+      "text": "Processing activities for model development and application are recorded in the controller's record of processing activities, including purposes, data categories, recipients, transfers and retention periods.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Controller obligation to maintain the record of processing activities; evidenced in the institution's record of processing activities, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    },
+    {
+      "id": "GDPR-35-7",
+      "article": "GDPR Art. 35(7)",
+      "chapter": "Data protection impact assessment (Art. 35-36)",
+      "text": "The DPIA contains a systematic description of the processing and purposes, an assessment of necessity and proportionality, an assessment of risks to data subjects, and the measures envisaged to address those risks.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text. A DPIA is mandatory for systematic and extensive evaluation based on automated processing including profiling (Art. 35(3)(a)), e.g. credit scoring."
+    },
+    {
+      "id": "GDPR-36-1",
+      "article": "GDPR Art. 36(1)",
+      "chapter": "Data protection impact assessment (Art. 35-36)",
+      "text": "Where the DPIA indicates a high residual risk that the controller cannot mitigate, the supervisory authority is consulted before the processing starts.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Controller obligation towards the data protection authority; evidenced in the prior consultation records of the Data Protection Officer, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) 2016/679 text."
+    }
+  ]
+}

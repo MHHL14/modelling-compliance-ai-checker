@@ -1,0 +1,1767 @@
+{
+  "docId": "EXT-EBA-PDLGD",
+  "requirements": [
+    {
+      "id": "EBA-PDLGD-014",
+      "article": "EBA/GL/2017/16 para 14",
+      "chapter": "4.1 Range of application of rating systems",
+      "text": "The same definition of default is applied to the same historical observations used in the different PD and LGD models of a rating system.",
+      "quote": "institutions should apply the same definition of default for the same historical observations used in different models",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-016",
+      "article": "EBA/GL/2017/16 para 16",
+      "chapter": "4.2.1 Data requirements — quality of data",
+      "text": "Data used in model development and as model inputs in application are sufficiently precise to avoid material distortions of grade or pool assignment and contain no biases that make them unfit for purpose.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "REQ-D12a",
+      "article": "EBA/GL/2017/16 – data requirements",
+      "chapter": "4.2.1 Data requirements — quality of data",
+      "text": "Every exclusion from the RDS has a documented reason.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot record (section-level reference kept). Specific basis: para 72 (documentation of data cleansing and exclusions in the one-year default rate calculation) and Art. 32(3)(b) RTS on IRB assessment methodology."
+    },
+    {
+      "id": "REQ-D12b",
+      "article": "EBA/GL/2017/16 – data requirements",
+      "chapter": "4.2.1 Data requirements — quality of data",
+      "text": "Every exclusion is quantified (facilities, share of population, defaults).",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot record (section-level reference kept). Specific basis: para 72(b) (reasons and quantity of exclusions for retail PD models) and para 72(a) (list of excluded observations for non-retail)."
+    },
+    {
+      "id": "REQ-D22",
+      "article": "EBA/GL/2017/16 – data requirements",
+      "chapter": "4.2.1 Data requirements — quality of data",
+      "text": "Treatment of missing values and outliers is documented and justified.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Pilot record. The GL contain no paragraph explicitly on missing values and outliers; substance derives from paras 15-16 (data quality), 37(a)(v) (missing risk driver data as Category A deficiency) and 70(c). Confirm the section-level reference is acceptable."
+    },
+    {
+      "id": "EBA-PDLGD-017",
+      "article": "EBA/GL/2017/16 para 17",
+      "chapter": "4.2.2 Governance for data representativeness",
+      "text": "Internal policies specify the statistical tests and metrics used to assess data representativeness, separately for data used in risk differentiation and for data underlying risk quantification.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-019",
+      "article": "EBA/GL/2017/16 para 19",
+      "chapter": "4.2.2 Governance for data representativeness",
+      "text": "Where external or pooled data are used, sufficient information is obtained from the data providers to assess their representativeness for the institution's own portfolios and processes.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-021",
+      "article": "EBA/GL/2017/16 para 21",
+      "chapter": "4.2.3 Representativeness of data for model development",
+      "text": "The representativeness of the development data for the application portfolio is analysed in terms of scope of application, definition of default, distribution of relevant risk characteristics, and lending standards and recovery policies.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-023",
+      "article": "EBA/GL/2017/16 para 23",
+      "chapter": "4.2.3 Representativeness of data for model development",
+      "text": "The definition of default underlying the development data is consistent over time: historical data are adjusted where the definition changed, and the definition in each data source is analysed separately.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-025",
+      "article": "EBA/GL/2017/16 para 25",
+      "chapter": "4.2.3 Representativeness of data for model development",
+      "text": "Material differences in key risk characteristics between the development sample and the application portfolio, identified with the statistical tests specified in policy, are addressed (e.g. other sample, subset of observations or additional risk drivers).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-026",
+      "article": "EBA/GL/2017/16 para 26",
+      "chapter": "4.2.3 Representativeness of data for model development",
+      "text": "Significant changes in lending standards, recovery policies or the legal environment over the historical observation period are analysed by comparing RDS data before and after the change.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-027",
+      "article": "EBA/GL/2017/16 para 27",
+      "chapter": "4.2.3 Representativeness of data for model development",
+      "text": "The PD development dataset contains a sufficient number of defaulted and non-defaulted observations, and any difference from the default proportion of the application portfolio is documented.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-028",
+      "article": "EBA/GL/2017/16 para 28",
+      "chapter": "4.2.4 Representativeness of data for calibration",
+      "text": "The comparability of data used to calculate long-run average default rates or LGDs is analysed for scope, default definition, risk characteristics, current and foreseeable economic conditions, and lending and recovery standards.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-030",
+      "article": "EBA/GL/2017/16 para 30",
+      "chapter": "4.2.4 Representativeness of data for calibration",
+      "text": "The current definition of default is compared with those underlying the calibration data; where it changed during the observation period, each past definition is analysed separately as for external data under the DoD guidelines.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-034",
+      "article": "EBA/GL/2017/16 para 34",
+      "chapter": "4.2.4 Representativeness of data for calibration",
+      "text": "Where insufficient representativeness of the calibration data leads to bias or increased uncertainty, an appropriate adjustment corrects the bias and a margin of conservatism is applied in accordance with section 4.4.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "REQ-D12c",
+      "article": "EBA/GL/2017/16 – representativeness",
+      "chapter": "4.2.4 Representativeness of data for calibration",
+      "text": "The impact of exclusions on representativeness is analysed.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot record (section-level reference kept). Specific basis: paras 25, 31 and 34 (representativeness and resulting adjustment/MoC); para 218(b)(ii) requires performance review without development exclusions."
+    },
+    {
+      "id": "EBA-PDLGD-035b",
+      "article": "EBA/GL/2017/16 para 35(b)",
+      "chapter": "4.3 Human judgement in estimation",
+      "text": "The impact of human judgement on model performance is analysed and every form of human judgement used in estimation is properly justified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-035c",
+      "article": "EBA/GL/2017/16 para 35(c)",
+      "chapter": "4.3 Human judgement in estimation",
+      "text": "The application of human judgement is documented, including at least the assessment criteria, rationale, assumptions, experts involved and a description of the process.",
+      "quote": "including at least the criteria for the assessment, rationale, assumptions, experts involved and description of the process",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-036",
+      "article": "EBA/GL/2017/16 para 36",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "All deficiencies leading to bias or to uncertainty not captured by the general estimation error are identified and classified as Category A (data and methodological) or Category B (changes and other sources of uncertainty).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-038",
+      "article": "EBA/GL/2017/16 para 38",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "Adequate methodologies (appropriate adjustments) correct identified deficiencies to the extent possible, with evidence that the adjusted risk parameter is a best estimate.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-043a",
+      "article": "EBA/GL/2017/16 para 43(a)",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "MoC for identified deficiencies is quantified at least for Categories A and B at calibration-segment level, covering uncertainty from appropriate adjustments and from uncorrected deficiencies.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-043b",
+      "article": "EBA/GL/2017/16 para 43(b)",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "MoC for the general estimation error (Category C) is quantified at least per calibration segment and reflects the dispersion of the distribution of the statistical estimator.",
+      "quote": "the MoC for the general estimation error should reflect the dispersion of the distribution of the statistical estimator",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-045",
+      "article": "EBA/GL/2017/16 paras 45-46",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "The final MoC is quantified as the sum of the Category A, B and C MoC and is added to the best estimate of the risk parameter.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-047",
+      "article": "EBA/GL/2017/16 para 47",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "The MoC for the general estimation error is greater than zero, and the MoC for each of Categories A and B is non-negative and proportionate to the increased uncertainty.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-049",
+      "article": "EBA/GL/2017/16 para 49",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "The model documentation records the MoC applied, including a complete list of identified deficiencies and affected components or parameters, their category, and the MoC quantification methods per category.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-050",
+      "article": "EBA/GL/2017/16 para 50",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "MoC levels are monitored regularly, and a plan exists to rectify the underlying data and methodological deficiencies within a reasonable timeframe, considering materiality.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-051",
+      "article": "EBA/GL/2017/16 para 51",
+      "chapter": "4.4 Deficiencies and margin of conservatism",
+      "text": "Internal reporting shows the MoC separately for Categories A, B and C, and MoC levels are reassessed in the regular review of estimates, including after inclusion of the most recent data.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-056",
+      "article": "EBA/GL/2017/16 para 56",
+      "chapter": "5.2 PD model development",
+      "text": "The RDS contains the values of risk drivers at appropriate points in time, reflecting their dynamics and update frequency and, for defaulted obligors, throughout the year prior to default.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-059",
+      "article": "EBA/GL/2017/16 para 59",
+      "chapter": "5.2 PD model development",
+      "text": "The model or assignment process applies an adequate, conservative adjustment where financial statements or credit bureau information used as relevant risk drivers are older than 24 months.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-060",
+      "article": "EBA/GL/2017/16 para 60",
+      "chapter": "5.2 PD model development",
+      "text": "Risk drivers and rating criteria are used consistently, in particular regarding the time horizon, in model development, calibration and application.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-067",
+      "article": "EBA/GL/2017/16 para 67",
+      "chapter": "5.2 PD model development",
+      "text": "The chosen rating philosophy is applied consistently over time and its appropriateness is analysed considering risk driver design, migration across grades and changes in yearly default rates per grade.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-069",
+      "article": "EBA/GL/2017/16 para 69",
+      "chapter": "5.2 PD model development",
+      "text": "Homogeneity within grades or pools is checked so that obligors in a grade have reasonably similar default risk and significant overlaps of default-risk distributions between grades are avoided.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-071",
+      "article": "EBA/GL/2017/16 para 71",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "Observations are excluded from one-year default rates only if wrongly classified as defaults (numerator only) or wrongly assigned to the model's scope (numerator and denominator).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-073",
+      "article": "EBA/GL/2017/16 para 73",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "The one-year default rate denominator comprises non-defaulted obligors with any on- or off-balance credit obligation at the start of the period; the numerator those with at least one default during the year.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-074",
+      "article": "EBA/GL/2017/16 para 74",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "Grade assignment for default rate calculation takes overrides into account but excludes substitution effects of credit risk mitigation and ex post conservative adjustments.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-075",
+      "article": "EBA/GL/2017/16 para 75",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "One-year default rates are also calculated for obligors within the model's scope that had no rating at the start of the observation period (missing ratings).",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-076",
+      "article": "EBA/GL/2017/16 para 76",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "Obligors that migrate to another grade, model or approach, or whose obligations are sold, written off or repaid during the period, remain in the default rate calculation, and any resulting bias is analysed.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-077",
+      "article": "EBA/GL/2017/16 para 77",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "Each defaulted obligor is counted only once in the numerator and denominator of a one-year default rate, even if it defaulted more than once in that period.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-080",
+      "article": "EBA/GL/2017/16 para 80",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "The choice between overlapping and non-overlapping one-year windows is based on a documented analysis of bias from short-term contracts, calculation dates, overlapping windows and seasonality.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-081",
+      "article": "EBA/GL/2017/16 para 81",
+      "chapter": "5.3.1-5.3.3 PD — one-year and observed average default rates",
+      "text": "The observed average default rate is the arithmetic average of one-year default rates; a weighted average is used only for retail where more recent data are a better predictor of losses.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-082",
+      "article": "EBA/GL/2017/16 para 82",
+      "chapter": "5.3.4 PD — long-run average default rate",
+      "text": "The historical observation period includes observations beyond the most recent five years where needed to reflect the likely range of variability of default rates.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-083",
+      "article": "EBA/GL/2017/16 para 83",
+      "chapter": "5.3.4 PD — long-run average default rate",
+      "text": "The historical observation period is assessed for a representative mix of good and bad years, considering default rate variability, relevant economic indicators and significant changes in the environment.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-085",
+      "article": "EBA/GL/2017/16 paras 84-85",
+      "chapter": "5.3.4 PD — long-run average default rate",
+      "text": "Where the historical observation period contains no or insufficient bad years, the observed average default rate is adjusted so that the long-run average default rate reflects the likely range of variability.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-086",
+      "article": "EBA/GL/2017/16 para 86",
+      "chapter": "5.3.4 PD — long-run average default rate",
+      "text": "Where adjustments lower the long-run average default rate below the observed average, it is compared with the higher of the five-year and all-data averages, and direction, magnitude and MoC are justified.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-087",
+      "article": "EBA/GL/2017/16 para 87",
+      "chapter": "5.3.5 PD — calibration to the long-run average",
+      "text": "The calibration process includes quantitative calibration tests per grade or pool and per calibration segment, plus qualitative analyses such as obligor distribution shape, minimum obligors per grade and avoidance of concentration.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-088",
+      "article": "EBA/GL/2017/16 para 88",
+      "chapter": "5.3.5 PD — calibration to the long-run average",
+      "text": "The calibration sample of each calibration segment is stored and described in the PD model documentation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-089",
+      "article": "EBA/GL/2017/16 para 89",
+      "chapter": "5.3.5 PD — calibration to the long-run average",
+      "text": "Calibration is performed after taking overrides into account and before the application of MoC and regulatory PD floors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-092",
+      "article": "EBA/GL/2017/16 para 92",
+      "chapter": "5.3.5 PD — calibration to the long-run average",
+      "text": "PD estimates are calibrated to the long-run average default rate either per grade or pool or per calibration segment, with additional calibration tests at the other level.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-096",
+      "article": "EBA/GL/2017/16 para 96",
+      "chapter": "5.3.5 PD — calibration to the long-run average",
+      "text": "Continuous PDs or smoothing of default rates are not used to overcome lack of data, low discriminatory power or other deficiencies, or to reduce own funds requirements.",
+      "quote": "Under no circumstances should the use of continuous PDs or any smoothening of default rates be adopted in order to overcome the lack of data",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-099",
+      "article": "EBA/GL/2017/16 para 99",
+      "chapter": "5.3.5 PD — calibration to the long-run average",
+      "text": "The calibration does not change the rank ordering of obligors or exposures within a calibration segment other than within each grade or pool.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-101",
+      "article": "EBA/GL/2017/16 para 101",
+      "chapter": "6.1 LGD — general and data requirements",
+      "text": "Where a facility defaults again less than nine months (or a longer justified period) after returning to non-defaulted status, it is treated as continuously defaulted from the first default.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-102",
+      "article": "EBA/GL/2017/16 para 102",
+      "chapter": "6.1 LGD — general and data requirements",
+      "text": "LGD estimates are based on the institution's own loss and recovery experience, possibly supplemented by external data, and are not derived solely from market prices of financial instruments.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-107",
+      "article": "EBA/GL/2017/16 para 107",
+      "chapter": "6.1 LGD — general and data requirements",
+      "text": "The LGD RDS covers all defaults in the historical observation period, all data needed to calculate realised LGDs, and loss drivers valued at default and at least within the year before default.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-109",
+      "article": "EBA/GL/2017/16 para 109",
+      "chapter": "6.1 LGD — general and data requirements",
+      "text": "The LGD RDS contains at least default date, all default triggers, outstanding amount at default, post-default drawings, write-offs, collateral data, amounts, timing and sources of recoveries and direct costs, closure type and realised loss.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-113",
+      "article": "EBA/GL/2017/16 para 113",
+      "chapter": "6.1 LGD — general and data requirements",
+      "text": "All information needed to calculate direct and indirect costs is collected and stored, and material indirect costs are allocated to exposures using the principles of the institution's cost accounting.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-122",
+      "article": "EBA/GL/2017/16 para 122",
+      "chapter": "6.2 LGD — model development and collateral",
+      "text": "LGD risk drivers are analysed at default and within the year before default using representative reference dates, and collateral values at the reference date do not reflect credit deterioration shortly before default.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-127",
+      "article": "EBA/GL/2017/16 para 127",
+      "chapter": "6.2 LGD — model development and collateral",
+      "text": "Collateral not meeting CRR Article 181(1)(f) is not used as a risk driver and its cash flows are treated as recoveries without collateral, while their source is still recorded and monitored.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-129g",
+      "article": "EBA/GL/2017/16 para 129(g)",
+      "chapter": "6.2 LGD — model development and collateral",
+      "text": "LGD estimates reflect potential decreases in collateral value until recovery, via a forward-looking adjustment where not reflected in historical data, and are not adjusted for potential increases in collateral value.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-131",
+      "article": "EBA/GL/2017/16 para 131",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "Realised LGD is calculated for each exposure as the ratio of economic loss to the outstanding amount of the credit obligation at default, including principal, interest and fees.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-132",
+      "article": "EBA/GL/2017/16 para 132",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "Economic loss equals the outstanding amount at default plus material direct and indirect costs discounted to default, minus all recoveries after default discounted to default.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-134",
+      "article": "EBA/GL/2017/16 para 134",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "Amounts forgiven or written off before or at default are added to the outstanding amount at default in both numerator and denominator of the realised LGD.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-135",
+      "article": "EBA/GL/2017/16 para 135",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "For exposures that return to non-defaulted status (cures), economic loss includes an artificial cash flow equal to the amount outstanding at the return date, discounted to default like observed cash flows.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-137",
+      "article": "EBA/GL/2017/16 paras 137-138",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "Fees and interest capitalised before default are included in the outstanding amount at default; amounts capitalised after default do not increase economic loss, but recoveries on them are included.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-140",
+      "article": "EBA/GL/2017/16 paras 140-142",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "Additional drawings after default are included in economic loss and increase the realised LGD denominator only where they are reflected in conversion factors rather than in LGD estimates.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-143",
+      "article": "EBA/GL/2017/16 para 143",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "All recoveries, costs and additional drawings after default are discounted using the primary interbank offered rate at default (3-month EURIBOR or comparable) plus an add-on of 5 percentage points.",
+      "quote": "a primary interbank offered rate applicable at the moment of default increased by an add-on of 5%-points",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-144",
+      "article": "EBA/GL/2017/16 para 144",
+      "chapter": "6.3.1 LGD — economic loss and realised LGD",
+      "text": "All material direct and indirect recovery costs are included in realised LGD, including material pre-default collection costs unless already in the outstanding amount or linked to a separate earlier default.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-147",
+      "article": "EBA/GL/2017/16 para 147",
+      "chapter": "6.3.2 LGD — long-run average LGD",
+      "text": "The LGD historical observation period covers at least the CRR minimum length, is composed of consecutive periods including the most recent, contains sufficient closed recovery processes and includes all available relevant internal data.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-150",
+      "article": "EBA/GL/2017/16 para 150",
+      "chapter": "6.3.2 LGD — long-run average LGD",
+      "text": "The long-run average LGD is the default-weighted arithmetic average of realised LGDs; averages of subsets such as yearly averages are not used, except for justified retail weighting of recent data.",
+      "quote": "an arithmetic average of realised LGDs over a historical observation period weighted by a number of defaults",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-156",
+      "article": "EBA/GL/2017/16 para 156",
+      "chapter": "6.3.2 LGD — long-run average LGD",
+      "text": "A maximum period of the recovery process is defined per type of exposure, documented and supported by evidence of recovery patterns observed on closed recovery processes.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-157",
+      "article": "EBA/GL/2017/16 para 157",
+      "chapter": "6.3.2 LGD — long-run average LGD",
+      "text": "Defaulted exposures are treated as closed recovery processes without undue delay when no further recovery actions are expected, the maximum recovery period is exceeded, they are repaid or written off, or they return to non-default.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-159",
+      "article": "EBA/GL/2017/16 paras 158-159",
+      "chapter": "6.3.2 LGD — long-run average LGD",
+      "text": "Future recoveries estimated for incomplete recovery processes are based on observed recovery patterns, back-tested, economically reasonable, account for bias from longer or lower recoveries, and their uncertainty is covered by MoC.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-160",
+      "article": "EBA/GL/2017/16 para 160",
+      "chapter": "6.3.2 LGD — long-run average LGD",
+      "text": "Realised LGDs reflecting a profit are set to zero for the observed and long-run average LGD, although unfloored values may be used for risk differentiation.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-161",
+      "article": "EBA/GL/2017/16 para 161",
+      "chapter": "6.3.3 LGD — calibration to the long-run average",
+      "text": "LGD estimates are calibrated to the long-run average LGD per grade or pool or per calibration segment, with additional tests at the other level, and are corrected upwards where realised values exceed estimates.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-163",
+      "article": "EBA/GL/2017/16 para 163",
+      "chapter": "6.3.3 LGD — calibration to the long-run average",
+      "text": "No defaults observed in the historical observation period within the scope of the LGD model are excluded from LGD quantification.",
+      "quote": "institutions should not exclude any defaults observed in the historical observation period that fall within the scope of application of the LGD model",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-165",
+      "article": "EBA/GL/2017/16 para 165",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "An ELBE and an LGD in-default estimate are assigned to each defaulted exposure within the scope of the rating system with own-LGD permission.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-171",
+      "article": "EBA/GL/2017/16 para 171",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "Reference dates for grouping defaulted exposures are set according to recovery patterns observed on closed recovery processes and are used instead of the default date in ELBE and LGD in-default estimation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-178",
+      "article": "EBA/GL/2017/16 para 178",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "Realised LGDs for defaulted exposures are calculated at each reference date, including fees and interest capitalised before it and discounting subsequent cash flows and drawings to that date.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-182",
+      "article": "EBA/GL/2017/16 para 182",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "The ELBE does not include any margin of conservatism.",
+      "quote": "the ELBE should not include any MoC in the sense of section 4.4.3",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-184",
+      "article": "EBA/GL/2017/16 paras 183-185",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "ELBE reflects current economic circumstances: unless the model contains an economically sensitive driver or realised LGDs are insensitive, the long-run average is adjusted and the adjustment documented separately.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-189",
+      "article": "EBA/GL/2017/16 para 189",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "LGD in-default reflects at least downturn conditions where these are more conservative than the long-run average LGD for defaulted exposures.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-191",
+      "article": "EBA/GL/2017/16 para 191",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "LGD in-default is higher than the ELBE (equal only in exceptional individual cases), and is corrected where an ELBE based on specific credit risk adjustments exceeds the directly estimated LGD in-default.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-193",
+      "article": "EBA/GL/2017/16 para 193",
+      "chapter": "7 Defaulted exposures — ELBE and LGD in-default",
+      "text": "The documentation separately shows the breakdown of LGD in-default into ELBE and add-on, and of the add-on into downturn, MoC and any additional unexpected-loss component.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (incl. ELBE and LGD in-default) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-217",
+      "article": "EBA/GL/2017/16 para 217",
+      "chapter": "9 Review of estimates",
+      "text": "The framework for regular review of estimates defines the minimum scope and frequency of analyses, predefined metrics, thresholds and significance levels, and predefined actions for adverse results.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-218a",
+      "article": "EBA/GL/2017/16 para 218(a)",
+      "chapter": "9 Review of estimates",
+      "text": "The at least annual review analyses representativeness of the RDS used for quantification and for development against the application portfolio, including portfolio changes and structural breaks.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-218b",
+      "article": "EBA/GL/2017/16 para 218(b)",
+      "chapter": "9 Review of estimates",
+      "text": "The annual review analyses model performance and its stability, including discriminatory power, per subsequent period against development performance, on the whole application portfolio without development adjustments or exclusions.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-218c",
+      "article": "EBA/GL/2017/16 para 218(c)",
+      "chapter": "9 Review of estimates",
+      "text": "The annual review analyses predictive power, including whether recent data materially change the long-run average default rate or LGD, and back-tests estimates against observed outcomes per grade or pool.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    },
+    {
+      "id": "EBA-PDLGD-221",
+      "article": "EBA/GL/2017/16 para 221",
+      "chapter": "9 Review of estimates",
+      "text": "Data adjustment and exclusion policies are applied consistently across the datasets used in the review of estimates, and any differences are justified and do not distort the review results.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2017/16 (EBA website PDF)."
+    }
+  ]
+}

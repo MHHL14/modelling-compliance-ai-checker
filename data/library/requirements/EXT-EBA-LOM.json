@@ -1,0 +1,914 @@
+{
+  "docId": "EXT-EBA-LOM",
+  "requirements": [
+    {
+      "id": "EBA-LOM-025c",
+      "article": "EBA/GL/2020/06 para 25(c)",
+      "chapter": "Internal governance for credit granting",
+      "text": "The management body approves the framework for the credit approval process, including, where relevant, the internal structures for credit granting and monitoring and the delegated decision-making authorities.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Approval of the credit approval framework is an obligation of the management body, evidenced in the credit risk policy framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 25(c). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-038g",
+      "article": "EBA/GL/2020/06 para 38(g)",
+      "chapter": "Credit risk policies and procedures",
+      "text": "Credit risk policies and procedures specify the conditions for automated decision-making in credit granting, including the products, segments and limits for which automated decision-making is allowed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Conditions for automated credit decision-making are set in the institution's credit risk policies and procedures.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 38(g). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-038i",
+      "article": "EBA/GL/2020/06 para 38(i)",
+      "chapter": "Credit risk policies and procedures",
+      "text": "Credit risk policies specify what is documented in the credit-granting process, at minimum the completed application, the qualitative and quantitative rationale, and all supporting documentation for approving or declining the credit facility.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Documentation standards for the credit-granting process are set in the institution's credit risk policies.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 38(i). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-040",
+      "article": "EBA/GL/2020/06 para 40",
+      "chapter": "Credit risk policies and procedures",
+      "text": "For credit products offered to consumers, credit-granting criteria do not induce undue hardship and over-indebtedness for borrowers and their households.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of consumers only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 40. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-041",
+      "article": "EBA/GL/2020/06 para 41",
+      "chapter": "Credit risk policies and procedures",
+      "text": "Credit risk policies specify the use of automated models in creditworthiness assessment and credit decision-making, with governance arrangements for their design and use and for managing the associated model risk, consistent with Section 4.3.4.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The policy framework for automated models in credit decision-making is evidenced in the institution's credit risk and model risk policies.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 41. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-053a",
+      "article": "EBA/GL/2020/06 para 53(a)",
+      "chapter": "Technology-enabled innovation for credit granting",
+      "text": "The risks inherent in technology-enabled innovation used for credit granting are captured in the risk management and control frameworks, commensurate with the business model, credit risk exposure, method complexity and extent of use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Capturing technology-enabled innovation risks in the risk management framework is an institution-level obligation.",
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies where technology-enabled innovation (e.g. machine-learning models) is used for credit granting.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 53(a). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-053b",
+      "article": "EBA/GL/2020/06 para 53(b)",
+      "chapter": "Technology-enabled innovation for credit granting",
+      "text": "The management body has a sufficient understanding of the use of technology-enabled innovation in credit granting, its limitations and its impact on credit-granting procedures.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Management body understanding is a governance obligation evidenced in board training and committee records.",
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies where technology-enabled innovation (e.g. machine-learning models) is used for credit granting.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 53(b). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-053d",
+      "article": "EBA/GL/2020/06 para 53(d)",
+      "chapter": "Technology-enabled innovation for credit granting",
+      "text": "Models used for credit granting are fit for purpose given their task, performance and use; where explanations are required during use, the institution considers developing an interpretable model.",
+      "quote": "If explanations are required during the models’ use, then consideration should be given to developing an interpretable model.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies where technology-enabled innovation (e.g. machine-learning models) is used for credit granting.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 53(d). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-053f",
+      "article": "EBA/GL/2020/06 para 53(f)",
+      "chapter": "Technology-enabled innovation for credit granting",
+      "text": "Model performance, including the validity and quality of outputs, is continuously monitored and timely remediation is taken when issues such as worsening or deviating behaviour are detected.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies where technology-enabled innovation (e.g. machine-learning models) is used for credit granting.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 53(f). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-054",
+      "article": "EBA/GL/2020/06 para 54",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "When using automated models for creditworthiness assessment and credit decision-making, the institution understands the models, including their methodology, input data, assumptions, limitations and outputs.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 54. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-054a",
+      "article": "EBA/GL/2020/06 para 54(a)",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "The institution has internal policies and procedures for detecting and preventing bias in automated credit models and for ensuring the quality of their input data.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 54(a). Applies from 30 June 2021 (para 18). Para 53(e) sets the same expectation for technology-enabled innovation."
+    },
+    {
+      "id": "EBA-LOM-054b",
+      "article": "EBA/GL/2020/06 para 54(b)",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "The institution has measures ensuring the traceability, auditability, robustness and resilience of the inputs and outputs of automated credit models.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 54(b). Applies from 30 June 2021 (para 18). Para 53(c) sets the same expectation for technology-enabled innovation."
+    },
+    {
+      "id": "EBA-LOM-054c",
+      "article": "EBA/GL/2020/06 para 54(c)",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "The quality of automated model output is regularly assessed with measures appropriate to the model's use, including backtesting of model performance.",
+      "quote": "including backtesting the performance of the model",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 54(c). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-054d",
+      "article": "EBA/GL/2020/06 para 54(d)",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "The credit decision-making framework includes control mechanisms, model overrides and escalation procedures for automated models, including qualitative approaches, qualitative risk assessment tools such as expert judgement, and quantitative limits.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 54(d). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-055a",
+      "article": "EBA/GL/2020/06 para 55(a)",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "Model documentation covers the methodology, assumptions and data inputs, and the approach to detecting and preventing bias and ensuring input data quality.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 55(a). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-055b",
+      "article": "EBA/GL/2020/06 para 55(b)",
+      "chapter": "Models for creditworthiness assessment and credit decision-making",
+      "text": "Model documentation covers the use of model outputs in decision-making and the monitoring of the automated decisions' effect on the overall quality of the portfolios or products concerned.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 55(b). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-061",
+      "article": "EBA/GL/2020/06 para 61",
+      "chapter": "Data infrastructure",
+      "text": "The data infrastructure captures loan-by-loan information, including the credit-granting criteria actually applied at origination, and enables tracking of policy deviations, exceptions and overrides, including rating or scoring overrides.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 61. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-065",
+      "article": "EBA/GL/2020/06 para 65",
+      "chapter": "Credit decision-making",
+      "text": "The credit decision-making framework clearly articulates the decision-making powers and limitations of each decision-maker and of any automated model used for credit decisions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 65. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-085",
+      "article": "EBA/GL/2020/06 para 85",
+      "chapter": "Information and documentation",
+      "text": "Consumer creditworthiness assessment uses evidenced information on at least loan purpose where relevant, employment, source of repayment capacity, household composition and dependants, financial commitments, regular expenses, collateral and other risk mitigants.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of consumers only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 85. Applies from 30 June 2021 (para 18). Annex 2 lists optional data items."
+    },
+    {
+      "id": "EBA-LOM-086",
+      "article": "EBA/GL/2020/06 para 86",
+      "chapter": "Information and documentation",
+      "text": "Enterprise creditworthiness assessment uses evidenced information on at least loan purpose where relevant, income and cash flow, financial position and commitments, business model, business plans with projections, collateral, other risk mitigants and product-specific legal documentation.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate",
+          "sme"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of enterprises only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 86. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-089",
+      "article": "EBA/GL/2020/06 para 89",
+      "chapter": "Information and documentation",
+      "text": "Where there are concerns about the accuracy and reliability of information, the institution makes checks and reasonable enquiries with the borrower and third parties and takes reasonable steps to verify the information.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 89. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-094",
+      "article": "EBA/GL/2020/06 para 94",
+      "chapter": "Information and documentation",
+      "text": "The information and data leading to credit approval, including the actions and assessments performed, are documented and kept accessible to competent authorities for at least the duration of the loan agreement.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Retention of credit approval information is evidenced in individual credit files and record-keeping procedures.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 94. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-096",
+      "article": "EBA/GL/2020/06 para 96",
+      "chapter": "Creditworthiness assessment — consumers",
+      "text": "The institution assesses the borrower's ability and prospect to meet obligations under the loan agreement, in particular the source of repayment capacity, taking into account the loan's nature, maturity and interest rate.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of consumers only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 96. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-097",
+      "article": "EBA/GL/2020/06 para 97",
+      "chapter": "Creditworthiness assessment — consumers",
+      "text": "Collateral is not by itself a predominant criterion for approving a loan and is treated as a second way out, unless repayment is contractually based on sale of the pledged property or liquid collateral.",
+      "quote": "Collateral, in the case of secured lending, by itself should not be a predominant criterion for approving a loan",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of consumers only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 97. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-098",
+      "article": "EBA/GL/2020/06 para 98",
+      "chapter": "Creditworthiness assessment — consumers",
+      "text": "The assessment considers factors influencing present and future repayment capacity, including other servicing obligations, their duration, rates and outstanding amounts, repayment behaviour and known taxes and insurance, avoiding undue hardship and over-indebtedness.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of consumers only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 98. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-101",
+      "article": "EBA/GL/2020/06 para 101",
+      "chapter": "Creditworthiness assessment — consumers",
+      "text": "The institution adopts suitable methods for assessing repayment ability, which may include models provided the guidelines are met, selecting the method according to the risk level, size and type of loan.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness assessment of consumers only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 101. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-105",
+      "article": "EBA/GL/2020/06 para 105",
+      "chapter": "Creditworthiness assessment — residential mortgage lending",
+      "text": "The borrower's ability to meet obligations is not based on an expected significant increase in income unless the documentation provides sufficient evidence.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to consumer lending secured by residential immovable property only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 105. Applies from 30 June 2021 (para 18). Para 116 sets the same rule for unsecured consumer lending."
+    },
+    {
+      "id": "EBA-LOM-106",
+      "article": "EBA/GL/2020/06 para 106",
+      "chapter": "Creditworthiness assessment — residential mortgage lending",
+      "text": "The assessment accounts for committed and other non-discretionary expenditure, such as current obligations, with appropriate substantiation and consideration of living expenses.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to consumer lending secured by residential immovable property only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 106. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-107",
+      "article": "EBA/GL/2020/06 para 107",
+      "chapter": "Creditworthiness assessment — residential mortgage lending",
+      "text": "The creditworthiness assessment includes sensitivity analyses of potential negative future events, including reduced income, higher interest rates on variable-rate loans, negative amortisation, and balloon or deferred payments.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to consumer lending secured by residential immovable property only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 107. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-194",
+      "article": "EBA/GL/2020/06 para 194",
+      "chapter": "Credit decision-making",
+      "text": "The creditworthiness assessment is properly documented and its documented outcomes are able to justify the proposal to approve or decline the loan application.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Documentation of the individual creditworthiness assessment is evidenced in credit files, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 194. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-210",
+      "article": "EBA/GL/2020/06 para 210",
+      "chapter": "Valuation of immovable property collateral",
+      "text": "Where residential property is valued by desktop valuation supported by advanced statistical models, the valuer remains responsible, the model provides a confidence measure, and a low-confidence or uncertain value proposal leads the valuer to use another method.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 210. Applies from 30 June 2021 (para 18). Derogation from full-visit valuation (para 209), limited to well-developed, mature residential markets."
+    },
+    {
+      "id": "EBA-LOM-223",
+      "article": "EBA/GL/2020/06 para 223",
+      "chapter": "Valuation of immovable property collateral",
+      "text": "Indices and statistical models used to monitor collateral values are sufficiently granular, methodologically appropriate for the asset type and lending product, and based on a sufficient time series of observed transactions and appraisals.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 223. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-225",
+      "article": "EBA/GL/2020/06 para 225",
+      "chapter": "Valuation of immovable property collateral",
+      "text": "When a review under CRR Art. 208(3)(b) is triggered, the property is revalued by a valuer, possibly supported by compliant advanced statistical models, which are not used as the sole means of revaluation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 225. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-236",
+      "article": "EBA/GL/2020/06 para 236",
+      "chapter": "Advanced statistical models for valuation",
+      "text": "Policies set criteria for using advanced statistical models for collateral valuation, revaluation and monitoring, accounting for the models' proven track record, property-specific variables, minimum accurate information and model uncertainty.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Criteria for using advanced statistical models for collateral valuation are set in the institution's collateral valuation policy.",
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 236. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-237a",
+      "article": "EBA/GL/2020/06 para 237(a)",
+      "chapter": "Advanced statistical models for valuation",
+      "text": "Advanced statistical models for valuation are property- and location-specific at a sufficient level of granularity, for example postcode level.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 237(a). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-237b",
+      "article": "EBA/GL/2020/06 para 237(b)",
+      "chapter": "Advanced statistical models for valuation",
+      "text": "Advanced statistical models for valuation are valid and accurate and subject to robust and regular backtesting against actual observed transaction prices.",
+      "quote": "subject to robust and regular backtesting against the actual observed transaction prices",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 237(b). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-237c",
+      "article": "EBA/GL/2020/06 para 237(c)",
+      "chapter": "Advanced statistical models for valuation",
+      "text": "Advanced statistical models for valuation are based on a sufficiently large and representative sample of observed transaction prices.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 237(c). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-237d",
+      "article": "EBA/GL/2020/06 para 237(d)",
+      "chapter": "Advanced statistical models for valuation",
+      "text": "Advanced statistical models for valuation are based on up-to-date data of high quality.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 237(d). Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-238",
+      "article": "EBA/GL/2020/06 para 238",
+      "chapter": "Advanced statistical models for valuation",
+      "text": "The institution remains responsible for the appropriateness and performance of valuation models, understands their methodology, input data and assumptions, and keeps model documentation up to date.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "mortgage_origination",
+          "valuation"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to valuation or revaluation of immovable property collateral only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 238. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-269",
+      "article": "EBA/GL/2020/06 para 269",
+      "chapter": "Monitoring framework and early warning indicators",
+      "text": "The institution develops, maintains and regularly evaluates quantitative and qualitative early warning indicators, supported by adequate IT and data infrastructure, allowing timely detection of increased credit risk at portfolio, segment and exposure level.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 269. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-270",
+      "article": "EBA/GL/2020/06 para 270",
+      "chapter": "Monitoring framework and early warning indicators",
+      "text": "Early warning indicators have defined trigger levels set with regard to credit risk appetite, strategy and policies, and assigned escalation procedures with responsibilities for follow-up, including selection for a watch list.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 270. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-274",
+      "article": "EBA/GL/2020/06 para 274",
+      "chapter": "Monitoring framework and early warning indicators",
+      "text": "Ongoing credit risk monitoring considers the credit quality deterioration signals listed in para 274(a)-(s), such as adverse financial changes, rating or behavioural score downgrades and any borrower facility 30 days past due.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 274. Applies from 30 June 2021 (para 18)."
+    },
+    {
+      "id": "EBA-LOM-275",
+      "article": "EBA/GL/2020/06 para 275",
+      "chapter": "Monitoring framework and early warning indicators",
+      "text": "When an early warning indicator is triggered, the designated functions analyse the severity of the event and propose follow-up actions, presenting the analysis to the relevant credit decision-makers without undue delay.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Follow-up of triggered early warning indicators is an operational credit monitoring process evidenced in credit monitoring procedures.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2020/06 final report (29 May 2020), para 275. Applies from 30 June 2021 (para 18)."
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "docId": "EXT-ECB-VALREP",
+  "requirements": [
+    {
+      "id": "ECB-VALREP-1.3",
+      "article": "ECB validation reporting instructions (Feb 2019) §1.3",
+      "chapter": "Reporting process",
+      "text": "Individual validation reports are shared with the ECB no later than one month after they are finalised and approved by management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory submission obligation of the institution; evidenced in the transmission records to the ECB, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.1",
+      "chapter": "Scope and reporting instructions",
+      "text": "The validation tools are applied separately to each rating system approved at the start of the observation period, covering all customers or facilities within its range of application.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.2a",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.2",
+      "chapter": "Scope and reporting instructions",
+      "text": "Validation tool results are submitted to the ECB in the ECB templates together with the annual internal validation report, at consolidated level unless the Decision states otherwise.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory reporting obligation of the institution; evidenced in the annual submission of the ECB templates, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.2b",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.2",
+      "chapter": "Scope and reporting instructions",
+      "text": "The validation tools use the one-year observation period of the internal validation, with the annual end date kept constant across reporting years.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.2c",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.2",
+      "chapter": "Scope and reporting instructions",
+      "text": "Templates are named [LEICode]_[ModelType]_[ModelID]_[ReferenceDate]_[VersionNumber], with the reference date as the end of the observation period (DDMMYYYY).",
+      "category": "documentation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Formal requirement on supervisory submission files; evidenced in the reporting submission to the ECB, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.4.2",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.4.2",
+      "chapter": "General information",
+      "text": "The validation function's overall assessment is reported on the four-point scale; major deficiencies indicate a potential RWEA impact of at least ±5% and severe deficiencies at least ±10%.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.4.3",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.4.3",
+      "chapter": "General information",
+      "text": "Portfolio information (RWEA, EAD, number of customers or facilities, number of grades, number of defaults) is reported for the beginning and end of the observation period.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.2.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.2.1",
+      "chapter": "PD – qualitative validation tools",
+      "text": "Rating process statistics report customers with outdated ratings or financial statements, transferred ratings and process-deficiency exclusions relative to portfolio size M, with their PDs and defaults.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.2.2",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.2.2",
+      "chapter": "PD – qualitative validation tools",
+      "text": "The relative frequency of customers with overrides in the validation sample (M_def/N) is reported at portfolio level.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.3.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.3.1",
+      "chapter": "PD – predictive ability",
+      "text": "PD calibration is tested with a one-sided Jeffreys test at portfolio and rating-grade level, reporting the Beta(D+1/2, N−D+1/2) distribution function evaluated at the PD as p-value.",
+      "quote": "the PD applied in the portfolio/rating grade at the beginning of the relevant observation period is greater than the true one",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.4.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.4.1",
+      "chapter": "PD – discriminatory power",
+      "text": "Discriminatory power is tested by comparing the current AUC with the AUC at initial validation/development, using S = (AUCinit − AUCcurr)/s and p-value 1 − Φ(S).",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.5.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.5.1",
+      "chapter": "PD – stability",
+      "text": "Customer migrations over the observation period are summarised with the upper and lower matrix weighted bandwidth (MWB) statistics at portfolio level.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.5.2",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.5.2",
+      "chapter": "PD – stability",
+      "text": "Stability of the migration matrix is assessed with pairwise z-tests on the monotonicity of off-diagonal transition frequencies for each rating grade.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.5.5.3",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.5.5.3",
+      "chapter": "PD – stability",
+      "text": "Concentration in rating grades is assessed with the Herfindahl index, testing the current coefficient of variation against that at initial validation (number-weighted; exposure-weighted HI also reported).",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.6.2.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.6.2.1",
+      "chapter": "LGD – predictive ability",
+      "text": "LGD is back-tested with a one-sided paired t-test of realised versus estimated LGD on facilities whose recovery closed in the observation period, at portfolio and grade/pool (or 12-segment) level.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimates only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.6.3.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.6.3.1",
+      "chapter": "LGD – discriminatory power",
+      "text": "LGD discriminatory power is tested by comparing the current generalised AUC (gAUC) with the gAUC at initial validation/development.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimates only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.7.2.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.7.2.1",
+      "chapter": "ELBE and LGD in-default",
+      "text": "ELBE is back-tested against realised LGD with a two-sided paired t-test at portfolio and grade/pool or segment level, at various reference points in default.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimates only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    },
+    {
+      "id": "ECB-VALREP-2.9.3.1",
+      "article": "ECB validation reporting instructions (Feb 2019) §2.9.3.1",
+      "chapter": "CCF – predictive ability",
+      "text": "CCF estimates are back-tested with a one-sided paired t-test of realised versus estimated CCF at facility grade or pool level, excluding facilities covered by an EAD approach.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB 'Instructions for reporting the validation results of internal models – IRB Pillar I models for credit risk' (February 2019)."
+    }
+  ]
+}

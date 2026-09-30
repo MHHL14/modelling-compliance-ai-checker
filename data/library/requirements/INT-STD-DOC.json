@@ -1,0 +1,566 @@
+{
+  "docId": "INT-STD-DOC",
+  "requirements": [
+    {
+      "id": "REQ-G01",
+      "article": "MRM-STD-021 §2",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The document follows the RDS template and is version-controlled with approvals.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (fixed ID, text and article). Covers §2.2–2.8 for the RDS documentation template of Annex A."
+    },
+    {
+      "id": "MRM-STD-021-2.1",
+      "article": "MRM-STD-021 §2.1",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The model has RDS documentation per Annex A, an MDD per Annex B, an implementation specification per MRM-STD-030 and a monitoring plan per MRM-STD-040.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.2a",
+      "article": "MRM-STD-021 §2.2",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The MDD follows the chapter structure, numbering and headings of the MDD template in Annex B.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.2b",
+      "article": "MRM-STD-021 §2.2",
+      "chapter": "Documentation template, version control and approval",
+      "text": "A template section that does not apply is retained with the statement \"Not applicable\" and a justification, and added sections do not alter template numbering.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.3",
+      "article": "MRM-STD-021 §2.3",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The document carries a cover block with title, model identifier and version, document version, status, author, reviewer, approver and approval date.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.4",
+      "article": "MRM-STD-021 §2.4",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The document is stored in the controlled document repository linked to the model inventory and contains a document history table with version, date, change summary, author and approver.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.5",
+      "article": "MRM-STD-021 §2.5",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The document is reviewed before approval by a qualified reviewer who is not its author, and the review is recorded in the document history.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.6",
+      "article": "MRM-STD-021 §2.6",
+      "chapter": "Documentation template, version control and approval",
+      "text": "The RDS documentation is approved by the model owner after data quality sign-off, and the MDD by the model owner and the head of the modelling unit.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.7",
+      "article": "MRM-STD-021 §2.7",
+      "chapter": "Documentation template, version control and approval",
+      "text": "Only approved document versions are submitted to Model Validation, the approval authority and supervisors.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-2.8",
+      "article": "MRM-STD-021 §2.8",
+      "chapter": "Documentation template, version control and approval",
+      "text": "An approved document version is never overwritten; any change results in a new version that is reviewed and approved.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-4.1",
+      "article": "MRM-STD-021 §4.1",
+      "chapter": "Reference data set documentation",
+      "text": "The RDS documentation describes the construction and data quality of the RDS in sufficient detail for Model Validation to rebuild the RDS independently from source data.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "REQ-D30",
+      "article": "MRM-STD-021 §4.2",
+      "chapter": "Reference data set documentation",
+      "text": "The RDS build is reproducible from versioned code.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (fixed ID, text and article)."
+    },
+    {
+      "id": "MRM-STD-021-4.2b",
+      "article": "MRM-STD-021 §4.2",
+      "chapter": "Reference data set documentation",
+      "text": "No manual data manipulation is used in the RDS build; unavoidable manual inputs are version-controlled files documented as expert judgement under MRM-STD-023.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-4.3",
+      "article": "MRM-STD-021 §4.3",
+      "chapter": "Reference data set documentation",
+      "text": "The RDS documentation records the repository, build code tag, source snapshot reference dates and the result of a full rebuild compared with the frozen RDS (row count and default or target event count).",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-4.4",
+      "article": "MRM-STD-021 §4.4",
+      "chapter": "Reference data set documentation",
+      "text": "The frozen RDS is stored read-only with a version identifier that is referenced in both the RDS documentation and the MDD.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-4.6",
+      "article": "MRM-STD-021 §4.6",
+      "chapter": "Reference data set documentation",
+      "text": "The RDS documentation contains a data dictionary stating for every RDS variable its business definition, source system and field, and transformation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-4.7",
+      "article": "MRM-STD-021 §4.7",
+      "chapter": "Reference data set documentation",
+      "text": "Every data deficiency in section 6.2 of the RDS documentation has an identifier and is cross-referenced to the MDD limitations log.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-A.2.1",
+      "article": "MRM-STD-021 Annex A §2.1",
+      "chapter": "RDS documentation template (Annex A)",
+      "text": "The RDS documentation states the observation period with start and end dates, snapshot frequency, number of observations, unique facilities or obligors, and number of defaults or target events.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-A.3.3",
+      "article": "MRM-STD-021 Annex A §3.3",
+      "chapter": "RDS documentation template (Annex A)",
+      "text": "The default definition section states the level of application (obligor or facility) and describes any historical approximation of the default flag.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models with a default-based target only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-A.4.2",
+      "article": "MRM-STD-021 Annex A §4.2",
+      "chapter": "RDS documentation template (Annex A)",
+      "text": "The exclusions section states, for each exclusion, the conclusion of the impact analysis with a reference to section 5.3.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-5.1",
+      "article": "MRM-STD-021 §5.1",
+      "chapter": "Model development documentation",
+      "text": "The MDD describes design, methodology, calibration, performance and limitations in sufficient detail for Model Validation to reproduce estimation and calibration without recourse to the developers.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-5.2",
+      "article": "MRM-STD-021 §5.2",
+      "chapter": "Model development documentation",
+      "text": "The MDD documents the methodological alternatives considered, the selection criteria and the justification of the selected approach.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-5.3",
+      "article": "MRM-STD-021 §5.3",
+      "chapter": "Model development documentation",
+      "text": "The MDD contains the complete limitations log of the model in chapter 8.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-5.4",
+      "article": "MRM-STD-021 §5.4",
+      "chapter": "Model development documentation",
+      "text": "The MDD describes every expert judgement applied in development with a reference to its entry in the expert judgement log.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-5.5",
+      "article": "MRM-STD-021 §5.5; CRR Art. 175",
+      "chapter": "Model development documentation",
+      "text": "The MDD documents the design and operational details of the rating system, the rationale for the choice of rating criteria and all major changes in the risk rating process.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal provision implementing CRR Art. 175(1)–(3); checked against the CRR text as known."
+    },
+    {
+      "id": "MRM-STD-021-5.6",
+      "article": "MRM-STD-021 §5.6",
+      "chapter": "Model development documentation",
+      "text": "Estimation and calibration results in the MDD are produced from tagged estimation code, and the tag and frozen RDS version are recorded in MDD chapter 12.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-5.8",
+      "article": "MRM-STD-021 §5.8",
+      "chapter": "Model development documentation",
+      "text": "The MDD of an ML model contains the explainability, fairness and robustness analyses required by AI-STD-700 in chapter 7.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine learning models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-6.2",
+      "article": "MRM-STD-021 §6.2",
+      "chapter": "Other documentation",
+      "text": "The monitoring plan with KPIs, thresholds and frequency is documented in MDD chapter 10 or in a separate document referenced there.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-7.1",
+      "article": "MRM-STD-021 §7.1",
+      "chapter": "Documentation quality",
+      "text": "The RDS documentation, the MDD, the implementation specification and the production code are consistent with each other.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-021-7.3",
+      "article": "MRM-STD-021 §7.3",
+      "chapter": "Documentation quality",
+      "text": "Every evidence reference in the 1LoD self-assessment points to a section number of an approved document version.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    }
+  ]
+}

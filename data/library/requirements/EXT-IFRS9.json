@@ -1,0 +1,847 @@
+{
+  "docId": "EXT-IFRS9",
+  "requirements": [
+    {
+      "id": "IFRS9-5.5.1",
+      "article": "IFRS 9 para 5.5.1",
+      "chapter": "Scope of impairment",
+      "text": "The institution recognises a loss allowance for expected credit losses on all debt financial assets at amortised cost or at fair value through OCI, lease receivables, contract assets, loan commitments and financial guarantee contracts within the impairment scope.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.1; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.6",
+      "article": "IFRS 9 para 5.5.6",
+      "chapter": "Scope of impairment",
+      "text": "For loan commitments and financial guarantee contracts, the date on which the institution becomes party to the irrevocable commitment is used as the date of initial recognition for impairment purposes, including as the reference point for the SICR assessment.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.6; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.4",
+      "article": "IFRS 9 para 5.5.4",
+      "chapter": "Staging — 12-month versus lifetime ECL",
+      "text": "The staging approach ensures that lifetime ECL is recognised for all financial instruments with a significant increase in credit risk since initial recognition, whether assessed individually or collectively, using all reasonable and supportable information, including forward-looking information.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.4; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.3",
+      "article": "IFRS 9 para 5.5.3",
+      "chapter": "Staging — 12-month versus lifetime ECL",
+      "text": "At each reporting date, the loss allowance is measured at lifetime ECL for every financial instrument whose credit risk has increased significantly since initial recognition (Stage 2), subject to the separate treatment of POCI assets and simplified-approach assets.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.3; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.5",
+      "article": "IFRS 9 para 5.5.5",
+      "chapter": "Staging — 12-month versus lifetime ECL",
+      "text": "Where credit risk has not increased significantly since initial recognition at the reporting date, the loss allowance for the instrument is measured at 12-month ECL (Stage 1).",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.5; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.7",
+      "article": "IFRS 9 para 5.5.7",
+      "chapter": "Staging — 12-month versus lifetime ECL",
+      "text": "Where lifetime ECL was recognised in the previous reporting period but the significant-increase criterion is no longer met at the current reporting date, the loss allowance is measured again at 12-month ECL (symmetrical transfer back to Stage 1).",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.7; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.43",
+      "article": "IFRS 9 para B5.5.43; Appendix A ('12-month expected credit losses')",
+      "chapter": "Staging — 12-month versus lifetime ECL",
+      "text": "12-month ECL is measured as the lifetime cash shortfalls resulting from a default within 12 months after the reporting date (or shorter expected life), weighted by that default probability — not as the cash shortfalls expected over the next 12 months.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.43 and Appendix A definition; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.9-a",
+      "article": "IFRS 9 para 5.5.9",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "The SICR assessment performed at each reporting date is based on the change in the risk of a default occurring over the expected life of the instrument, not on the change in the amount of expected credit losses.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.9; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.9-b",
+      "article": "IFRS 9 para 5.5.9",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "The SICR assessment compares the risk of default at the reporting date with the risk of default at initial recognition; the origination risk of default (for example origination lifetime PD or rating) is therefore retained for each instrument.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.9; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.9",
+      "article": "IFRS 9 para B5.5.9",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "SICR thresholds reflect that the significance of a change in default risk depends on the default risk at initial recognition: a given absolute change is more significant for instruments originated with a lower risk of default.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.9; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.11",
+      "article": "IFRS 9 paras B5.5.10–B5.5.11",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "The SICR comparison accounts for the relationship between expected life and risk of default, so that default risk at the reporting date is compared with origination default risk on a consistent remaining-life basis rather than by simply comparing absolute risk over time.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.10–B5.5.11; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.13",
+      "article": "IFRS 9 paras B5.5.13–B5.5.14",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "Changes in 12-month default risk are used as a proxy for changes in lifetime default risk only where default patterns are not concentrated at a specific point of the expected life and circumstances (such as those in B5.5.14) do not require a lifetime assessment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.13–B5.5.14; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.17",
+      "article": "IFRS 9 paras B5.5.16–B5.5.17",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "The SICR assessment is a holistic, multifactor analysis that considers the relevant indicators in B5.5.17(a)–(p), such as internal and external ratings, behavioural scores, forecast adverse economic conditions, collateral and covenant changes, and past-due information, weighted by relevance to the product and borrower.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.16–B5.5.17; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.21",
+      "article": "IFRS 9 para B5.5.21",
+      "chapter": "Significant increase in credit risk (SICR)",
+      "text": "The timing of SICR recognition is not aligned to the point at which an asset becomes credit-impaired or meets the internal definition of default.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.21; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.11-a",
+      "article": "IFRS 9 para 5.5.11",
+      "chapter": "Past-due information and 30 days past due presumption",
+      "text": "Where reasonable and supportable forward-looking information is available without undue cost or effort, the SICR assessment does not rely solely on past-due information; past-due-based approaches are used only where more forward-looking information is not so available.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.11; see also B5.5.2; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.11-b",
+      "article": "IFRS 9 para 5.5.11",
+      "chapter": "Past-due information and 30 days past due presumption",
+      "text": "The SICR framework applies the rebuttable presumption that credit risk has increased significantly when contractual payments are more than 30 days past due, as the latest point for transfer to lifetime ECL where SICR has not already been identified earlier.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.11 and B5.5.19; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.20",
+      "article": "IFRS 9 paras 5.5.11, B5.5.20",
+      "chapter": "Past-due information and 30 days past due presumption",
+      "text": "Any rebuttal of the 30 days past due presumption is supported by reasonable and supportable information demonstrating that such delinquency does not represent a significant increase in credit risk, for example an administrative oversight or historical evidence of no correlation at 30 days.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.11 and B5.5.20; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.10",
+      "article": "IFRS 9 paras 5.5.10, B5.5.22",
+      "chapter": "Low credit risk exemption",
+      "text": "Where the low credit risk exemption is applied, it is restricted to instruments with a low risk of default and strong near-term capacity to meet contractual cash flows, assessed without reliance on collateral and not merely relative to other exposures or the jurisdiction.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.10 and B5.5.22; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.23",
+      "article": "IFRS 9 para B5.5.23",
+      "chapter": "Low credit risk exemption",
+      "text": "Low credit risk is determined using internal ratings or other methodologies consistent with a globally understood definition of low credit risk (for example equivalent to an external investment-grade rating), considering all terms of the instrument from a market participant perspective.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.23; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.24",
+      "article": "IFRS 9 para B5.5.24",
+      "chapter": "Low credit risk exemption",
+      "text": "An instrument that ceases to qualify as low credit risk is not transferred to lifetime ECL automatically; a SICR assessment against its credit risk at initial recognition is performed instead.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.24; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.37-a",
+      "article": "IFRS 9 para B5.5.37",
+      "chapter": "Definition of default",
+      "text": "The default definition used to determine the risk of a default occurring is consistent with the definition used for internal credit risk management of the relevant instrument and considers qualitative indicators, such as financial covenant breaches, where appropriate.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.37; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.37-b",
+      "article": "IFRS 9 para B5.5.37",
+      "chapter": "Definition of default",
+      "text": "Default is presumed to occur no later than 90 days past due, unless reasonable and supportable information demonstrates that a more lagging default criterion is more appropriate for the instrument.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.37; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-AppA-CI",
+      "article": "IFRS 9 Appendix A ('credit-impaired financial asset')",
+      "chapter": "Credit-impaired assets (Stage 3)",
+      "text": "Credit-impaired assets are identified from observable evidence of events detrimental to estimated future cash flows — significant financial difficulty, breach or past due, distressed concessions, probable bankruptcy, loss of an active market, or deep-discount purchase — including the combined effect of several events.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para Appendix A definition, points (a)–(f); paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.33",
+      "article": "IFRS 9 para B5.5.33",
+      "chapter": "Credit-impaired assets (Stage 3)",
+      "text": "For assets that are credit-impaired at the reporting date but are not POCI, ECL is measured as the difference between the gross carrying amount and the present value of estimated future cash flows discounted at the original effective interest rate.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.33; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.13",
+      "article": "IFRS 9 para 5.5.13",
+      "chapter": "Purchased or originated credit-impaired (POCI) assets",
+      "text": "For purchased or originated credit-impaired assets, the loss allowance recognised at the reporting date comprises only the cumulative changes in lifetime ECL since initial recognition, without 12-month/lifetime staging.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.13; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.45",
+      "article": "IFRS 9 para B5.5.45",
+      "chapter": "Purchased or originated credit-impaired (POCI) assets",
+      "text": "ECL on POCI assets is discounted using the credit-adjusted effective interest rate determined at initial recognition.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.45; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.12",
+      "article": "IFRS 9 para 5.5.12",
+      "chapter": "Modifications",
+      "text": "For modified financial assets that are not derecognised, SICR is assessed by comparing the risk of default at the reporting date based on the modified terms with the risk of default at initial recognition based on the original, unmodified terms.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.12; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.27",
+      "article": "IFRS 9 para B5.5.27",
+      "chapter": "Modifications",
+      "text": "A modified asset is not automatically considered to have lower credit risk; transfer back from lifetime ECL requires evidence such as a history of timely payment performance against the modified terms, demonstrated consistently over a period of time.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.27; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.4.3",
+      "article": "IFRS 9 para 5.4.3",
+      "chapter": "Modifications",
+      "text": "For modifications not resulting in derecognition, the gross carrying amount is recalculated as the present value of the modified contractual cash flows discounted at the original effective interest rate (credit-adjusted rate for POCI), and a modification gain or loss is recognised in profit or loss.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Accounting obligation for modified financial assets; evidenced in the institution's accounting policies and financial reporting process, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.4.3; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.4.4",
+      "article": "IFRS 9 paras 5.4.4, B5.4.9",
+      "chapter": "Write-off",
+      "text": "The gross carrying amount is directly reduced (written off), in full or in part, when there is no reasonable expectation of recovering the financial asset or a portion of it; write-off data used in loss estimation are consistent with this policy.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.4.4 and B5.4.9; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.1",
+      "article": "IFRS 9 para B5.5.1",
+      "chapter": "Collective assessment",
+      "text": "Where evidence of a significant increase in credit risk is not yet available at instrument level, SICR is assessed on a collective basis using information indicative of increased credit risk for groups or sub-groups of instruments.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.1 (see also B5.5.2–B5.5.4); paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.5",
+      "article": "IFRS 9 para B5.5.5",
+      "chapter": "Collective assessment",
+      "text": "Instruments assessed collectively are grouped on shared credit risk characteristics (such as instrument type, rating, collateral type, origination date, remaining term, industry, geography, loan-to-value) designed to identify significant increases in credit risk on a timely basis.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.5; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.6",
+      "article": "IFRS 9 para B5.5.6",
+      "chapter": "Collective assessment",
+      "text": "Where a sub-group with a significant increase in credit risk cannot be identified from shared credit risk characteristics, lifetime ECL is recognised on the portion of the group for which credit risk is deemed to have increased significantly.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.6; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.17-a",
+      "article": "IFRS 9 paras 5.5.17(a), B5.5.41–B5.5.42",
+      "chapter": "Measurement of ECL",
+      "text": "ECL reflects an unbiased, probability-weighted amount determined by evaluating a range of possible outcomes, rather than a single most-likely, best-case or worst-case scenario.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.17(a), B5.5.41–B5.5.42; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.18",
+      "article": "IFRS 9 para 5.5.18",
+      "chapter": "Measurement of ECL",
+      "text": "The ECL estimate always reflects both the possibility that a credit loss occurs and the possibility that none occurs, even where the probability of loss is very low; not every possible scenario needs to be identified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.18; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.17-b",
+      "article": "IFRS 9 paras 5.5.17(b), B5.5.44",
+      "chapter": "Measurement of ECL — time value of money",
+      "text": "ECL is discounted to the reporting date, not to the expected default date, using the effective interest rate determined at initial recognition or an approximation of it; for variable-rate instruments the current effective interest rate is used.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.17(b), B5.5.44; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.17-c",
+      "article": "IFRS 9 paras 5.5.17(c), B5.5.49",
+      "chapter": "Measurement of ECL — reasonable and supportable information",
+      "text": "ECL measurement uses reasonable and supportable information available without undue cost or effort at the reporting date about past events, current conditions and forecasts of future economic conditions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.17(c), B5.5.49; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.51",
+      "article": "IFRS 9 para B5.5.51",
+      "chapter": "Measurement of ECL — reasonable and supportable information",
+      "text": "Information used in ECL measurement includes borrower-specific factors, general economic conditions and an assessment of both the current and the forecast direction of conditions at the reporting date, and reflects the effect of expected prepayments.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.51; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.52-a",
+      "article": "IFRS 9 para B5.5.52",
+      "chapter": "Measurement of ECL — reasonable and supportable information",
+      "text": "Historical credit loss data are adjusted, on the basis of current observable data, for current conditions and forecasts that did not affect the historical period, and for historical conditions not relevant to future contractual cash flows.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.52; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.52-b",
+      "article": "IFRS 9 para B5.5.52",
+      "chapter": "Measurement of ECL — reasonable and supportable information",
+      "text": "Period-to-period changes in ECL estimates reflect, and are directionally consistent with, changes in related observable data such as unemployment rates, property prices, commodity prices and payment status.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.52; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.52-c",
+      "article": "IFRS 9 para B5.5.52",
+      "chapter": "Measurement of ECL — back-testing",
+      "text": "The ECL methodology and assumptions are reviewed regularly to reduce differences between ECL estimates and actual credit loss experience.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.52; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.53",
+      "article": "IFRS 9 para B5.5.53",
+      "chapter": "Measurement of ECL — reasonable and supportable information",
+      "text": "Historical loss rates are applied to groups defined consistently with the groups for which those rates were observed, and each group is associated with relevant observable data reflecting current conditions.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.53; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.19",
+      "article": "IFRS 9 paras 5.5.19, B5.5.38",
+      "chapter": "Measurement of ECL — period of exposure",
+      "text": "The ECL horizon does not exceed the maximum contractual period (including extension options) over which the institution is exposed to credit risk, even where a longer period is consistent with business practice.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.19, B5.5.38; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-5.5.20",
+      "article": "IFRS 9 paras 5.5.20, B5.5.39–B5.5.40",
+      "chapter": "Measurement of ECL — period of exposure",
+      "text": "For revolving facilities whose contractual cancellation right does not limit exposure to the notice period, ECL is measured over the period of exposure not mitigated by normal credit risk management actions, based on historical evidence as listed in B5.5.40.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para 5.5.20, B5.5.39–B5.5.40; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    },
+    {
+      "id": "IFRS9-B5.5.55",
+      "article": "IFRS 9 para B5.5.55",
+      "chapter": "Measurement of ECL — collateral",
+      "text": "Expected cash shortfalls reflect cash flows from collateral and credit enhancements that are part of the contractual terms and not separately recognised, including foreclosure proceeds less costs to obtain and sell, irrespective of whether foreclosure is probable.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against IFRS 9 consolidated text (IFRS Foundation), para B5.5.55; paraphrased (no IFRS quotes). Impairment paragraphs identical in the EU-endorsed text (Reg. (EU) 2016/2067)."
+    }
+  ]
+}

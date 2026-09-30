@@ -1,0 +1,533 @@
+{
+  "docId": "EXT-EBA-ECL",
+  "requirements": [
+    {
+      "id": "EBA-ECL-021",
+      "article": "EBA/GL/2017/06 para 21",
+      "chapter": "General provisions — reasonable and supportable information",
+      "text": "The institution considers a wide range of relevant information on past events, current conditions and forecasts in ECL assessment and measurement, using experienced credit judgement to determine which information is reasonable and supportable.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 21."
+    },
+    {
+      "id": "EBA-ECL-022",
+      "article": "EBA/GL/2017/06 para 22",
+      "chapter": "General provisions — forward-looking information",
+      "text": "Forward-looking information, including macroeconomic factors, is incorporated using judgement consistent with generally accepted economic analysis and forecasting methods and supported by a sufficient set of data.",
+      "quote": "apply sound judgement consistent with generally accepted methods for economic analysis and forecasting, and supported by a sufficient set of data",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 22."
+    },
+    {
+      "id": "EBA-ECL-027-c-iv",
+      "article": "EBA/GL/2017/06 para 27(c)(iv)",
+      "chapter": "Principle 1 — Governance and internal control",
+      "text": "The internal control system includes an ECL model validation process with policies setting its accountability and reporting structure, internal rules for assessing and approving model changes, and reporting of validation outcomes.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The ECL model validation process and its policies are evidenced in the institution's validation policy and internal control framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 27(c)(iv)."
+    },
+    {
+      "id": "EBA-ECL-030",
+      "article": "EBA/GL/2017/06 para 30",
+      "chapter": "Principle 2 — Sound ECL methodologies",
+      "text": "The allowance methodology documents definitions of key terms (such as default, loss and migration rates); where terms or assumptions differ between accounting, capital and credit risk management, the rationale is documented and approved by senior management.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 30."
+    },
+    {
+      "id": "EBA-ECL-033-d",
+      "article": "EBA/GL/2017/06 para 33(d)–(e)",
+      "chapter": "Principle 2 — Sound ECL methodologies",
+      "text": "The ECL measurement method (e.g. loss rate, PD/LGD, discounted cash flow) applied to each portfolio is identified and documented together with the reasons for its appropriateness; changes in approach are explained with their quantitative impact.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 33(d)–(e)."
+    },
+    {
+      "id": "EBA-ECL-033-f",
+      "article": "EBA/GL/2017/06 para 33(f)",
+      "chapter": "Principle 2 — Sound ECL methodologies",
+      "text": "The methodology documents the inputs, data and assumptions used, how the life of an exposure is determined (including prepayments), the historical period evaluated, and adjustments made for differences between current/forecast and historical conditions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 33(f)."
+    },
+    {
+      "id": "EBA-ECL-038-a",
+      "article": "EBA/GL/2017/06 para 38(a)",
+      "chapter": "Principle 2 — Scenarios",
+      "text": "The institution demonstrates and documents how ECL estimates, and components such as PD and LGD, change under changes in scenarios, including changes in relevant external conditions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 38(a)."
+    },
+    {
+      "id": "EBA-ECL-038-b",
+      "article": "EBA/GL/2017/06 para 38(b)",
+      "chapter": "Principle 2 — Scenarios",
+      "text": "The institution has a documented process for determining the time horizon of scenarios and for estimating ECL for exposures whose lives exceed the period covered by the economic forecasts used.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 38(b)."
+    },
+    {
+      "id": "EBA-ECL-039",
+      "article": "EBA/GL/2017/06 para 39",
+      "chapter": "Principle 2 — Scenarios",
+      "text": "Forward-looking information and economic forecasts used for ECL are consistent with inputs to other estimates in the financial statements, budgets, strategic and capital plans and other management information.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 39."
+    },
+    {
+      "id": "EBA-ECL-041-a-ii",
+      "article": "EBA/GL/2017/06 para 41(a)(ii)",
+      "chapter": "Principle 2 — Modifications",
+      "text": "Renegotiations or modifications do not automatically lead to a lower allowance; any decrease is supported by strong evidence, including consistently satisfactory payment performance over a reasonable period, having regard to forbearance probation requirements.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 41(a)(ii)."
+    },
+    {
+      "id": "EBA-ECL-049",
+      "article": "EBA/GL/2017/06 paras 49, 52",
+      "chapter": "Principle 3 — Grouping on shared credit risk characteristics",
+      "text": "Exposures are grouped on shared credit risk characteristics granular enough to assess changes in credit risk, and not in a way that the performance of the group obscures increases in credit risk of particular exposures.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 49 and 52."
+    },
+    {
+      "id": "EBA-ECL-056",
+      "article": "EBA/GL/2017/06 paras 54, 56",
+      "chapter": "Principle 3 — Temporary adjustments (overlays)",
+      "text": "Temporary adjustments to allowances are used only as interim solutions and are directionally consistent with forward-looking forecasts, supported by appropriate documentation and subject to governance processes.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 54 and 56."
+    },
+    {
+      "id": "EBA-ECL-066",
+      "article": "EBA/GL/2017/06 paras 65–66",
+      "chapter": "Principle 5 — ECL model validation",
+      "text": "ECL models, including model-based rating systems and risk component estimates, are validated at initial development, when significant changes are made, and on an ongoing basis to confirm suitability for their intended use.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 65–66."
+    },
+    {
+      "id": "EBA-ECL-067-a",
+      "article": "EBA/GL/2017/06 para 67(a)",
+      "chapter": "Principle 5 — ECL model validation",
+      "text": "Model validation is performed independently of model development by staff with the necessary experience and expertise; findings are reported promptly to the appropriate level, and outsourced validation remains the institution's responsibility.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The independence and staffing of the validation function are organisational requirements evidenced in the validation function's mandate.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 67(a)."
+    },
+    {
+      "id": "EBA-ECL-067-b-inputs",
+      "article": "EBA/GL/2017/06 para 67(b)",
+      "chapter": "Principle 5 — ECL model validation",
+      "text": "Internal quality and reliability standards apply to historical, current and forward-looking model input data, which are relevant, accurate, reliable and complete without exclusions that could bias ECL; validation confirms these standards are met.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 67(b), first bullet (model inputs)."
+    },
+    {
+      "id": "EBA-ECL-067-b-perf",
+      "article": "EBA/GL/2017/06 para 67(b)",
+      "chapter": "Principle 5 — ECL model validation",
+      "text": "Internally established standards for acceptable model performance are defined; where performance thresholds are significantly breached, remedial action up to recalibration or redevelopment is taken.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 67(b), third bullet (model output/performance)."
+    },
+    {
+      "id": "EBA-ECL-068",
+      "article": "EBA/GL/2017/06 para 68",
+      "chapter": "Principle 6 — Experienced credit judgement",
+      "text": "The use of experienced credit judgement to incorporate the expected impact of reasonable and supportable forward-looking information on ECL is documented in the credit risk methodology and subject to appropriate oversight.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 68."
+    },
+    {
+      "id": "EBA-ECL-071",
+      "article": "EBA/GL/2017/06 para 71",
+      "chapter": "Principle 6 — Experienced credit judgement",
+      "text": "The institution demonstrates that forward-looking information used in ECL estimation is linked to the credit risk drivers of the exposures or portfolios; where a relevant factor is not incorporated, a temporary adjustment may be needed.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 71."
+    },
+    {
+      "id": "EBA-ECL-075",
+      "article": "EBA/GL/2017/06 para 75",
+      "chapter": "Principle 7 — Common processes, systems, tools and data",
+      "text": "To the maximum extent possible, common processes, systems, tools and data are used to assess credit risk, measure ECL for accounting purposes and determine expected losses for capital adequacy purposes.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 75."
+    },
+    {
+      "id": "EBA-ECL-082",
+      "article": "EBA/GL/2017/06 paras 81–82",
+      "chapter": "Principle 8 — Disclosure",
+      "text": "Public disclosures communicate the main ECL assumptions and inputs and explain qualitatively how forward-looking information, including macroeconomic factors, has been incorporated in ECL estimation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Public ECL disclosures are evidenced in the institution's financial statements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 81–82."
+    },
+    {
+      "id": "EBA-ECL-089",
+      "article": "EBA/GL/2017/06 paras 89–90",
+      "chapter": "IFRS 9 — Definition of default",
+      "text": "The accounting definition of default is guided by the regulatory definition in Article 178 CRR, covering both unlikeliness-to-pay and 90 days past due, with unlikeliness to pay identified before 90 days past due is reached.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 89–90."
+    },
+    {
+      "id": "EBA-ECL-105",
+      "article": "EBA/GL/2017/06 para 105",
+      "chapter": "IFRS 9 — Assessment of significant increases in credit risk",
+      "text": "A clear policy with well-developed criteria defines what constitutes a significant increase in credit risk per exposure type, assessed on the risk of default before the effect of credit risk mitigants such as collateral or guarantees.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 105."
+    },
+    {
+      "id": "EBA-ECL-109",
+      "article": "EBA/GL/2017/06 para 109",
+      "chapter": "IFRS 9 — Assessment of significant increases in credit risk",
+      "text": "Where changes in PD are used to identify SICR, both the relative change (PD change divided by PD at initial recognition) and the absolute change in PD are taken into consideration.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 109."
+    },
+    {
+      "id": "EBA-ECL-118",
+      "article": "EBA/GL/2017/06 para 118",
+      "chapter": "IFRS 9 — Assessment of significant increases in credit risk",
+      "text": "The SICR assessment is not based solely on quantitative analysis, and 'significant' is not equated with statistical significance.",
+      "quote": "‘Significant’ should not be equated with statistical significance",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 118."
+    },
+    {
+      "id": "EBA-ECL-132",
+      "article": "EBA/GL/2017/06 paras 132–133",
+      "chapter": "IFRS 9 — Practical expedients",
+      "text": "Use of the low credit risk exemption is limited and accompanied by clear evidence that credit risk at the reporting date is so low that a significant increase since initial recognition could not have occurred.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 132–133."
+    },
+    {
+      "id": "EBA-ECL-134",
+      "article": "EBA/GL/2017/06 para 134",
+      "chapter": "IFRS 9 — Practical expedients",
+      "text": "Low credit risk is evaluated primarily on the institution's own credit risk assessment; exposures with an external investment-grade rating are not automatically treated as low credit risk, and internal ratings more optimistic than external ratings are additionally justified.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 134."
+    },
+    {
+      "id": "EBA-ECL-135",
+      "article": "EBA/GL/2017/06 para 135",
+      "chapter": "IFRS 9 — Practical expedients",
+      "text": "The more-than-30-days-past-due presumption is used only as a backstop alongside earlier indicators and not as a primary indicator of transfer to lifetime ECL.",
+      "quote": "credit institutions should avoid using it as a primary indicator of transfer to lifetime ECL",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 135."
+    },
+    {
+      "id": "EBA-ECL-136",
+      "article": "EBA/GL/2017/06 para 136",
+      "chapter": "IFRS 9 — Practical expedients",
+      "text": "Any rebuttal of the 30 days past due presumption is supported by a thorough analysis, using current and forward-looking information, clearly demonstrating that 30 days past due is not correlated with a significant increase in credit risk.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2017/06 final report (12 May 2017), para 136."
+    }
+  ]
+}

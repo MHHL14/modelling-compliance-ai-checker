@@ -1,0 +1,523 @@
+{
+  "docId": "INT-STD-MOC",
+  "requirements": [
+    {
+      "id": "CRM-STD-101-3.1a",
+      "article": "CRM-STD-101 §3.1; CRR Art. 179(1)(f)",
+      "chapter": "MoC framework and categories",
+      "text": "The final risk parameter estimate consists of the best estimate, including appropriate adjustments, plus the margin of conservatism.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-3.1b",
+      "article": "CRM-STD-101 §3.1",
+      "chapter": "MoC framework and categories",
+      "text": "The MoC is not used to compensate for deficiencies that can be corrected through an appropriate adjustment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-3.2",
+      "article": "CRM-STD-101 §3.2–3.4; EBA/GL/2017/16 section 4.4",
+      "chapter": "MoC framework and categories",
+      "text": "The MoC distinguishes category A (data and methodological deficiencies), category B (relevant changes) and category C (general estimation error).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; categories consistent with EBA/GL/2017/16 section 4.4."
+    },
+    {
+      "id": "CRM-STD-101-3.5",
+      "article": "CRM-STD-101 §3.5",
+      "chapter": "MoC framework and categories",
+      "text": "Each identified deficiency is linked to exactly one category (A or B) and recorded in the MoC register with a unique identifier, the affected parameters and segments, and a reference to the MRM-STD-022 data deficiency log.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-3.6",
+      "article": "CRM-STD-101 §3.6",
+      "chapter": "MoC framework and categories",
+      "text": "Each deficiency is quantified individually as its effect on the risk parameter per calibration segment before aggregation within its category.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-3.7a",
+      "article": "CRM-STD-101 §3.7",
+      "chapter": "MoC framework and categories",
+      "text": "The quantification of each category A and B deficiency is supported by a sensitivity analysis that re-estimates the parameter under plausible alternative treatments of the deficiency.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-3.7b",
+      "article": "CRM-STD-101 §3.7",
+      "chapter": "MoC framework and categories",
+      "text": "The MoC for a deficiency is not lower than the adverse effect indicated by the sensitivity analysis, unless a lower value is justified and approved by Model Risk Management.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-4.1",
+      "article": "CRM-STD-101 §4.1",
+      "chapter": "Identification of deficiencies",
+      "text": "Deficiencies are identified systematically at each development, recalibration and annual review using the trigger list of Annex 1.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-4.2",
+      "article": "CRM-STD-101 §4.2",
+      "chapter": "Identification of deficiencies",
+      "text": "Deficiencies identified by validation, monitoring, internal audit or the supervisor are assessed for their effect on the estimates and, where relevant, added to the MoC register within three months.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-4.3",
+      "article": "CRM-STD-101 §4.3",
+      "chapter": "Identification of deficiencies",
+      "text": "For each deficiency an appropriate adjustment is considered first, and the remaining uncertainty of any adjustment applied is assessed for category A MoC.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-4.4",
+      "article": "CRM-STD-101 §4.4",
+      "chapter": "Identification of deficiencies",
+      "text": "The deficiency assessment, including deficiencies considered and rejected, is documented in the MoC section of the model development document.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-5.1",
+      "article": "CRM-STD-101 §5.1",
+      "chapter": "Quantification",
+      "text": "The MoC is quantified at least per category and per calibration segment (or per grade for PD).",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-5.2",
+      "article": "CRM-STD-101 §5.2",
+      "chapter": "Quantification",
+      "text": "Expert judgement is used to quantify MoC only where sensitivity, bootstrap or scenario, and benchmarking methods are not feasible, and is documented and approved under MRM-STD-023.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-5.3",
+      "article": "CRM-STD-101 §5.3",
+      "chapter": "Quantification",
+      "text": "The sensitivity analysis documents the plausible range of each alternative treatment, the parameter value under each treatment and the rationale for the value selected.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-5.4",
+      "article": "CRM-STD-101 §5.4",
+      "chapter": "Quantification",
+      "text": "The MoC for each deficiency is non-negative, and a deficiency that lowers the estimate does not reduce the MoC of other deficiencies.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-5.5a",
+      "article": "CRM-STD-101 §5.5",
+      "chapter": "Quantification",
+      "text": "Category C MoC for PD is at least the difference between the upper bound of a one-sided 90% confidence interval of the LRA default rate and the LRA, accounting for autocorrelation of yearly default rates.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-5.5b",
+      "article": "CRM-STD-101 §5.5",
+      "chapter": "Quantification",
+      "text": "Category C MoC for LGD and CCF is at least the difference between the 90th percentile of the bootstrapped long-run average and the long-run average.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD and CCF models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-6.1",
+      "article": "CRM-STD-101 §6.1",
+      "chapter": "Application and aggregation",
+      "text": "The total MoC per calibration segment is the simple sum of the category A, B and C MoCs, without diversification.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-6.2",
+      "article": "CRM-STD-101 §6.2",
+      "chapter": "Application and aggregation",
+      "text": "For PD the MoC is applied to the calibrated best estimate before the regulatory floor; for LGD and CCF the order of adjustments, MoC and downturn is documented and applied consistently in development and production.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-6.3",
+      "article": "CRM-STD-101 §6.3",
+      "chapter": "Application and aggregation",
+      "text": "The application of MoC preserves rank ordering, with PDs after MoC increasing monotonically with grade.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-6.4",
+      "article": "CRM-STD-101 §6.4",
+      "chapter": "Application and aggregation",
+      "text": "Where IRB parameters are used for purposes requiring unbiased estimates, such as IFRS 9, the MoC is removed and the removal documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-6.5",
+      "article": "CRM-STD-101 §6.5",
+      "chapter": "Application and aggregation",
+      "text": "The effect of the MoC on risk-weighted exposure amounts is reported per category and per rating system.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-7.1",
+      "article": "CRM-STD-101 §7.1",
+      "chapter": "Remediation",
+      "text": "Each category A deficiency has a remediation plan with an owner and target date, unless documented as permanent and reassessed at each annual review.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-7.2",
+      "article": "CRM-STD-101 §7.2",
+      "chapter": "Remediation",
+      "text": "Where the total MoC exceeds 20% of the best estimate for PD, or 5 percentage points for LGD or CCF, the need for redevelopment is presented to the Model Risk Committee.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-7.3",
+      "article": "CRM-STD-101 §7.3",
+      "chapter": "Remediation",
+      "text": "An MoC component is reduced or removed only after remediation of the underlying deficiency has been implemented and confirmed by Model Validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-8.1",
+      "article": "CRM-STD-101 §8.1",
+      "chapter": "MoC monitoring",
+      "text": "The MoC is reviewed at least annually as part of the annual review of estimates, including the continued relevance and quantification of each deficiency.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-8.2",
+      "article": "CRM-STD-101 §8.2",
+      "chapter": "MoC monitoring",
+      "text": "The MoC register records per deficiency the category, quantification method, MoC value, calibration segments affected and remediation status, and is kept up to date.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-101-8.4",
+      "article": "CRM-STD-101 §8.4",
+      "chapter": "MoC monitoring",
+      "text": "Changes in the MoC are classified as model changes under MRM-STD-050 and Commission Delegated Regulation (EU) No 529/2014.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-101 v2.0) text authored for the library."
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "docId": "EXT-RTS-MAT",
+  "requirements": [
+    {
+      "id": "REQ-D07",
+      "article": "CRR Art. 178; RTS 2018/171; EBA/GL/2016/07",
+      "chapter": "Materiality threshold — overview",
+      "text": "Default is defined as > 90 dpd above the materiality threshold (EUR 100 absolute and 1% relative) or unlikeliness to pay.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Pilot record (text and article kept). Imprecise for non-retail: EUR 100 is the maximum absolute component for retail (Art. 1(2)); for non-retail the maximum is EUR 500 (Art. 2(2)), and the levels applied are those set by the competent authority (for ECB-supervised institutions EUR 100 / EUR 500 and 1%)."
+    },
+    {
+      "id": "RTS-MAT-1-1a",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 1(1)",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "The default definition for retail exposures uses the single materiality threshold set by the competent authority for all institutions in its jurisdiction.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-1-1b",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 1(1), second subparagraph",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "Where the retail default definition is applied at the level of an individual credit facility, the separate facility-level threshold set by the competent authority, if any, is applied.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-1-2a",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 1(2), second subparagraph",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "The absolute component is compared with the sum of all amounts past due owed by the obligor to the institution, its parent undertaking or any of its subsidiaries, and does not exceed EUR 100 for retail exposures.",
+      "quote": "The maximum amount shall not exceed 100 EUR or the equivalent of that amount in the relevant national currency.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-1-2b",
+      "article": "Delegated Regulation (EU) 2018/171 Arts 1(2), third subparagraph, and 2(2)",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "The relative component is calculated as the credit obligation past due divided by the total on-balance-sheet exposures to the obligor of the institution, parent and subsidiaries, excluding equity exposures.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition. Same calculation applies to non-retail via Art. 2(2)."
+    },
+    {
+      "id": "RTS-MAT-1-2c",
+      "article": "Delegated Regulation (EU) 2018/171 Arts 1(2), third subparagraph, and 4",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "The relative component applied equals the level set by the competent authority, which lies between 0% and 2.5% and is 1% unless the authority has substantiated a different level.",
+      "quote": "The percentage shall be between 0 % and 2,5 % and shall be set at 1 %",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-1-3",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 1(3)",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "Under facility-level application for retail, the amount past due and the total on-balance-sheet exposure in the threshold test refer only to the single credit facility concerned.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-1-5",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 1(5)",
+      "chapter": "Art. 1 Retail exposures",
+      "text": "A retail obligor (or facility) is defaulted under the past due criterion when both the absolute and the relative components are exceeded for 90 consecutive days.",
+      "quote": "both the limit expressed as the absolute component of the materiality threshold and the limit expressed as the relative component of that threshold are exceeded",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition. The alternative of 180 consecutive days in the RTS relied on the Art. 178(1)(b) CRR discretion that CRR3 removed, so only 90 days is reflected."
+    },
+    {
+      "id": "RTS-MAT-2-1",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 2(1)",
+      "chapter": "Art. 2 Exposures other than retail",
+      "text": "The default definition for exposures other than retail uses the single materiality threshold set by the competent authority for all institutions in its jurisdiction.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to exposures other than retail (corporate, institution, sovereign) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-2-2",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 2(2)",
+      "chapter": "Art. 2 Exposures other than retail",
+      "text": "For exposures other than retail, the absolute component of the materiality threshold does not exceed EUR 500 (or the national currency equivalent), with the relative component calculated as for retail.",
+      "quote": "the absolute component of that materiality threshold shall not exceed 500 EUR or the equivalent of that amount in the relevant national currency",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to exposures other than retail (corporate, institution, sovereign) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-2-4",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 2(4)",
+      "chapter": "Art. 2 Exposures other than retail",
+      "text": "An obligor with exposures other than retail is defaulted under the past due criterion when both the absolute and the relative components are exceeded for 90 consecutive days.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to exposures other than retail (corporate, institution, sovereign) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition. The alternative of 180 consecutive days in the RTS relied on the Art. 178(1)(b) CRR discretion that CRR3 removed, so only 90 days is reflected."
+    },
+    {
+      "id": "RTS-MAT-DPD",
+      "article": "Delegated Regulation (EU) 2018/171 Arts 1(5) and 2(4)",
+      "chapter": "Days past due counting",
+      "text": "The days-past-due counter starts on the first day on which both threshold components are exceeded and restarts when either component is no longer exceeded.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Derived from the 'consecutive days' wording of Arts 1(5) and 2(4) (addressed to competent authorities); the RTS does not spell out the counter mechanics explicitly. Confirm interpretation and article attribution."
+    },
+    {
+      "id": "RTS-MAT-5",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 5",
+      "chapter": "Arts 5-6 Currency and date of application",
+      "text": "Where the absolute component is set in a currency other than the euro, the threshold in that currency is applied unchanged even if exchange-rate movements push its euro equivalent above EUR 100 or EUR 500.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the as-adopted text of Delegated Regulation (EU) 2018/171 (OJ version via legislation.gov.uk). The RTS addresses competent authorities; the requirement states the resulting obligation for the institution's default definition."
+    },
+    {
+      "id": "RTS-MAT-6",
+      "article": "Delegated Regulation (EU) 2018/171 Art. 6",
+      "chapter": "Arts 5-6 Currency and date of application",
+      "text": "The regulatory materiality threshold is applied from the date of application set by the competent authority, and the default flags in the RDS identify from which date it was applied.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Art. 6 (as adopted) lets the competent authority set the date of application, no later than 31 December 2020 as regards Standardised Approach institutions. The second clause (RDS flagging) is a practical derivation, not literal text. Check the consolidated EUR-Lex text for later amendments."
+    }
+  ]
+}

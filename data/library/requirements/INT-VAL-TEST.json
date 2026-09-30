@@ -1,0 +1,619 @@
+{
+  "docId": "INT-VAL-TEST",
+  "requirements": [
+    {
+      "id": "MV-HB-003-4.1",
+      "article": "MV-HB-003 §4.1",
+      "chapter": "General testing principles",
+      "text": "Validation tests are performed on out-of-sample and, where available, out-of-time samples, with observation window, sample definition and exclusions documented for each test.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §4.1."
+    },
+    {
+      "id": "MV-HB-003-4.2",
+      "article": "MV-HB-003 §4.2",
+      "chapter": "General testing principles",
+      "text": "Each red test result leads to a finding of at least Medium severity, and a red calibration result for a regulatory-capital model is assessed for High severity.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §4.2."
+    },
+    {
+      "id": "MV-HB-003-5.1",
+      "article": "MV-HB-003 §5.1",
+      "chapter": "Discriminatory power",
+      "text": "AUC and Gini are computed on the validation sample with a 95% confidence interval, using the DeLong method or a bootstrap with at least 1,000 replications.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §5.1."
+    },
+    {
+      "id": "MV-HB-003-5.2",
+      "article": "MV-HB-003 §5.2",
+      "chapter": "Discriminatory power",
+      "text": "The Gini coefficient meets the absolute thresholds per model type; red applies below 0.50 for retail behavioural PD, below 0.35 for retail application and SME PD, and below 0.45 for corporate PD.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD and credit scoring models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §5.2."
+    },
+    {
+      "id": "MV-HB-003-5.3",
+      "article": "MV-HB-003 §5.3",
+      "chapter": "Discriminatory power",
+      "text": "The current AUC is compared with the AUC at initial validation or last recalibration; a relative Gini decrease above 10% or a significant decrease is amber, above 20% red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §5.3."
+    },
+    {
+      "id": "MV-HB-003-5.4",
+      "article": "MV-HB-003 §5.4",
+      "chapter": "Discriminatory power",
+      "text": "Observed default rates increase monotonically with the rating grade, and a statistically significant inversion between adjacent grades is rated amber.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd",
+          "ifrs9",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD-calibrated credit rating and scoring models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §5.4."
+    },
+    {
+      "id": "MV-HB-003-5.5",
+      "article": "MV-HB-003 §5.5",
+      "chapter": "Discriminatory power",
+      "text": "For LGD and CCF models the generalised AUC or Somers' D is computed and compared with the development value using the relative-decrease thresholds of §5.3.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD and CCF models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §5.5."
+    },
+    {
+      "id": "VAL-04",
+      "article": "MV-HB-003 §6",
+      "chapter": "Representativeness",
+      "text": "Representativeness is tested on default-rate levels, not only on risk-driver distributions.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Pilot requirement VAL-04 kept verbatim; anchored in MV-HB-003 §6.1(b) and specified in §6.3."
+    },
+    {
+      "id": "MV-HB-003-6.2",
+      "article": "MV-HB-003 §6.2",
+      "chapter": "Representativeness",
+      "text": "Risk-driver and score distributions of the development sample and the current portfolio are compared using the PSI per risk driver, complemented by a comparison of missing and special-value shares.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §6.2."
+    },
+    {
+      "id": "MV-HB-003-6.3",
+      "article": "MV-HB-003 §6.3",
+      "chapter": "Representativeness",
+      "text": "The default-rate comparison uses a two-sample test of proportions per segment and grade at 5% significance; a significant difference is amber and a significant difference above 20% relative is red.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §6.3."
+    },
+    {
+      "id": "MV-HB-003-6.4",
+      "article": "MV-HB-003 §6.4",
+      "chapter": "Representativeness",
+      "text": "Qualitative representativeness is assessed for segmentation, product mix, underwriting standards, collection and recovery policies, economic conditions and legal environment.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §6.4."
+    },
+    {
+      "id": "MV-HB-003-6.5",
+      "article": "MV-HB-003 §6.5",
+      "chapter": "Representativeness",
+      "text": "Material non-representativeness leads to a finding and to an assessment of whether recalibration or a margin of conservatism under CRM-STD-101 is required.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §6.5."
+    },
+    {
+      "id": "MV-HB-003-7.1",
+      "article": "MV-HB-003 §7.1",
+      "chapter": "Calibration",
+      "text": "For each grade an exact one-sided binomial test is performed of the grade PD against underestimation of the observed default rate, with amber at p < 5% and red at p < 1%.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd",
+          "ifrs9",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD-calibrated credit rating and scoring models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §7.1."
+    },
+    {
+      "id": "MV-HB-003-7.2",
+      "article": "MV-HB-003 §7.2",
+      "chapter": "Calibration",
+      "text": "The Jeffreys test (Beta(D + ½, N − D + ½) posterior) is performed per grade and at portfolio level, with amber at p < 5% and red at p < 1%.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd",
+          "ifrs9",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD-calibrated credit rating and scoring models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §7.2."
+    },
+    {
+      "id": "MV-HB-003-7.3",
+      "article": "MV-HB-003 §7.3",
+      "chapter": "Calibration",
+      "text": "The Hosmer–Lemeshow test is applied across all grades on the out-of-time sample, and a red result is corroborated by per-grade tests before a finding is raised.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd",
+          "ifrs9",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD-calibrated credit rating and scoring models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §7.3."
+    },
+    {
+      "id": "MV-HB-003-7.5",
+      "article": "MV-HB-003 §7.5",
+      "chapter": "Calibration",
+      "text": "For IRB PD models the long-run average default rate is compared with the portfolio-average PD; a relative deviation above 10% is amber and above 20% red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB PD models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §7.5."
+    },
+    {
+      "id": "MV-HB-003-7.6",
+      "article": "MV-HB-003 §7.6",
+      "chapter": "Calibration",
+      "text": "For IFRS 9 and other models requiring unbiased estimates, calibration tests are applied two-sided and overestimation is treated as underestimation.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ifrs9"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IFRS 9 models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §7.6."
+    },
+    {
+      "id": "MV-HB-003-8.1",
+      "article": "MV-HB-003 §8.1",
+      "chapter": "Stability",
+      "text": "The PSI is computed on the score or grade distribution and on each risk driver, using at least ten buckets or the rating grades, with empty buckets floored at 0.01%.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §8.1."
+    },
+    {
+      "id": "MV-HB-003-8.2",
+      "article": "MV-HB-003 §8.2",
+      "chapter": "Stability",
+      "text": "A PSI below 0.10 is rated green, from 0.10 to below 0.25 amber, and 0.25 or above red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §8.2."
+    },
+    {
+      "id": "MV-HB-003-8.3",
+      "article": "MV-HB-003 §8.3",
+      "chapter": "Stability",
+      "text": "The twelve-month rating migration matrix is analysed; a share of obligors migrating by more than two grades above 10% is amber and above 20% red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd",
+          "ifrs9",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD-calibrated credit rating and scoring models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §8.3."
+    },
+    {
+      "id": "MV-HB-003-9.1",
+      "article": "MV-HB-003 §9.1",
+      "chapter": "LGD back-testing",
+      "text": "Realised LGDs are compared with estimated LGDs per segment for closed recovery processes using a one-sided t-test on the mean difference, with amber at p < 5% and red at p < 1%.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §9.1."
+    },
+    {
+      "id": "MV-HB-003-9.3",
+      "article": "MV-HB-003 §9.3",
+      "chapter": "LGD back-testing",
+      "text": "Downturn LGD estimates are not lower than the realised LGDs observed in the identified downturn period.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §9.3."
+    },
+    {
+      "id": "MV-HB-003-9.4",
+      "article": "MV-HB-003 §9.4",
+      "chapter": "LGD back-testing",
+      "text": "ELBE is compared with realised LGDs for defaulted exposures, and LGD in-default is not lower than ELBE for any exposure.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models for defaulted exposures only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §9.4."
+    },
+    {
+      "id": "MV-HB-003-10.1",
+      "article": "MV-HB-003 §10.1",
+      "chapter": "CCF and EAD tests",
+      "text": "Realised CCFs measured with a fixed twelve-month horizon are compared with estimated CCFs per facility type using a one-sided t-test, with amber at p < 5% and red at p < 1%.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to EAD/CCF models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §10.1."
+    },
+    {
+      "id": "MV-HB-003-10.2",
+      "article": "MV-HB-003 §10.2",
+      "chapter": "CCF and EAD tests",
+      "text": "The EAD coverage ratio (estimated over realised EAD) is green at 1.00 or above, amber from 0.90 to below 1.00, and red below 0.90.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to EAD/CCF models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §10.2."
+    },
+    {
+      "id": "MV-HB-003-11.1",
+      "article": "MV-HB-003 §11.1",
+      "chapter": "Machine-learning-specific tests",
+      "text": "Performance on training, test and out-of-time samples is compared; a Gini difference between training and out-of-time sample above 5 percentage points is amber and above 10 red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §11.1."
+    },
+    {
+      "id": "MV-HB-003-11.2",
+      "article": "MV-HB-003 §11.2",
+      "chapter": "Machine-learning-specific tests",
+      "text": "The model is re-trained with at least five random seeds and perturbed hyperparameters, and a Gini standard deviation above 2 percentage points is amber.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §11.2."
+    },
+    {
+      "id": "MV-HB-003-11.3",
+      "article": "MV-HB-003 §11.3",
+      "chapter": "Machine-learning-specific tests",
+      "text": "The model is compared with an interpretable challenger on the same data, and a Gini uplift below 3 percentage points is amber and requires justification of the added complexity.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §11.3."
+    },
+    {
+      "id": "MV-HB-003-11.4",
+      "article": "MV-HB-003 §11.4",
+      "chapter": "Machine-learning-specific tests",
+      "text": "Feature importances are compared between development and out-of-time samples, and a Spearman rank correlation below 0.7 for the top 20 features is amber.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §11.4."
+    },
+    {
+      "id": "MV-HB-003-12.1",
+      "article": "MV-HB-003 §12.1",
+      "chapter": "Reporting of test results",
+      "text": "All tests are reported in an annex to the validation report stating sample, test statistic, threshold and traffic-light result, and tests not performed are listed with the reason.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-HB-003 §12.1."
+    }
+  ]
+}

@@ -11,21 +11,22 @@ import { Banner, Card, CardHeader, EmptyState, Kpi, PageHeader } from '@/compone
 import { ScopeStepper } from '@/components/dev/ScopeStepper';
 import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { Button } from '@/components/ui/button';
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { COMPONENT_LABEL } from '@/lib/ai/generic';
 import { extractFromUpload } from '@/lib/ai/pilot';
 import { generateText, simulateRun, simulateShort, useProvider } from '@/lib/ai/provider';
-import { applicabilityReason, applicableDocs } from '@/lib/applicability';
+import { SourcePicker } from '@/components/common/SourcePicker';
+import { useContent } from '@/components/common/useContent';
+import type { LibReq } from '@/lib/content';
+import { applicabilityConfidence, MANDATORY_SOURCES, whyApplicable } from '@/lib/engine/sources';
 import { fmtDateTime, nowISO } from '@/lib/clock';
 import { can } from '@/lib/permissions';
 import { seeded, uid } from '@/lib/rng';
-import { DOCUMENTS, getDocument, LIBRARY_BASE_VERSION, PERSONAS, PILOT, PILOT_MODEL_ID } from '@/lib/seed';
+import { getDocument, PERSONAS, PILOT, PILOT_MODEL_ID } from '@/lib/seed';
 import { cn } from '@/lib/utils';
-import type { LibraryDocument, Requirement, Upload } from '@/lib/types';
-import { proposalRequirements, setRequirements, use1lod, type ReqStatus } from '@/stores/store1lod';
+import type { Requirement, Upload } from '@/lib/types';
+import { notApplicableRequirements, proposalRequirements, setRequirements, use1lod, type ReqStatus } from '@/stores/store1lod';
 import { useLibrary } from '@/stores/storeLibrary';
 
 type ReqFilter = 'all' | 'proposed' | 'accepted' | 'excluded' | 'not_applicable';
@@ -55,38 +56,36 @@ function sampleOf(ids: string[], n = 3) {
 
 export default function ScopePage() {
   const { caseId } = useParams<{ caseId: string }>();
-  const { id, uc, model, sc, readOnly: completed } = useCaseCtx(caseId);
+  const { id, uc, model, readOnly: completed } = useCaseCtx(caseId);
   const s = use1lod();
   const library = useLibrary();
   const [step, setStep] = useState(0);
   const [filter, setFilter] = useState<ReqFilter>('all');
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const [excludeFor, setExcludeFor] = useState<string | null>(null);
-  const [addDoc, setAddDoc] = useState<LibraryDocument | null>(null);
   const [lockOpen, setLockOpen] = useState(false);
   const [classify, setClassify] = useState<{ file: File; text?: string } | null>(null);
   const [bulk, setBulk] = useState<{ ids: string[]; label: string } | null>(null);
   const [opened, setOpened] = useState<Set<string>>(new Set());
-  const [docTab, setDocTab] = useState('proposed');
 
-  const reqs = useMemo(() => (uc ? proposalRequirements(uc) : []), [uc]);
-  const appDocs = useMemo(() => (uc ? applicableDocs({ tags: uc.attributes.tags }) : []), [uc]);
-  if (!uc || !model || !sc) return null;
+  const ready = useContent(uc ? [uc.modelId] : []);
+  const reqs = useMemo(() => (uc && ready ? proposalRequirements(uc) : []), [uc, ready]);
+  const na = useMemo(() => (uc && ready ? notApplicableRequirements(uc) : []), [uc, ready]);
+  if (!uc || !model) return null;
+  if (!ready) return <p className="p-6 text-sm text-ink-2">Loading the requirement library…</p>;
 
   const locked = !!uc.lockedAt;
   const readOnly = locked || completed;
-  const conf = (rid: string) => sc.applicabilityConfidence[rid] ?? 0.8;
+  const conf = (rid: string) => { const r = reqs.find((x) => x.id === rid); return r ? applicabilityConfidence(model.id, r) : 0.8; };
   const status = (rid: string): ReqStatus => uc.reqStatus[rid] ?? 'proposed';
   const counts = {
     proposed: reqs.filter((r) => status(r.id) === 'proposed').length,
     accepted: reqs.filter((r) => status(r.id) === 'accepted').length,
     excluded: reqs.filter((r) => status(r.id) === 'excluded').length,
-    not_applicable: sc.notApplicable.length,
+    not_applicable: na.length,
   };
   const decided = reqs.length - counts.proposed;
   const allDecided = !!uc.generatedAt && counts.proposed === 0;
-  const addedIds = new Set(uc.addedDocuments.map((d) => d.docId));
-  const docsInScope = new Set([...appDocs.map((d) => d.id), ...addedIds]);
   const extracted = uc.uploads.flatMap((u) => (u.extractedRequirements ?? []).map((r) => ({ r, upload: u })));
   const demoSources =
     uc.modelId === PILOT_MODEL_ID ? PILOT.upload_examples.filter((u) => u.kind === 'requirement_source').map((u) => u.name) : [`Supervisory letter – ${model.id} (2027).pdf`];
@@ -97,9 +96,9 @@ export default function ScopePage() {
   const highProposed = (list: Requirement[]) => list.filter((r) => status(r.id) === 'proposed' && conf(r.id) >= HIGH).map((r) => r.id);
 
   async function generate() {
-    await simulateRun({ title: 'Generating requirement set', total: sc!.requirements.length, label: 'Checking applicability' });
+    await simulateRun({ title: 'Deriving requirements from the selected sources', total: Math.max(8, uc!.sources.length), label: 'Reading source' });
     s.generate(id);
-    toast.success('Requirement set proposed', { description: 'Every requirement is an AI proposal until you accept or exclude it.' });
+    toast.success('Requirements derived', { description: 'Every requirement is an AI proposal until you accept or exclude it.' });
   }
 
   function openBulk(ids: string[], label: string) {
@@ -122,7 +121,7 @@ export default function ScopePage() {
       s.addUpload(id, upload);
       toast.success(`${found.length} model-specific requirement(s) extracted`, { description: 'Review them under “Model-specific requirements (from uploads)”.' });
     } else {
-      s.uploadEvidence(id, upload, text);
+      s.uploadEvidence(id, upload, text, 'submission');
       toast.success('Evidence registered', { description: `${file.name} is available to the self-assessment.` });
     }
   }
@@ -134,7 +133,7 @@ export default function ScopePage() {
       <PageHeader
         eyebrow={`Stage 1 · Scoping · ${model.id}`}
         title="Scoping"
-        subtitle="Decide which requirements apply and which documents are in scope. The locked set is what both lines assess against."
+        subtitle="Select the requirement sources, decide on each requirement the AI derives from them, and lock the set. The locked set is what both lines assess against."
       />
 
       <Card className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 px-5 py-3 text-sm">
@@ -143,21 +142,9 @@ export default function ScopePage() {
         <span className="text-ink-2">
           {uc.cycle} · {COMPONENT_LABEL[uc.component]} · {uc.attributes.regulatory_use} · Tier {uc.attributes.tier}
         </span>
-        <span className="flex flex-wrap gap-1">
-          {uc.attributes.tags.map((t) => (
-            <Tooltip key={t}>
-              <TooltipTrigger asChild>
-                <span tabIndex={0} className="rounded-md border border-line bg-bg px-1.5 py-0.5 font-mono text-[11px] text-ink-2">
-                  {t}
-                </span>
-              </TooltipTrigger>
-              <TooltipContent>Model characteristic, confirmed in the use case wizard</TooltipContent>
-            </Tooltip>
-          ))}
-        </span>
       </Card>
 
-      <ScopeStepper step={step} onStep={setStep} done={[allDecided, !!uc.generatedAt && allDecided, locked]} />
+      <ScopeStepper step={step} onStep={setStep} done={[!!uc.generatedAt, allDecided, locked]} />
 
       {locked && (
         <Banner tone="success" icon={<Lock className="size-4" aria-hidden />} className="mb-4">
@@ -165,21 +152,21 @@ export default function ScopePage() {
         </Banner>
       )}
 
-      {/* Step 1 — Requirements */}
-      {step === 0 &&
+      {/* Step 2 — Requirements */}
+      {step === 1 &&
         (!uc.generatedAt ? (
           <EmptyState
             icon={<Sparkles className="size-5" aria-hidden />}
-            title="No requirement set yet"
+            title="No requirements derived yet"
             actions={
               !completed && (
                 <Button onClick={generate}>
-                  <Sparkles aria-hidden /> Generate requirement set
+                  <Sparkles aria-hidden /> Derive requirements
                 </Button>
               )
             }
           >
-            The AI proposes requirements from the {appDocs.length} applicable documents for {COMPONENT_LABEL[uc.component]}. You decide on each one.
+            The AI derives the requirements for {COMPONENT_LABEL[uc.component]} from the {uc.sources.length} sources you selected. You decide on each one.
           </EmptyState>
         ) : (
           <Card>
@@ -189,7 +176,7 @@ export default function ScopePage() {
                   Requirement set <AiDraftBadge />
                 </span>
               }
-              subtitle={`${uc.reqSetId} · ${COMPONENT_LABEL[uc.component]} · library v${LIBRARY_BASE_VERSION} · proposed ${fmtDateTime(uc.generatedAt)}`}
+              subtitle={`${uc.reqSetId} · ${COMPONENT_LABEL[uc.component]} · library v${uc.libraryVersion} · ${uc.sources.length} sources · derived ${fmtDateTime(uc.generatedAt)}`}
               actions={
                 !readOnly && (
                   <Button variant="outline" size="sm" disabled={highProposed(reqs).length === 0} onClick={() => openBulk(highProposed(reqs), 'all documents')}>
@@ -225,7 +212,7 @@ export default function ScopePage() {
             </div>
             {filter === 'not_applicable' ? (
               <ul className="divide-y divide-line">
-                {sc.notApplicable.map((r) => (
+                {na.map((r) => (
                   <li key={r.id} className="px-4 py-3 text-sm">
                     <div className="flex items-baseline gap-2">
                       <span className="font-mono text-xs font-semibold text-ink-2">{r.id}</span>
@@ -294,7 +281,7 @@ export default function ScopePage() {
                                   <p className="mt-0.5 text-xs text-ink-2">{r.article}</p>
                                   {st === 'excluded' && uc.excludedReasons[r.id] && <p className="mt-0.5 text-xs text-ink-2">Excluded: {uc.excludedReasons[r.id]}</p>}
                                 </td>
-                                <td className="w-[200px] px-2 py-2.5 text-xs text-ink-2">{r.applicability_rationale}</td>
+                                <td className="w-[200px] px-2 py-2.5 text-xs text-ink-2">{r.applicability_rationale || ('docId' in r ? whyApplicable(r as LibReq, model) : '')}</td>
                                 <td className="px-2 py-2.5">
                                   <ConfidenceBar value={conf(r.id)} />
                                 </td>
@@ -337,84 +324,35 @@ export default function ScopePage() {
               </div>
             )}
             <div className="flex justify-end border-t border-line px-4 py-3">
-              <Button onClick={() => setStep(1)}>
-                Next: documents <ArrowRight aria-hidden />
+              <Button onClick={() => setStep(2)}>
+                Next: review and lock <ArrowRight aria-hidden />
               </Button>
             </div>
           </Card>
         ))}
 
-      {/* Step 2 — Documents */}
-      {step === 1 && (
+      {/* Step 1 — Sources */}
+      {step === 0 && (
         <div className="space-y-4">
           <Card>
-            <CardHeader title="Documents" subtitle={`${docsInScope.size} in scope · applicability rule on the model characteristics`} />
-            <Tabs value={docTab} onValueChange={setDocTab} className="px-3 py-3">
-              <TabsList>
-                <TabsTrigger value="proposed">Proposed ({docsInScope.size})</TabsTrigger>
-                <TabsTrigger value="add" disabled={readOnly}>
-                  Add from library
-                </TabsTrigger>
-                <TabsTrigger value="upload" disabled={readOnly}>
-                  Upload
-                </TabsTrigger>
-              </TabsList>
-              <TabsContent value="proposed" className="mt-3 grid gap-4 lg:grid-cols-2">
-                {(['external', 'internal'] as const).map((cat) => {
-                  const list = [...appDocs, ...DOCUMENTS.filter((d) => addedIds.has(d.id) && !appDocs.includes(d))].filter((d) => d.category === cat);
-                  return (
-                    <div key={cat}>
-                      <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-2">
-                        {cat === 'external' ? 'External' : 'Internal'} ({list.length})
-                      </p>
-                      <ul className="space-y-1.5">
-                        {list.map((d) => {
-                          const added = uc.addedDocuments.find((a) => a.docId === d.id);
-                          return (
-                            <li key={d.id} className="rounded-lg border border-line px-2.5 py-2">
-                              <div className="flex items-start justify-between gap-2">
-                                <p className="text-[13px] leading-snug text-ink">{d.title}</p>
-                                {added && <span className="shrink-0 rounded-full bg-yellow-100 px-1.5 text-[11px] font-medium text-yellow-ink">User added</span>}
-                              </div>
-                              <div className="mt-1 flex flex-wrap items-center gap-1.5">
-                                <BindingBadge level={d.binding_level} />
-                                <span className="text-[11px] text-ink-3">{d.reference}</span>
-                              </div>
-                              <p className="mt-1 text-[11px] text-ink-2">{added ? `Why relevant: ${added.reason}` : `Applies: ${applicabilityReason({ ...model, tags: uc.attributes.tags }, d)}`}</p>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </TabsContent>
-              <TabsContent value="add" className="mt-3">
-                <Command className="rounded-lg border border-line">
-                  <CommandInput placeholder={`Search ${DOCUMENTS.length} library documents…`} />
-                  <CommandList className="max-h-[520px]">
-                    <CommandEmpty>No document found.</CommandEmpty>
-                    {(['external', 'internal'] as const).map((cat) => (
-                      <CommandGroup key={cat} heading={cat === 'external' ? 'External' : 'Internal'}>
-                        {DOCUMENTS.filter((d) => d.category === cat).map((d) => (
-                          <CommandItem key={d.id} value={`${d.title} ${d.reference} ${d.id} ${d.key_topics.join(' ')}`} onSelect={() => setAddDoc(d)}>
-                            <div className="min-w-0">
-                              <p className="text-[13px] leading-snug">{d.title}</p>
-                              <p className="text-[11px] text-ink-3">
-                                {d.reference}
-                                {addedIds.has(d.id) ? ' · user added' : appDocs.includes(d) ? ' · already proposed' : ''}
-                              </p>
-                            </div>
-                          </CommandItem>
-                        ))}
-                      </CommandGroup>
-                    ))}
-                  </CommandList>
-                </Command>
-              </TabsContent>
-              <TabsContent value="upload" className="mt-3 grid gap-4 lg:grid-cols-2">
-                <div className="space-y-3">
-                  <FileDrop onFiles={async (files) => setClassify({ file: files[0], text: await readTextIfPossible(files[0]) })} hint="PDF and DOCX: metadata registered, text extraction simulated. TXT and MD are read in the browser." />
+            <CardHeader
+              title="Requirement sources"
+              subtitle={`${uc.sources.length} selected. The AI derives the requirements from exactly these sources.${uc.generatedAt && !locked ? ' Changing the selection updates the requirement set; decisions already taken are kept.' : ''}`}
+            />
+            <div className="px-4 py-4">
+              <SourcePicker
+                selected={uc.sources}
+                readOnly={readOnly}
+                onToggle={(docId, on) => (on ? s.addSource(id, docId, 'Selected by the model developer') : s.removeSource(id, docId))}
+              />
+            </div>
+          </Card>
+          <Card>
+            <CardHeader title="Additional requirement sources (uploads)" subtitle="Supervisory decisions, previous validation reports, letters or memos with obligations. The AI extracts model-specific requirements from them." />
+            <div className="grid gap-4 px-4 py-4 lg:grid-cols-2">
+              <div className="space-y-3">
+                {!readOnly && <FileDrop onFiles={async (files) => setClassify({ file: files[0], text: await readTextIfPossible(files[0]) })} hint="PDF and DOCX: metadata registered, text extraction simulated. TXT and MD are read in the browser." />}
+                {!readOnly && (
                   <div className="text-xs text-ink-2">
                     <p className="mb-1 font-medium">Demo files:</p>
                     <div className="flex flex-col gap-1">
@@ -425,21 +363,21 @@ export default function ScopePage() {
                       ))}
                     </div>
                   </div>
-                </div>
-                <ul className="space-y-1.5">
-                  {uc.uploads.map((u) => (
-                    <li key={u.id} className="rounded-lg border border-line px-2.5 py-2 text-xs">
-                      <p className="font-medium text-ink">{u.name}</p>
-                      <p className="text-ink-2">
-                        {u.kind === 'evidence' ? 'Evidence' : 'Requirement source'} · {(u.size / 1024).toFixed(1)} KB · {fmtDateTime(u.uploadedAt)}
-                        {u.extractedRequirements ? ` · ${u.extractedRequirements.length} extracted` : ''}
-                      </p>
-                    </li>
-                  ))}
-                  {uc.uploads.length === 0 && <li className="text-sm text-ink-2">No uploads yet.</li>}
-                </ul>
-              </TabsContent>
-            </Tabs>
+                )}
+              </div>
+              <ul className="space-y-1.5">
+                {uc.uploads.map((u) => (
+                  <li key={u.id} className="rounded-lg border border-line px-2.5 py-2 text-xs">
+                    <p className="font-medium text-ink">{u.name}</p>
+                    <p className="text-ink-2">
+                      {u.kind === 'evidence' ? 'Evidence' : 'Requirement source'} · {(u.size / 1024).toFixed(1)} KB · {fmtDateTime(u.uploadedAt)}
+                      {u.extractedRequirements ? ` · ${u.extractedRequirements.length} extracted` : ''}
+                    </p>
+                  </li>
+                ))}
+                {uc.uploads.length === 0 && <li className="text-sm text-ink-2">No uploads yet.</li>}
+              </ul>
+            </div>
           </Card>
           <Card>
             <CardHeader
@@ -503,11 +441,9 @@ export default function ScopePage() {
             </div>
           </Card>
           <div className="flex justify-between">
-            <Button variant="outline" onClick={() => setStep(0)}>
-              <ArrowLeft aria-hidden /> Back: requirements
-            </Button>
-            <Button onClick={() => setStep(2)}>
-              Next: review and lock <ArrowRight aria-hidden />
+            <span />
+            <Button onClick={() => setStep(1)}>
+              Next: requirements <ArrowRight aria-hidden />
             </Button>
           </div>
         </div>
@@ -520,10 +456,10 @@ export default function ScopePage() {
             <Kpi label="Accepted" value={counts.accepted} tone="good" />
             <Kpi label="Excluded" value={counts.excluded} hint="With reason" />
             <Kpi label="Model-specific" value={uc.modelSpecific.length} />
-            <Kpi label="Documents in scope" value={docsInScope.size} hint={`${uc.addedDocuments.length} user added`} />
+            <Kpi label="Requirement sources" value={uc.sources.length} hint={`${MANDATORY_SOURCES.length} mandatory`} />
           </div>
           {!uc.generatedAt ? (
-            <Banner tone="warn">Generate and review the requirement set first.</Banner>
+            <Banner tone="warn">Derive and review the requirements first.</Banner>
           ) : (
             counts.proposed > 0 && (
               <Banner tone="warn">
@@ -557,12 +493,16 @@ export default function ScopePage() {
               </ul>
             </Card>
             <Card>
-              <CardHeader title="Added documents and model-specific requirements" />
-              <ul className="divide-y divide-line">
-                {uc.addedDocuments.map((d) => (
-                  <li key={d.docId} className="px-4 py-2.5 text-sm">
-                    {getDocument(d.docId)?.title}
-                    <p className="text-xs text-ink-2">Why relevant: {d.reason}</p>
+              <CardHeader title="Requirement sources and model-specific requirements" />
+              <ul className="max-h-[420px] divide-y divide-line overflow-y-auto">
+                {uc.sources.map((d) => (
+                  <li key={d} className="px-4 py-2 text-sm">
+                    {getDocument(d)?.title ?? d}
+                    <p className="text-xs text-ink-2">
+                      {getDocument(d)?.reference}
+                      {MANDATORY_SOURCES.includes(d) ? ' · mandatory internal base' : ''}
+                      {reqs.filter((r) => r.docId === d).length ? ` · ${reqs.filter((r) => r.docId === d).length} requirements` : ''}
+                    </p>
                   </li>
                 ))}
                 {uc.modelSpecific.map((r) => (
@@ -570,7 +510,7 @@ export default function ScopePage() {
                     <span className="font-mono text-xs font-semibold text-[#5b3a86]">{r.id}</span> {r.text}
                   </li>
                 ))}
-                {uc.addedDocuments.length + uc.modelSpecific.length === 0 && <li className="px-4 py-4 text-sm text-ink-2">None.</li>}
+                
               </ul>
             </Card>
           </div>
@@ -578,7 +518,7 @@ export default function ScopePage() {
             <Lock className={cn('size-4', locked ? 'text-green-600' : 'text-ink-3')} aria-hidden />
             <p className="text-sm text-ink">
               {locked ? 'Locked' : 'Lock'} requirement set <strong>{uc.reqSetId}</strong>
-              {uc.setVersion > 1 && ` v${uc.setVersion}`} · library v{LIBRARY_BASE_VERSION} · <strong>{setRequirements(uc).length}</strong> requirements · <strong>{docsInScope.size}</strong> documents
+              {uc.setVersion > 1 && ` v${uc.setVersion}`} · library v{uc.libraryVersion} · <strong>{setRequirements(uc).length}</strong> requirements from <strong>{uc.sources.length}</strong> sources
             </p>
             <div className="ml-auto flex gap-2">
               {locked ? (
@@ -610,7 +550,7 @@ export default function ScopePage() {
           </Card>
           <div className="flex justify-start">
             <Button variant="outline" onClick={() => setStep(1)}>
-              <ArrowLeft aria-hidden /> Back: documents
+              <ArrowLeft aria-hidden /> Back: requirements
             </Button>
           </div>
         </div>
@@ -624,21 +564,6 @@ export default function ScopePage() {
         placeholder="Covered in the MDD component, not in this document"
         confirmLabel="Exclude"
         onConfirm={(r) => excludeFor && s.setReqStatus(id, [excludeFor], 'excluded', r)}
-      />
-      <ReasonDialog
-        open={!!addDoc}
-        onOpenChange={(o) => !o && setAddDoc(null)}
-        title="Add document from library"
-        description={addDoc ? `${addDoc.title} (${addDoc.reference})${appDocs.includes(addDoc) ? ' — already proposed by the applicability rule; adding it records your explicit relevance reason.' : ''}` : ''}
-        label="Why relevant (one line)"
-        placeholder="Validation expectations for the representativeness and reproducibility tests"
-        confirmLabel="Add document"
-        onConfirm={(r) => {
-          if (!addDoc) return;
-          s.addDocument(id, addDoc.id, r);
-          toast.success('Document added', { description: addDoc.title });
-          setDocTab('proposed');
-        }}
       />
       <Dialog open={!!classify} onOpenChange={(o) => !o && setClassify(null)}>
         <DialogContent>
@@ -665,7 +590,7 @@ export default function ScopePage() {
           <DialogHeader>
             <DialogTitle>Lock requirement set {uc.reqSetId}?</DialogTitle>
             <DialogDescription>
-              The 2nd line will assess against this exact set (library v{LIBRARY_BASE_VERSION}). After locking, scoping becomes read-only; changes require unlocking, which creates a new version.
+              The 2nd line will assess against this exact set (library v{uc.libraryVersion}). After locking, scoping becomes read-only; changes require unlocking, which creates a new version.
             </DialogDescription>
           </DialogHeader>
           <ul className="space-y-1 text-sm">
@@ -679,7 +604,7 @@ export default function ScopePage() {
               • <strong>{counts.excluded}</strong> excluded, with reason
             </li>
             <li>
-              • <strong>{docsInScope.size}</strong> documents in scope ({uc.addedDocuments.length} user added)
+              • <strong>{uc.sources.length}</strong> requirement sources
             </li>
           </ul>
           <DialogFooter>
@@ -725,7 +650,7 @@ export default function ScopePage() {
                     <div className="mt-1 text-xs text-ink-2">
                       <p className="text-sm text-ink">{r.text}</p>
                       <p className="mt-1">
-                        {r.article} — {r.applicability_rationale}
+                        {r.article} — {r.applicability_rationale || ('docId' in r ? whyApplicable(r as LibReq, model) : '')}
                       </p>
                     </div>
                   )}

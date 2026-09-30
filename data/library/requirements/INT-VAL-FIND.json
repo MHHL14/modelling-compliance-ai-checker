@@ -1,0 +1,540 @@
+{
+  "docId": "INT-VAL-FIND",
+  "requirements": [
+    {
+      "id": "MV-STD-002-4.1",
+      "article": "MV-STD-002 §4.1",
+      "chapter": "Required finding content",
+      "text": "Each finding is recorded in the findings register with a unique identifier, a title, a severity and the identifier of each library requirement or standard provision it relates to.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.1."
+    },
+    {
+      "id": "MV-STD-002-4.2",
+      "article": "MV-STD-002 §4.2",
+      "chapter": "Required finding content",
+      "text": "Each finding states the factual observation with a precise reference to the evidence, such as document section, code file and line, or data query.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.2."
+    },
+    {
+      "id": "MV-STD-002-4.3",
+      "article": "MV-STD-002 §4.3",
+      "chapter": "Required finding content",
+      "text": "Each finding describes the impact of the deficiency on model outputs, use or regulatory compliance, and quantifies it where reasonably possible.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.3."
+    },
+    {
+      "id": "MV-STD-002-4.4",
+      "article": "MV-STD-002 §4.4",
+      "chapter": "Required finding content",
+      "text": "Each finding states the challenge: the question the model owner must answer or the outcome the model owner must demonstrate, without prescribing the technical solution.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.4."
+    },
+    {
+      "id": "MV-STD-002-4.5",
+      "article": "MV-STD-002 §4.5",
+      "chapter": "Required finding content",
+      "text": "Each finding names the accountable 1LoD unit and the responsible person as owner.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.5."
+    },
+    {
+      "id": "MV-STD-002-4.6",
+      "article": "MV-STD-002 §4.6",
+      "chapter": "Required finding content",
+      "text": "Each finding carries a remediation deadline set in accordance with MV-STD-002 §6.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.6."
+    },
+    {
+      "id": "MV-STD-002-4.7",
+      "article": "MV-STD-002 §4.7",
+      "chapter": "Required finding content",
+      "text": "Draft findings are discussed with the model owner before the report is finalised, and any disagreement is recorded in the management response.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §4.7."
+    },
+    {
+      "id": "MV-STD-002-5.2",
+      "article": "MV-STD-002 §5.2",
+      "chapter": "Severity rating",
+      "text": "A finding is rated High where it causes a material misstatement of outputs (indicatively ≥5% impact or ≥10% of exposures changing grade), regulatory non-compliance, an output-affecting implementation deviation or a fundamental methodological flaw.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §5.2."
+    },
+    {
+      "id": "MV-STD-002-5.3",
+      "article": "MV-STD-002 §5.3",
+      "chapter": "Severity rating",
+      "text": "A finding not meeting the High criteria is rated Medium where it has a 1–5% output impact, breaches an internal standard or supervisory expectation, reflects a missing required test, or may become material.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §5.3."
+    },
+    {
+      "id": "MV-STD-002-5.4",
+      "article": "MV-STD-002 §5.4",
+      "chapter": "Severity rating",
+      "text": "A finding is rated Low where its impact is below 1% or otherwise limited, such as documentation gaps, presentational weaknesses or good-practice improvements.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §5.4."
+    },
+    {
+      "id": "MV-STD-002-5.5",
+      "article": "MV-STD-002 §5.5",
+      "chapter": "Severity rating",
+      "text": "Where the impact cannot be quantified, severity is rated on the qualitative criteria and the higher severity is applied where two levels are equally supported.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §5.5."
+    },
+    {
+      "id": "MV-STD-002-5.6",
+      "article": "MV-STD-002 §5.6",
+      "chapter": "Severity rating",
+      "text": "Related Medium findings that jointly indicate a systemic weakness in the model or its governance are assessed for aggregation into a single High finding.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §5.6."
+    },
+    {
+      "id": "MV-STD-002-6.1",
+      "article": "MV-STD-002 §6.1",
+      "chapter": "Remediation deadlines",
+      "text": "Remediation deadlines do not exceed six months for High, nine months for Medium and twelve months for Low findings from the final report date, and fall on the last day of a month.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §6.1."
+    },
+    {
+      "id": "MV-STD-002-6.2",
+      "article": "MV-STD-002 §6.2",
+      "chapter": "Remediation deadlines",
+      "text": "A High finding on a model not yet approved for use is remediated before approval or covered by a condition whose compensating measure is approved by the approval authority.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §6.2."
+    },
+    {
+      "id": "MV-STD-002-6.3",
+      "article": "MV-STD-002 §6.3",
+      "chapter": "Remediation deadlines",
+      "text": "The model owner submits a remediation plan with milestones for every High and Medium finding within 20 business days of the final validation report.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §6.3."
+    },
+    {
+      "id": "MV-STD-002-6.4",
+      "article": "MV-STD-002 §6.4",
+      "chapter": "Remediation deadlines",
+      "text": "A deadline extension is requested before the deadline with justification and interim mitigant, and approved by the Head of Model Validation (Medium, Low) or the Model Risk Committee (High and any further extension).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §6.4."
+    },
+    {
+      "id": "MV-STD-002-7.1",
+      "article": "MV-STD-002 §7.1",
+      "chapter": "Follow-up and closure",
+      "text": "The closure evidence package contains the remediation description, updated documentation with version number, code change references, re-performed test results and the model owner's sign-off.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §7.1."
+    },
+    {
+      "id": "MV-STD-002-7.2",
+      "article": "MV-STD-002 §7.2",
+      "chapter": "Follow-up and closure",
+      "text": "Model Validation re-performs the relevant test or check before closing a High finding and re-performs quantitative tests before closing a Medium finding.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §7.2."
+    },
+    {
+      "id": "MV-STD-002-7.3",
+      "article": "MV-STD-002 §7.3",
+      "chapter": "Follow-up and closure",
+      "text": "Only Model Validation sets a finding to closed, within 30 business days of a complete closure package; a partially remediated finding remains open.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §7.3."
+    },
+    {
+      "id": "MV-STD-002-7.4",
+      "article": "MV-STD-002 §7.4",
+      "chapter": "Follow-up and closure",
+      "text": "Where remediation constitutes a material model change, it follows MRM-STD-050 and the finding is closed only after the related change validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §7.4."
+    },
+    {
+      "id": "MV-STD-002-8.2",
+      "article": "MV-STD-002 §8.2",
+      "chapter": "Escalation of overdue findings",
+      "text": "Overdue High findings are reported without delay to the CRO and to the next Model Risk Committee; Medium findings overdue by more than three months are reported to the Model Risk Committee.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §8.2."
+    },
+    {
+      "id": "MV-STD-002-8.3",
+      "article": "MV-STD-002 §8.3",
+      "chapter": "Escalation of overdue findings",
+      "text": "Where a High finding is overdue by more than three months, Model Validation reassesses the validation opinion and may downgrade it or require a usage restriction or conservative adjustment.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §8.3."
+    },
+    {
+      "id": "MV-STD-002-8.4",
+      "article": "MV-STD-002 §8.4",
+      "chapter": "Escalation of overdue findings",
+      "text": "For IRB models, open and overdue High findings are included in the annual validation reporting under MV-STD-010 §7.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §8.4."
+    },
+    {
+      "id": "MV-STD-002-9.1-a",
+      "article": "MV-STD-002 §9.1(a)",
+      "chapter": "Link between findings and opinion",
+      "text": "The opinion fit for purpose is issued only if no High finding is open and the open Medium findings do not require conditions on the model's use.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §9.1(a)."
+    },
+    {
+      "id": "MV-STD-002-9.1-b",
+      "article": "MV-STD-002 §9.1(b)",
+      "chapter": "Link between findings and opinion",
+      "text": "The opinion fit for purpose with conditions is issued only if the impact of open High findings, or of Medium findings requiring conditions, is contained by the stated conditions.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §9.1(b)."
+    },
+    {
+      "id": "MV-STD-002-9.1-c",
+      "article": "MV-STD-002 §9.1(c)",
+      "chapter": "Link between findings and opinion",
+      "text": "The opinion not fit for purpose is issued where one or more open High findings have an impact that cannot be adequately contained by conditions.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §9.1(c)."
+    },
+    {
+      "id": "MV-STD-002-9.2",
+      "article": "MV-STD-002 §9.2",
+      "chapter": "Link between findings and opinion",
+      "text": "A quantitative adjustment (MoC or post-model adjustment) used as condition for a High finding covers at least Model Validation's estimate of the impact of the finding.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §9.2."
+    },
+    {
+      "id": "MV-STD-002-9.4",
+      "article": "MV-STD-002 §9.4",
+      "chapter": "Link between findings and opinion",
+      "text": "Risk acceptance of a finding is time-limited, decided by the Head of MRM (Low, Medium) or the CRO after Model Risk Committee consultation (High), and is not available for non-compliance with binding regulation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-002 §9.4."
+    }
+  ]
+}

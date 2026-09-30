@@ -1,0 +1,567 @@
+{
+  "docId": "INT-VAL-IRB",
+  "requirements": [
+    {
+      "id": "MV-STD-010-2.1",
+      "article": "MV-STD-010 §2.1",
+      "chapter": "IRB validation framework",
+      "text": "A full-scope validation of a new rating system, or of a material change under Delegated Regulation (EU) No 529/2014, is performed before the application for supervisory approval.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §2.1."
+    },
+    {
+      "id": "MV-STD-010-2.2",
+      "article": "MV-STD-010 §2.2",
+      "chapter": "IRB validation framework",
+      "text": "Each IRB rating system is validated at least annually, covering back-testing, benchmarking, representativeness, data quality, review of estimates, changes, use test, overrides and follow-up of open findings.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal provision implementing the annual validation expectation of CRR Art. 185 and the ECB guide to internal models."
+    },
+    {
+      "id": "MV-STD-010-2.3",
+      "article": "MV-STD-010 §2.3",
+      "chapter": "IRB validation framework",
+      "text": "A full-scope validation of each IRB rating system is performed at least every three years and after each material change.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §2.3."
+    },
+    {
+      "id": "MV-STD-010-2.4",
+      "article": "MV-STD-010 §2.4",
+      "chapter": "IRB validation framework",
+      "text": "The rating assignment process is assessed, including timeliness of rating updates, the share of outdated ratings and the frequency and justification of overrides.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §2.4."
+    },
+    {
+      "id": "MV-STD-010-2.6",
+      "article": "MV-STD-010 §2.6",
+      "chapter": "IRB validation framework",
+      "text": "IRB risk parameters are used in credit approval, pricing, limit setting, risk appetite and internal capital allocation, and differences to internally used parameters are documented and justified.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §2.6."
+    },
+    {
+      "id": "MV-STD-010-3.1",
+      "article": "MV-STD-010 §3.1",
+      "chapter": "Data and definition of default",
+      "text": "The historical observation periods used for estimation meet the minimum lengths of CRR Articles 180 to 182 for the relevant parameter and exposure class.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §3.1."
+    },
+    {
+      "id": "MV-STD-010-3.2",
+      "article": "MV-STD-010 §3.2",
+      "chapter": "Data and definition of default",
+      "text": "The definition of default applied in the RDS and in production complies with CRR Art. 178, EBA/GL/2016/07, Delegated Regulation (EU) 2018/171 and CR-STD-110.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §3.2."
+    },
+    {
+      "id": "MV-STD-010-3.3",
+      "article": "MV-STD-010 §3.3",
+      "chapter": "Data and definition of default",
+      "text": "Adjustments or approximations of historical data for changes in the definition of default are assessed, and residual deficiencies are identified for MoC.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §3.3."
+    },
+    {
+      "id": "VAL-02",
+      "article": "MV-STD-010 §3.4",
+      "chapter": "Data and definition of default",
+      "text": "The implemented default flag (code) matches the documented definition.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Pilot requirement VAL-02 kept verbatim; anchored in MV-STD-010 §3.4."
+    },
+    {
+      "id": "MV-STD-010-3.4-b",
+      "article": "MV-STD-010 §3.4",
+      "chapter": "Data and definition of default",
+      "text": "The default flag check covers days-past-due counting, absolute and relative materiality thresholds, UTP triggers, probation and cure periods and contagion, in both RDS build code and production code.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §3.4."
+    },
+    {
+      "id": "MV-STD-010-3.5",
+      "article": "MV-STD-010 §3.5",
+      "chapter": "Data and definition of default",
+      "text": "IRB data quality is assessed against MRM-STD-022, including the completeness of default and recovery data and the accuracy of loss components (recoveries, costs, discounting).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §3.5."
+    },
+    {
+      "id": "MV-STD-010-3.6",
+      "article": "MV-STD-010 §3.6",
+      "chapter": "Data and definition of default",
+      "text": "Where the RDS combines several sources, legal entities or external pools, the definition of default is applied consistently across sources or differences are adjusted and covered by MoC.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §3.6."
+    },
+    {
+      "id": "MV-STD-010-4.1",
+      "article": "MV-STD-010 §4.1",
+      "chapter": "Margin of conservatism",
+      "text": "All relevant deficiencies are identified and assigned to MoC categories A (data and methods), B (relevant changes) and C (general estimation error) in line with CRM-STD-101.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §4.1."
+    },
+    {
+      "id": "VAL-03",
+      "article": "MV-STD-010 §4.2; CRM-STD-101 §3",
+      "chapter": "Margin of conservatism",
+      "text": "MoC for data deficiencies is supported by a sensitivity analysis.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Pilot requirement VAL-03 kept verbatim; anchored in MV-STD-010 §4.2 with cross-reference to CRM-STD-101 §3."
+    },
+    {
+      "id": "MV-STD-010-4.2-b",
+      "article": "MV-STD-010 §4.2",
+      "chapter": "Margin of conservatism",
+      "text": "Model Validation performs its own sensitivity analysis of each data deficiency and raises a finding where its estimated effect exceeds the applied MoC.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §4.2."
+    },
+    {
+      "id": "MV-STD-010-4.3",
+      "article": "MV-STD-010 §4.3",
+      "chapter": "Margin of conservatism",
+      "text": "The MoC for general estimation error (category C) is quantified from the estimation uncertainty of the calibration, such as confidence intervals or bootstrap distributions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §4.3."
+    },
+    {
+      "id": "MV-STD-010-4.4",
+      "article": "MV-STD-010 §4.4",
+      "chapter": "Margin of conservatism",
+      "text": "MoC is not used to compensate for remediable deficiencies, and each category A or B deficiency has a remediation plan.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §4.4."
+    },
+    {
+      "id": "MV-STD-010-5.1",
+      "article": "MV-STD-010 §5.1",
+      "chapter": "Back-testing",
+      "text": "PD estimates are back-tested annually per grade and at portfolio level against one-year default rates and the long-run average, using the binomial and Jeffreys tests of MV-HB-003 §7.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB PD models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal provision; implements the comparison of realised default rates with estimated PDs per grade (CRR Art. 185(b))."
+    },
+    {
+      "id": "MV-STD-010-5.2",
+      "article": "MV-STD-010 §5.2",
+      "chapter": "Back-testing",
+      "text": "LGD, downturn LGD, ELBE and LGD in-default estimates are back-tested annually under MV-HB-003 §9.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB LGD models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §5.2."
+    },
+    {
+      "id": "MV-STD-010-5.3",
+      "article": "MV-STD-010 §5.3",
+      "chapter": "Back-testing",
+      "text": "CCF and EAD estimates are back-tested annually under MV-HB-003 §10.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB EAD/CCF models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §5.3."
+    },
+    {
+      "id": "MV-STD-010-5.5",
+      "article": "MV-STD-010 §5.5",
+      "chapter": "Back-testing",
+      "text": "Where realised values deviate from estimates beyond the red thresholds of MV-HB-003, the reasons are analysed and the need for recalibration or model change is concluded in the validation report.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §5.5."
+    },
+    {
+      "id": "MV-STD-010-5.6",
+      "article": "MV-STD-010 §5.6",
+      "chapter": "Back-testing",
+      "text": "Back-testing methods are applied consistently across validation cycles; a change of method is justified and results under the previous method are reported in parallel for at least one cycle.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §5.6."
+    },
+    {
+      "id": "MV-STD-010-6.1",
+      "article": "MV-STD-010 §6.1",
+      "chapter": "Benchmarking and review of estimates",
+      "text": "Risk parameters are compared with external data sources and benchmarks, including external ratings, pooled data and the supervisory benchmarking results under CRD Art. 78.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal provision; implements comparison with external data sources (CRR Art. 185(c)) and CRD Art. 78 supervisory benchmarking."
+    },
+    {
+      "id": "MV-STD-010-6.2",
+      "article": "MV-STD-010 §6.2",
+      "chapter": "Benchmarking and review of estimates",
+      "text": "For Tier 1 IRB models Model Validation develops or maintains an independent challenger model or recalibration and explains material differences in the validation report.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §6.2."
+    },
+    {
+      "id": "MV-STD-010-6.3",
+      "article": "MV-STD-010 §6.3",
+      "chapter": "Benchmarking and review of estimates",
+      "text": "The annual review of estimates by the model owner is assessed, including inclusion of the most recent data in the calibration sample and the documented conclusion on the need for recalibration.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "to_review",
+      "verification_note": "Internal provision is authoritative; the cross-reference to CRR Art. 179(1)(c) for the annual review of estimates should be confirmed against the consolidated CRR text (point letter)."
+    },
+    {
+      "id": "MV-STD-010-7.1",
+      "article": "MV-STD-010 §7.1",
+      "chapter": "ECB validation reporting",
+      "text": "Annual validation results for all PD, LGD and CCF models in the scope of the ECB request are prepared using the templates and test specifications of the ECB validation reporting instructions.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §7.1."
+    },
+    {
+      "id": "MV-STD-010-7.2",
+      "article": "MV-STD-010 §7.2",
+      "chapter": "ECB validation reporting",
+      "text": "The data used for the ECB validation templates is reconciled with the internal validation data and with COREP exposures, and reconciliation differences are documented.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §7.2."
+    },
+    {
+      "id": "MV-STD-010-7.3",
+      "article": "MV-STD-010 §7.3",
+      "chapter": "ECB validation reporting",
+      "text": "The ECB validation templates are four-eyes reviewed within Model Validation, signed off by the Head of Model Validation and submitted within the ECB deadline.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §7.3."
+    },
+    {
+      "id": "MV-STD-010-7.5",
+      "article": "MV-STD-010 §7.5",
+      "chapter": "ECB validation reporting",
+      "text": "Each red result in the ECB validation templates is addressed in the internal validation report by a finding under MV-STD-002 or a documented justification.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §7.5."
+    },
+    {
+      "id": "MV-STD-010-8.1",
+      "article": "MV-STD-010 §8.1",
+      "chapter": "Validation report and management reporting",
+      "text": "The IRB validation report contains a compliance overview mapping the rating system to the applicable CRR articles and library requirements, the ECB template results and the MoC review.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-010 §8.1."
+    }
+  ]
+}

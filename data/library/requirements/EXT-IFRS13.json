@@ -1,0 +1,305 @@
+{
+  "docId": "EXT-IFRS13",
+  "requirements": [
+    {
+      "id": "IFRS13-9",
+      "article": "IFRS 13 para 9",
+      "chapter": "Definition of fair value",
+      "text": "Fair value is measured as the exit price that would be received to sell an asset or paid to transfer a liability in an orderly transaction between market participants at the measurement date.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-22",
+      "article": "IFRS 13 para 22",
+      "chapter": "Market participant assumptions",
+      "text": "Fair value uses the assumptions market participants would use in pricing the asset or liability, assuming they act in their economic best interest, not entity-specific assumptions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-42",
+      "article": "IFRS 13 para 42-43",
+      "chapter": "Non-performance risk",
+      "text": "The fair value of a liability, including derivative liabilities, reflects non-performance risk, including the entity's own credit risk (debit valuation adjustment).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation. DVA terminology is market practice, not IFRS 13 wording."
+    },
+    {
+      "id": "IFRS13-48",
+      "article": "IFRS 13 para 48-49",
+      "chapter": "Portfolio exception",
+      "text": "Fair value may be measured on the net exposure to market or counterparty credit risk only if the group is managed and reported to key management on that basis under a documented risk management strategy.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation. Use of the exception is an accounting policy choice (para 51) and must be disclosed (para 96)."
+    },
+    {
+      "id": "IFRS13-56",
+      "article": "IFRS 13 para 56",
+      "chapter": "Credit risk adjustments",
+      "text": "Under the portfolio exception, the counterparty credit adjustment reflects net credit exposure after netting and collateral arrangements that market participants would consider, including their expected legal enforceability.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation. CVA on derivative assets otherwise follows from para 11 and 22 (credit risk as a characteristic priced by market participants)."
+    },
+    {
+      "id": "IFRS13-22-FVA",
+      "article": "IFRS 13 para 22 and 88",
+      "chapter": "Funding adjustments",
+      "text": "Funding valuation adjustments are included in derivative fair values only to the extent that market participants would include funding costs and benefits in pricing at the measurement date.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "IFRS 13 does not address funding valuation adjustments explicitly; this is the prevailing interpretation derived from market participant assumptions and risk adjustments. Confirm with the accounting policy function."
+    },
+    {
+      "id": "IFRS13-61",
+      "article": "IFRS 13 para 61",
+      "chapter": "Valuation techniques",
+      "text": "Valuation techniques are appropriate in the circumstances, supported by sufficient data, and maximise relevant observable inputs while minimising unobservable inputs.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation. Restated in para 67 for inputs."
+    },
+    {
+      "id": "IFRS13-64",
+      "article": "IFRS 13 para 64",
+      "chapter": "Valuation techniques",
+      "text": "Where the transaction price is fair value at initial recognition and unobservable inputs will be used subsequently, the valuation technique is calibrated so that it returns the transaction price at initial recognition.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-65",
+      "article": "IFRS 13 para 65-66",
+      "chapter": "Valuation techniques",
+      "text": "Valuation techniques are applied consistently; a change is made only if it yields an equally or more representative measurement and is accounted for as a change in accounting estimate.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-73",
+      "article": "IFRS 13 para 73",
+      "chapter": "Fair value hierarchy",
+      "text": "Each fair value measurement is categorised in its entirety at the level of the lowest-level input that is significant to the entire measurement.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-75",
+      "article": "IFRS 13 para 75",
+      "chapter": "Fair value hierarchy",
+      "text": "A measurement whose observable input is adjusted with an unobservable input that significantly changes fair value is categorised as Level 3.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation. Same principle for Level 2 input adjustments in para 84."
+    },
+    {
+      "id": "IFRS13-88",
+      "article": "IFRS 13 para 87-88",
+      "chapter": "Unobservable inputs",
+      "text": "Level 3 measurements include a risk adjustment for model and input uncertainty where market participants would include one in pricing.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-93-d",
+      "article": "IFRS 13 para 93(d)",
+      "chapter": "Disclosures — Level 2 and Level 3",
+      "text": "For Level 2 and Level 3 measurements, the valuation techniques and inputs are described, changes in technique are explained, and quantitative information on significant unobservable Level 3 inputs is provided.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Financial statement disclosure obligation; evidenced in the fair value notes to the financial statements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-93-e",
+      "article": "IFRS 13 para 93(e)",
+      "chapter": "Disclosures — Level 3",
+      "text": "For recurring Level 3 measurements, a reconciliation from opening to closing balances is provided, showing gains and losses, purchases, sales, issues, settlements and transfers into and out of Level 3.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Financial statement disclosure obligation; evidenced in the Level 3 reconciliation in the financial statements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-93-g",
+      "article": "IFRS 13 para 93(g)",
+      "chapter": "Disclosures — Level 3",
+      "text": "For Level 3 measurements, the valuation processes are described, including how valuation policies are decided and how period-to-period fair value changes are analysed.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Financial statement disclosure obligation; evidenced in the fair value notes to the financial statements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation."
+    },
+    {
+      "id": "IFRS13-93-h-ii",
+      "article": "IFRS 13 para 93(h)(ii)",
+      "chapter": "Disclosures — Level 3",
+      "text": "For Level 3 financial instruments, the effect of reasonably possible alternative unobservable input assumptions is disclosed where significant, together with how it was calculated.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Financial statement disclosure obligation; evidenced in the Level 3 sensitivity disclosures in the financial statements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against IFRS 13 as included in Commission Regulation (EU) 2023/1803; paraphrased, no quotation. Narrative sensitivity for all recurring Level 3 measurements in para 93(h)(i)."
+    }
+  ]
+}

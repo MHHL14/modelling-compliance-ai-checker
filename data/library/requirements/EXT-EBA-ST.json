@@ -1,0 +1,441 @@
+{
+  "docId": "EXT-EBA-ST",
+  "requirements": [
+    {
+      "id": "EBA-ST-012",
+      "article": "EBA/GL/2018/04 para 12",
+      "chapter": "Stress testing programme",
+      "text": "The stress testing programme covers at least the types, objectives and frequency of stress tests, governance and responsibilities, entity and risk coverage, data infrastructure, methodological details including models and solvency–liquidity links, and the assumptions and remedial actions envisaged.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The scope of the stress testing programme is an institution-level framework evidenced in the stress testing programme documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 12."
+    },
+    {
+      "id": "EBA-ST-017",
+      "article": "EBA/GL/2018/04 para 17",
+      "chapter": "Stress testing programme",
+      "text": "The effectiveness and robustness of the stress testing programme is assessed at least annually, using both quantitative and qualitative analysis, and the programme is updated as appropriate.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The annual assessment of the stress testing programme is an institution-level review evidenced in programme review reports.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 17."
+    },
+    {
+      "id": "EBA-ST-018",
+      "article": "EBA/GL/2018/04 para 18",
+      "chapter": "Stress testing programme",
+      "text": "The quantitative assessment includes sound backtesting to validate the assumptions, parameters and results of stress testing models (e.g. credit risk, market risk and pre-provision net revenue models); the qualitative assessment relies on expert judgement or benchmarking.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 18."
+    },
+    {
+      "id": "EBA-ST-019-d",
+      "article": "EBA/GL/2018/04 para 19(c)–(d)",
+      "chapter": "Stress testing programme",
+      "text": "The programme assessment covers model assumptions and the sensitivity of results to them, the role of expert judgement, and model performance including performance on out-of-sample data not used for model development.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 19(c)–(d)."
+    },
+    {
+      "id": "EBA-ST-020",
+      "article": "EBA/GL/2018/04 para 20",
+      "chapter": "Stress testing programme",
+      "text": "The stress testing programme is documented, covering at least the approach, solvency–liquidity interlinkages, roles of the second and third lines of defence, the design-to-assessment process, the evaluation of outcomes including judgemental areas, and an inventory of IT applications used.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Documentation of the stress testing programme is evidenced in institution-level programme documentation, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 20."
+    },
+    {
+      "id": "EBA-ST-023",
+      "article": "EBA/GL/2018/04 para 23",
+      "chapter": "Governance",
+      "text": "The management body approves the stress testing programme and oversees its implementation and performance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Approval and oversight of the stress testing programme is an obligation of the management body, evidenced in board minutes.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 23."
+    },
+    {
+      "id": "EBA-ST-025-b",
+      "article": "EBA/GL/2018/04 para 25(b)",
+      "chapter": "Governance",
+      "text": "The management body understands the material aspects of the programme sufficiently to challenge key modelling assumptions, scenario selection and the assumptions underlying the stress tests.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Management body understanding of the stress testing programme is evidenced in board training and committee records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 25(b)."
+    },
+    {
+      "id": "EBA-ST-029",
+      "article": "EBA/GL/2018/04 para 29",
+      "chapter": "Governance — use of results",
+      "text": "The stress testing programme is an integral part of the risk management framework, including ICAAP and ILAAP, and supports business decisions and strategic, capital and liquidity planning, taking account of identified limitations.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Integration of stress testing into the risk management framework, ICAAP and ILAAP is evidenced in institution-level governance documents.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 29."
+    },
+    {
+      "id": "EBA-ST-031",
+      "article": "EBA/GL/2018/04 para 31",
+      "chapter": "Governance — use of results",
+      "text": "Quantitative and qualitative stress test outputs, including implied losses, capital and liquidity requirements and available capital and liquidity, are used as inputs to setting risk appetite and limits and as a planning tool.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Use of stress test outputs for risk appetite and planning is evidenced in the risk appetite framework and capital planning documents.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 31."
+    },
+    {
+      "id": "EBA-ST-035",
+      "article": "EBA/GL/2018/04 paras 33, 35",
+      "chapter": "Data infrastructure",
+      "text": "The stress testing programme is supported by a data infrastructure with the capacity to capture its extensive data needs and mechanisms ensuring the continuing ability to run stress tests as planned.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "The data infrastructure supporting the stress testing programme is an institution-level capability evidenced in IT and data architecture documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 33 and 35."
+    },
+    {
+      "id": "EBA-ST-041",
+      "article": "EBA/GL/2018/04 paras 40–43",
+      "chapter": "Data infrastructure",
+      "text": "Risk data used for stress testing are accurate and reliable, and their aggregation is largely automated and ensures accuracy, integrity, completeness (including off-balance-sheet risks), timeliness and adaptability, with reconciliation and controls in place.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 40–43."
+    },
+    {
+      "id": "EBA-ST-061",
+      "article": "EBA/GL/2018/04 paras 61–62",
+      "chapter": "Methodologies",
+      "text": "Appropriate and robust mechanisms translate stressed risk factors into internal risk parameters (PD, LGD, write-offs, fair value haircuts), based on historical experience and supplemented where appropriate by external and supervisory benchmarks.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 61–62."
+    },
+    {
+      "id": "EBA-ST-063",
+      "article": "EBA/GL/2018/04 para 63",
+      "chapter": "Methodologies — model risk",
+      "text": "Model risk in stress test models is addressed through regular conservative expert review of model assumptions and mechanics, conservatism for assumptions that are hard to quantify, and regular assessment of the sensitivity of results to assumptions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 63."
+    },
+    {
+      "id": "EBA-ST-064",
+      "article": "EBA/GL/2018/04 para 64",
+      "chapter": "Methodologies — model risk",
+      "text": "Links between risk factors and losses rest on robust statistical models where data permit, supported by qualitative expert judgement otherwise; model shortcomings are understood and communicated, and results of alternative approaches are compared where possible.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 64."
+    },
+    {
+      "id": "EBA-ST-073",
+      "article": "EBA/GL/2018/04 paras 73–74",
+      "chapter": "Scenario design",
+      "text": "Stress scenarios are forward-looking, consider hypothetical non-historical events as well as historical ones, and span a range of events and degrees of severity where meaningful and feasible.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 73–74."
+    },
+    {
+      "id": "EBA-ST-075-c",
+      "article": "EBA/GL/2018/04 para 75(c)–(d)",
+      "chapter": "Scenario design",
+      "text": "Each scenario has a coherent, plausible and internally consistent narrative covering all main risk factors and their dependence structure; exclusions of risk factors from the narrative are justified and documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 75(c)–(d)."
+    },
+    {
+      "id": "EBA-ST-075-f",
+      "article": "EBA/GL/2018/04 para 75(f)",
+      "chapter": "Scenario design",
+      "text": "Stressed risk factors are translated into internally consistent risk parameters.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 75(f)."
+    },
+    {
+      "id": "EBA-ST-079",
+      "article": "EBA/GL/2018/04 paras 79–80",
+      "chapter": "Scenario design — severity",
+      "text": "Stress tests are based on severe but plausible scenarios whose severity reflects the purpose of the test, including at least one severe economic downturn for capital adequacy and capital planning purposes.",
+      "quote": "Institutions should ensure that stress testing is based on severe but plausible scenarios",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 79–80."
+    },
+    {
+      "id": "EBA-ST-104",
+      "article": "EBA/GL/2018/04 para 104",
+      "chapter": "Credit risk stress testing",
+      "text": "Credit risk stress tests analyse at least the borrower's ability to repay (PD), recoveries including deterioration of collateral values and guarantor quality (LGD), and the size and dynamics of exposure including undrawn commitments (EAD).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 104."
+    },
+    {
+      "id": "EBA-ST-112",
+      "article": "EBA/GL/2018/04 para 112",
+      "chapter": "Credit risk stress testing",
+      "text": "The impact of credit risk scenarios is quantified in terms of credit losses (provisions), risk exposures, income and own funds requirements, and can be broken down by relevant segments or portfolios.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 112."
+    },
+    {
+      "id": "EBA-ST-114",
+      "article": "EBA/GL/2018/04 para 114",
+      "chapter": "Credit risk stress testing",
+      "text": "Stressed credit loss estimates use point-in-time parameters consistent with scenario severity where relevant, rather than the through-the-cycle PD or downturn LGD parameters used for own funds requirements.",
+      "quote": "apply estimates based on point-in-time parameters in accordance with the severity of the scenario for the purpose of estimating credit losses",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 114."
+    },
+    {
+      "id": "EBA-ST-189-d",
+      "article": "EBA/GL/2018/04 para 189(b)–(d)",
+      "chapter": "Stress testing for ICAAP",
+      "text": "ICAAP stress tests are institution-wide, include at least one severe but plausible adverse economic scenario, cover the same forward-looking period as the ICAAP (at least two years) and are updated at least as often as the ICAAP.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide ICAAP stress tests are evidenced in the ICAAP, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ICAAP models and processes only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2018/04 final report (19 July 2018), para 189(b)–(d)."
+    }
+  ]
+}

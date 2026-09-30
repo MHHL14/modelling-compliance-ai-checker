@@ -1,0 +1,305 @@
+{
+  "docId": "EXT-CRR-PV",
+  "requirements": [
+    {
+      "id": "CRR-PV-34-1",
+      "article": "CRR Art. 34(1)",
+      "chapter": "Additional value adjustments",
+      "text": "Article 105 is applied to all fair-valued assets, and the resulting additional value adjustments are deducted from CET1 capital.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Application of prudent valuation to all fair-valued assets and the CET1 deduction are evidenced in the institution's own funds calculation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-2-a",
+      "article": "CRR Art. 105(2)(a)",
+      "chapter": "Systems and controls",
+      "text": "Documented valuation policies define responsibilities, market data sources and their review, use of unobservable inputs, independent valuation frequency, closing price timing, adjustment and verification procedures.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Valuation policies are institution-wide policies evidenced in the valuation policy framework, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-6",
+      "article": "CRR Art. 105(6)",
+      "chapter": "Mark-to-model",
+      "text": "Where marking to market is not possible, positions are conservatively marked to model, including for own funds calculation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-7-b",
+      "article": "CRR Art. 105(7)(b)",
+      "chapter": "Mark-to-model",
+      "text": "Model market inputs are sourced in line with market prices where possible, and the appropriateness of inputs and model parameters is assessed frequently.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-7-d",
+      "article": "CRR Art. 105(7)(d)",
+      "chapter": "Mark-to-model",
+      "text": "Internally developed valuation models rest on assumptions challenged by qualified independent parties; the model is developed or approved independently of trading desks and independently tested, including mathematics, assumptions and software implementation.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629). Independence and testing sentence is the second subparagraph of Art. 105(7)."
+    },
+    {
+      "id": "CRR-PV-105-7-e",
+      "article": "CRR Art. 105(7)(e)",
+      "chapter": "Mark-to-model",
+      "text": "Formal change control procedures apply to valuation models, and a secure copy of the model is held and used periodically to check valuations.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-7-g",
+      "article": "CRR Art. 105(7)(g)",
+      "chapter": "Mark-to-model",
+      "text": "Valuation models are periodically reviewed for accuracy, including continued appropriateness of assumptions, P&L versus risk factor analysis and comparison of actual close-out values with model outputs.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-8",
+      "article": "CRR Art. 105(8)",
+      "chapter": "Independent price verification",
+      "text": "Market prices and model inputs are verified at least monthly by a person or unit independent from those benefiting from the trading book.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Independent price verification is an institution-level product control process evidenced in IPV procedures and reports.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-10",
+      "article": "CRR Art. 105(10)",
+      "chapter": "Valuation adjustments",
+      "text": "The institution formally considers valuation adjustments for unearned credit spreads, close-out costs, operational risks, market price uncertainty, early termination, investing and funding costs, future administrative costs and, where relevant, model risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-105-13",
+      "article": "CRR Art. 105(13)",
+      "chapter": "Valuation adjustments",
+      "text": "For complex products, the need for valuation adjustments for model risk from a possibly incorrect valuation methodology and from unobservable calibration parameters is explicitly assessed.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against consolidated CRR text (CELEX 02013R0575-20250629)."
+    },
+    {
+      "id": "CRR-PV-RTS-11-1",
+      "article": "Delegated Regulation (EU) 2016/101 Art. 11(1)",
+      "chapter": "Model risk AVA (core approach)",
+      "text": "A model risk AVA is estimated for each valuation model, reflecting the range of models and calibrations used by market participants; uncertainty from market-derived calibration parameters is captured in the market price uncertainty AVA.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against OJ text of Delegated Regulation (EU) 2016/101. EBA amending RTS (consultation EBA/CP/2024/01) not reflected; check whether adopted. Core approach applies where fair-valued assets and liabilities are EUR 15 bn or more (Art. 4(1))."
+    },
+    {
+      "id": "CRR-PV-RTS-11-3",
+      "article": "Delegated Regulation (EU) 2016/101 Art. 11(3)",
+      "chapter": "Model risk AVA (core approach)",
+      "text": "Where possible, the model risk AVA is derived from a range of plausible valuations produced by alternative appropriate models and calibrations, at the 90 % confidence exit point.",
+      "quote": "where they are 90 % confident they could exit the valuation exposure at that price or better",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against OJ text of Delegated Regulation (EU) 2016/101. EBA amending RTS (consultation EBA/CP/2024/01) not reflected; check whether adopted."
+    },
+    {
+      "id": "CRR-PV-RTS-11-5",
+      "article": "Delegated Regulation (EU) 2016/101 Art. 11(4)-(5)",
+      "chapter": "Model risk AVA (core approach)",
+      "text": "Where alternative models cannot be used, an expert-based model risk AVA considers product complexity, diversity of approaches, one-way markets, unhedgeable risks and payoff adequacy, and is notified to the competent authority.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against OJ text of Delegated Regulation (EU) 2016/101. EBA amending RTS (consultation EBA/CP/2024/01) not reflected; check whether adopted."
+    },
+    {
+      "id": "CRR-PV-RTS-11-6",
+      "article": "Delegated Regulation (EU) 2016/101 Art. 11(6)",
+      "chapter": "Model risk AVA (core approach)",
+      "text": "The prudence of the expert-based model risk AVA is confirmed annually against the alternative-models method on a material sample of valuation models.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against OJ text of Delegated Regulation (EU) 2016/101. EBA amending RTS (consultation EBA/CP/2024/01) not reflected; check whether adopted."
+    },
+    {
+      "id": "CRR-PV-RTS-19-2-a",
+      "article": "Delegated Regulation (EU) 2016/101 Art. 19(2)(a)",
+      "chapter": "Systems and controls",
+      "text": "Valuation model performance is reviewed at least annually.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against OJ text of Delegated Regulation (EU) 2016/101. EBA amending RTS (consultation EBA/CP/2024/01) not reflected; check whether adopted."
+    },
+    {
+      "id": "CRR-PV-RTS-19-3-d",
+      "article": "Delegated Regulation (EU) 2016/101 Art. 19(3)(d)",
+      "chapter": "Systems and controls",
+      "text": "Thresholds based on observed market data are defined to determine when valuation models are no longer sufficiently robust.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against OJ text of Delegated Regulation (EU) 2016/101. EBA amending RTS (consultation EBA/CP/2024/01) not reflected; check whether adopted."
+    }
+  ]
+}

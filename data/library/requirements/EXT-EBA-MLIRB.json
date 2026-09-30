@@ -1,0 +1,301 @@
+{
+  "docId": "EXT-EBA-MLIRB",
+  "requirements": [
+    {
+      "id": "EBA-MLIRB-A1-knowledge-a",
+      "article": "EBA/REP/2023/28 Annex I, stakeholder knowledge, point (a)",
+      "chapter": "Skills and understanding",
+      "text": "Staff in model development, the CRCU and the validation unit are sufficiently skilled to develop and validate ML models and to assess the relevance of risk drivers and the economic rationale.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Staff skills in the development, CRCU and validation functions are evidenced in the institution's resourcing and training records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-knowledge-b",
+      "article": "EBA/REP/2023/28 Annex I, stakeholder knowledge, point (b)",
+      "chapter": "Skills and understanding",
+      "text": "The management body and senior management receive high-level documentation clarifying the key drivers of grade assignment and, where relevant, how ML affects risk quantification.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-complexity",
+      "article": "EBA/REP/2023/28 Annex I, complexity",
+      "chapter": "Complexity",
+      "text": "The institution avoids unnecessary modelling complexity that is not justified by a significant improvement in predictive capacity.",
+      "quote": "institutions are recommended to avoid unnecessary complexity in the modelling approach if it is not justified by a significant improvement in the predictive capacities.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-complexity-a",
+      "article": "EBA/REP/2023/28 Annex I, complexity, point (a)",
+      "chapter": "Complexity",
+      "text": "The model does not include an excessive number of explanatory drivers or drivers without significant predictive information.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-complexity-b",
+      "article": "EBA/REP/2023/28 Annex I, complexity, point (b)",
+      "chapter": "Complexity",
+      "text": "Unstructured data are not used where more conventional data with similar predictive capacity are available.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-interpretation-a",
+      "article": "EBA/REP/2023/28 Annex I, interpretation, point (a)",
+      "chapter": "Explainability",
+      "text": "The institution statistically analyses each risk driver's ceteris paribus relationship with the output and its overall weight, to identify the drivers that most influence predictions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-interpretation-b",
+      "article": "EBA/REP/2023/28 Annex I, interpretation, point (b)",
+      "chapter": "Explainability",
+      "text": "The economic relationship of each risk driver with the output is assessed so that model estimates are plausible and intuitive.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-interpretation-c",
+      "article": "EBA/REP/2023/28 Annex I, interpretation, point (c)",
+      "chapter": "Explainability",
+      "text": "A summary document explains the model's key drivers and main driver-prediction relationships in accessible terms for all relevant stakeholders, including internal model users.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-human-judgement",
+      "article": "EBA/REP/2023/28 Annex I, human judgement",
+      "chapter": "Human judgement",
+      "text": "Staff performing overrides can assess the model's behaviour on a specific prediction and consider only aspects insufficiently embedded in the automated rating.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-updates",
+      "article": "EBA/REP/2023/28 Annex I, model updates",
+      "chapter": "Model updates and changes",
+      "text": "The reasons for frequent ML model updates are analysed and monitored; model parameters are expected to remain generally stable.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-model-change",
+      "article": "EBA/REP/2023/28 Annex I, model updates; §4.4 para 35(a)",
+      "chapter": "Model updates and changes",
+      "text": "Every update of an ML rating system is assessed under the model change framework; a significant change in rank ordering or exposure distribution is material, and changes are not split.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered). Same position in section 4.4 para 35(a), referring to Delegated Regulation (EU) 529/2014 Annex I Part II Section 1 para 2(d) and Art. 3(3)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-validation-i",
+      "article": "EBA/REP/2023/28 Annex I, validation, point (i)",
+      "chapter": "Validation of ML models",
+      "text": "Overfitting is addressed by comparing performance on the development sample with out-of-sample and out-of-time performance.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-validation-ii",
+      "article": "EBA/REP/2023/28 Annex I, validation, point (ii)",
+      "chapter": "Validation of ML models",
+      "text": "The validation unit verifies the rationale for the chosen hyperparameters; where they are set by error minimisation, this does not introduce undesired bias.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-validation-iii",
+      "article": "EBA/REP/2023/28 Annex I, validation, point (iii)",
+      "chapter": "Validation of ML models",
+      "text": "Where ML models use large or external data, data quality and representativeness are ensured, including whether reduced representativeness lowers performance on internal customers.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-validation-iv",
+      "article": "EBA/REP/2023/28 Annex I, validation, point (iv)",
+      "chapter": "Validation of ML models",
+      "text": "Stability is analysed both in grade assignment (given possible point-in-time elements) and in driver-output relationships across successive model releases.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    },
+    {
+      "id": "EBA-MLIRB-A1-data-preparation",
+      "article": "EBA/REP/2023/28 Annex I, data preparation",
+      "chapter": "Use of ML in IRB modelling",
+      "text": "Where ML is used for data preparation, clear rules, documentation and a proper set of checks and controls ensure the appropriateness of the methodology applied to the data.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/REP/2023/28 Annex I (principle-based recommendations; points are not paragraph-numbered)."
+    }
+  ]
+}

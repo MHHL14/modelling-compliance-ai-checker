@@ -1,0 +1,548 @@
+{
+  "docId": "INT-STD-MON",
+  "requirements": [
+    {
+      "id": "MRM-STD-040-4.1",
+      "article": "MRM-STD-040 §4.1",
+      "chapter": "Monitoring plan",
+      "text": "The model has a monitoring plan approved by the Model Owner before go-live and, for Tier 1 and Tier 2 models, reviewed by Model Validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §4.1."
+    },
+    {
+      "id": "MRM-STD-040-4.2",
+      "article": "MRM-STD-040 §4.2",
+      "chapter": "Monitoring plan",
+      "text": "The monitoring plan defines the KPIs and their calculation, amber and red thresholds, frequency, data and reference periods, segments, responsible persons and escalation per traffic light.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §4.2."
+    },
+    {
+      "id": "MRM-STD-040-4.3",
+      "article": "MRM-STD-040 §4.3",
+      "chapter": "Monitoring plan",
+      "text": "Monitoring KPIs cover, where applicable, discriminatory power, calibration, population and characteristic stability, production data quality, overrides and overlays, and model coverage.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §4.3."
+    },
+    {
+      "id": "MRM-STD-040-4.4",
+      "article": "MRM-STD-040 §4.4",
+      "chapter": "Monitoring plan",
+      "text": "KPIs are computed for the overall model and for each material segment, rating grade or pool.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §4.4."
+    },
+    {
+      "id": "MRM-STD-040-4.5",
+      "article": "MRM-STD-040 §4.5",
+      "chapter": "Monitoring plan",
+      "text": "The monitoring plan is updated whenever the model changes and reviewed at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §4.5."
+    },
+    {
+      "id": "MRM-STD-040-5.2",
+      "article": "MRM-STD-040 §5.2",
+      "chapter": "KPIs and thresholds",
+      "text": "The PSI of the score or rating distribution and of each input variable is computed against the development sample, with green below 0.10, amber 0.10–0.25 and red above 0.25.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.2."
+    },
+    {
+      "id": "MRM-STD-040-5.3a",
+      "article": "MRM-STD-040 §5.3",
+      "chapter": "KPIs and thresholds",
+      "text": "AUC or Gini is computed on the latest observation window and compared with development; a relative Gini decline above 10% is amber and above 20% red.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "statistical",
+          "ml",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models producing a rank-ordering score, rating or classification.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.3."
+    },
+    {
+      "id": "MRM-STD-040-5.3b",
+      "article": "MRM-STD-040 §5.3",
+      "chapter": "KPIs and thresholds",
+      "text": "A Gini coefficient below 0.40 for corporate or below 0.50 for retail rating models is classified red regardless of the change since development.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate",
+          "retail"
+        ],
+        "all": [
+          "credit"
+        ]
+      },
+      "not_applicable_reason": "Applies to corporate and retail credit rating and scoring models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.3."
+    },
+    {
+      "id": "MRM-STD-040-5.4",
+      "article": "MRM-STD-040 §5.4; CRR Art. 185(b)",
+      "chapter": "KPIs and thresholds",
+      "text": "Realised default rates are compared with estimated PD per grade and for the portfolio using a one-sided binomial or Jeffreys test as defined in MV-HB-003, with the thresholds of MRM-STD-040 §5.4.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd",
+          "ifrs9",
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models that estimate probabilities of default.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.4."
+    },
+    {
+      "id": "MRM-STD-040-5.5",
+      "article": "MRM-STD-040 §5.5; CRR Art. 185(c)",
+      "chapter": "KPIs and thresholds",
+      "text": "Realised LGD and CCF are compared with estimates by grade or pool and for the portfolio; portfolio underestimation above 5% relative is amber and above 10% red.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead",
+          "ifrs9"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models estimating LGD or EAD/CCF.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.5."
+    },
+    {
+      "id": "MRM-STD-040-5.6",
+      "article": "MRM-STD-040 §5.6",
+      "chapter": "KPIs and thresholds",
+      "text": "For models other than credit risk parameter models, the monitoring plan defines equivalent performance, stability and accuracy KPIs with thresholds approved by Model Risk Management.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market",
+          "valuation",
+          "irrbb",
+          "aml",
+          "fraud",
+          "genai",
+          "stress_test",
+          "climate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models other than credit risk parameter models.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.6."
+    },
+    {
+      "id": "MRM-STD-040-5.7",
+      "article": "MRM-STD-040 §5.7",
+      "chapter": "KPIs and thresholds",
+      "text": "Override rates and directions are monitored against the thresholds of MRM-STD-023 §6.2 or stricter model-specific thresholds.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §5.7."
+    },
+    {
+      "id": "MRM-STD-040-6.1",
+      "article": "MRM-STD-040 §6.1",
+      "chapter": "Monitoring frequency",
+      "text": "Monitoring is performed at least quarterly for Tier 1, semi-annually for Tier 2 and annually for Tier 3 models.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §6.1."
+    },
+    {
+      "id": "MRM-STD-040-6.3",
+      "article": "MRM-STD-040 §6.3",
+      "chapter": "Monitoring frequency",
+      "text": "Monitoring results are finalised and reported within 60 calendar days after the end of the reference period.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §6.3."
+    },
+    {
+      "id": "MRM-STD-040-7.1",
+      "article": "MRM-STD-040 §7.1",
+      "chapter": "Breach escalation and triggers",
+      "text": "Each amber KPI result is analysed by the Model Owner and its cause documented in the monitoring report.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §7.1."
+    },
+    {
+      "id": "MRM-STD-040-7.2a",
+      "article": "MRM-STD-040 §7.2",
+      "chapter": "Breach escalation and triggers",
+      "text": "A red result, or amber on the same KPI in two consecutive cycles, is notified to Model Risk Management and Model Validation within ten business days.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §7.2."
+    },
+    {
+      "id": "MRM-STD-040-7.2b",
+      "article": "MRM-STD-040 §7.2",
+      "chapter": "Breach escalation and triggers",
+      "text": "For each trigger, a root cause analysis and action plan is submitted within 60 calendar days.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §7.2."
+    },
+    {
+      "id": "MRM-STD-040-7.3",
+      "article": "MRM-STD-040 §7.3",
+      "chapter": "Breach escalation and triggers",
+      "text": "The action plan for a trigger proposes no action with justification, a temporary overlay, recalibration, redevelopment or restriction of use, with changes processed under MRM-STD-050.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §7.3."
+    },
+    {
+      "id": "MRM-STD-040-7.4",
+      "article": "MRM-STD-040 §7.4",
+      "chapter": "Breach escalation and triggers",
+      "text": "Red results on Tier 1 models and triggers unresolved after six months are reported to the Model Risk Committee.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §7.4."
+    },
+    {
+      "id": "MRM-STD-040-7.5",
+      "article": "MRM-STD-040 §7.5",
+      "chapter": "Breach escalation and triggers",
+      "text": "Monitoring results indicating non-compliance of an IRB rating system with the CRR are assessed for notification to the competent authority and for an additional margin of conservatism.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models used for own funds requirements only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §7.5."
+    },
+    {
+      "id": "MRM-STD-040-8.1",
+      "article": "MRM-STD-040 §8.1; CRR Art. 172(3)",
+      "chapter": "Overrides and model use",
+      "text": "The monitoring report presents override rates by direction, reason, magnitude and approving unit, and the realised performance of overridden versus non-overridden cases.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §8.1."
+    },
+    {
+      "id": "MRM-STD-040-8.2",
+      "article": "MRM-STD-040 §8.2",
+      "chapter": "Overrides and model use",
+      "text": "Each monitoring report lists material overlays in place with amount, purpose and planned removal date.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §8.2."
+    },
+    {
+      "id": "MRM-STD-040-8.3",
+      "article": "MRM-STD-040 §8.3",
+      "chapter": "Overrides and model use",
+      "text": "The monitoring report shows model coverage: the share of the in-scope portfolio assessed by the model and exposures with missing or outdated model outputs.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §8.3."
+    },
+    {
+      "id": "MRM-STD-040-9.1",
+      "article": "MRM-STD-040 §9.1",
+      "chapter": "Annual model review",
+      "text": "An annual model review by the Model Owner covers monitoring results, portfolio and environment changes, open findings and data deficiencies, the EJ log and overlays, and code-documentation consistency.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §9.1."
+    },
+    {
+      "id": "MRM-STD-040-9.2",
+      "article": "MRM-STD-040 §9.2",
+      "chapter": "Annual model review",
+      "text": "The annual model review concludes whether the model remains fit for purpose and whether action is required, and is signed off by the Model Owner and submitted to Model Risk Management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §9.2."
+    },
+    {
+      "id": "MRM-STD-040-9.3",
+      "article": "MRM-STD-040 §9.3; CRR Art. 185(b)-(c)",
+      "chapter": "Annual model review",
+      "text": "For IRB models, the annual review compares realised default rates, loss rates and conversion factors with estimates and is provided to Model Validation.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models used for own funds requirements only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §9.3."
+    },
+    {
+      "id": "MRM-STD-040-10.1",
+      "article": "MRM-STD-040 §10.1",
+      "chapter": "Monitoring reporting",
+      "text": "A monitoring report per model shows each KPI with value, threshold, traffic light and trend over at least the last four monitoring cycles.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §10.1."
+    },
+    {
+      "id": "MRM-STD-040-10.3",
+      "article": "MRM-STD-040 §10.3",
+      "chapter": "Monitoring reporting",
+      "text": "Monitoring code and data are version controlled and monitoring results are reproducible.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-040 v3.1), §10.3."
+    }
+  ]
+}

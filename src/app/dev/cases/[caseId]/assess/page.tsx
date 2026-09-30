@@ -1,20 +1,21 @@
 'use client';
-import { AlertTriangle, ChevronDown, ClipboardList, Download, FastForward, FileUp, Link2, Lock, Play, RefreshCw, ScrollText, Terminal } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, ChevronDown, ClipboardList, Download, FastForward, FilePlus2, FileUp, Link2, Lock, Pencil, Play, RefreshCw, ScrollText, Terminal } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { toast } from 'sonner';
 import { AssessmentQueue } from '@/components/assessment/AssessmentQueue';
 import { FileDrop, readTextIfPossible } from '@/components/common/FileDrop';
+import { DocumentationPicker } from '@/components/common/DocumentationPicker';
 import { RunInspector } from '@/components/common/RunInspector';
-import { Banner, Card, PageHeader } from '@/components/common/ui-bits';
+import { Banner, Card, CardHeader, PageHeader } from '@/components/common/ui-bits';
 import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { AiProviderBadgeLight } from '@/components/common/AiProviderBadgeLight';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { COMPONENT_LABEL } from '@/lib/ai/generic';
-import { affectedBy } from '@/lib/scenario/engine';
+import { affectedBy, docsOf, finalVersionOf, type DocSel } from '@/lib/engine/assess';
 import { simulateRun, simulateShort } from '@/lib/ai/provider';
 import { fmtDateTime, nowISO } from '@/lib/clock';
 import { exportSheets } from '@/lib/excel';
@@ -23,21 +24,33 @@ import { can } from '@/lib/permissions';
 import { uid } from '@/lib/rng';
 import { PILOT, sourceGroup } from '@/lib/seed';
 import type { AssessmentRow, Upload } from '@/lib/types';
-import { allCaseRequirements, finalVerdict, use1lod } from '@/stores/store1lod';
+import { allCaseRequirements, defaultSelection, finalVerdict, selKey, use1lod } from '@/stores/store1lod';
 import { logAudit } from '@/stores/storeAudit';
 import { useLibrary } from '@/stores/storeLibrary';
 
 
 export default function AssessPage() {
   const { caseId } = useParams<{ caseId: string }>();
-  const { id, uc: work, sc, readOnly: completed, model, docs } = useCaseCtx(caseId);
+  const { id, uc: work, readOnly: completed, model, docs, ready } = useCaseCtx(caseId);
   const s = use1lod();
   const libVersion = useLibrary((l) => (can('1lod', 'read:library') ? l.version : '3.2'));
   const [selected, setSelected] = useState<string | null>(null);
   const [scriptDialog, setScriptDialog] = useState<AssessmentRow | null>(null);
   const [justification, setJustification] = useState<AssessmentRow | null>(null);
+  const [editSel, setEditSel] = useState(false);
 
-  if (!model || !work || !sc) return null;
+  // Preselect the final versions of the documents used in the draft check (the user confirms or changes this).
+  useEffect(() => {
+    if (!work || !ready || work.submissionSelection || work.submission) return;
+    const fromDraft: DocSel[] = work.draftSelection.flatMap((d) => {
+      const doc = docsOf(d.modelId)?.documents.find((x) => x.id === d.docId);
+      return doc ? [{ ...d, version: finalVersionOf(doc).version }] : [];
+    });
+    s.setSubmissionSelection(id, fromDraft.length ? fromDraft : defaultSelection(work.modelId, 'final'));
+  }, [work, ready, id, s]);
+
+  if (!model || !work) return null;
+  if (!ready) return <p className="p-6 text-sm text-ink-2">Loading the documentation library…</p>;
 
   const run = work.run;
   const reqs = allCaseRequirements(work);
@@ -48,9 +61,35 @@ export default function AssessPage() {
   const readOnly = !!work.submission || completed;
   const libChanged = run && libVersion !== run.libraryVersion;
   const changedIds = libChanged ? PILOT.library_change.changes.map((c) => c.id) : [];
+  const selection = work.submissionSelection ?? [];
+  const confirmed = !!work.selectionConfirmedAt;
+  const selectedKeys = new Set(selection.map(selKey));
+  const ownDocs = docsOf(work.modelId)?.documents ?? [];
+  /** documents of this model (not yet selected) whose final version addresses a requirement */
+  const expectedDocs = (reqId: string) =>
+    ownDocs.filter((d) => {
+      const v = finalVersionOf(d);
+      return !selection.some((x) => x.modelId === work.modelId && x.docId === d.id) && v.sections.some((sec) => sec.evidence?.some((e) => e.req === reqId));
+    });
+
+  function changeSelection(next: DocSel[]) {
+    const added = next.filter((n) => !selectedKeys.has(selKey(n)));
+    s.setSubmissionSelection(id, next);
+    if (run && added.length) {
+      const affected = added.flatMap((a) => affectedBy(work!.modelId, a));
+      s.patch(id, (x) => ({ changedRows: [...new Set([...x.changedRows, ...affected.filter((r) => x.run?.rows.some((row) => row.requirementId === r))])], selectionConfirmedAt: nowISO() }));
+    }
+  }
+
+  function addExpected(docId: string, rowId: string) {
+    const d = ownDocs.find((x) => x.id === docId)!;
+    changeSelection([...selection, { modelId: work!.modelId, docId, version: finalVersionOf(d).version }]);
+    s.patch(id, (x) => ({ changedRows: [...new Set([...x.changedRows, rowId])] }));
+    toast.success(`${d.title} v${finalVersionOf(d).version} added to the selection`, { description: 'Re-run the changed rows to re-assess them against it.' });
+  }
 
   async function runAssessment() {
-    await simulateRun({ title: `Self-assessment · ${work!.reqSetId}`, total: reqs.length, scripts: 2 });
+    await simulateRun({ title: `Self-assessment · ${work!.reqSetId} · ${selection.length} document(s)`, total: reqs.length, scripts: 2 });
     s.runAssessment(id);
     toast.success('Assessment complete', { description: 'All rows are AI drafts until you decide.' });
   }
@@ -64,9 +103,10 @@ export default function AssessPage() {
   async function uploadEvidence(file: File, rowId: string) {
     const text = await readTextIfPossible(file);
     const upload: Upload = { id: uid('UPL'), name: file.name, size: file.size, kind: 'evidence', uploadedAt: nowISO(), mime: file.type };
-    const affects = affectedBy(sc!, file.name);
+    const match = docsOf(work!.modelId)?.documents.find((d) => file.name.toLowerCase().startsWith(d.title.toLowerCase()));
+    const affects = match ? affectedBy(work!.modelId, { modelId: work!.modelId, docId: match.id, version: finalVersionOf(match).version }).filter((r) => rows.some((x) => x.requirementId === r)).slice(0, 4) : [];
     await simulateShort(`Uploading ${file.name}`, ['Registering file…', 'Extracting text (simulated)…', 'Retrieving passages…', affects.length ? `Re-assessing ${affects.join(', ')}…` : 'Matching against open rows…'], 2000);
-    const done = s.uploadEvidence(id, upload, text, true);
+    const done = s.uploadEvidence(id, upload, text, 'submission', true);
     if (done.includes(rowId)) {
       const nr = use1lod.getState().cases[id]?.run?.rows.find((r) => r.requirementId === rowId);
       toast.success(`${rowId} re-assessed: ${nr?.verdict.replace('_', ' ')} · ${nr?.confidence} confidence`, { description: nr?.citations[0] ? `New citation ${nr.citations[0].doc} §${nr.citations[0].section}` : undefined });
@@ -107,8 +147,9 @@ export default function AssessPage() {
           size="sm"
           variant="outline"
           onClick={() => {
-            logAudit({ line: '1lod', modelId: work!.modelId, type: 'Linked to MoC register', detail: `${row.requirementId} linked to MoC register entry MOC-PDMORT-A-03 (category A).` });
-            toast.success('Linked to MoC register', { description: 'Entry MOC-PDMORT-A-03 · category A · PD-MORT-NL v4' });
+            const entry = work!.modelId === 'MDL-01' ? 'MOC-PDMORT-A-03' : `MOC-${work!.modelId.replace('MDL-', 'M')}-A-01`;
+            logAudit({ line: '1lod', modelId: work!.modelId, type: 'Linked to MoC register', detail: `${row.requirementId} linked to MoC register entry ${entry} (category A).` });
+            toast.success('Linked to MoC register', { description: `Entry ${entry} · category A · ${model!.name}` });
           }}
         >
           <Link2 aria-hidden /> Link to MoC register
@@ -123,22 +164,29 @@ export default function AssessPage() {
 
   function detailExtras(row: AssessmentRow) {
     if (readOnly) return null;
-    const show = row.verdict === 'not_found' || (row.mitigation?.type === 'verification' && !/\b(CC|VR)-\d+/.test(row.mitigation.text)) || row.mitigation?.type === 'compensating';
+    const show = row.verdict === 'not_found' || row.verdict === 'partial' || (row.mitigation?.type === 'verification' && !/\b(CC|VR)-\d+/.test(row.mitigation.text)) || row.mitigation?.type === 'compensating';
     if (!show) return null;
+    const expected = expectedDocs(row.requirementId);
     return (
       <div className="mt-3 space-y-2 rounded-lg border border-line bg-bg/50 p-3">
+        {expected.length > 0 && (
+          <>
+            <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-ink-2">
+              <FilePlus2 className="size-3.5" aria-hidden /> Evidence may sit in a document you did not select
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {expected.map((d) => (
+                <Button key={d.id} size="sm" variant="outline" onClick={() => addExpected(d.id, row.requirementId)}>
+                  Add {d.title} v{finalVersionOf(d).version}
+                </Button>
+              ))}
+            </div>
+          </>
+        )}
         <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-ink-2">
           <FileUp className="size-3.5" aria-hidden /> Upload evidence
         </p>
         <FileDrop compact label="Drop evidence file (re-assesses this row)" onFiles={(f) => uploadEvidence(f[0], row.requirementId)} />
-        <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-          <span className="text-ink-3">Demo files:</span>
-          {sc!.evidenceFiles.map((f) => (
-            <button key={f.name} type="button" className="text-green-800 hover:underline" onClick={() => uploadEvidence(new File([new Uint8Array(f.sizeKb * 1024)], f.name, { type: 'application/pdf' }), row.requirementId)}>
-              {f.name}
-            </button>
-          ))}
-        </div>
       </div>
     );
   }
@@ -171,18 +219,13 @@ export default function AssessPage() {
         title="Self-assessment"
         subtitle={
           <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span>{sc.document.title} v{sc.document.finalVersion}</span>·<span>{work.reqSetId}</span>·<span>library v{run?.libraryVersion ?? '3.2'}</span>·<AiProviderBadgeLight />
+            <span>{selection.length} document(s)</span>·<span>{work.reqSetId}</span>·<span>library v{run?.libraryVersion ?? '3.2'}</span>·<AiProviderBadgeLight />
             {run && <span className="text-ink-3">run {run.id} · {fmtDateTime(run.startedAt)}</span>}
           </span>
         }
         actions={
           <>
             {run && <RunInspector run={run} docs={docs} row={rows.find((r) => r.requirementId === selected)} requirement={reqs.find((r) => r.id === selected)} />}
-            {!readOnly && !run && work.lockedAt && (
-              <Button onClick={runAssessment}>
-                <Play aria-hidden /> Run assessment
-              </Button>
-            )}
             {!readOnly && run && (
               <Button variant={work.changedRows.length ? 'default' : 'outline'} onClick={rerunChanged} disabled={!work.changedRows.length}>
                 <RefreshCw aria-hidden /> Re-run changed rows ({work.changedRows.length})
@@ -233,6 +276,84 @@ export default function AssessPage() {
         )}
       </div>
 
+      {(!run || editSel) && !readOnly ? (
+        <Card className="mb-4">
+          <CardHeader
+            title="Documentation to assess"
+            subtitle="Select the final documentation you will submit, from the model documentation library or by uploading it. The AI assesses every requirement in the locked set against exactly these documents."
+            actions={
+              confirmed && run ? (
+                <Button size="sm" variant="outline" onClick={() => setEditSel(false)}>
+                  Done
+                </Button>
+              ) : null
+            }
+          />
+          <div className="space-y-3 px-4 py-4">
+            <DocumentationPicker
+              modelId={work.modelId}
+              kind="final"
+              selection={selection}
+              onChange={changeSelection}
+              uploads={work.evidenceDocs.map((d) => ({ name: d.uploadName, note: 'uploaded — text extracted (simulated)' }))}
+              onUpload={async (files) => {
+                for (const f of files) {
+                  const text = await readTextIfPossible(f);
+                  s.uploadEvidence(id, { id: uid('UPL'), name: f.name, size: f.size, kind: 'evidence', uploadedAt: nowISO(), mime: f.type }, text, 'submission');
+                }
+                toast.success('Upload registered', { description: 'Recognised library documents are added to the selection.' });
+              }}
+            />
+            {!run && (
+              <div className="flex flex-wrap items-center gap-3 border-t border-line pt-3">
+                {confirmed ? (
+                  <span className="flex items-center gap-1.5 text-sm text-green-800">
+                    <CheckCircle2 className="size-4" aria-hidden /> {selection.length} document(s) confirmed {fmtDateTime(work.selectionConfirmedAt)}
+                  </span>
+                ) : (
+                  <Button
+                    variant="outline"
+                    disabled={!selection.length}
+                    onClick={() => {
+                      s.confirmSelection(id);
+                      toast.success('Documentation confirmed', { description: `${selection.length} document(s) will be assessed and included in the submission package.` });
+                    }}
+                  >
+                    <CheckCircle2 aria-hidden /> Confirm documentation ({selection.length})
+                  </Button>
+                )}
+                <Button onClick={runAssessment} disabled={!confirmed || !work.lockedAt || !selection.length}>
+                  <Play aria-hidden /> Run assessment
+                </Button>
+              </div>
+            )}
+          </div>
+        </Card>
+      ) : (
+        <Card className="mb-4 flex flex-wrap items-center gap-2 px-4 py-2.5 text-sm">
+          <span className="font-medium text-ink">Documentation assessed:</span>
+          {selection.map((d) => {
+            const doc = docsOf(d.modelId)?.documents.find((x) => x.id === d.docId);
+            return (
+              <span key={selKey(d)} className="rounded bg-bg px-2 py-0.5 text-xs text-ink-2">
+                {doc?.title ?? d.docId} v{d.version}
+                {d.modelId !== work.modelId && ` (${d.modelId})`}
+              </span>
+            );
+          })}
+          {work.evidenceDocs.map((d) => (
+            <span key={d.id} className="rounded bg-blue-100 px-2 py-0.5 text-xs text-blue">
+              {d.uploadName}
+            </span>
+          ))}
+          {!readOnly && (
+            <Button size="xs" variant="ghost" className="ml-auto" onClick={() => setEditSel(true)}>
+              <Pencil aria-hidden /> Change selection
+            </Button>
+          )}
+        </Card>
+      )}
+
       {run ? (
         <>
           <Card className="mb-4 flex flex-wrap items-center gap-x-8 gap-y-2 px-5 py-3.5">
@@ -275,12 +396,13 @@ export default function AssessPage() {
       ) : (
         <Card className="p-10 text-center text-sm text-ink-2">
           <p className="font-medium text-ink">No assessment run yet</p>
-          <p className="mt-1">{work.lockedAt ? 'Run the assessment: the AI drafts an assessment for every requirement in the locked set; you decide on each row.' : 'Lock the requirement set in Scoping first.'}</p>
-          {work.lockedAt && !readOnly && (
-            <Button className="mt-3" onClick={runAssessment}>
-              <Play aria-hidden /> Run assessment
-            </Button>
-          )}
+          <p className="mt-1">
+            {!work.lockedAt
+              ? 'Lock the requirement set in Scoping first.'
+              : confirmed
+                ? 'Run the assessment: the AI drafts an assessment for every requirement in the locked set against the confirmed documentation; you decide on each row.'
+                : 'Select and confirm the documentation to assess above.'}
+          </p>
         </Card>
       )}
 

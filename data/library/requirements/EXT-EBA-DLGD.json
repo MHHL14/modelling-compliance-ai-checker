@@ -1,0 +1,861 @@
+{
+  "docId": "EXT-EBA-DLGD",
+  "requirements": [
+    {
+      "id": "REQ-L14",
+      "article": "EBA/GL/2019/03",
+      "chapter": "General requirements on downturn LGD estimation",
+      "text": "Downturn LGD is estimated per EBA/GL/2019/03.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement REQ-L14, library v3.2 wording (umbrella requirement). Replaced in v3.3 by 'Downturn LGD covers all relevant components and includes yearly elevated LGDs' (ECB guide v4.0)."
+    },
+    {
+      "id": "EBA-DLGD-013",
+      "article": "EBA/GL/2019/03 para 13",
+      "chapter": "General requirements on downturn LGD estimation",
+      "text": "For downturn LGD quantification, the institution applies all relevant definitions and requirements of Sections 4, 6, 7, 8 and 9 of EBA/GL/2017/16.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 13."
+    },
+    {
+      "id": "EBA-DLGD-014a",
+      "article": "EBA/GL/2019/03 para 14(a)",
+      "chapter": "General requirements on downturn LGD estimation",
+      "text": "Downturn LGD is calibrated at least at the same level at which the long-run average LGD is calculated for calibration purposes (EBA/GL/2017/16 para 161).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 14(a)."
+    },
+    {
+      "id": "EBA-DLGD-014b",
+      "article": "EBA/GL/2019/03 para 14(b)",
+      "chapter": "Calibration segments",
+      "text": "Facilities covered by the LGD model are split into calibration segments with significantly different loss profiles, considering at least geographical areas, industry sectors and, for retail, product types with material exposure shares.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 14(b)."
+    },
+    {
+      "id": "EBA-DLGD-015a-i",
+      "article": "EBA/GL/2019/03 para 15(a)(i)",
+      "chapter": "Multiple downturn periods",
+      "text": "Where multiple downturn periods are identified, downturn LGD is calibrated for each identified downturn period and for each calibration segment in accordance with Section 4.3.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 15(a)(i)."
+    },
+    {
+      "id": "EBA-DLGD-015a-ii-iii",
+      "article": "EBA/GL/2019/03 para 15(a)(ii)-(iii)",
+      "chapter": "Multiple downturn periods",
+      "text": "Each period's downturn LGD estimates are applied to the current non-defaulted exposures, and the period yielding the highest average downturn LGD including final MoC is selected per calibration segment as the finally relevant downturn period.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 15(a)(ii)-(iii)."
+    },
+    {
+      "id": "EBA-DLGD-015a-iv",
+      "article": "EBA/GL/2019/03 para 15(a)(iv)",
+      "chapter": "Multiple downturn periods",
+      "text": "Where Section 5 or 6 can be applied to some downturn periods but not to others, only the Section 5/6 estimates are used and an appropriate Category A MoC is added for the periods lacking relevant loss data.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 15(a)(iv)."
+    },
+    {
+      "id": "EBA-DLGD-015b",
+      "article": "EBA/GL/2019/03 para 15(b)",
+      "chapter": "Multiple downturn periods",
+      "text": "Where a downturn period is not calibrated for a calibration segment, the institution provides evidence that the corresponding economic factors are not relevant for that segment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 15(b)."
+    },
+    {
+      "id": "EBA-DLGD-016a",
+      "article": "EBA/GL/2019/03 para 16(a)",
+      "chapter": "Final downturn LGD estimates",
+      "text": "Where separate methodologies are used, final downturn LGD plus final MoC is compared with long-run average LGD plus final MoC at the LRA calibration level, to ensure the more conservative value is used (CRR Art. 181(1)(b)).",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 16(a)."
+    },
+    {
+      "id": "EBA-DLGD-016b",
+      "article": "EBA/GL/2019/03 para 16(b)",
+      "chapter": "Final downturn LGD estimates",
+      "text": "Where a single estimate combines a long-run average LGD and a downturn add-on, the final MoC covers the uncertainty of both the long-run average estimation and the downturn adjustment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 16(b)."
+    },
+    {
+      "id": "EBA-DLGD-017",
+      "article": "EBA/GL/2019/03 para 17(a)-(b)",
+      "chapter": "Final downturn LGD estimates",
+      "text": "For models with cycle-sensitive risk drivers, the institution compares the current grade or pool distribution with its likely distribution under the selected downturn period and, where substantially different, adjusts downturn LGD to limit cyclicality.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 17(a)-(b)."
+    },
+    {
+      "id": "EBA-DLGD-018",
+      "article": "EBA/GL/2019/03 para 18",
+      "chapter": "Comparison with reference value",
+      "text": "Final downturn LGD is compared with the reference value (Section 8) calculated on the RDS at least per calibration segment, and any material difference is justified.",
+      "quote": "Institutions should justify any material difference between the final downturn LGD and the reference value.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 18."
+    },
+    {
+      "id": "EBA-DLGD-019b",
+      "article": "EBA/GL/2019/03 para 19(b)",
+      "chapter": "Comparison with reference value",
+      "text": "Where a material difference from the reference value cannot be justified, the institution re-assesses its downturn LGD quantification, in particular the completeness of downturn period identification and the aggregation of intermediate parameters.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 19(b)."
+    },
+    {
+      "id": "EBA-DLGD-020",
+      "article": "EBA/GL/2019/03 para 20",
+      "chapter": "Downturn LGD for defaulted exposures",
+      "text": "Downturn LGD estimation for defaulted exposures (LGD in-default) uses the same downturn period as identified for the corresponding non-defaulted exposures.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 20."
+    },
+    {
+      "id": "EBA-DLGD-021",
+      "article": "EBA/GL/2019/03 para 21(a)-(b)",
+      "chapter": "Downturn LGD for defaulted exposures",
+      "text": "The downturn component of LGD in-default is quantified per reference date or at default and inferred via the difference to ELBE; the non-defaulted downturn component is used instead only with evidence that this is more conservative.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 21(a)-(b)."
+    },
+    {
+      "id": "EBA-DLGD-022-023",
+      "article": "EBA/GL/2019/03 para 22-23",
+      "chapter": "Hierarchy of approaches",
+      "text": "Where sufficient relevant loss data is available during, before and after the considered downturn period, downturn LGD is calibrated on the observed impact (Section 5).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 22-23."
+    },
+    {
+      "id": "EBA-DLGD-024-025",
+      "article": "EBA/GL/2019/03 para 24-25",
+      "chapter": "Hierarchy of approaches",
+      "text": "Where loss data is insufficient to assess the impact, downturn LGD is calibrated on estimated impact (Section 6) where feasible, and only otherwise by the Section 7 approach.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 24-25."
+    },
+    {
+      "id": "EBA-DLGD-026a",
+      "article": "EBA/GL/2019/03 para 26(a)",
+      "chapter": "Hierarchy of approaches",
+      "text": "Where intermediate parameters are used, their aggregation into downturn LGD starts with the parameter showing the highest observed or estimated downturn impact, adding impacts on other parameters where necessary.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 26(a)."
+    },
+    {
+      "id": "EBA-DLGD-026b",
+      "article": "EBA/GL/2019/03 para 26(b)",
+      "chapter": "Hierarchy of approaches",
+      "text": "Downturn LGD estimates are not biased by cash flows received with a significantly longer time lag than the maximum recovery period (EBA/GL/2017/16 para 156) that may reflect post-downturn upturn conditions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 26(b)."
+    },
+    {
+      "id": "EBA-DLGD-027a-i-1",
+      "article": "EBA/GL/2019/03 para 27(a)(i)(1)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "The impact analysis shows the level of realised LGDs per default year, averaged over all defaults of that year that are closed or have reached the maximum time of recovery.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(a)(i)(1)."
+    },
+    {
+      "id": "EBA-DLGD-027a-i-2",
+      "article": "EBA/GL/2019/03 para 27(a)(i)(2)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "For incomplete recovery processes, marginal recoveries per year after default are computed and the recovery patterns compared with those of complete defaults for each default year.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(a)(i)(2)."
+    },
+    {
+      "id": "EBA-DLGD-027a-ii",
+      "article": "EBA/GL/2019/03 para 27(a)(ii)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "The impact analysis examines annual recoveries by relevant source of recovery, with and without repossessions where applicable and irrespective of default date, for evidence of decrease.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(a)(ii)."
+    },
+    {
+      "id": "EBA-DLGD-027a-iii",
+      "article": "EBA/GL/2019/03 para 27(a)(iii)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "The impact analysis examines, per default year, the number of defaults returning to non-defaulted status within a predefined fixed horizon appropriate for the type of exposure (cure rates).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(a)(iii)."
+    },
+    {
+      "id": "EBA-DLGD-027a-iv",
+      "article": "EBA/GL/2019/03 para 27(a)(iv)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "The impact analysis examines the time in default for all defaults per default year for evidence of increase.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(a)(iv)."
+    },
+    {
+      "id": "EBA-DLGD-027b",
+      "article": "EBA/GL/2019/03 para 27(b)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "The impact analysis uses as many points in time as the relevant loss data allows; consecutive years are merged only where annual data is scarce and merging adds value.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(b)."
+    },
+    {
+      "id": "EBA-DLGD-027c",
+      "article": "EBA/GL/2019/03 para 27(c)",
+      "chapter": "Impact analysis (observed impact)",
+      "text": "The impact analysis takes into account any lag between the downturn period and the time its impact becomes visible in the relevant loss data.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 27(c)."
+    },
+    {
+      "id": "EBA-DLGD-028",
+      "article": "EBA/GL/2019/03 para 28",
+      "chapter": "Downturn LGD based on observed impact",
+      "text": "Downturn LGD is calibrated with an estimation methodology coherent with the evidence obtained from the impact analysis.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 28."
+    },
+    {
+      "id": "EBA-DLGD-029",
+      "article": "EBA/GL/2019/03 para 29(a)-(b)",
+      "chapter": "Downturn LGD based on observed impact",
+      "text": "Long-run average LGD is used as downturn LGD only where no downturn impact is observed and the documented MoC covers all downturn-related uncertainty, with no more severe Category A and no additional Category B deficiencies.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 29(a)-(b)."
+    },
+    {
+      "id": "EBA-DLGD-030",
+      "article": "EBA/GL/2019/03 para 30",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "Before quantification, the institution selects the haircut approach, extrapolation approach or a combination based on appropriateness and coverage of all material components of economic loss, and documents the choice.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 30. The GL add that the haircut approach is most appropriate where a collateral market value or index is a model input and a relevant economic factor."
+    },
+    {
+      "id": "EBA-DLGD-031",
+      "article": "EBA/GL/2019/03 para 31",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "Under the haircut approach, the adjusted economic-factor inputs are based on the most severe observation of the factor in accordance with the severity specification of Reg. (EU) 2021/930 Art. 3.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 31. The GL refer to 'Article 3 of the RTS on economic downturn'; in the adopted Reg. 2021/930 severity is specified in Art. 1(2)(b) with the time-span in Art. 3."
+    },
+    {
+      "id": "EBA-DLGD-032a",
+      "article": "EBA/GL/2019/03 para 32(a)",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "An extrapolation approach is used only where a statistically significant dependency between realised LGDs, intermediate parameters or risk drivers and the relevant economic factors is established.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 32(a)."
+    },
+    {
+      "id": "EBA-DLGD-032b",
+      "article": "EBA/GL/2019/03 para 32(b)",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "Observed data from another period is used for an intermediate parameter only if major loss components use haircut or extrapolation, data covers at least the CRR Art. 181 minimum period including adverse conditions, and the parameter shows low volatility.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 32(b)."
+    },
+    {
+      "id": "EBA-DLGD-033",
+      "article": "EBA/GL/2019/03 para 33",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "Where observed data reflecting the downturn impact on an intermediate parameter or risk driver is available, it is used in combination with the haircut or extrapolation approach.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 33."
+    },
+    {
+      "id": "EBA-DLGD-034",
+      "article": "EBA/GL/2019/03 para 34",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "The dependency structure between intermediate parameters or risk drivers is reflected appropriately when aggregating them into downturn LGD.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 34."
+    },
+    {
+      "id": "EBA-DLGD-035",
+      "article": "EBA/GL/2019/03 para 35(a)-(b)",
+      "chapter": "Downturn LGD based on estimated impact",
+      "text": "For extrapolation approaches, the strictly positive Category A MoC is quantified via a confidence interval of the dependency model (32(a)) or via the ratio of downturn to observed economic-factor values (32(b)).",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 35(a)-(b)."
+    },
+    {
+      "id": "EBA-DLGD-035-036a",
+      "article": "EBA/GL/2019/03 para 35, 36(a)",
+      "chapter": "MoC for downturn LGD",
+      "text": "Where downturn LGD is based on estimated impact (Section 6) or on another approach (Section 7), a strictly positive Category A MoC is applied to reflect the lack of relevant loss data.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 35, 36(a)."
+    },
+    {
+      "id": "EBA-DLGD-036b",
+      "article": "EBA/GL/2019/03 para 36(b)",
+      "chapter": "Downturn LGD without observed or estimated impact",
+      "text": "Under the Section 7 approach, downturn LGD including final MoC is at least the lower of long-run average LGD plus 15 percentage points and 105%.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 36(b)."
+    },
+    {
+      "id": "EBA-DLGD-036c",
+      "article": "EBA/GL/2019/03 para 36, last subpara",
+      "chapter": "Downturn LGD without observed or estimated impact",
+      "text": "Where the Section 7 approach is used, the institution justifies to the competent authority why downturn LGD cannot be calibrated using the Section 5 or Section 6 approaches.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 36, last subpara."
+    },
+    {
+      "id": "EBA-DLGD-037a",
+      "article": "EBA/GL/2019/03 para 37(a)",
+      "chapter": "Reference value",
+      "text": "Using all available loss data, the institution selects the two default years with the highest ratio of total economic loss to total outstanding amount at default.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 37(a)."
+    },
+    {
+      "id": "EBA-DLGD-037b",
+      "article": "EBA/GL/2019/03 para 37(b)",
+      "chapter": "Reference value",
+      "text": "The reference value is calculated at least per calibration segment as the simple average of the average realised LGDs of the two selected default years.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation (downturn LGD) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2019/03 final report (6 March 2019), section 3 Guidelines, para 37(b)."
+    }
+  ]
+}

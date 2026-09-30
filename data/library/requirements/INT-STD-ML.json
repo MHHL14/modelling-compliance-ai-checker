@@ -1,0 +1,571 @@
+{
+  "docId": "INT-STD-ML",
+  "requirements": [
+    {
+      "id": "AI-STD-700-4.1",
+      "article": "AI-STD-700 §4.1",
+      "chapter": "Model design and justification",
+      "text": "The MDD justifies the use of an ML technique, describing the expected benefit over conventional techniques and the additional risks introduced.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-4.3",
+      "article": "AI-STD-700 §4.3; MRM-STD-021",
+      "chapter": "Model design and justification",
+      "text": "The full development pipeline is executable from version-controlled code with fixed random seeds and a recorded software environment, so that results can be reproduced.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-5.1",
+      "article": "AI-STD-700 §5.1",
+      "chapter": "Data",
+      "text": "Representativeness of the development data is demonstrated against the current portfolio; a PSI above 0.25 on the score or any of the ten most important features is explained and its impact assessed.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-5.2",
+      "article": "AI-STD-700 §5.2",
+      "chapter": "Data",
+      "text": "Data are split into development and test samples before feature selection or tuning, and the test sample includes an out-of-time portion covering at least the most recent twelve months of outcomes.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-5.3",
+      "article": "AI-STD-700 §5.3",
+      "chapter": "Data",
+      "text": "Every feature is constructed point-in-time using only information available at the prediction date; features derived from the target, post-event information or outcome-triggered processes are not used.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-5.4",
+      "article": "AI-STD-700 §5.4",
+      "chapter": "Data",
+      "text": "Any feature with univariate AUC above 0.90 against the target, or whose removal reduces model AUC by more than five percentage points, has a documented leakage review.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-5.5",
+      "article": "AI-STD-700 §5.5",
+      "chapter": "Data",
+      "text": "The RDS documentation analyses sources of bias in the data, including historical decision bias, label bias, under-representation and measurement bias, and documents mitigation measures and their effect.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-6.1",
+      "article": "AI-STD-700 §6.1",
+      "chapter": "Feature engineering and governance",
+      "text": "Every model feature is recorded in the Feature Register with definition, source system, lineage, transformation logic, business rationale, owner and availability at prediction time.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-6.2a",
+      "article": "AI-STD-700 §6.2",
+      "chapter": "Feature engineering and governance",
+      "text": "Protected attributes are not used as model features.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ML models whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-6.2b",
+      "article": "AI-STD-700 §6.2",
+      "chapter": "Feature engineering and governance",
+      "text": "Features are screened for proxy effects; a feature predicting a protected attribute with AUC above 0.65 or Cramér's V above 0.30 is removed or retained with a justification approved by the AI Governance Office.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ML models whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-6.3",
+      "article": "AI-STD-700 §6.3",
+      "chapter": "Feature engineering and governance",
+      "text": "Engineered features of Tier 1 models have an economic or behavioural interpretation; uninterpretable automatically generated features are not used.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-6.4",
+      "article": "AI-STD-700 §6.4",
+      "chapter": "Feature engineering and governance",
+      "text": "Feature selection is performed on the development sample only, and features with mean absolute SHAP below 1% of the total are removed unless retained for a documented business reason.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-7.1",
+      "article": "AI-STD-700 §7.1",
+      "chapter": "Training and overfitting controls",
+      "text": "The hyperparameter search space, search method, objective and selection criterion are documented, and tuning uses only the development sample, never the test sample.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-7.2",
+      "article": "AI-STD-700 §7.2",
+      "chapter": "Training and overfitting controls",
+      "text": "Overfitting is controlled through regularisation, early stopping, complexity constraints or equivalent techniques, and the controls applied are documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-7.3",
+      "article": "AI-STD-700 §7.3",
+      "chapter": "Training and overfitting controls",
+      "text": "The Gini gap between development and test samples is reported; a gap above five percentage points is justified and a gap above ten percentage points is not accepted for production.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-7.4",
+      "article": "AI-STD-700 §7.4",
+      "chapter": "Training and overfitting controls",
+      "text": "Monotonic constraints are imposed in the algorithm for features whose direction of effect is established by the risk logic, and the constraint choices are documented.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models, where risk logic establishes the direction of the main risk drivers.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-7.5",
+      "article": "AI-STD-700 §7.5",
+      "chapter": "Training and overfitting controls",
+      "text": "Compliance with monotonic constraints and plausibility of the learned relationships are verified with partial dependence or ICE analysis on the test sample.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-8.1",
+      "article": "AI-STD-700 §8.1",
+      "chapter": "Explainability",
+      "text": "Global SHAP importance on the test sample and dependence plots for at least the ten most important features are presented, confirming the main drivers are consistent with business expectations.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-8.2",
+      "article": "AI-STD-700 §8.2",
+      "chapter": "Explainability",
+      "text": "Local explanations are available for every prediction used in a decision, and for Tier 1 or customer- and alert-level decision models the local SHAP values are stored with each production prediction.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-8.3",
+      "article": "AI-STD-700 §8.3",
+      "chapter": "Explainability",
+      "text": "Models whose outputs lead to decisions communicated to customers or reviewed by analysts produce ranked reason codes mapped to documented, business-reviewed standard statements.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-8.4",
+      "article": "AI-STD-700 §8.4",
+      "chapter": "Explainability",
+      "text": "The fidelity of the explanation method is tested, including SHAP additivity to the model output and stability of explanations for similar inputs.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-9.1",
+      "article": "AI-STD-700 §9.1; PRIV-POL-001",
+      "chapter": "Fairness testing",
+      "text": "Fairness is tested before approval and at every periodic review, covering at least sex and age group and other protected attributes where lawfully available.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ML models whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-9.2a",
+      "article": "AI-STD-700 §9.2",
+      "chapter": "Fairness testing",
+      "text": "The ratio of favourable-outcome rates between the least and most favoured group is at least 0.80.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ML models whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-9.2b",
+      "article": "AI-STD-700 §9.2",
+      "chapter": "Fairness testing",
+      "text": "The difference in true-positive rates between groups does not exceed five percentage points, and calibration by group is reported for probability models.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ML models whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-9.3",
+      "article": "AI-STD-700 §9.3",
+      "chapter": "Fairness testing",
+      "text": "Fairness threshold breaches are analysed for root cause and mitigated or justified by a documented risk rationale, with AI Governance Office approval for retention.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ML models whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-10.2",
+      "article": "AI-STD-700 §10.2",
+      "chapter": "Performance, stability and benchmarking",
+      "text": "Stability is demonstrated across time periods, segments and repeated training with different seeds; for Tier 1 models the Gini standard deviation across five seeds does not exceed one percentage point.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-10.3",
+      "article": "AI-STD-700 §10.3",
+      "chapter": "Performance, stability and benchmarking",
+      "text": "The model is benchmarked against a simpler interpretable model on the same data and target; with a Gini uplift below two percentage points the simpler model is preferred unless otherwise justified.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-11.1",
+      "article": "AI-STD-700 §11.1; MRM-STD-050",
+      "chapter": "Retraining governance",
+      "text": "The MDD defines the retraining approach: triggers, frequency, data window, the pipeline elements that may change and the acceptance tests a retrained model must pass.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-11.3",
+      "article": "AI-STD-700 §11.3",
+      "chapter": "Retraining governance",
+      "text": "No continuous or online learning is used in production for Tier 1 and Tier 2 models.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    },
+    {
+      "id": "AI-STD-700-12.2",
+      "article": "AI-STD-700 §12.2; MRM-STD-040",
+      "chapter": "Monitoring of drift",
+      "text": "Input drift is monitored with the PSI on the score and top ten features, at least monthly for real-time models and quarterly otherwise, with amber above 0.10 and red above 0.25.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-700 v1.3)."
+    }
+  ]
+}

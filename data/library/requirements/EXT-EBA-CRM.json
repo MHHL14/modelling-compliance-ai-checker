@@ -1,0 +1,557 @@
+{
+  "docId": "EXT-EBA-CRM",
+  "requirements": [
+    {
+      "id": "EBA-CRM-012",
+      "article": "EBA/GL/2020/05 para 12",
+      "chapter": "General provisions",
+      "text": "Funded credit protection is recognised in LGD estimates under CRR Art. 181(1) only where it has not already been recognised in the exposure value via master netting agreements or on-balance sheet netting (CRR Art. 166).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 12."
+    },
+    {
+      "id": "EBA-CRM-015",
+      "article": "EBA/GL/2020/05 para 15",
+      "chapter": "General provisions",
+      "text": "Credit insurance is recognised in PD/LGD estimates only where it qualifies as unfunded credit protection, and is treated as a guarantee or credit derivative according to how it effectively functions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 15."
+    },
+    {
+      "id": "EBA-CRM-017",
+      "article": "EBA/GL/2020/05 para 17",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "Where LGD estimates reflect collateral, the collateral arrangement is legally effective and enforceable in all relevant jurisdictions, allowing liquidation or repossession within a reasonable time frame, including on obligor default, bankruptcy or insolvency.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 17."
+    },
+    {
+      "id": "EBA-CRM-018",
+      "article": "EBA/GL/2020/05 para 18(a)-(b)",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "Internal policies specify consistent revaluation rules, methods and monitoring frequency per collateral type, with more frequent monitoring where the market is subject to significant changes in conditions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Collateral revaluation rules are set in the institution's collateral management policy, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 18(a)-(b)."
+    },
+    {
+      "id": "EBA-CRM-019",
+      "article": "EBA/GL/2020/05 para 19(a)-(e)",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "Internal legal-certainty and valuation requirements are fully consistent with CRR Arts. 207(3)-(4)(d), 208(2)-(3), 209(2), 210(a),(g) and 212 for financial, immovable property, receivables, other physical and other funded collateral respectively.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Internal legal-certainty and valuation requirements are set in the institution's collateral and credit risk mitigation policies.",
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 19. CRR3 (Reg. (EU) 2024/1623) amended CRR Arts. 208 and 229 on immovable property valuation (incl. mortgage lending value); confirm consistency of this paragraph with the amended CRR."
+    },
+    {
+      "id": "EBA-CRM-019b",
+      "article": "EBA/GL/2020/05 para 19(b)(i)-(iv)",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "Immovable property collateral is valued by a qualified independent valuer, independent of the credit decision, at or below market value (or mortgage lending value where permitted), documented transparently and reduced for monitoring results and prior claims.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 19(b). CRR3 (Reg. (EU) 2024/1623) amended CRR Arts. 208 and 229 on immovable property valuation (incl. mortgage lending value); confirm consistency of this paragraph with the amended CRR."
+    },
+    {
+      "id": "EBA-CRM-019d",
+      "article": "EBA/GL/2020/05 para 19(d)",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "Other physical collateral is valued at market value, being the estimated amount for which it would exchange between a willing buyer and a willing seller in an arm's-length transaction.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 19(d)."
+    },
+    {
+      "id": "EBA-CRM-020",
+      "article": "EBA/GL/2020/05 para 20(a)-(b)",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "A written legal opinion by legal counsel independent of the credit decision process confirms enforceability of each type of collateral arrangement in all relevant jurisdictions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Legal opinions on collateral enforceability are obtained by the legal function and evidenced in the legal opinion register.",
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 20(a)-(b)."
+    },
+    {
+      "id": "EBA-CRM-021",
+      "article": "EBA/GL/2020/05 para 21",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "An additional legal opinion is obtained for any substantive variation of a collateral arrangement, at least for changes in the applicable legal framework or application to other exposure types, exposure classes or obligor types.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Additional legal opinions are obtained by the legal function and evidenced in the legal opinion register.",
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 21."
+    },
+    {
+      "id": "EBA-CRM-023",
+      "article": "EBA/GL/2020/05 para 23(a)-(e)",
+      "chapter": "Eligibility — funded credit protection",
+      "text": "For other physical collateral, legal opinions cover at least the governing-law jurisdiction, the registration (or owner) jurisdiction, the likely jurisdiction of realisation and any other relevant jurisdiction.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The jurisdictional coverage of legal opinions is evidenced in the legal opinion register, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 23(a)-(e)."
+    },
+    {
+      "id": "EBA-CRM-024-025",
+      "article": "EBA/GL/2020/05 para 24-25",
+      "chapter": "Eligibility — unfunded credit protection",
+      "text": "A written legal opinion by independent legal counsel confirms enforceability of each type of unfunded credit protection in all relevant jurisdictions, and is renewed for any substantive variation of the contract terms.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Legal opinions on unfunded credit protection are obtained by the legal function and evidenced in the legal opinion register.",
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 24-25."
+    },
+    {
+      "id": "EBA-CRM-029",
+      "article": "EBA/GL/2020/05 para 29",
+      "chapter": "Effects of funded credit protection",
+      "text": "Realised LGD for exposures under master netting or on-balance sheet netting is computed on the fully adjusted exposure value E*, without counting netting cash flows as post-default recoveries.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 29."
+    },
+    {
+      "id": "EBA-CRM-030a",
+      "article": "EBA/GL/2020/05 para 30(a)",
+      "chapter": "Effects of funded credit protection",
+      "text": "LGD estimates are not reduced for collateral consisting of a liability of the obligor ranking lower than or pari passu with the obligation to the institution.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 30(a)."
+    },
+    {
+      "id": "EBA-CRM-030b",
+      "article": "EBA/GL/2020/05 para 30(b)",
+      "chapter": "Effects of funded credit protection",
+      "text": "For other than first-rank claims on collateral, LGD estimates appropriately reflect the institution's subordinated position.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 30(b)."
+    },
+    {
+      "id": "EBA-CRM-030c",
+      "article": "EBA/GL/2020/05 para 30(c)",
+      "chapter": "Effects of funded credit protection",
+      "text": "For other physical collateral, LGD estimates consider the likely location of the collateral over the loan's life and its effect on the ability to gain control and liquidate it expeditiously.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 30(c)."
+    },
+    {
+      "id": "EBA-CRM-032",
+      "article": "EBA/GL/2020/05 para 32",
+      "chapter": "Effects of unfunded credit protection",
+      "text": "Policies for recognising unfunded credit protection specify for each rating system which method of para 31 is used (modelling, substitution of risk parameters, override, substitution of risk weight) and are applied consistently over time.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 31-32. CRR3 (Reg. (EU) 2024/1623) amended the IRB CRM framework (incl. CRR Arts. 161(3), 164, 183 and removal of the double-default treatment) and the GL have not yet been updated; confirm continued applicability."
+    },
+    {
+      "id": "EBA-CRM-033",
+      "article": "EBA/GL/2020/05 para 33",
+      "chapter": "Effects of unfunded credit protection",
+      "text": "Cash flows from ineligible unfunded credit protection are treated as received without protection, while their source is recorded, their level monitored and PD/LGD adjusted where needed to avoid bias.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 33."
+    },
+    {
+      "id": "EBA-CRM-034",
+      "article": "EBA/GL/2020/05 para 34(a)-(c)",
+      "chapter": "Modelling approach for guarantees",
+      "text": "Under the modelling approach, LGD estimates conservatively consider currency mismatch, correlation between guarantor and obligor, and the defaulted status of the guarantor.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 34(a)-(c)."
+    },
+    {
+      "id": "EBA-CRM-035",
+      "article": "EBA/GL/2020/05 para 35",
+      "chapter": "Modelling approach for guarantees",
+      "text": "Guarantees modelled as risk drivers adjust LGD only, or PD and LGD with empirical evidence of PD impact and no double counting; adjusting only PD is not permitted.",
+      "quote": "The sole adjustment of the PD estimates should be deemed inappropriate in any circumstance.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 35."
+    },
+    {
+      "id": "EBA-CRM-036",
+      "article": "EBA/GL/2020/05 para 36(a)-(c)",
+      "chapter": "Substitution approaches",
+      "text": "The substitution of risk parameters approach is used only where the protection is eligible under CRR Part Three Title II Chapter 4, direct costs of exercising it are negligible, and the guarantor is not in default.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 36. CRR3 (Reg. (EU) 2024/1623) amended the IRB CRM framework (incl. CRR Arts. 161(3), 164, 183 and removal of the double-default treatment) and the GL have not yet been updated; confirm continued applicability."
+    },
+    {
+      "id": "EBA-CRM-037c",
+      "article": "EBA/GL/2020/05 para 37(c)",
+      "chapter": "Substitution approaches",
+      "text": "Guaranteed exposures (or parts) under substitution of risk parameters or risk weight are assigned to a separate scope of application of the LGD model and their risk weight is calculated separately.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 37(c). CRR3 (Reg. (EU) 2024/1623) amended the IRB CRM framework (incl. CRR Arts. 161(3), 164, 183 and removal of the double-default treatment) and the GL have not yet been updated; confirm continued applicability."
+    },
+    {
+      "id": "EBA-CRM-038",
+      "article": "EBA/GL/2020/05 para 38(a)-(c)",
+      "chapter": "Substitution approaches",
+      "text": "For partially guaranteed exposures, realised LGD of the uncovered part allocates guarantor cash flows and guarantee-related direct costs to the covered part, other cash flows and direct costs to the uncovered part, and indirect costs per EBA/GL/2017/16 para 113.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 38(a)-(c)."
+    },
+    {
+      "id": "EBA-CRM-040",
+      "article": "EBA/GL/2020/05 para 40",
+      "chapter": "Substitution approaches",
+      "text": "Where substitution of risk parameters is applied, validation compares expected loss of comparable direct exposures to the guarantor with observed loss rates of guaranteed exposures that defaulted.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 40."
+    },
+    {
+      "id": "EBA-CRM-042",
+      "article": "EBA/GL/2020/05 para 42",
+      "chapter": "Risk weight floor",
+      "text": "Where recognising unfunded credit protection reduces the risk weight, the final risk weight is not lower than that of a comparable direct exposure to the guarantor (CRR Arts. 161(3), 164(2)).",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 42. CRR3 (Reg. (EU) 2024/1623) amended the IRB CRM framework (incl. CRR Arts. 161(3), 164, 183 and removal of the double-default treatment) and the GL have not yet been updated; confirm continued applicability."
+    },
+    {
+      "id": "EBA-CRM-046",
+      "article": "EBA/GL/2020/05 para 46(a)-(b)",
+      "chapter": "Multiple credit risk mitigation techniques",
+      "text": "Clear policies set the allocation, sequence and recognition of funded and unfunded protection consistent with the recovery process, and no protection is recognised twice.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using own-LGD estimates (A-IRB) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2020/05 (6 May 2020) text, para 46(a)-(b)."
+    }
+  ]
+}

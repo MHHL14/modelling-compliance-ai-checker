@@ -1,0 +1,2253 @@
+{
+  "docId": "EXT-CRR-IRB",
+  "requirements": [
+    {
+      "id": "CRR-143-3",
+      "article": "CRR Art. 143(3)",
+      "chapter": "Permission and model changes",
+      "text": "The institution obtains the prior permission of the competent authority for material changes to the range of application of a rating system and for material changes to the rating system itself.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obtaining prior permission for material changes is an obligation of the institution towards the competent authority, evidenced in permission applications.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3. Materiality classification per Delegated Regulation (EU) No 529/2014 (see EXT-RTS-MAT)."
+    },
+    {
+      "id": "CRR-146",
+      "article": "CRR Art. 146",
+      "chapter": "Permission and model changes",
+      "text": "Where the institution ceases to comply with the IRB requirements, it notifies the competent authority and either presents and realises a plan for a timely return to compliance or demonstrates that the effect of non-compliance is immaterial.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Notification of non-compliance and the return-to-compliance plan are obligations of the institution towards the competent authority.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-144-1-a",
+      "article": "CRR Art. 144(1)(a)",
+      "chapter": "Use test and experience test",
+      "text": "The rating systems provide a meaningful assessment of obligor and transaction characteristics, a meaningful differentiation of risk and accurate and consistent quantitative estimates of risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-144-1-b",
+      "article": "CRR Art. 144(1)(b)",
+      "chapter": "Use test and experience test",
+      "text": "Internal ratings and default and loss estimates used in the own funds calculation play an essential role in the risk management and decision-making process and in the credit approval, internal capital allocation and corporate governance functions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3. Use test; assessment methodology in Delegated Regulation (EU) 2022/439 Art. 18–21."
+    },
+    {
+      "id": "CRR-145-1",
+      "article": "CRR Art. 145(1)",
+      "chapter": "Use test and experience test",
+      "text": "The institution has used rating systems broadly in line with the IRB requirements for internal risk measurement and management purposes for at least three years prior to its qualification to use the IRB approach.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The three-year prior-use experience test is an institution-level permission condition evidenced in the IRB application, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-147a-1",
+      "article": "CRR Art. 147a(1)",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "The institution does not use own estimates of LGD or conversion factors for exposures to institutions, financial sector entities and large corporates with consolidated annual revenues above EUR 500 million; these exposures are treated under the Foundation IRB approach.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of LGD or conversion factors only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Restriction introduced by CRR3 (Art. 147a). Substance certain; the point lettering within Art. 147a(1) and the exact scope wording (e.g. financial sector entities) not verified against the official text."
+    },
+    {
+      "id": "CRR-148-1",
+      "article": "CRR Art. 148(1)",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "Once the institution has implemented the IRB approach for a type of exposures within an exposure class, it applies the IRB approach to all exposures within that exposure class, unless permission for permanent partial use has been granted.",
+      "quote": "it shall do so for all exposures within that exposure class",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Application of the IRB approach across an exposure class is evidenced in the IRB roll-out plan and permanent partial use records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-148-1-seq",
+      "article": "CRR Art. 148(1)",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "Sequential implementation of the IRB approach across types of exposures, business units or the use of own LGD and conversion factor estimates follows a roll-out plan agreed with the competent authority.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Sequential implementation is governed by the IRB roll-out plan agreed with the competent authority, not by model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Implementation period set by the competent authority under Art. 148(2)."
+    },
+    {
+      "id": "CRR-148-3",
+      "article": "CRR Art. 148(3)",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "The institution does not use the flexibility of sequential implementation selectively to achieve reduced own funds requirements for exposures or business units not yet covered by the IRB approach or own estimates.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Use of sequential implementation is an institution-level decision evidenced in the IRB roll-out plan.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-150-1",
+      "article": "CRR Art. 150(1)",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "The institution applies the Standardised Approach to types of exposures within an IRB exposure class only with the prior permission of the competent authority and only where those exposures are immaterial in terms of size and perceived risk profile.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Permanent partial use is an institution-level permission evidenced in PPU applications and approvals, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Art. 150 was restructured by CRR3 (new para 1a for specific exposure types; EBA guidelines on immateriality under para 2a). Substance confirmed; exact subparagraph of the immateriality condition to be confirmed."
+    },
+    {
+      "id": "CRR-160-1",
+      "article": "CRR Art. 160(1)",
+      "chapter": "Input floors",
+      "text": "The PD assigned to exposures to corporates and institutions is not lower than 0.05%.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to PD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "CRR3 PD input floor (raised from 0.03%). Value and paragraph confirmed from CRR3 text."
+    },
+    {
+      "id": "CRR-163-1",
+      "article": "CRR Art. 163(1)",
+      "chapter": "Input floors",
+      "text": "The PD assigned to retail exposures is not lower than 0.1% for QRRE revolvers and not lower than 0.05% for all other retail exposures.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail PD estimation only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "CRR3 retail PD input floors; values certain, point lettering within Art. 163(1) not verified."
+    },
+    {
+      "id": "CRR-161-5",
+      "article": "CRR Art. 161(5)",
+      "chapter": "Input floors",
+      "text": "Own LGD estimates for corporate exposures are not lower than 25% if unsecured and, if fully secured by funded credit protection, 0% (financial collateral), 10% (receivables), 10% (immovable property) or 15% (other physical collateral); partially secured exposures use the formula in Art. 161(6).",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_lgd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "CRR3 LGD input floor values confirmed (Art. 164(4a)(c) cross-refers to the formula in Art. 161(6)); paragraph number 161(5) for the floor table inferred, to be confirmed."
+    },
+    {
+      "id": "CRR-164-4-a",
+      "article": "CRR Art. 164(4); Art. 164(4a)(d)",
+      "chapter": "Input floors",
+      "text": "Own LGD estimates for retail exposures secured by residential property are not lower than 5%, irrespective of the level of collateral.",
+      "quote": "the applicable LGD input floor shall be fixed at 5 % irrespective of the level of collateral",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_lgd",
+          "mortgage"
+        ]
+      },
+      "not_applicable_reason": "Applies to own-LGD estimates for retail exposures secured by residential property only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-164-4-b",
+      "article": "CRR Art. 164(4); Art. 164(4a)(c)",
+      "chapter": "Input floors",
+      "text": "Own LGD estimates are not lower than 50% for QRRE and, for other retail exposures, 30% if unsecured and 0%, 10%, 10% or 15% if secured by financial collateral, receivables, immovable property or other physical collateral; partial security uses the Art. 161(6) formula.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_lgd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Table 1 of Art. 164(4)."
+    },
+    {
+      "id": "CRR-166-8b",
+      "article": "CRR Art. 166(8b)",
+      "chapter": "Input floors",
+      "text": "Own estimates of conversion factors (IRB-CCF) are used only for undrawn revolving commitments that would not be subject to a 100% conversion factor under the Standardised Approach.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). CRR3 restriction of own CCF estimates."
+    },
+    {
+      "id": "CRR-166-8c",
+      "article": "CRR Art. 166(8c)",
+      "chapter": "Input floors",
+      "text": "The exposure value of each exposure for which IRB-CCF is used is not lower than the drawn amount plus 50% of the off-balance-sheet exposure calculated using the Standardised Approach conversion factor.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). CRR3 EAD input floor."
+    },
+    {
+      "id": "CRR-170-1-b-1",
+      "article": "CRR Art. 170(1)(b)",
+      "chapter": "Rating system structure",
+      "text": "The obligor rating scale reflects exclusively the quantification of the risk of obligor default.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to rating systems for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-170-1-b-2",
+      "article": "CRR Art. 170(1)(b)",
+      "chapter": "Rating system structure",
+      "text": "The obligor rating scale has a minimum of seven grades for non-defaulted obligors and one grade for defaulted obligors.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to rating systems for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-170-1-d",
+      "article": "CRR Art. 170(1)(d)",
+      "chapter": "Rating system structure",
+      "text": "Where the portfolio is concentrated in a market segment and range of default risk, there are enough obligor grades within that range; significant concentrations within a single grade are supported by convincing empirical evidence of a reasonably narrow PD band.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to rating systems for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-170-2",
+      "article": "CRR Art. 170(2)",
+      "chapter": "Rating system structure",
+      "text": "Where own LGD estimates are used, the rating system incorporates a distinct facility rating scale that exclusively reflects LGD-related transaction characteristics.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_lgd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-170-3-b",
+      "article": "CRR Art. 170(3)(b)",
+      "chapter": "Rating system structure",
+      "text": "The number of exposures in each retail grade or pool is sufficient for meaningful quantification and validation of loss characteristics, and the distribution of exposures and obligors avoids excessive concentrations.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-170-3-c",
+      "article": "CRR Art. 170(3)(c)",
+      "chapter": "Rating system structure",
+      "text": "The retail assignment process provides meaningful differentiation of risk, groups sufficiently homogeneous exposures and allows accurate and consistent estimation of loss characteristics at grade or pool level.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-170-4",
+      "article": "CRR Art. 170(4)",
+      "chapter": "Rating system structure",
+      "text": "Retail exposures are assigned to grades or pools taking into account obligor risk characteristics, transaction risk characteristics including product and collateral types, and delinquency.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-171-1-a",
+      "article": "CRR Art. 171(1)(a)",
+      "chapter": "Assignment to grades or pools",
+      "text": "Grade and pool definitions and criteria are sufficiently detailed for obligors or facilities posing similar risk to be assigned consistently to the same grade or pool across lines of business, departments and geographic locations.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-171-1-b",
+      "article": "CRR Art. 171(1)(b)",
+      "chapter": "Assignment to grades or pools",
+      "text": "The documentation of the rating process allows third parties to understand the assignment of exposures to grades or pools, to replicate those assignments and to evaluate their appropriateness.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-171-2",
+      "article": "CRR Art. 171(2)",
+      "chapter": "Assignment to grades or pools",
+      "text": "All relevant and current information is taken into account in assigning obligors and facilities to grades or pools; the less information available, the more conservative the assignment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-172-3-a",
+      "article": "CRR Art. 172(3)",
+      "chapter": "Assignment to grades or pools",
+      "text": "The institution documents the situations in which human judgement may override the inputs or outputs of the assignment process and the personnel responsible for approving overrides.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-172-3-b",
+      "article": "CRR Art. 172(3)",
+      "chapter": "Assignment to grades or pools",
+      "text": "Overrides are recorded together with the responsible personnel, and the performance of exposures whose assignment was overridden is analysed, including an assessment of the performance of the responsible personnel.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-173-1-b",
+      "article": "CRR Art. 173(1)(b)",
+      "chapter": "Assignment to grades or pools",
+      "text": "Obligor and facility assignments are updated at least annually, more frequently for high-risk obligors and problem exposures, and a new rating is assigned when material information on the obligor or exposure becomes available.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to rating systems for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-173-2",
+      "article": "CRR Art. 173(2)",
+      "chapter": "Assignment to grades or pools",
+      "text": "Retail assignments are updated at least annually, or the loss characteristics and delinquency status of each pool are reviewed at least annually together with a representative review of individual exposures within each pool.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-174-a",
+      "article": "CRR Art. 174(a)",
+      "chapter": "Use of models",
+      "text": "The model has good predictive power, its input variables form a reasonable and effective basis for the predictions, it has no material biases, and own funds requirements are not distorted by its use.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-174-b",
+      "article": "CRR Art. 174(b)",
+      "chapter": "Use of models",
+      "text": "The institution has a process for vetting data inputs into the model, including an assessment of the accuracy, completeness and appropriateness of the data.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-174-d",
+      "article": "CRR Art. 174(d)",
+      "chapter": "Use of models",
+      "text": "The institution has a regular cycle of model validation that includes monitoring of model performance and stability, review of the model specification and testing of model outputs against outcomes.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-174-e",
+      "article": "CRR Art. 174(e)",
+      "chapter": "Use of models",
+      "text": "The model is complemented by human judgement and oversight aimed at detecting and limiting errors from model weaknesses, using relevant information not considered by the model; how judgement and model results are combined is documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-1",
+      "article": "CRR Art. 175(1)",
+      "chapter": "Documentation of rating systems",
+      "text": "The design and operational details of the rating systems are documented, evidencing compliance with the IRB requirements and covering portfolio differentiation, rating criteria, responsibilities, frequency of assignment reviews and management oversight.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-2",
+      "article": "CRR Art. 175(2)",
+      "chapter": "Documentation of rating systems",
+      "text": "The institution documents the rationale for and the analysis supporting its choice of rating criteria.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-3",
+      "article": "CRR Art. 175(3)",
+      "chapter": "Documentation of rating systems",
+      "text": "The definitions of default and loss used internally are documented and their consistency with the definitions in the CRR is demonstrated.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-4-a",
+      "article": "CRR Art. 175(4)(a)",
+      "chapter": "Documentation of rating systems",
+      "text": "For statistical models, the documentation gives a detailed outline of the theory, assumptions and mathematical and empirical basis of the assignment of estimates, and of the data sources used to estimate the model.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-4-b",
+      "article": "CRR Art. 175(4)(b)",
+      "chapter": "Documentation of rating systems",
+      "text": "The documentation establishes a rigorous statistical process for validating the model, including out-of-time and out-of-sample performance tests.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-4-c",
+      "article": "CRR Art. 175(4)(c)",
+      "chapter": "Documentation of rating systems",
+      "text": "The documentation indicates any circumstances under which the model does not work effectively.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-175-5",
+      "article": "CRR Art. 175(5)",
+      "chapter": "Documentation of rating systems",
+      "text": "Use of a third-party vendor model with proprietary technology does not exempt the institution from the documentation or any other IRB requirement.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-176-1-a-d",
+      "article": "CRR Art. 176(1)(a)–(d)",
+      "chapter": "Data maintenance",
+      "text": "The institution stores complete rating histories on obligors and recognised guarantors, including the dates ratings were assigned, the key data and methodology used and the person responsible for the assignment.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to rating systems for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-176-1-e-g",
+      "article": "CRR Art. 176(1)(e)–(g)",
+      "chapter": "Data maintenance",
+      "text": "The institution stores the identity of defaulted obligors and exposures, the date and circumstances of each default, and data on PDs, realised default rates and rating migration per grade.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to rating systems for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-176-2",
+      "article": "CRR Art. 176(2)",
+      "chapter": "Data maintenance",
+      "text": "The institution stores complete histories of facility ratings and LGD and conversion factor estimates, with dates, key data, methodology and responsible persons, and estimated and realised LGDs and conversion factors and loss components per defaulted exposure.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead"
+        ],
+        "all": [
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to own LGD / conversion factor estimates for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-176-4",
+      "article": "CRR Art. 176(4)",
+      "chapter": "Data maintenance",
+      "text": "For retail, the institution stores the data used to allocate exposures to grades or pools, estimated PDs, LGDs and conversion factors per grade or pool, defaulted exposures with their grades or pools in the year before default, and realised LGDs and conversion factors.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-177-1",
+      "article": "CRR Art. 177(1)",
+      "chapter": "Stress testing",
+      "text": "The institution has sound stress testing processes for the assessment of capital adequacy, identifying possible events or future changes in economic conditions that could adversely affect its credit exposures and its ability to withstand them.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Stress testing processes for capital adequacy are an institution-wide framework evidenced in the stress testing programme and ICAAP.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-177-2",
+      "article": "CRR Art. 177(2)",
+      "chapter": "Stress testing",
+      "text": "The institution regularly performs a credit risk stress test based on severe but plausible recession scenarios, assessing rating migration and the effect on total credit risk own funds requirements, covering the vast majority of its total exposure.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The regular IRB credit risk stress test is an institution-wide exercise evidenced in the IRB stress testing framework and ICAAP, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-178-1-a",
+      "article": "CRR Art. 178(1)(a)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "Default is recognised when the institution considers the obligor unlikely to pay its credit obligations to the institution, its parent or subsidiaries in full, without recourse to actions such as realising security.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3. Detailed in EBA/GL/2016/07 (see EXT-EBA-DOD)."
+    },
+    {
+      "id": "CRR-178-1-b",
+      "article": "CRR Art. 178(1)(b)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "Default is recognised when the obligor is more than 90 days past due on any material credit obligation to the institution, its parent or subsidiaries.",
+      "quote": "the obligor is more than 90 days past due on any material credit obligation",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3. Detailed in EBA/GL/2016/07 (see EXT-EBA-DOD)."
+    },
+    {
+      "id": "CRR-178-2-d",
+      "article": "CRR Art. 178(2)(d)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "Materiality of past-due credit obligations is assessed against the threshold set by the competent authority, comprising an absolute and a relative component, in accordance with Delegated Regulation (EU) 2018/171.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3. Threshold values per national competent authority / ECB Regulation (EU) 2018/1845."
+    },
+    {
+      "id": "CRR-178-2-e",
+      "article": "CRR Art. 178(2)(e)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "The institution has documented policies on counting days past due, in particular on the re-ageing of facilities and the granting of extensions, amendments or deferrals, renewals, and the netting of existing accounts.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-178-3-a-c",
+      "article": "CRR Art. 178(3)(a)–(c)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "Non-accrued status, a specific credit risk adjustment resulting from a significant perceived decline in credit quality, and the sale of a credit obligation at a material credit-related economic loss are treated as indications of unlikeliness to pay.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3. Detailed in EBA/GL/2016/07 (see EXT-EBA-DOD)."
+    },
+    {
+      "id": "CRR-178-3-d",
+      "article": "CRR Art. 178(3)(d)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "A distressed restructuring likely to result in a diminished financial obligation through material forgiveness or postponement of principal, interest or fees is treated as an indication of unlikeliness to pay.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Substance confirmed; CRR3 amended point (d) (treatment of forbearance measures / diminished financial obligation) — exact current wording to be confirmed."
+    },
+    {
+      "id": "CRR-178-3-e-f",
+      "article": "CRR Art. 178(3)(e)–(f)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "The institution filing for the obligor's bankruptcy or similar order, or the obligor seeking or being placed in bankruptcy or similar protection, is treated as an indication of unlikeliness to pay.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-178-4",
+      "article": "CRR Art. 178(4)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "Where external data are used that are not consistent with the institution's definition of default, appropriate adjustments are made to achieve broad equivalence with that definition.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-178-5",
+      "article": "CRR Art. 178(5)",
+      "chapter": "Definition of default (Art. 178)",
+      "text": "An obligor or facility is returned to non-defaulted status only when no default trigger continues to apply; a subsequent triggering of a default event is treated as a new default.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-179-1-a-1",
+      "article": "CRR Art. 179(1)(a)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Estimates of PD, LGD, conversion factors and EL incorporate all relevant data, information and methods and are derived from historical experience and empirical evidence, not purely from judgemental considerations.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-a-2",
+      "article": "CRR Art. 179(1)(a)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Estimates are plausible and intuitive and are based on the material drivers of the respective risk parameters.",
+      "quote": "The estimates shall be plausible and intuitive and shall be based on the material drivers of the respective risk parameters.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-a-3",
+      "article": "CRR Art. 179(1)(a)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "The less data the institution has, the more conservative its estimation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-b",
+      "article": "CRR Art. 179(1)(b)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Estimates are representative of long-run experience.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Point (b) also requires a breakdown of loss experience by risk drivers."
+    },
+    {
+      "id": "CRR-179-1-c-1",
+      "article": "CRR Art. 179(1)(c)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Changes in lending practice or in the process for pursuing recoveries over the observation periods used for estimation are taken into account.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-c-2",
+      "article": "CRR Art. 179(1)(c)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Estimates reflect technical advances, new data and other information as it becomes available, and are reviewed when new information comes to light, but at least annually.",
+      "quote": "Institutions shall review their estimates when new information comes to light but at least on an annual basis",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "REQ-D15",
+      "article": "CRR Art. 179(1)(d); EBA/GL/2017/16",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "The RDS is representative of the current portfolio (risk drivers and default-rate levels).",
+      "quote": "the population of exposures represented in the data used for estimation",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (text and article fixed). Art. 179(1)(d) representativeness confirmed against the consolidated CRR3 text; detailed representativeness analysis in EBA/GL/2017/16 section 5."
+    },
+    {
+      "id": "CRR-179-1-d-2",
+      "article": "CRR Art. 179(1)(d)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "The economic or market conditions underlying the estimation data are relevant to current and foreseeable conditions.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-d-3",
+      "article": "CRR Art. 179(1)(d)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "The number of exposures in the sample and the data period used for quantification are sufficient to provide confidence in the accuracy and robustness of the estimates.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-f-1",
+      "article": "CRR Art. 179(1)(f)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "To overcome biases, the institution includes appropriate adjustments in its estimates to the extent possible, before adding a margin of conservatism.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Wording of point (f) as amended by CRR3."
+    },
+    {
+      "id": "REQ-D21",
+      "article": "CRR Art. 179(1)(f); EBA/GL/2017/16 section 4.4; CRM-STD-101",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Data deficiencies are identified and linked to a Margin of Conservatism category.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (text and article fixed). CRR Art. 179(1)(f) confirmed against the consolidated CRR3 text; EBA/GL/2017/16 section 4.4 (MoC categories A–C). CRM-STD-101 is an internal reference not covered by this file."
+    },
+    {
+      "id": "CRR-179-1-f-2",
+      "article": "CRR Art. 179(1)(f)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "A sufficient margin of conservatism related to the expected range of estimation errors is added to the estimates; the less satisfactory the methods and data, the larger the margin.",
+      "quote": "it shall add to its estimates a sufficient margin of conservatism that is related to the expected range of estimation errors",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-1-sub2",
+      "article": "CRR Art. 179(1), second subparagraph",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Where different estimates are used for the calculation of risk weights and for internal purposes, this is documented and reasonable.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-179-2",
+      "article": "CRR Art. 179(2)",
+      "chapter": "Risk quantification — overall requirements",
+      "text": "Where pooled data are used, the rating systems and criteria of the pool members are similar to the institution's own, the pool is representative of the portfolio and the data are used consistently over time; the institution retains responsibility and in-house understanding.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-180-1-a",
+      "article": "CRR Art. 180(1)(a)",
+      "chapter": "PD estimation",
+      "text": "PDs are estimated by obligor grade from long-run averages of one-year default rates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to PD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-180-1-e",
+      "article": "CRR Art. 180(1)(e)",
+      "chapter": "PD estimation",
+      "text": "Where internal default experience is used, the analysis demonstrates that estimates reflect underwriting standards and differences between the rating system that generated the data and the current one; a greater margin of conservatism is added where these have changed.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to PD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-180-1-f",
+      "article": "CRR Art. 180(1)(f)",
+      "chapter": "PD estimation",
+      "text": "Where internal grades are mapped to external rating scales, the mapping is based on a comparison of rating criteria and of ratings of common obligors, compares default definitions, avoids biases and is documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to PD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-180-1-h",
+      "article": "CRR Art. 180(1)(h)",
+      "chapter": "PD estimation",
+      "text": "The historical observation period used for PD estimation covers at least five years for at least one data source, and a longer period is used where available and relevant.",
+      "quote": "at least five years for at least one source",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to PD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-180-1-i",
+      "article": "CRR Art. 180(1)(i)",
+      "chapter": "PD estimation",
+      "text": "The long-run average default rate is calculated as an arithmetic average based on the number of obligors (count weighted); exposure-weighted averages are not used.",
+      "quote": "arithmetic average based on the number of obligors (count weighted)",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to PD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Point (i) inserted by CRR3."
+    },
+    {
+      "id": "CRR-180-2-a",
+      "article": "CRR Art. 180(2)(a)",
+      "chapter": "PD estimation",
+      "text": "Retail PDs are estimated by obligor or facility grade or pool from long-run averages of one-year default rates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-180-2-c",
+      "article": "CRR Art. 180(2)(c)",
+      "chapter": "PD estimation",
+      "text": "Internal data are the primary source for retail loss characteristics; external or pooled data or statistical models are used only where a strong link is demonstrated in assignment process and in risk profile and composition.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "REQ-D01",
+      "article": "CRR Art. 180(2)(e)",
+      "chapter": "PD estimation",
+      "text": "The RDS covers at least 5 years of historical data for retail PD estimation.",
+      "quote": "at least five years for at least one source",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (text and article fixed). Confirmed against the consolidated CRR3 text: minimum five-year observation period for at least one source."
+    },
+    {
+      "id": "CRR-180-2-f",
+      "article": "CRR Art. 180(2)(f)",
+      "chapter": "PD estimation",
+      "text": "The institution identifies and analyses expected changes of risk parameters over the life of retail credit exposures (seasoning effects).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_pd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-181-1-a",
+      "article": "CRR Art. 181(1)(a)",
+      "chapter": "LGD estimation",
+      "text": "LGDs are estimated by facility grade or pool on the basis of the average realised LGDs using all observed defaults within the data sources (default-weighted average).",
+      "quote": "the average realised LGDs by facility grade or pool using all observed defaults",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-181-1-b",
+      "article": "CRR Art. 181(1)(b)",
+      "chapter": "LGD estimation",
+      "text": "LGD estimates appropriate for an economic downturn are used where they are more conservative than the long-run average.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Downturn specification per Delegated Regulation (EU) 2022/439 Art. 50 and the RTS on economic downturn (EXT-EBA-DLGD)."
+    },
+    {
+      "id": "CRR-181-1-c",
+      "article": "CRR Art. 181(1)(c)",
+      "chapter": "LGD estimation",
+      "text": "LGD estimates take into account the dependence between the risk of the obligor and that of the funded credit protection or its provider; significant dependence is addressed conservatively.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). CRR3 terminology (funded credit protection)."
+    },
+    {
+      "id": "CRR-181-1-e",
+      "article": "CRR Art. 181(1)(e)",
+      "chapter": "LGD estimation",
+      "text": "LGD estimates recognising funded credit protection are not based solely on its estimated market value and take into account a potential inability to gain control of and liquidate the protection expeditiously.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-181-1-h-1",
+      "article": "CRR Art. 181(1)(h)",
+      "chapter": "LGD estimation",
+      "text": "For defaulted exposures, the institution produces a best estimate of expected loss for each exposure given current economic circumstances and exposure status.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). ELBE; see Delegated Regulation (EU) 2022/439 Art. 51."
+    },
+    {
+      "id": "CRR-181-1-h-2",
+      "article": "CRR Art. 181(1)(h)",
+      "chapter": "LGD estimation",
+      "text": "The LGD for defaulted exposures equals the best estimate of expected loss plus an estimate of the increase in loss rate caused by possible additional unexpected losses during the recovery period.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). LGD in-default."
+    },
+    {
+      "id": "CRR-181-1-j",
+      "article": "CRR Art. 181(1)(j)",
+      "chapter": "LGD estimation",
+      "text": "LGD estimates for exposures to corporates, institutions and central governments are based on at least five years of data, increasing by one year each year after implementation to at least seven years, for at least one source.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_lgd",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-181-2",
+      "article": "CRR Art. 181(2), second subparagraph",
+      "chapter": "LGD estimation",
+      "text": "Retail LGD estimates are based on data covering at least five years.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_lgd",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026). Two-year transitional data period applies only at IRB implementation with competent authority permission."
+    },
+    {
+      "id": "CRR-182-1-a",
+      "article": "CRR Art. 182(1)(a)",
+      "chapter": "Conversion factor estimation",
+      "text": "Conversion factors are estimated by facility grade or pool on the basis of the average realised conversion factors using the default-weighted average of all observed defaults within the data sources.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-182-1-b",
+      "article": "CRR Art. 182(1)(b)",
+      "chapter": "Conversion factor estimation",
+      "text": "Conversion factor estimates appropriate for an economic downturn are used where they are more conservative than the long-run average.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-182-1-c",
+      "article": "CRR Art. 182(1)(c)",
+      "chapter": "Conversion factor estimation",
+      "text": "Conversion factor estimates reflect possible additional drawings up to and after default, with a larger margin of conservatism where a stronger positive correlation between default frequency and conversion factor magnitude can be expected.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-182-1-d",
+      "article": "CRR Art. 182(1)(d)",
+      "chapter": "Conversion factor estimation",
+      "text": "Conversion factor estimates consider the institution's account monitoring and payment processing policies and its ability and willingness to prevent further drawings short of payment default.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-182-1-e",
+      "article": "CRR Art. 182(1)(e)",
+      "chapter": "Conversion factor estimation",
+      "text": "The institution has systems to monitor facility amounts, outstandings against committed lines and changes in outstandings per obligor and grade, and can monitor outstanding balances daily.",
+      "quote": "monitor outstanding balances on a daily basis",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-182-1-g",
+      "article": "CRR Art. 182(1)(g)",
+      "chapter": "Conversion factor estimation",
+      "text": "IRB-CCF is estimated using a 12-month fixed-horizon approach, linking each default to the obligor and facility characteristics at the reference date twelve months before default.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors (IRB-CCF) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Inserted by CRR3; content taken from consolidated text summary, exact wording and whether point (g) or (h) to be confirmed. EBA guidelines on IRB-CCF under Art. 182(5)."
+    },
+    {
+      "id": "CRR-182-2",
+      "article": "CRR Art. 182(2)",
+      "chapter": "Conversion factor estimation",
+      "text": "Conversion factor estimates for exposures to corporates, institutions and central governments are based on at least five years of data, increasing by one year each year after implementation to at least seven years, for at least one source.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_ead",
+          "corporate"
+        ]
+      },
+      "not_applicable_reason": "Applies to own conversion factor estimation for exposures to corporates, institutions and central governments only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-182-3",
+      "article": "CRR Art. 182(3)",
+      "chapter": "Conversion factor estimation",
+      "text": "Retail conversion factor estimates are based on data covering at least five years.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": [
+          "irb_ead",
+          "retail"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail conversion factor estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the consolidated CRR text as amended by CRR3 (consolidated version 2026)."
+    },
+    {
+      "id": "CRR-183-3",
+      "article": "CRR Art. 183(3)",
+      "chapter": "Guarantees and credit derivatives",
+      "text": "The institution has clearly specified, plausible criteria for adjusting grades, pools or LGD estimates for guarantees, addressing the guarantor's ability and willingness to perform, timing of payments, correlation with the obligor and residual risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Substance confirmed; paragraph numbering of Art. 183 (criteria for adjusting estimates) to be confirmed against the CRR3 consolidated text."
+    },
+    {
+      "id": "CRR-185-a",
+      "article": "CRR Art. 185(a)",
+      "chapter": "Validation of internal estimates",
+      "text": "The institution has robust systems to validate the accuracy and consistency of rating systems, processes and the estimation of all relevant risk parameters, enabling a consistent and meaningful assessment of their performance.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-185-b-1",
+      "article": "CRR Art. 185(b)",
+      "chapter": "Validation of internal estimates",
+      "text": "Realised default rates are regularly compared with estimated PDs for each grade, and where realised default rates fall outside the expected range, the reasons for the deviation are analysed.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-185-b-2",
+      "article": "CRR Art. 185(b)",
+      "chapter": "Validation of internal estimates",
+      "text": "Where own LGD or conversion factor estimates are used, realised values are compared with estimates per grade or pool and deviations are analysed.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of LGD or conversion factors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-185-b-3",
+      "article": "CRR Art. 185(b)",
+      "chapter": "Validation of internal estimates",
+      "text": "Back-testing uses historical data covering as long a period as possible; the methods and data are documented and the analysis and documentation are updated at least annually.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-185-c",
+      "article": "CRR Art. 185(c)",
+      "chapter": "Validation of internal estimates",
+      "text": "The institution uses other quantitative validation tools and comparisons with relevant external data sources, based on data appropriate to the portfolio, updated regularly and covering a relevant observation period.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-185-d",
+      "article": "CRR Art. 185(d)",
+      "chapter": "Validation of internal estimates",
+      "text": "Quantitative validation methods and data are consistent through time, and changes in estimation and validation methods and data (sources and periods) are documented.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-185-e",
+      "article": "CRR Art. 185(e)",
+      "chapter": "Validation of internal estimates",
+      "text": "The institution has sound internal standards for deviations of realised from expected values that call estimates into question, taking the business cycle into account, and revises estimates upward where realised values continue to exceed expectations.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-189-1",
+      "article": "CRR Art. 189(1)",
+      "chapter": "Internal governance and oversight",
+      "text": "All material aspects of the rating and estimation processes are approved by the management body or a designated committee and by senior management, who possess a general understanding of the rating systems and of the associated management reports.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-189-2",
+      "article": "CRR Art. 189(2)",
+      "chapter": "Internal governance and oversight",
+      "text": "Senior management has a good understanding of the rating systems' design and operation, ensures they operate properly, and informs the management body of material changes or exceptions from established policies.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Senior management understanding and reporting to the management body is a governance obligation evidenced in committee minutes and management reporting.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-189-3",
+      "article": "CRR Art. 189(3)",
+      "chapter": "Internal governance and oversight",
+      "text": "Management reporting includes the risk profile by grade, migration across grades, parameter estimates per grade, and comparison of realised default rates (and, where applicable, realised LGDs and conversion factors) against expectations and stress-test outcomes.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-190-1",
+      "article": "CRR Art. 190(1)",
+      "chapter": "Internal governance and oversight",
+      "text": "The credit risk control unit is independent from the functions responsible for originating or renewing exposures, reports directly to senior management, and is responsible for the design or selection, implementation, oversight and performance of the rating systems.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The independence and organisation of the credit risk control unit are evidenced in the institution's organisational charts and terms of reference.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-190-2-f-h",
+      "article": "CRR Art. 190(2)(f)–(h)",
+      "chapter": "Internal governance and oversight",
+      "text": "The credit risk control unit actively participates in the design or selection, implementation and validation of the models used in the rating process, and oversees and reviews those models on an ongoing basis.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The responsibilities of the credit risk control unit are an organisational obligation evidenced in its mandate and terms of reference.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    },
+    {
+      "id": "CRR-191",
+      "article": "CRR Art. 191",
+      "chapter": "Internal governance and oversight",
+      "text": "Internal audit or a comparable independent audit unit reviews at least annually the rating systems and their operations, including the estimation of PDs, LGDs, ELs and conversion factors, and adherence to all applicable requirements.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The annual review by internal audit is an obligation of the audit function, evidenced in internal audit plans and reports.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRR text; provision not materially amended by CRR3."
+    }
+  ]
+}

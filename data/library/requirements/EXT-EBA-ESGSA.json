@@ -1,0 +1,443 @@
+{
+  "docId": "EXT-EBA-ESGSA",
+  "requirements": [
+    {
+      "id": "EBA-ESGSA-015",
+      "article": "EBA/GL/2025/04 para 15",
+      "chapter": "Purpose and governance",
+      "text": "Each environmental scenario analysis has a clearly defined purpose, expectations and limitations.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 15. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-016",
+      "article": "EBA/GL/2025/04 para 16",
+      "chapter": "Purpose and governance",
+      "text": "A credible and coherent narrative of the most likely evolution of the business environment is defined, endorsed by senior management, used consistently across the organisation, and serves as the basis of the reference scenario.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The common business-environment narrative is an institution-wide planning element endorsed by senior management and evidenced in strategic planning documents.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 16. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-017",
+      "article": "EBA/GL/2025/04 para 17",
+      "chapter": "Purpose and governance",
+      "text": "Resilience to environmental factors is tested with two complementary tools: stress tests assessing short-term capital and liquidity resilience, and resilience analysis assessing the business model over the medium to long term.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The combination of stress tests and resilience analysis is an institution-level framework evidenced in the ESG risk and stress testing framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 17. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-018",
+      "article": "EBA/GL/2025/04 para 18",
+      "chapter": "Purpose and governance",
+      "text": "A process ensures the robustness of the common narrative and scenarios across business lines, with regular review, in particular upon significant changes in the business environment.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The process ensuring robustness of the common narrative across business lines is an institution-level governance process.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 18. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-019",
+      "article": "EBA/GL/2025/04 para 19",
+      "chapter": "Purpose and governance",
+      "text": "Scenario analyses are substantiated and documented, including scenario and modelling choices, assumptions, proxies used for data gaps, factors included or excluded, and main results and conclusions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 19. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-022",
+      "article": "EBA/GL/2025/04 paras 22, 24",
+      "chapter": "Transmission channels",
+      "text": "The most relevant transmission channels of transition and physical risks to exposures are identified through a structured, well-documented and regularly reviewed process.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 22 and 24; Annex lists potential channels. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-026",
+      "article": "EBA/GL/2025/04 para 26",
+      "chapter": "Transmission channels",
+      "text": "Risk mitigation or amplification factors are considered according to the time horizon, including insurance coverage and protection gaps, counterparties' transition or adaptation plans, and public adaptation measures without over-reliance on government support.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 26. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-027",
+      "article": "EBA/GL/2025/04 para 27",
+      "chapter": "Transmission channels",
+      "text": "The analysis assesses how environmental risks materialise in established risk categories, including business model, credit (default probabilities, collateral values), market, liquidity and operational risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 27. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-031",
+      "article": "EBA/GL/2025/04 paras 28–31",
+      "chapter": "Scenario design",
+      "text": "Scenarios are credible and based on recent scientific knowledge and recognised providers (e.g. NGFS, IPCC, IEA), considering socioeconomic context, technology, consumer preferences and, for climate, policy, energy systems, sectoral pathways and emissions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 28–31. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-033",
+      "article": "EBA/GL/2025/04 paras 32–33",
+      "chapter": "Scenario design",
+      "text": "Chosen scenarios are refined and customised to the objective, scope and granularity of the analysis and to the risk characteristics of the institution's portfolios and business model.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 32–33. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-035",
+      "article": "EBA/GL/2025/04 paras 35–36",
+      "chapter": "Scenario design",
+      "text": "Scenarios cover both physical and transition risk, selected on the basis of the materiality assessment, with sufficient consistency where they are modelled separately.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 35–36. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-037",
+      "article": "EBA/GL/2025/04 para 37",
+      "chapter": "Scenario design",
+      "text": "Scenarios are internally consistent: the trajectory of each key factor (e.g. economic growth, energy demand, technology adoption) is set consistently with the other factors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 37. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-042",
+      "article": "EBA/GL/2025/04 para 42",
+      "chapter": "Stress testing",
+      "text": "IRB institutions' credit risk stress tests under Article 177(2a) CRR include physical and transition climate risk drivers, using a methodology consistent with Section 4.7.1 of EBA/GL/2018/04.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models and their credit risk stress tests only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 42. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-043",
+      "article": "EBA/GL/2025/04 paras 43–44",
+      "chapter": "Stress testing",
+      "text": "Environmental stress tests use a baseline scenario continuing current conditions and trends, including adopted policies, and a set of severe but plausible adverse scenarios.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 43–44. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-045",
+      "article": "EBA/GL/2025/04 para 45",
+      "chapter": "Stress testing",
+      "text": "Adverse scenarios examine compound risks where environmental and other shocks combine, capturing amplification beyond a simple aggregation of separately analysed impacts.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 45. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-046",
+      "article": "EBA/GL/2025/04 para 46",
+      "chapter": "Stress testing — models",
+      "text": "A thorough gap analysis of stress testing models identifies where modelling capabilities must improve to capture environmental risks, favouring structural enhancement of approaches over ad hoc adjustments.",
+      "quote": "institutions should consider an in-depth overhaul of their approaches, rather than multiple ad-hoc adjustments",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 46. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-048",
+      "article": "EBA/GL/2025/04 para 48",
+      "chapter": "Stress testing — models",
+      "text": "Stress test models reflect industry sector and country or geographical location, and new or extended models include environment-sensitive variables linked to the identified transmission channels.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 48. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-049",
+      "article": "EBA/GL/2025/04 para 49",
+      "chapter": "Stress testing — models",
+      "text": "Where possible, environmental shocks are applied at exposure level; for risks material mainly through concentration, shocks are applied to groups of counterparties with a similar environmental risk profile.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 49. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-051",
+      "article": "EBA/GL/2025/04 para 51",
+      "chapter": "Stress testing — models",
+      "text": "Environmental factors are progressively incorporated into stress testing models, starting with credit risk models and extending to market, operational and liquidity risk across relevant portfolios, sectors and geographies.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The progressive incorporation of environmental factors across stress testing models is an institution-level programme evidenced in the stress testing development plan.",
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 51. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-059",
+      "article": "EBA/GL/2025/04 paras 55–56, 59",
+      "chapter": "Resilience analysis",
+      "text": "Resilience analysis projects risk-adjusted profitability and other metrics, including environmental metrics, over a horizon of at least 10 years under an internal reference scenario and a set of distinct alternative scenarios.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Business-model resilience analysis is an institution-level exercise evidenced in strategic planning and the ICAAP.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 55–56 and 59. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-063",
+      "article": "EBA/GL/2025/04 para 63",
+      "chapter": "Ongoing monitoring and expert judgement",
+      "text": "Model calibration is challenged by comparison with external and supervisory observations, sensitivity analyses of output stability and non-linearities, and, for third-party models, verification of the supplier's validation framework.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 63. Applies from 1 January 2027."
+    },
+    {
+      "id": "EBA-ESGSA-064",
+      "article": "EBA/GL/2025/04 paras 64–65",
+      "chapter": "Ongoing monitoring and expert judgement",
+      "text": "Residual model shortcomings (e.g. value-chain risks, tipping points, contagion) and data limitations are addressed by conservative, expert-judgement-based adjustments to model results.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/04 final report (5 November 2025), para 64–65. Applies from 1 January 2027."
+    }
+  ]
+}

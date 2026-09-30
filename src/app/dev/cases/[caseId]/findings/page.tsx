@@ -95,9 +95,9 @@ function FindingCard({ f, modelId, readOnly }: { f: Finding; modelId: string; re
 
 export default function FindingsPage() {
   const { caseId } = useParams<{ caseId: string }>();
-  const { id, uc: work, sc, readOnly: completed, model } = useCaseCtx(caseId);
+  const { id, uc: work, readOnly: completed, model } = useCaseCtx(caseId);
   const s = use1lod();
-  if (!model || !work || !sc) return null;
+  if (!model || !work) return null;
   const pending = work.findings.filter((f) => f.response && f.status === 'issued');
 
   async function exportResponses() {

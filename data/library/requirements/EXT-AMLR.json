@@ -1,0 +1,685 @@
+{
+  "docId": "EXT-AMLR",
+  "requirements": [
+    {
+      "id": "AMLR-9-1",
+      "article": "AMLR Art. 9(1)",
+      "chapter": "Internal policies, procedures and controls",
+      "text": "The obliged entity has internal policies, procedures and controls, proportionate to its nature, risks, complexity and size, that mitigate and manage effectively the money laundering and terrorist financing risks identified at Union, Member State and entity level.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "AML/CFT internal policies, procedures and controls are an institution-wide programme evidenced in the AML/CFT policy framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-9-2-b",
+      "article": "AMLR Art. 9(2)(b)",
+      "chapter": "Internal policies, procedures and controls",
+      "text": "The obliged entity has internal controls and an independent audit function (or, absent such a function, an external expert) that test its AML/CFT internal policies, procedures and controls.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Independent testing of AML/CFT controls is an obligation of the internal audit function, evidenced in audit plans and reports.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-9-2-sub2",
+      "article": "AMLR Art. 9(2), second subparagraph",
+      "chapter": "Internal policies, procedures and controls",
+      "text": "The AML/CFT internal policies, procedures and controls are recorded in writing; internal policies are approved by the management body in its management function and internal procedures and controls at least at the level of the compliance manager.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Recording and approval of AML/CFT policies and procedures is a governance obligation evidenced in the institution's policy framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-10-1",
+      "article": "AMLR Art. 10(1), first subparagraph",
+      "chapter": "Business-wide risk assessment",
+      "text": "The obliged entity takes appropriate, proportionate measures to identify and assess the money laundering and terrorist financing risks to which it is exposed, and the risks of non-implementation and evasion of targeted financial sanctions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The identification and assessment of ML/TF risks is performed in the business-wide risk assessment, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-10-1-a",
+      "article": "AMLR Art. 10(1)(a)",
+      "chapter": "Business-wide risk assessment",
+      "text": "The business-wide risk assessment takes into account at least the risk variables in Annex I (customer, product/service/transaction, delivery channel) and the lower- and higher-risk factors in Annexes II and III.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The content of the business-wide risk assessment is evidenced in that assessment, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-10-1-f",
+      "article": "AMLR Art. 10(1)(f)",
+      "chapter": "Business-wide risk assessment",
+      "text": "The business-wide risk assessment takes into account information on the obliged entity's customer base.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The content of the business-wide risk assessment is evidenced in that assessment, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-10-1-sub2",
+      "article": "AMLR Art. 10(1), second subparagraph",
+      "chapter": "Business-wide risk assessment",
+      "text": "Before launching new products, services, business practices, delivery channels or new or developing technologies, or serving a new customer segment or geography, the obliged entity identifies and assesses the related ML/TF risks and takes measures to manage and mitigate them.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ML/TF risk assessment of new products and delivery channels is evidenced in the new product approval process, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-10-2",
+      "article": "AMLR Art. 10(2), first subparagraph",
+      "chapter": "Business-wide risk assessment",
+      "text": "The business-wide risk assessment is documented, kept up to date and regularly reviewed, including when internal or external events significantly affect the ML/TF risks, and is made available to supervisors on request.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Documentation and review of the business-wide risk assessment is an institution-level obligation evidenced in that assessment.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-10-2-sub2",
+      "article": "AMLR Art. 10(2), second subparagraph",
+      "chapter": "Business-wide risk assessment",
+      "text": "The business-wide risk assessment is drawn up by the compliance officer and approved by the management body in its management function.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Drawing up and approving the business-wide risk assessment is an obligation of the compliance officer and management body, evidenced in governance records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-18-3-c",
+      "article": "AMLR Art. 18(3)(c)",
+      "chapter": "Outsourcing",
+      "text": "The decision on the risk profile to be attributed to a customer is not outsourced to a service provider.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Relevant where a vendor tool or service provider generates customer risk ratings: the rating decision must remain with the obliged entity."
+    },
+    {
+      "id": "AMLR-18-3-f",
+      "article": "AMLR Art. 18(3)(f)",
+      "chapter": "Outsourcing",
+      "text": "The approval of the criteria for the detection of suspicious or unusual transactions and activities is not outsourced to a service provider.",
+      "quote": "the approval of the criteria for the detection of suspicious or unusual transactions and activities",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Directly relevant to transaction monitoring scenario and threshold approval, including vendor-supplied rule sets."
+    },
+    {
+      "id": "AMLR-20-1-g",
+      "article": "AMLR Art. 20(1)(g)",
+      "chapter": "Customer due diligence — general",
+      "text": "Customer due diligence determines whether the customer, its beneficial owner and, where relevant, the person on whose behalf a transaction is carried out is a politically exposed person, a family member or a person known to be a close associate.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-20-2",
+      "article": "AMLR Art. 20(2), first subparagraph",
+      "chapter": "Customer due diligence — general",
+      "text": "The extent of customer due diligence measures is determined on an individual analysis of ML/TF risks, having regard to customer and relationship characteristics, the business-wide risk assessment, the Annex I risk variables and the Annex II and III risk factors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Core legal basis for the individual customer risk rating."
+    },
+    {
+      "id": "AMLR-20-2-sub2",
+      "article": "AMLR Art. 20(2), second subparagraph",
+      "chapter": "Customer due diligence — general",
+      "text": "Where an increased ML/TF risk is identified, the obliged entity applies enhanced due diligence measures under Chapter III, Section 4; simplified measures may be applied only where lower risk is identified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-20-4",
+      "article": "AMLR Art. 20(4)",
+      "chapter": "Customer due diligence — general",
+      "text": "The obliged entity is at all times able to demonstrate to its supervisor that the customer due diligence measures taken are appropriate in view of the identified ML/TF risks.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-21-3",
+      "article": "AMLR Art. 21(3), first subparagraph",
+      "chapter": "Customer due diligence — general",
+      "text": "The obliged entity keeps records of the actions taken to apply customer due diligence, including the decisions taken and the supporting documents and justifications, and updates them whenever customer due diligence is reviewed under Article 26.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Record keeping of customer due diligence actions is evidenced in customer files and KYC procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-25",
+      "article": "AMLR Art. 25",
+      "chapter": "Customer due diligence — general",
+      "text": "Before entering a business relationship, the obliged entity understands its purpose and intended nature, obtaining where necessary information on its economic rationale, the estimated amount of envisaged activity, source and destination of funds, and the customer's business activity or occupation.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. This information forms the expected-activity baseline used in transaction monitoring."
+    },
+    {
+      "id": "AMLR-26-1",
+      "article": "AMLR Art. 26(1), first subparagraph",
+      "chapter": "Ongoing monitoring of business relationships and transactions",
+      "text": "The obliged entity monitors business relationships, including transactions, on an ongoing basis to ensure consistency with its knowledge of the customer, business activity, risk profile and, where necessary, origin and destination of funds, and to detect transactions requiring assessment under Article 69(2).",
+      "quote": "to detect those transactions that shall be made subject to a more thorough assessment pursuant to Article 69(2)",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. AMLA guidelines on ongoing monitoring are due under Art. 26(5)."
+    },
+    {
+      "id": "AMLR-26-1-sub2",
+      "article": "AMLR Art. 26(1), second subparagraph",
+      "chapter": "Ongoing monitoring of business relationships and transactions",
+      "text": "Where a business relationship covers more than one product or service, customer due diligence measures, including monitoring, cover all those products and services.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Testable as product/source-system coverage of the monitoring data feed."
+    },
+    {
+      "id": "AMLR-26-2",
+      "article": "AMLR Art. 26(2)",
+      "chapter": "Ongoing monitoring of business relationships and transactions",
+      "text": "Customer documents, data and information are kept up to date, with a risk-based update interval not exceeding one year for higher-risk customers subject to enhanced due diligence and five years for all other customers.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-26-3",
+      "article": "AMLR Art. 26(3)",
+      "chapter": "Ongoing monitoring of business relationships and transactions",
+      "text": "The obliged entity reviews and, where relevant, updates customer information when the customer's relevant circumstances change, when it must contact the customer to review beneficial ownership or under Directive 2011/16/EU, or when it becomes aware of a relevant fact.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Event-driven review of customer information is an operational KYC process evidenced in CDD procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Basis for event-driven customer risk re-rating."
+    },
+    {
+      "id": "AMLR-33-1-sub2",
+      "article": "AMLR Art. 33(1), second subparagraph",
+      "chapter": "Simplified due diligence",
+      "text": "Where simplified due diligence is applied, the obliged entity still carries out sufficient monitoring of transactions and the business relationship to enable the detection of unusual or suspicious transactions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-34-2",
+      "article": "AMLR Art. 34(2)",
+      "chapter": "Enhanced due diligence",
+      "text": "The obliged entity examines the origin and destination of funds and the purpose of all transactions that are complex, unusually large, conducted in an unusual pattern, or without apparent economic or lawful purpose.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Monitoring scenarios should be able to identify each of the four transaction types."
+    },
+    {
+      "id": "AMLR-34-3",
+      "article": "AMLR Art. 34(3)",
+      "chapter": "Enhanced due diligence",
+      "text": "When assessing the ML/TF risk of a business relationship or occasional transaction, the obliged entity considers at least the Annex III higher-risk factors, AMLA guidelines under Article 32, FIU notifications and business-wide risk assessment findings.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-34-4-f",
+      "article": "AMLR Art. 34(4)(f)",
+      "chapter": "Enhanced due diligence",
+      "text": "For higher-risk relationships, enhanced due diligence is proportionate to the risks identified and may include enhanced monitoring by increasing the number and timing of controls and selecting transaction patterns needing further examination.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Art. 34(4) lists possible measures ('may include'); the obligation is proportionate enhanced due diligence."
+    },
+    {
+      "id": "AMLR-42-1-c",
+      "article": "AMLR Art. 42(1)(c)",
+      "chapter": "Enhanced due diligence",
+      "text": "The obliged entity conducts enhanced ongoing monitoring of business relationships with politically exposed persons.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-69-1-a",
+      "article": "AMLR Art. 69(1)(a) and second subparagraph",
+      "chapter": "Reporting of suspicions",
+      "text": "The obliged entity promptly reports to the FIU, on its own initiative, where it knows, suspects or has reasonable grounds to suspect that funds or activities are criminal proceeds or related to terrorist financing, including attempted transactions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Suspicious transaction reporting to the FIU is an obligation of the institution evidenced in its reporting procedures and FIU records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-69-2",
+      "article": "AMLR Art. 69(2), first subparagraph",
+      "chapter": "Reporting of suspicions",
+      "text": "The obliged entity assesses customers' transactions and activities against all relevant facts and information known to it and, where necessary, prioritises its assessment by urgency and by the risks affecting its Member State.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Covers alert triage and prioritisation."
+    },
+    {
+      "id": "AMLR-69-2-sub2",
+      "article": "AMLR Art. 69(2), second subparagraph",
+      "chapter": "Reporting of suspicions",
+      "text": "Suspicion is based on customer and counterparty characteristics, transaction size, nature, methods and patterns, links between transactions, origin, destination or use of funds, and consistency with the customer due diligence information including the customer's risk profile.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Useful as coverage check for scenario and feature design."
+    },
+    {
+      "id": "AMLR-76-2-c",
+      "article": "AMLR Art. 76(2)(c)",
+      "chapter": "Data protection and automated decision-making",
+      "text": "Where special categories of personal data are processed for AML/CFT purposes, the obliged entity does not take decisions that would lead to biased and discriminatory outcomes on the basis of those data.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-76-5-a",
+      "article": "AMLR Art. 76(5)(a)",
+      "chapter": "Data protection and automated decision-making",
+      "text": "Where decisions result from automated processes, profiling or AI systems, the data processed by those systems is limited to data obtained under Chapter III (customer due diligence).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Explicit condition for automated CDD/monitoring decisions, including ML-based risk scoring."
+    },
+    {
+      "id": "AMLR-76-5-b",
+      "article": "AMLR Art. 76(5)(b)",
+      "chapter": "Data protection and automated decision-making",
+      "text": "Automated decisions to enter, refuse or maintain a business relationship, carry out or refuse an occasional transaction, or increase or decrease the extent of customer due diligence are subject to meaningful human intervention.",
+      "quote": "is subject to meaningful human intervention to ensure the accuracy and appropriateness of such a decision",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    },
+    {
+      "id": "AMLR-76-5-c",
+      "article": "AMLR Art. 76(5)(c)",
+      "chapter": "Data protection and automated decision-making",
+      "text": "The customer can obtain an explanation of, and challenge, an automated decision reached by the obliged entity, except in relation to a suspicious transaction report under Article 69.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Requires the customer risk rating and related automated decisions to be explainable at individual level."
+    },
+    {
+      "id": "AMLR-77-1-b",
+      "article": "AMLR Art. 77(1)(b)",
+      "chapter": "Record retention",
+      "text": "The obliged entity retains a record of each Article 69(2) assessment, including the information and circumstances considered and its result, whether or not a suspicious transaction report was made, and a copy of any report.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Retention of records of individual transaction assessments is evidenced in the case management system and record-keeping procedures.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies. Covers documentation of alert investigations, including closed alerts."
+    },
+    {
+      "id": "AMLR-77-3",
+      "article": "AMLR Art. 77(3), first subparagraph",
+      "chapter": "Record retention",
+      "text": "CDD documents, assessment records and transaction records are retained for five years from the end of the business relationship, the occasional transaction or the refusal, after which personal data are deleted unless other law requires retention.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Record retention periods are an institution-wide obligation evidenced in the record retention policy.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Regulation (EU) 2024/1624 (Cellar/EUR-Lex). Applies from 10 July 2027 (Art. 90); until then the Wwft (national transposition of Directive (EU) 2015/849) applies."
+    }
+  ]
+}

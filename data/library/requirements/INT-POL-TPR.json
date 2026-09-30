@@ -1,0 +1,413 @@
+{
+  "docId": "INT-POL-TPR",
+  "requirements": [
+    {
+      "id": "TPR-POL-001-4.3",
+      "article": "TPR-POL-001 §4.3",
+      "chapter": "Governance",
+      "text": "The third-party arrangement supporting the model or AI system has a named Arrangement Owner in the first line of defence.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the third-party risk management process; evidenced in the Register of Information and arrangement file, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-4.4",
+      "article": "TPR-POL-001 §4.4; DORA Art. 28(2)",
+      "chapter": "Governance",
+      "text": "The Management Board has adopted, and reviews at least annually, a strategy on ICT third-party risk including a policy on ICT services supporting critical or important functions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Management Board; evidenced in the approved ICT third-party risk strategy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-5.1",
+      "article": "TPR-POL-001 §5.1; DORA Art. 28(4)(a); EBA/GL/2019/02 section 4",
+      "chapter": "Pre-contract assessment and due diligence",
+      "text": "The Arrangement Owner has documented, and TPRM has reviewed, whether the arrangement is outsourcing and whether it supports a critical or important function.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the third-party risk management process; evidenced in the arrangement file reviewed by TPRM, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-5.2",
+      "article": "TPR-POL-001 §5.2; DORA Art. 28(4)",
+      "chapter": "Pre-contract assessment and due diligence",
+      "text": "A pre-contract risk assessment covers operational, ICT and security, legal, compliance, reputational, conflict-of-interest, data protection and concentration risks.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the third-party risk management process; evidenced in the pre-contract risk assessment, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-5.3",
+      "article": "TPR-POL-001 §5.3; EBA/GL/2019/02 section 12",
+      "chapter": "Pre-contract assessment and due diligence",
+      "text": "Due diligence on the provider assesses reputation, financial soundness, capability, information security, business continuity, sub-contracting chain, service and data locations and legal compliance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the third-party risk management process; evidenced in the provider due diligence file, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision authored; exact EBA/GL/2019/02 subsection for due diligence (section 12.3) to be confirmed."
+    },
+    {
+      "id": "TPR-POL-001-5.4",
+      "article": "TPR-POL-001 §5.4; AI-POL-001 §7.8",
+      "chapter": "Pre-contract assessment and due diligence",
+      "text": "Due diligence on a provider of a model, AI system or GPAI model covers methodology and training data documentation, known limitations, evaluation evidence, change and versioning practices and terms on use of the Bank's data.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-5.7",
+      "article": "TPR-POL-001 §5.7; DORA Art. 28(3)",
+      "chapter": "Pre-contract assessment and due diligence",
+      "text": "The competent authority is informed in a timely manner of a planned arrangement supporting a critical or important function.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution towards the competent authority; evidenced in the supervisory notification, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-6.1",
+      "article": "TPR-POL-001 §6.1; DORA Art. 30(2)",
+      "chapter": "Contractual requirements",
+      "text": "The contract for ICT services includes the elements of Art. 30(2) DORA, including service description, locations of service and data processing, data protection, data access and return, service levels, incident assistance, authority cooperation and termination rights.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Contractual obligation of the institution; evidenced in the ICT services contract, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-6.2",
+      "article": "TPR-POL-001 §6.2; DORA Art. 30(3); EBA/GL/2019/02 section 13",
+      "chapter": "Contractual requirements",
+      "text": "The contract for a critical or important function includes quantitative service levels, notice and reporting obligations, tested contingency plans, unrestricted access, inspection and audit rights, and exit provisions with an adequate transition period.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Contractual obligation of the institution; evidenced in the outsourcing contract, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-6.3",
+      "article": "TPR-POL-001 §6.3; MRM-POL-001",
+      "chapter": "Contractual requirements",
+      "text": "The contract for a model, AI system or model data grants the Bank sufficient documentation to understand and independently validate the product, advance notice of material changes and access to performance information.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-6.4",
+      "article": "TPR-POL-001 §6.4; EBA/GL/2019/02 section 13.1",
+      "chapter": "Contractual requirements",
+      "text": "Sub-outsourcing of a critical or important function is permitted only under contractual conditions including prior notification and the Bank's right to object or terminate.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Contractual obligation of the institution; evidenced in the outsourcing contract, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision authored; EBA/GL/2019/02 subsection on sub-outsourcing (13.1) to be confirmed."
+    },
+    {
+      "id": "TPR-POL-001-7.1",
+      "article": "TPR-POL-001 §7.1; DORA Art. 28(3)",
+      "chapter": "Register of Information",
+      "text": "The arrangement is recorded in the Register of Information before the service commences.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution under DORA; evidenced in the Register of Information, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-7.2",
+      "article": "TPR-POL-001 §7.2; Commission Implementing Regulation (EU) 2024/2956",
+      "chapter": "Register of Information",
+      "text": "The Register of Information entry follows the format of Implementing Regulation (EU) 2024/2956 and is updated within ten business days of any change to the arrangement.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution under DORA; evidenced in the Register of Information, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-7.4",
+      "article": "TPR-POL-001 §7.4",
+      "chapter": "Register of Information",
+      "text": "The Register of Information entry references the Model Inventory or AI Inventory identifier of the supported model or AI system, and vice versa.",
+      "category": "documentation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-8.1",
+      "article": "TPR-POL-001 §8.1; DORA Art. 29",
+      "chapter": "Concentration risk",
+      "text": "Before contracting for a critical or important function, the Bank assesses whether the provider is not easily substitutable or whether multiple arrangements with the same or connected providers arise.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level concentration risk assessment; evidenced in the TPRM concentration assessment, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-9.1",
+      "article": "TPR-POL-001 §9.1",
+      "chapter": "Ongoing monitoring",
+      "text": "Performance of the arrangement is monitored against contractual service levels and key risk indicators at a criticality-based frequency and at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Arrangement Owner under the TPRM process; evidenced in service-level monitoring reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-9.3",
+      "article": "TPR-POL-001 §9.3; MRM-STD-040",
+      "chapter": "Ongoing monitoring",
+      "text": "For third-party models and AI systems, model performance is monitored in the Bank's environment and provider-notified changes are assessed before being applied in production.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-10.1",
+      "article": "TPR-POL-001 §10.1; DORA Art. 28(8); EBA/GL/2019/02 section 15",
+      "chapter": "Exit strategies",
+      "text": "For an arrangement supporting a critical or important function, a documented exit strategy covers termination scenarios, alternative solutions, transition plans, data retrieval and the time and resources required.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the third-party risk management process; evidenced in the documented exit strategy for the arrangement, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0); DORA article reference checked."
+    },
+    {
+      "id": "TPR-POL-001-10.2",
+      "article": "TPR-POL-001 §10.2",
+      "chapter": "Exit strategies",
+      "text": "The exit strategy is tested for feasibility at least every three years and reviewed on material change.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the third-party risk management process; evidenced in exit strategy test records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    },
+    {
+      "id": "TPR-POL-001-10.3",
+      "article": "TPR-POL-001 §10.3",
+      "chapter": "Exit strategies",
+      "text": "The exit strategy for a third-party model or AI system identifies a fallback approach and the conditions under which it is activated.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (TPR-POL-001 v3.0)."
+    }
+  ]
+}

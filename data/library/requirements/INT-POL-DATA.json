@@ -1,0 +1,545 @@
+{
+  "docId": "INT-POL-DATA",
+  "requirements": [
+    {
+      "id": "DATA-POL-001-4.1",
+      "article": "DATA-POL-001 §4.1",
+      "chapter": "Data ownership",
+      "text": "Every data domain from which model data is sourced has exactly one Data Owner recorded in the Group Data Catalogue.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Bank's data governance organisation; evidenced in the Group Data Catalogue, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §4.1."
+    },
+    {
+      "id": "DATA-POL-001-4.3a",
+      "article": "DATA-POL-001 §4.3",
+      "chapter": "Data ownership",
+      "text": "The model data is mapped to the data domains from which it is sourced.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §4.3."
+    },
+    {
+      "id": "DATA-POL-001-4.3b",
+      "article": "DATA-POL-001 §4.3",
+      "chapter": "Data ownership",
+      "text": "The Model Owner has agreed with the relevant Data Owners the data quality expectations for the critical data elements used by the model.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §4.3."
+    },
+    {
+      "id": "DATA-POL-001-4.4",
+      "article": "DATA-POL-001 §4.4",
+      "chapter": "Data ownership",
+      "text": "Changes to the definition, source or transformation logic of a data element used by the model are approved by the Data Owner and communicated in advance to the Model Owner.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Data Owner under the data change management process; evidenced in data change records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §4.4."
+    },
+    {
+      "id": "REQ-D19",
+      "article": "DATA-POL-001 §5",
+      "chapter": "Data lineage",
+      "text": "Lineage from source systems to the RDS is documented for every variable.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (fixed id, text and article); DATA-POL-001 v3.2 §5.1 and §5.5."
+    },
+    {
+      "id": "DATA-POL-001-5.1",
+      "article": "DATA-POL-001 §5.1",
+      "chapter": "Data lineage",
+      "text": "Lineage from source systems to the production input data of the model is documented for every model variable, including discarded variables used to construct retained variables.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §5.1."
+    },
+    {
+      "id": "DATA-POL-001-5.2",
+      "article": "DATA-POL-001 §5.2",
+      "chapter": "Data lineage",
+      "text": "The lineage of each variable identifies the source system and fields, each intermediate data store, every transformation, filter, join and aggregation with a reference to the performing code or ETL job, and the extraction frequency and timing.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §5.2."
+    },
+    {
+      "id": "DATA-POL-001-5.3",
+      "article": "DATA-POL-001 §5.3",
+      "chapter": "Data lineage",
+      "text": "Manual interventions in the model data flow (manual uploads, end-user computing tools, manual corrections) are identified explicitly in the lineage together with the control applied to each.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §5.3."
+    },
+    {
+      "id": "DATA-POL-001-5.4",
+      "article": "DATA-POL-001 §5.4",
+      "chapter": "Data lineage",
+      "text": "For variables sourced from third parties or external data, the lineage starts at the point of receipt within the Bank and records the provider, the data product and the version or delivery date.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §5.4."
+    },
+    {
+      "id": "DATA-POL-001-5.6",
+      "article": "DATA-POL-001 §5.6",
+      "chapter": "Data lineage",
+      "text": "Lineage documentation reflects any change in source system, transformation logic or data flow before the changed data is used in development, monitoring or production.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §5.6."
+    },
+    {
+      "id": "DATA-POL-001-5.7",
+      "article": "DATA-POL-001 §5.7",
+      "chapter": "Data lineage",
+      "text": "The lineage of the development data and of the production input data is compared at implementation, and any difference in source or transformation is documented and its impact on the model assessed.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §5.7."
+    },
+    {
+      "id": "DATA-POL-001-6.1",
+      "article": "DATA-POL-001 §6.1",
+      "chapter": "Critical data elements",
+      "text": "Every model input variable and every data element used to construct the target variable (including default flags, loss and recovery amounts and exposure at default) is designated as a critical data element.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §6.1."
+    },
+    {
+      "id": "DATA-POL-001-6.2",
+      "article": "DATA-POL-001 §6.2",
+      "chapter": "Critical data elements",
+      "text": "Each critical data element has a documented business definition, a technical definition and at least one data quality rule for each applicable data quality dimension of MRM-STD-022 §3.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §6.2."
+    },
+    {
+      "id": "DATA-POL-001-6.3",
+      "article": "DATA-POL-001 §6.3",
+      "chapter": "Critical data elements",
+      "text": "Critical data elements are reconciled against the source system or accounting data at least annually, and unexplained differences are recorded as data quality issues.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §6.3."
+    },
+    {
+      "id": "DATA-POL-001-7.1",
+      "article": "DATA-POL-001 §7.1",
+      "chapter": "Metadata",
+      "text": "Metadata for every data element used in the model (business and technical definition, type and format, permitted values, unit and currency, source, Data Owner, update frequency, classification) is recorded in the Group Data Catalogue.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §7.1."
+    },
+    {
+      "id": "DATA-POL-001-7.2",
+      "article": "DATA-POL-001 §7.2",
+      "chapter": "Metadata",
+      "text": "Where different definitions of the same concept are used (for example accounting and prudential default), each is labelled distinctly and the difference is documented.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §7.2."
+    },
+    {
+      "id": "DATA-POL-001-7.3",
+      "article": "DATA-POL-001 §7.3",
+      "chapter": "Metadata",
+      "text": "Metadata changes are versioned so that the definition applicable to any historical data point in the model data can be retrieved.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §7.3."
+    },
+    {
+      "id": "DATA-POL-001-8.1",
+      "article": "DATA-POL-001 §8.1",
+      "chapter": "Data quality management",
+      "text": "Data quality of model data is managed in accordance with the Data Quality Standard for Models (MRM-STD-022).",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §8.1."
+    },
+    {
+      "id": "DATA-POL-001-8.2",
+      "article": "DATA-POL-001 §8.2",
+      "chapter": "Data quality management",
+      "text": "Data deficiencies identified in model data are remediated at source where feasible rather than corrected only in the model data.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §8.2."
+    },
+    {
+      "id": "DATA-POL-001-8.3",
+      "article": "DATA-POL-001 §8.3",
+      "chapter": "Data quality management",
+      "text": "Every data quality issue affecting a critical data element of the model is recorded in the Bank data issue register and in the model's data deficiency log with impact, owner, remediation plan and target date.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §8.3."
+    },
+    {
+      "id": "DATA-POL-001-8.4",
+      "article": "DATA-POL-001 §8.4",
+      "chapter": "Data quality management",
+      "text": "Data quality issues rated high or critical that affect a model are escalated to the Group Data Governance Committee and to the Model Risk Committee.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §8.4."
+    },
+    {
+      "id": "DATA-POL-001-9.2",
+      "article": "DATA-POL-001 §9.2; BCBS 239 principle 3",
+      "chapter": "BCBS 239 alignment",
+      "text": "Model data is aggregated on a largely automated basis; remaining manual processes are documented, justified and controlled.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §9.2."
+    },
+    {
+      "id": "DATA-POL-001-9.3",
+      "article": "DATA-POL-001 §9.3; BCBS 239 principles 3–4",
+      "chapter": "BCBS 239 alignment",
+      "text": "Data used for model outputs feeding regulatory capital or risk reporting is reconcilable with the Bank's accounting data and with the data used in the corresponding regulatory reports.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "capital",
+          "risk_reporting"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs feed regulatory capital or risk reporting.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §9.3."
+    },
+    {
+      "id": "DATA-POL-001-10.1",
+      "article": "DATA-POL-001 §10.1",
+      "chapter": "Retention and archiving",
+      "text": "Personal data in model data sets is not retained longer than necessary for the purpose, in accordance with PRIV-POL-001.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models processing personal data only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §10.1."
+    },
+    {
+      "id": "DATA-POL-001-10.2a",
+      "article": "DATA-POL-001 §10.2",
+      "chapter": "Retention and archiving",
+      "text": "Each RDS version used for development or recalibration is archived together with the code used to construct it and its lineage and metadata, so that the development data can be reproduced.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §10.2."
+    },
+    {
+      "id": "DATA-POL-001-10.2b",
+      "article": "DATA-POL-001 §10.2",
+      "chapter": "Retention and archiving",
+      "text": "Archived RDS versions are retained for the life of the model and at least ten years after its decommissioning.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §10.2."
+    },
+    {
+      "id": "DATA-POL-001-10.3",
+      "article": "DATA-POL-001 §10.3; CRR Art. 176, 180, 181",
+      "chapter": "Retention and archiving",
+      "text": "Historical data required for risk parameter estimation (rating histories, default events, loss and recovery cash flows, exposure histories) is retained for at least the observation periods required by CRR Articles 176, 180 and 181.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models used for own funds requirements only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §10.3."
+    },
+    {
+      "id": "DATA-POL-001-10.4",
+      "article": "DATA-POL-001 §10.4",
+      "chapter": "Retention and archiving",
+      "text": "Archived model data is protected against alteration, and any correction is made on a new version with the original retained.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §10.4."
+    },
+    {
+      "id": "DATA-POL-001-12.1",
+      "article": "DATA-POL-001 §12.1",
+      "chapter": "Exceptions and dispensations",
+      "text": "Any deviation from DATA-POL-001 affecting model data is covered by a dispensation approved by the Chief Data Officer and the Head of Model Risk Management, with an expiry date of at most twelve months.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (DATA-POL-001 v3.2), §12.1."
+    }
+  ]
+}

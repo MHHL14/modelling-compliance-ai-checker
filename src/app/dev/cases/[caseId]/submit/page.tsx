@@ -23,21 +23,21 @@ const ORDER: Verdict[] = ['compliant', 'partial', 'non_compliant', 'not_found', 
 
 export default function SubmitPage() {
   const { caseId } = useParams<{ caseId: string }>();
-  const { id, uc: work, sc, readOnly: completed, model } = useCaseCtx(caseId);
+  const { id, uc: work, readOnly: completed, model, docs } = useCaseCtx(caseId);
   const record = use1lod((s) => s.recordSubmission);
   const buildSubmission = use1lod((s) => s.buildSubmission);
   const [signed, setSigned] = useState(false);
-  if (!model || !work || !sc) return null;
+  if (!model || !work) return null;
 
   const rows = work.run?.rows ?? [];
   const undecided = rows.filter((r) => !r.decision);
   const missingMit = rows.filter((r) => ['partial', 'non_compliant'].includes(finalVerdict(r)) && !r.mitigation && !r.decision?.reason);
-  const docVersions = [`${sc.document.id} v${sc.document.finalVersion}`, ...work.evidenceDocs.map((d) => `${d.id} v${d.version}`)];
+  const docVersions = Object.entries(work.run?.documentVersions ?? {}).map(([d, v]) => `${docs.find((x) => x.id === d && x.version === v)?.title ?? d} v${v}`);
   const checks = [
     { ok: !!work.lockedAt, label: 'Requirement set locked', detail: work.lockedAt ? `${work.reqSetId} v${work.setVersion} · ${fmtDateTime(work.lockedAt)}` : 'Lock the set in Scoping', href: `/dev/cases/${encodeURIComponent(id)}/scope` },
     { ok: rows.length > 0 && undecided.length === 0, label: 'All rows decided', detail: undecided.length ? `${undecided.length} row(s) without a human decision: ${undecided.map((r) => r.requirementId).join(', ')}` : `${rows.length}/${rows.length}`, href: `/dev/cases/${encodeURIComponent(id)}/assess` },
     { ok: missingMit.length === 0, label: 'All non-compliant / partial rows have a mitigation or justification', detail: missingMit.length ? missingMit.map((r) => r.requirementId).join(', ') : 'OK', href: `/dev/cases/${encodeURIComponent(id)}/assess` },
-    { ok: true, label: 'Document versions frozen', detail: docVersions.join(' · ') },
+    { ok: docVersions.length > 0, label: 'Documentation confirmed and assessed', detail: docVersions.length ? docVersions.join(' · ') : 'Select and confirm the documentation in the Self-assessment', href: `/dev/cases/${encodeURIComponent(id)}/assess` },
   ];
   const allOk = checks.every((c) => c.ok);
 

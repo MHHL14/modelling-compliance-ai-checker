@@ -100,3 +100,8 @@ Library change v3.2 → v3.3 (`pilot_seed.json`, key `library_change`): include 
 ## Before you finish
 
 Run `node scripts/validate-library.mjs <DOC-ID> [<DOC-ID> …]` for your documents and fix every error it reports.
+
+
+## Level: model or institution
+
+Most requirements are **model-level**: a model developer can evidence them in the model's own documentation (RDS, MDD, implementation and testing report, monitoring report, approval and sign-off sections). Requirements that are obligations of the institution as a whole, of the management body, of a control function (e.g. the independence and organisation of the validation function or internal audit), or of an institution-wide process (roll-out plans, permission applications, supervisory notifications, committee terms of reference, bank-wide policies and inventories) are **institution-level**: they are evidenced in governance documents, not in a specific model's documentation. Mark them with `"level": "institution"` and a one-sentence `"level_reason"` (e.g. "Obligation of the institution towards the competent authority; evidenced in the IRB roll-out plan, not in model documentation."). Omit `level` for model-level requirements. Pilot requirements (REQ-*, VAL-*) are always model-level. Institution-level requirements are shown to the user as not applicable to a model's documentation, with the reason.

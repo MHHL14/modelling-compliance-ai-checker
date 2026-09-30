@@ -1,7 +1,7 @@
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export const SCOPE_STEPS = ['Requirements', 'Documents', 'Review and lock'] as const;
+export const SCOPE_STEPS = ['Sources', 'Requirements', 'Review and lock'] as const;
 
 export function ScopeStepper({ step, onStep, done }: { step: number; onStep: (n: number) => void; done: boolean[] }) {
   return (

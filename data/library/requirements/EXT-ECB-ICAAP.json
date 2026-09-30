@@ -1,0 +1,315 @@
+{
+  "docId": "EXT-ECB-ICAAP",
+  "requirements": [
+    {
+      "id": "ECB-ICAAP-P1-15",
+      "article": "ECB ICAAP Guide, Principle 1(i), para 15",
+      "chapter": "Principle 1 — Governance",
+      "text": "The management body approves the key elements of the ICAAP, including risk quantification methodologies with their high-level assumptions and parameters (time horizon, diversification, confidence levels) supported by reliable data and sound data aggregation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the management body concerning the ICAAP as a whole; evidenced in management body approvals of the ICAAP, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 1, para 15."
+    },
+    {
+      "id": "ECB-ICAAP-P1-17",
+      "article": "ECB ICAAP Guide, Principle 1(iii), para 17",
+      "chapter": "Principle 1 — Internal review and validation",
+      "text": "The regular internal review of the ICAAP covers qualitative and quantitative aspects, including the stress-testing framework, risk capture, data aggregation and proportionate validation of internal risk quantification methodologies.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP framework-level review obligation; evidenced in the internal review of the ICAAP, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 1, para 17."
+    },
+    {
+      "id": "ECB-ICAAP-P1-21",
+      "article": "ECB ICAAP Guide, Principle 1, paras 20–21",
+      "chapter": "Principle 1 — Internal review and validation",
+      "text": "ICAAP outcomes, methodologies and assumptions are reviewed through back-testing and assessment of continued appropriateness; results are documented and reported to senior management and the management body, and weaknesses are remediated promptly.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 1, paras 20–21."
+    },
+    {
+      "id": "ECB-ICAAP-P3-41",
+      "article": "ECB ICAAP Guide, Principle 3(ii), paras 41–44; Glossary",
+      "chapter": "Principle 3 — Normative perspective",
+      "text": "Under the normative perspective, the institution projects its ability to meet all capital-related regulatory and supervisory requirements over a multi-year horizon (at least three years) under a credible baseline and institution-specific adverse scenarios, covering all material risks.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP framework-level capital planning obligation; evidenced in the normative-perspective capital plan, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 3(ii), paras 41–44 and Glossary definitions of baseline and adverse scenario."
+    },
+    {
+      "id": "ECB-ICAAP-P3-50",
+      "article": "ECB ICAAP Guide, Principle 3(iii), paras 49–50",
+      "chapter": "Principle 3 — Economic perspective",
+      "text": "Under the economic perspective, the institution identifies and quantifies all material risks on an economic-value basis, with a point-in-time quantification at the reference date complemented by a medium-term assessment of material future developments.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 3(iii), paras 49–50."
+    },
+    {
+      "id": "ECB-ICAAP-P4-59",
+      "article": "ECB ICAAP Guide, Principle 4(i)–(ii), para 59",
+      "chapter": "Principle 4 — Risk identification",
+      "text": "A regular risk identification process, performed at least annually and whenever the risk profile changes materially, results in a comprehensive internal risk inventory based on the institution's own materiality definition.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide risk identification process; evidenced in the risk identification process and internal risk inventory, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 4, para 59."
+    },
+    {
+      "id": "ECB-ICAAP-P6-73",
+      "article": "ECB ICAAP Guide, Principle 6(i), para 73",
+      "chapter": "Principle 6 — Risk quantification",
+      "text": "Risk quantification methodologies are tailored to the institution's circumstances — its risk appetite, business model, risk profile, size and complexity — under both the economic and normative perspectives.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, para 73."
+    },
+    {
+      "id": "ECB-ICAAP-P6-74",
+      "article": "ECB ICAAP Guide, Principle 6, para 74",
+      "chapter": "Principle 6 — Risk quantification",
+      "text": "Risks that are difficult to quantify or lack data are not excluded from the assessment; sufficiently conservative risk figures are determined using all relevant information, including expert judgement.",
+      "quote": "Risks are not expected to be excluded from the assessment because they are difficult to quantify or the relevant data are not available.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, para 74 and footnote 38."
+    },
+    {
+      "id": "ECB-ICAAP-P6-76",
+      "article": "ECB ICAAP Guide, Principle 6, paras 76–78",
+      "chapter": "Principle 6 — Level of conservatism",
+      "text": "Risk quantification methodologies are robust, sufficiently stable, risk-sensitive and conservative enough to quantify rare losses, with methodological uncertainty addressed by additional conservatism and calibration based on the institution's own risk appetite.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, paras 76–78."
+    },
+    {
+      "id": "ECB-ICAAP-P6-83",
+      "article": "ECB ICAAP Guide, Principle 6, para 83",
+      "chapter": "Principle 6 — Choice of methodologies",
+      "text": "The institution fully understands the risk quantification methodologies it uses and can demonstrate their adequacy for its risk profile; vendor models are tailored to its business rather than imported mechanistically.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, para 83."
+    },
+    {
+      "id": "ECB-ICAAP-P6-84",
+      "article": "ECB ICAAP Guide, Principle 6(ii), para 84",
+      "chapter": "Principle 6 — Data quality",
+      "text": "An effective data quality framework with adequate processes and controls covers all relevant risk data and data quality dimensions (such as completeness, accuracy, consistency, timeliness, validity and traceability).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain an institution-wide data quality framework; evidenced in the data quality policy and procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, para 84 and footnote 42."
+    },
+    {
+      "id": "ECB-ICAAP-P6-86",
+      "article": "ECB ICAAP Guide, Principle 6, paras 85–86",
+      "chapter": "Principle 6 — Diversification",
+      "text": "Diversification assumptions are prudent and transparent; for inter-risk diversification, gross figures before diversification are reported alongside net figures, and coverage is ensured when diversification breaks down under stress.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, paras 85–86."
+    },
+    {
+      "id": "ECB-ICAAP-P6-88",
+      "article": "ECB ICAAP Guide, Principle 6(ii), paras 88, 90",
+      "chapter": "Principle 6 — Independent validation",
+      "text": "ICAAP risk quantification methodologies are subject to regular independent internal validation, proportionate to materiality and complexity, with conclusions reported to senior management and the management body and used in methodology review.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, paras 88 and 90."
+    },
+    {
+      "id": "ECB-ICAAP-P6-89",
+      "article": "ECB ICAAP Guide, Principle 6, para 89",
+      "chapter": "Principle 6 — Independent validation",
+      "text": "Independence between development and validation of risk quantification methodologies is ensured, and the independent validation is not performed by the internal audit function.",
+      "quote": "the independent validation is expected to not be conducted by the internal audit function",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation and independence of the validation and internal audit functions; evidenced in their organisational documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 6, para 89."
+    },
+    {
+      "id": "ECB-ICAAP-P7-91",
+      "article": "ECB ICAAP Guide, Principle 7(i), paras 91–92",
+      "chapter": "Principle 7 — Stress testing",
+      "text": "The stress-testing programme covers both the normative and economic perspectives; the institution defines its own scenarios and sensitivities capturing its material vulnerabilities, rather than relying on supervisory stress tests, and translates them into risk, loss and capital figures.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP framework-level stress-testing programme obligation; evidenced in the stress-testing programme documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 7, paras 91–92."
+    },
+    {
+      "id": "ECB-ICAAP-P7-94",
+      "article": "ECB ICAAP Guide, Principle 7(ii), paras 94–95",
+      "chapter": "Principle 7 — Stress testing",
+      "text": "Adverse scenarios under the normative perspective assume exceptional but plausible developments with a material impact on regulatory capital ratios (notably CET1), covering severe downturns, financial shocks, institution-specific vulnerabilities and plausible combinations.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide to the ICAAP (November 2018), Principle 7, paras 94–95."
+    }
+  ]
+}

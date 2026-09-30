@@ -1,0 +1,591 @@
+{
+  "docId": "EXT-RTS-MMC",
+  "requirements": [
+    {
+      "id": "RTS-MMC-2-1",
+      "article": "Reg. (EU) No 529/2014 Art. 2(1)",
+      "chapter": "Classification of extensions and changes",
+      "text": "Every change to the range of application of a rating system or to a rating system is classified either as material (requiring prior permission, CRR Art. 143(3)) or as other change requiring notification.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-2-2",
+      "article": "Reg. (EU) No 529/2014 Art. 2(2)",
+      "chapter": "Classification of extensions and changes",
+      "text": "Non-material changes are further classified as requiring notification before implementation (ex ante) or after implementation (ex post).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-3-2-a",
+      "article": "Reg. (EU) No 529/2014 Art. 3(2)(a)",
+      "chapter": "Quantitative impact assessment",
+      "text": "The quantitative impact of a change on risk-weighted exposure amounts is assessed using the most recent data available.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment)."
+    },
+    {
+      "id": "RTS-MMC-3-2-b",
+      "article": "Reg. (EU) No 529/2014 Art. 3(2)(b)",
+      "chapter": "Quantitative impact assessment",
+      "text": "Where a precise impact assessment is not feasible, the impact is assessed on a representative sample or with other reliable inference methodologies, and the approach is documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment)."
+    },
+    {
+      "id": "RTS-MMC-3-3",
+      "article": "Reg. (EU) No 529/2014 Art. 3(3)",
+      "chapter": "Classification principles",
+      "text": "A material change is not split into several changes or extensions of lower materiality.",
+      "quote": "One material extension or change shall not be split into several changes or extensions of lower materiality.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) adds that simultaneous modifications and modifications of the same nature are assessed as one change, with phased implementation plans subject to notification. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-3-4",
+      "article": "Reg. (EU) No 529/2014 Art. 3(4)",
+      "chapter": "Classification principles",
+      "text": "In case of doubt, a change is assigned to the category of highest potential materiality.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-3-5",
+      "article": "Reg. (EU) No 529/2014 Art. 3(5)",
+      "chapter": "Implementation of approved changes",
+      "text": "After permission of a material change, own funds requirements are calculated on the approved change from the date specified in the permission; non-implementation on that date requires a new permission applied for without undue delay.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-3-6",
+      "article": "Reg. (EU) No 529/2014 Art. 3(6)",
+      "chapter": "Implementation of approved changes",
+      "text": "Where implementation of an approved change is delayed, the institution notifies the competent authority and presents a plan for timely implementation within an agreed period.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory notification obligation of the institution; evidenced in notifications to the competent authority, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-3-7",
+      "article": "Reg. (EU) No 529/2014 Art. 3(7)",
+      "chapter": "Implementation of approved changes",
+      "text": "Where the institution decides not to implement a change that was notified ex ante, it notifies the competent authority of that decision without undue delay.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory notification obligation of the institution; evidenced in notifications to the competent authority, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-4-1-a",
+      "article": "Reg. (EU) No 529/2014 Art. 4(1)(a); Annex I, Part I, Section 1, point 1",
+      "chapter": "Material changes — range of application",
+      "text": "Extending a rating system to an additional business unit, product or obligor type, or to third-party-originated exposures is material, unless representativeness (CRR Art. 174(c)) and comparability (Art. 179(1)(d)) are demonstrated.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). Annex I, Part I, Section 1, point 1(a)-(c) summarised; exact carve-outs differ per point. CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) replaces this with a single representativeness test and adds quantitative thresholds for extensions (new Art. 4(1)(d): 1.5% overall RWEA decrease or 15% RWEA increase). Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-4-1-c-i",
+      "article": "Reg. (EU) No 529/2014 Art. 4(1)(c)(i), 4(2)",
+      "chapter": "Material changes — quantitative thresholds",
+      "text": "A change is material if it decreases the overall credit and dilution risk RWEA by 1.5% at EU parent consolidated level (or at solo level for an institution that is neither parent nor subsidiary).",
+      "category": "governance",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). The in-force text reads 'a decrease of 1,5 %' (no 'or more'); EBA/RTS/2026/05 reads '1,5 % or more'. Threshold unchanged."
+    },
+    {
+      "id": "RTS-MMC-4-1-c-ii",
+      "article": "Reg. (EU) No 529/2014 Art. 4(1)(c)(ii), 4(3)",
+      "chapter": "Material changes — quantitative thresholds",
+      "text": "A change is material if it decreases the credit and dilution risk RWEA associated with the range of application of the rating system by 15% or more.",
+      "category": "governance",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-4-2-3",
+      "article": "Reg. (EU) No 529/2014 Art. 4(2)-(3), Art. 5(2)",
+      "chapter": "Quantitative impact assessment",
+      "text": "RWEA impact ratios are computed as the before/after RWEA difference over pre-change RWEA, at the same point in time, isolating the effect of the change and holding the exposure set constant.",
+      "quote": "The determination of the impact on risk-weighted exposure amounts shall refer only to the impact of the change to the IRB approach",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment)."
+    },
+    {
+      "id": "RTS-MMC-5-1-a-qual",
+      "article": "Reg. (EU) No 529/2014 Art. 5(1)(a)(i)-(ii); Annex I, Part I, Section 2 and Part II, Section 2",
+      "chapter": "Non-material changes — ex ante notification",
+      "text": "Changes listed in Annex I, Part I, Section 2 or Part II, Section 2 are notified to the competent authority at least two months before implementation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory notification obligation of the institution; evidenced in ex ante notifications to the competent authority, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance. The Annex lists themselves are revised by the draft."
+    },
+    {
+      "id": "RTS-MMC-5-1-a-iii",
+      "article": "Reg. (EU) No 529/2014 Art. 5(1)(a)(iii), 5(2)",
+      "chapter": "Non-material changes — ex ante notification",
+      "text": "Changes decreasing the RWEA associated with the range of application of the rating system by at least 5% are notified at least two months before implementation.",
+      "category": "governance",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory notification obligation of the institution; evidenced in ex ante notifications to the competent authority, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-5-1-b",
+      "article": "Reg. (EU) No 529/2014 Art. 5(1)(b)",
+      "chapter": "Non-material changes — ex post notification",
+      "text": "All other changes are notified to the competent authority after implementation, at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory notification obligation of the institution; evidenced in the ex post notifications to the competent authority, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-AI-II-1-2-c",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 1, point 2(c)",
+      "chapter": "Material changes — rating systems",
+      "text": "A change in the rating system's assumptions on net migration of exposures across grades due to changing economic conditions (rating philosophy) is classified as material.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) reclassifies changes in business-cycle migration assumptions (Art. 171(3)) as ex ante notification. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-1-2-d",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 1, point 2(d)",
+      "chapter": "Material changes — rating systems",
+      "text": "The institution defines measures and significance levels to determine whether changes to rating criteria significantly change rank ordering or the distribution across grades, which makes them material.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) retains an institution-defined measure but only for 'fundamental' changes in rank ordering or distribution (Part II, Section 1, point 1(a)(iv)). Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-1-2-f",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 1, point 2(f)",
+      "chapter": "Material changes — rating systems",
+      "text": "A change in the fundamental methodology for estimating PD, LGD (incl. ELBE) or conversion factors, including the MoC methodology and, for LGD/CF, the downturn methodology, is classified as material.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) limits materiality to switches between grade-level and alternative estimation methods and between loss-data-based and alternative downturn methods; MoC and downturn methodology changes become ex ante notifications. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-1-2-g",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 1, point 2(g)",
+      "chapter": "Material changes — rating systems",
+      "text": "Inclusion of additional collateral types in LGD estimation is classified as material where their treatment differs from already approved procedures.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) moves inclusion of additional funded credit protection to ex ante notification. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-1-3",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 1, point 3",
+      "chapter": "Material changes — rating systems",
+      "text": "Changes in the definition of default under CRR Art. 178 are classified as material.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) keeps only fundamental default-definition changes material (level of application for retail, or a significant change in default classifications measured against an institution-defined threshold). Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-1-4",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 1, point 4",
+      "chapter": "Material changes — rating systems",
+      "text": "Changes in validation methodology or processes that change the institution's judgement of the accuracy and consistency of risk parameter estimation or rating system performance are classified as material.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) reclassifies validation changes: ex ante only where removal of tests or lowering of thresholds leads to a more lenient judgement, otherwise ex post. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-2-2-h",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 2, point 2(h)",
+      "chapter": "Ex ante notification — rating systems",
+      "text": "Changes to PD, LGD or CF estimation methodology, MoC methodology or downturn methodology that are not material are notified ex ante.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) keeps MoC and downturn methodology/period changes as ex ante items (q)-(t), while other non-fundamental estimation changes appear to fall under ex post notification (Part II, Section 3). Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-2-5-b",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 2, point 5(b)",
+      "chapter": "Ex ante notification — data",
+      "text": "A change of the data sources used for grade or pool assignment or for parameter estimation is notified ex ante.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) no longer lists data-source changes explicitly among ex ante items; only switches between internal, external and pooled data are material. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-AI-II-2-5-c",
+      "article": "Reg. (EU) No 529/2014 Annex I, Part II, Section 2, point 5(c)",
+      "chapter": "Ex ante notification — data",
+      "text": "A change in the length or composition of the time series used for parameter estimation, beyond the annual inclusion of the latest observations, is notified ex ante.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance. See draft item (m) and new items (n)-(o) on calibration segments and sample."
+    },
+    {
+      "id": "RTS-MMC-8-1-a-c",
+      "article": "Reg. (EU) No 529/2014 Art. 8(1)(a)-(c)",
+      "chapter": "Documentation of extensions and changes",
+      "text": "An application for a material change includes a description of the change, its rationale and objective, the implementation date, and the affected scope of application with volume characteristics.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the permission application to the competent authority; evidenced in the application package, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) restructures Art. 8 (e.g. explanation of materiality categorisation, whether the change remedies a validation or supervisory finding). Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-8-1-d-e",
+      "article": "Reg. (EU) No 529/2014 Art. 8(1)(d)-(e)",
+      "chapter": "Documentation of extensions and changes",
+      "text": "An application for a material change includes the technical and process documents and the reports of the institution's independent review or validation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the permission application to the competent authority; evidenced in the application package, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-8-1-f",
+      "article": "Reg. (EU) No 529/2014 Art. 8(1)(f)",
+      "chapter": "Documentation of extensions and changes",
+      "text": "An application for a material change includes confirmation, with date, that the change was approved by the competent bodies through the institution's internal approval process.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the permission application to the competent authority; evidenced in the application package, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). EBA/RTS/2026/05 (final draft amending RTS under CRR3 Art. 143(5), 30.3.2026, not yet in the OJ) keeps the substance."
+    },
+    {
+      "id": "RTS-MMC-8-1-g-h",
+      "article": "Reg. (EU) No 529/2014 Art. 8(1)(g)-(h)",
+      "chapter": "Documentation of extensions and changes",
+      "text": "An application for a material change includes, where applicable, the quantitative RWEA impact and records of the current and previous version numbers of the internal models concerned.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the permission application to the competent authority; evidenced in the application package, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) drops the version-record item and requires a breakdown of impact across bundled changes. Re-verify once the amending Regulation is published."
+    },
+    {
+      "id": "RTS-MMC-8-2",
+      "article": "Reg. (EU) No 529/2014 Art. 8(2)",
+      "chapter": "Documentation of extensions and changes",
+      "text": "An ex ante or ex post notification includes the description and rationale, implementation date, affected scope with volumes, internal approval confirmation and, where applicable, the quantitative impact.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for supervisory notifications; evidenced in the notification submitted to the competent authority, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against Reg. (EU) No 529/2014, OJ L 148, 20.5.2014, as amended by Reg. (EU) 2015/942 (IRB provisions unchanged by that amendment). CRR3: EBA/RTS/2026/05 (final draft amending RTS under CRR Art. 143(5), 30.3.2026, not yet adopted in the OJ at time of authoring) revises the documentation set for notifications (points (a)-(c), plus (e) for extensions). Re-verify once the amending Regulation is published."
+    }
+  ]
+}

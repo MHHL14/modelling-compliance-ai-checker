@@ -1,0 +1,560 @@
+{
+  "docId": "INT-VAL-GEN",
+  "requirements": [
+    {
+      "id": "MV-STD-001-4.1",
+      "article": "MV-STD-001 §4.1",
+      "chapter": "Independence",
+      "text": "The Model Validation function is organisationally independent of the units that develop, own or use the model, and validator remuneration is not linked to validation outcomes or model approval.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.1."
+    },
+    {
+      "id": "MV-STD-001-4.2",
+      "article": "MV-STD-001 §4.2",
+      "chapter": "Independence",
+      "text": "The validator did not contribute to the development, calibration or implementation of the model and did not work in the developing unit during the preceding twelve months.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.2."
+    },
+    {
+      "id": "MV-STD-001-4.4-a",
+      "article": "MV-STD-001 §4.4(a)",
+      "chapter": "Validation types and scope",
+      "text": "The model is subject to an initial validation before first use and before any application for supervisory approval.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.4(a)."
+    },
+    {
+      "id": "MV-STD-001-4.4-c",
+      "article": "MV-STD-001 §4.4(c)",
+      "chapter": "Validation types and scope",
+      "text": "A model change classified as material under MRM-STD-050 is subject to a change validation before implementation.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.4(c)."
+    },
+    {
+      "id": "MV-STD-001-4.5",
+      "article": "MV-STD-001 §4.5",
+      "chapter": "Validation types and scope",
+      "text": "The validation scope meets the minimum tier-based scope for data replication, re-estimation, code-versus-documentation check, conceptual soundness, outcome analysis, benchmarking and use test.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.5."
+    },
+    {
+      "id": "MV-STD-001-4.6",
+      "article": "MV-STD-001 §4.6",
+      "chapter": "Validation types and scope",
+      "text": "Periodic validation is performed at least annually for Tier 1 and regulatory-capital models, at least every two years for Tier 2 models and at least every three years for Tier 3 models.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.6."
+    },
+    {
+      "id": "MV-STD-001-4.7",
+      "article": "MV-STD-001 §4.7",
+      "chapter": "Validation types and scope",
+      "text": "Each validation is based on a scoping memo recording the validation type, the tier-based scope, the applicable library requirements and any scope limitations.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §4.7."
+    },
+    {
+      "id": "VAL-01",
+      "article": "MV-STD-001 §5.1",
+      "chapter": "Replication and implementation verification",
+      "text": "Validation independently replicates the RDS from source data.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Pilot requirement VAL-01 kept verbatim; anchored in MV-STD-001 §5.1 (depth of replication per tier in §4.5)."
+    },
+    {
+      "id": "MV-STD-001-5.1-b",
+      "article": "MV-STD-001 §5.1",
+      "chapter": "Replication and implementation verification",
+      "text": "The RDS replication reconciles record counts, default or event counts and key-variable distributions with the developer's RDS; unexplained differences above 0.5% of records or events are recorded as findings.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §5.1."
+    },
+    {
+      "id": "MV-STD-001-5.2",
+      "article": "MV-STD-001 §5.2",
+      "chapter": "Replication and implementation verification",
+      "text": "Validation re-estimates the model on the replicated RDS following the documented methodology, and parameter or output differences not explained by documented choices are recorded as findings.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §5.2."
+    },
+    {
+      "id": "MV-STD-001-5.3",
+      "article": "MV-STD-001 §5.3",
+      "chapter": "Replication and implementation verification",
+      "text": "Every parameter implemented in the model code (coefficients, transformations, bins, grade boundaries, cut-offs, overrides, floors, MoC and adjustments) matches the value and logic documented in the approved MDD and RDS documentation.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §5.3."
+    },
+    {
+      "id": "MV-STD-001-5.4",
+      "article": "MV-STD-001 §5.4",
+      "chapter": "Replication and implementation verification",
+      "text": "The production implementation reproduces the outputs of the validated model on an independently drawn test sample, with full agreement of grade or class assignments.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §5.4."
+    },
+    {
+      "id": "MV-STD-001-6.1",
+      "article": "MV-STD-001 §6.1",
+      "chapter": "Conceptual soundness",
+      "text": "The modelling approach is assessed as appropriate for the model's purpose, portfolio and intended use, with reference to alternative approaches in literature and industry practice.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §6.1."
+    },
+    {
+      "id": "MV-STD-001-6.2",
+      "article": "MV-STD-001 §6.2",
+      "chapter": "Conceptual soundness",
+      "text": "The key model assumptions are identified and assessed for validity, and the model limitations are documented together with their mitigants.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §6.2."
+    },
+    {
+      "id": "MV-STD-001-6.3",
+      "article": "MV-STD-001 §6.3",
+      "chapter": "Conceptual soundness",
+      "text": "The selection of risk drivers is reviewed for statistical significance, economic rationale and plausibility of sign and magnitude.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §6.3."
+    },
+    {
+      "id": "MV-STD-001-6.4",
+      "article": "MV-STD-001 §6.4",
+      "chapter": "Conceptual soundness",
+      "text": "Each material expert-judgement component is challenged against MRM-STD-023, including its documented rationale and the sensitivity of the model output to the judgement.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §6.4."
+    },
+    {
+      "id": "MV-STD-001-6.5",
+      "article": "MV-STD-001 §6.5",
+      "chapter": "Conceptual soundness",
+      "text": "Validation performs its own sensitivity analysis of the model output to the key assumptions and parameters.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §6.5."
+    },
+    {
+      "id": "MV-STD-001-7.1",
+      "article": "MV-STD-001 §7.1",
+      "chapter": "Data",
+      "text": "The data quality of the RDS is assessed independently against the dimensions of MRM-STD-022, without relying solely on the model owner's data quality assessment.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §7.1."
+    },
+    {
+      "id": "MV-STD-001-7.2",
+      "article": "MV-STD-001 §7.2",
+      "chapter": "Data",
+      "text": "The representativeness of the development data for the current and expected portfolio is assessed using the tests of MV-HB-003 §6.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §7.2."
+    },
+    {
+      "id": "MV-STD-001-7.3",
+      "article": "MV-STD-001 §7.3",
+      "chapter": "Data",
+      "text": "The impact of each material data treatment (exclusions, imputations, outlier treatment and filters) on the number of records and events and on the model outcome is assessed.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §7.3."
+    },
+    {
+      "id": "MV-STD-001-7.4",
+      "article": "MV-STD-001 §7.4",
+      "chapter": "Data",
+      "text": "External and vendor data used in the model are assessed for fitness for use.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §7.4."
+    },
+    {
+      "id": "MV-STD-001-8.1",
+      "article": "MV-STD-001 §8.1",
+      "chapter": "Outcome analysis and benchmarking",
+      "text": "Model outputs are compared with realised outcomes on out-of-sample and, where available, out-of-time data, using the tests and thresholds of MV-HB-003.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §8.1."
+    },
+    {
+      "id": "MV-STD-001-8.2",
+      "article": "MV-STD-001 §8.2",
+      "chapter": "Outcome analysis and benchmarking",
+      "text": "For Tier 1 and Tier 2 models, outputs are compared with at least one independent benchmark (MV challenger model, external ratings or external data), and material divergences are explained.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §8.2."
+    },
+    {
+      "id": "MV-STD-001-9.1",
+      "article": "MV-STD-001 §9.1",
+      "chapter": "Use test",
+      "text": "The model is used in line with its approved purpose and scope, and any use outside the approved scope is identified.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §9.1."
+    },
+    {
+      "id": "MV-STD-001-9.2",
+      "article": "MV-STD-001 §9.2",
+      "chapter": "Use test",
+      "text": "For models used in decision-making, and for IRB models in line with CRR Art. 144(1)(b), the model outputs play an essential role in the relevant processes.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §9.2."
+    },
+    {
+      "id": "MV-STD-001-9.3",
+      "article": "MV-STD-001 §9.3",
+      "chapter": "Use test",
+      "text": "The frequency, direction and rationale of overrides of model outputs are analysed, and an override rate above the monitoring threshold is analysed in the validation report.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §9.3."
+    },
+    {
+      "id": "MV-STD-001-10.1",
+      "article": "MV-STD-001 §10.1",
+      "chapter": "Validation report and opinion",
+      "text": "The validation report contains the opinion, model description and intended use, validation type and scope with limitations, results per validation area, rated findings, conditions and the library requirements assessed with their outcome.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §10.1."
+    },
+    {
+      "id": "MV-STD-001-10.2",
+      "article": "MV-STD-001 §10.2",
+      "chapter": "Validation report and opinion",
+      "text": "The validation report expresses one of the opinions: fit for purpose, fit for purpose with conditions, or not fit for purpose.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §10.2."
+    },
+    {
+      "id": "MV-STD-001-10.4",
+      "article": "MV-STD-001 §10.4",
+      "chapter": "Validation report and opinion",
+      "text": "Each condition attached to the validation opinion specifies a measurable action or restriction, its owner and its deadline.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §10.4."
+    },
+    {
+      "id": "MV-STD-001-10.5",
+      "article": "MV-STD-001 §10.5",
+      "chapter": "Validation report and opinion",
+      "text": "The validation report is reviewed by a senior validator outside the validation team, signed off by the Head of Model Validation for Tier 1 and 2 models, and submitted before the approval decision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-001 §10.5."
+    }
+  ]
+}

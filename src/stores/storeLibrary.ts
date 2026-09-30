@@ -1,6 +1,7 @@
 'use client';
 import { create } from 'zustand';
-import { createJSONStorage, persist } from 'zustand/middleware';
+import { persist } from 'zustand/middleware';
+import { workspaceStorage } from '@/lib/storage';
 import { nowISO } from '@/lib/clock';
 import { LIBRARY_BASE_VERSION } from '@/lib/seed';
 import type { Requirement } from '@/lib/types';
@@ -64,6 +65,6 @@ export const useLibrary = create<LibraryState>()(
         logAudit({ line: 'library', type: 'Library version published', detail: `Requirement library v${from} → v${to} published. Affected rows flagged “Needs review — library changed”.` });
       },
     }),
-    { name: 'mcw-storeLibrary', version: 1, storage: createJSONStorage(() => localStorage) },
+    { name: 'mcw-storeLibrary', version: 1, storage: workspaceStorage },
   ),
 );

@@ -1,0 +1,577 @@
+{
+  "docId": "INT-POL-AI",
+  "requirements": [
+    {
+      "id": "AI-POL-001-4.1",
+      "article": "AI-POL-001 §4.1",
+      "chapter": "Principles",
+      "text": "Fairness of every AI system affecting natural persons is assessed before deployment and monitored during use, using the metrics and thresholds of AI-STD-700.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to AI systems whose outputs affect natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0)."
+    },
+    {
+      "id": "AI-POL-001-4.2a",
+      "article": "AI-POL-001 §4.2",
+      "chapter": "Principles",
+      "text": "The purpose, logic, main inputs, limitations and intended use of the AI system are documented in terms understandable to users, validators and supervisors.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0)."
+    },
+    {
+      "id": "AI-POL-001-4.2b",
+      "article": "AI-POL-001 §4.2; AI Act Art. 50(1)",
+      "chapter": "Principles",
+      "text": "Natural persons are informed when they interact directly with an AI system, unless this is obvious from the context.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-4.3",
+      "article": "AI-POL-001 §4.3",
+      "chapter": "Principles",
+      "text": "The AI system can be explained at global and individual level proportionate to the impact of the use case, and individual explanations are available to staff acting on its outputs.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-4.4",
+      "article": "AI-POL-001 §4.4",
+      "chapter": "Principles",
+      "text": "The AI use case has a named Use Case Owner and a named technical owner recorded in the AI Inventory.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-4.5",
+      "article": "AI-POL-001 §4.5; AI Act Art. 14",
+      "chapter": "Principles",
+      "text": "The human oversight design specifies who oversees the AI system, which outputs are reviewed, the criteria for intervention and the means to override or stop the system.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-4.6",
+      "article": "AI-POL-001 §4.6; AI Act Art. 15",
+      "chapter": "Principles",
+      "text": "The AI system achieves an appropriate level of accuracy, robustness and cybersecurity, including resilience against errors, data drift and adversarial manipulation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-4.7",
+      "article": "AI-POL-001 §4.7; GDPR Art. 25",
+      "chapter": "Principles",
+      "text": "Processing of personal data by the AI system complies with PRIV-POL-001, including data protection by design and data minimisation.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to AI systems processing personal data.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.1",
+      "article": "AI-POL-001 §5.1",
+      "chapter": "AI inventory and risk classification",
+      "text": "The AI use case is registered in the AI Inventory before development or procurement starts, recording purpose, owners, systems, provider/deployer role, affected persons, data categories, classifications and Model Inventory identifier.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.2",
+      "article": "AI-POL-001 §5.2; AI Act Art. 3(1)",
+      "chapter": "AI inventory and risk classification",
+      "text": "The assessment of the system against the AI system definition of Art. 3(1) AI Act is documented, including the reasoning where the system is concluded not to be an AI system.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.3",
+      "article": "AI-POL-001 §5.3; AI Act Art. 5, 6, 50 and Annex III",
+      "chapter": "AI inventory and risk classification",
+      "text": "The use case is classified under the AI Act as prohibited, high-risk, subject to transparency obligations or minimal risk, with a documented rationale reviewed by the AI Governance Office.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.4",
+      "article": "AI-POL-001 §5.4; AI Act Art. 6(3) and 6(4)",
+      "chapter": "AI inventory and risk classification",
+      "text": "Where an Annex III use case is concluded not to pose a significant risk under Art. 6(3), the assessment is documented before being placed into service and approved by the AI Governance Office; no derogation is applied where the system profiles natural persons.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.5",
+      "article": "AI-POL-001 §5.5; AI Act Annex III point 5(b)",
+      "chapter": "AI inventory and risk classification",
+      "text": "Creditworthiness assessment or credit scoring of natural persons, including self-employed persons, is classified as high-risk under Annex III point 5(b), unless used solely to detect financial fraud.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to AI systems used for credit decisions or credit scoring.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.6",
+      "article": "AI-POL-001 §5.6",
+      "chapter": "AI inventory and risk classification",
+      "text": "The use case is assigned an internal AI Risk Class based on AI Act classification, customer impact, autonomy, decision materiality and model tier; AI Act high-risk systems are AI Risk Class High.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-5.7",
+      "article": "AI-POL-001 §5.7",
+      "chapter": "AI inventory and risk classification",
+      "text": "The AI Act classification and AI Risk Class are reassessed on every material change to purpose, scope, data or autonomy and at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-6.1",
+      "article": "AI-POL-001 §6.1; AI Act Art. 5",
+      "chapter": "Prohibited and restricted uses",
+      "text": "The AI system is not used for any practice prohibited under Art. 5 AI Act, such as manipulative techniques, exploitation of vulnerabilities, social scoring or emotion recognition in the workplace.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-6.2",
+      "article": "AI-POL-001 §6.2; GDPR Art. 22",
+      "chapter": "Prohibited and restricted uses",
+      "text": "The AI system does not take fully automated decisions to reject credit, terminate a relationship or refuse a product to a natural person without a documented human review path.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to AI systems supporting decisions on natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.2",
+      "article": "AI-POL-001 §7.2",
+      "chapter": "Governance and approval",
+      "text": "The AI system has a documented use-case approval by the authority matching its AI Risk Class before production use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.3",
+      "article": "AI-POL-001 §7.3; MRM-POL-001",
+      "chapter": "Governance and approval",
+      "text": "Where the AI system is also a model, model approval under MRM-POL-001 following independent validation under MV-STD-001 and MV-STD-020 is obtained before production use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.4a",
+      "article": "AI-POL-001 §7.4; AI Act Art. 9",
+      "chapter": "High-risk AI systems",
+      "text": "For high-risk AI systems provided by the Bank, a risk management system covering the entire lifecycle is established and integrated into the model lifecycle of MRM-POL-001.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.4b",
+      "article": "AI-POL-001 §7.4; AI Act Art. 10",
+      "chapter": "High-risk AI systems",
+      "text": "For high-risk AI systems provided by the Bank, training, validation and testing data are subject to data governance covering relevance, representativeness, errors, completeness and bias examination.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.4c",
+      "article": "AI-POL-001 §7.4; AI Act Art. 11 and Annex IV",
+      "chapter": "High-risk AI systems",
+      "text": "For high-risk AI systems provided by the Bank, technical documentation demonstrating compliance with the AI Act requirements is drawn up before the system is placed into service.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.4d",
+      "article": "AI-POL-001 §7.4; AI Act Art. 12",
+      "chapter": "High-risk AI systems",
+      "text": "For high-risk AI systems provided by the Bank, the system automatically records events (logs) over its lifetime to enable traceability of its functioning.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.5",
+      "article": "AI-POL-001 §7.5; AI Act Art. 26(6)",
+      "chapter": "High-risk AI systems",
+      "text": "For high-risk AI systems deployed by the Bank, automatically generated logs under the Bank's control are retained for at least six months.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.6",
+      "article": "AI-POL-001 §7.6; AI Act Art. 27; GDPR Art. 35",
+      "chapter": "High-risk AI systems",
+      "text": "A fundamental rights impact assessment, coordinated with the DPIA, is performed before first use of a high-risk AI system under Annex III point 5(b) or 5(c).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-7.8",
+      "article": "AI-POL-001 §7.8; TPR-POL-001",
+      "chapter": "Governance and approval",
+      "text": "Third-party AI systems and GPAI models are procured under TPR-POL-001 with AI-specific due diligence on training data provenance, documentation, evaluation results and contractual information and audit rights.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to AI systems or models sourced from a third party.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-8.1",
+      "article": "AI-POL-001 §8.1; AI Act Art. 86",
+      "chapter": "Transparency towards customers and users",
+      "text": "Customers subject to a decision based on a high-risk AI system receive, on request, a clear and meaningful explanation of the role of the AI system and the main elements of the decision.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-8.2",
+      "article": "AI-POL-001 §8.2; AI Act Art. 50",
+      "chapter": "Transparency towards customers and users",
+      "text": "AI-generated or AI-manipulated content published to customers or the public is labelled as such in accordance with AI-STD-710.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to generative AI systems.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-8.3",
+      "article": "AI-POL-001 §8.3; AI Act Art. 13",
+      "chapter": "Transparency towards customers and users",
+      "text": "Instructions for use describing intended purpose, known limitations, performance levels and expected oversight tasks are provided to internal users of the AI system.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (AI-POL-001 v2.0); external cross-reference checked against the AI Act."
+    },
+    {
+      "id": "AI-POL-001-9.2",
+      "article": "AI-POL-001 §9.2; AI Act Art. 4",
+      "chapter": "AI literacy",
+      "text": "Developers, validators, Use Case Owners and staff assigned to human oversight complete role-specific AI training before assignment to the use case and refresher training at least every two years.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide training obligation; evidenced in the Bank's training records and learning management system, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal obligation is authored and stands; the scope of AI Act Art. 4 as amended by the Digital Omnibus (Reg. (EU) 2026/1744) should be confirmed."
+    }
+  ]
+}

@@ -1,0 +1,1062 @@
+{
+  "docId": "EXT-EBA-DOD",
+  "requirements": [
+    {
+      "id": "EBA-DOD-011a",
+      "article": "EBA/GL/2016/07 para 11(a)",
+      "chapter": "3 Implementation — first application (IRB)",
+      "text": "Historical data used for risk parameter estimation are adjusted, where possible, to the definition of default under these guidelines, including the materiality threshold for past due credit obligations.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-011c",
+      "article": "EBA/GL/2016/07 para 11(c)",
+      "chapter": "3 Implementation — first application (IRB)",
+      "text": "An additional margin of conservatism covers possible distortions of risk estimates resulting from an inconsistent definition of default in the historical data used for modelling.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-014",
+      "article": "EBA/GL/2016/07 para 14",
+      "chapter": "3 Implementation — first application (IRB)",
+      "text": "In regular reviews of estimates, the data window is extended (or justifiably moved) to include data collected under the new default definition, and the related MoC is reassessed until a sufficiently long homogeneous period exists.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-016a",
+      "article": "EBA/GL/2016/07 para 16",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Any amount of principal, interest or fee not paid at the date it was due is recognised as a past due credit obligation.",
+      "quote": "where any amount of principal, interest or fee has not been paid at the date it was due",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-016b",
+      "article": "EBA/GL/2016/07 para 16",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Internal policies specify that, where the payment schedule has been modified, days past due are counted on the basis of the modified schedule.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-017",
+      "article": "EBA/GL/2016/07 paras 17-18",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Instalments changed, suspended or postponed under contractual rights or by law are not counted as past due, and the reasons for such changes or suspensions are analysed for indications of unlikeliness to pay.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-019",
+      "article": "EBA/GL/2016/07 para 19",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Days past due counting is suspended for disputed obligations only where the dispute is before a court or other formal binding procedure or, for leasing, a complaint is confirmed by an independent unit.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-021",
+      "article": "EBA/GL/2016/07 para 21",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Where days past due are calculated less often than daily, the date of default is set to the date on which the past due criterion was actually fulfilled.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-022",
+      "article": "EBA/GL/2016/07 para 22",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Once the past due criterion is met, the obligor is classified as defaulted without additional expert judgement and all its exposures are defaulted, except under retail facility-level application or a technical past due situation.",
+      "quote": "The classification of the obligor to a defaulted status should not be subject to additional expert judgement",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-023",
+      "article": "EBA/GL/2016/07 para 23",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Technical past due situations are recognised only in the listed cases (institution data or system errors, payment execution failures, payment allocation time lags, specified factoring cases), excluding wrong credit decisions.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): point (d) (factoring) replaced; tolerance extended from 30 to 90 days and undisclosed/uninformed factoring cases moved here from paras 31-32. Requirement wording covers both versions."
+    },
+    {
+      "id": "EBA-DOD-024",
+      "article": "EBA/GL/2016/07 para 24",
+      "chapter": "4 Past due criterion — counting of days past due",
+      "text": "Technical past due situations are removed from the reference data set of defaulted exposures used for the estimation of risk parameters.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-034",
+      "article": "EBA/GL/2016/07 para 34",
+      "chapter": "4 Past due criterion — materiality threshold",
+      "text": "The competent authority's materiality threshold is applied; a lower internal threshold is used only where shown to be a relevant UTP indication without excessive short-lived defaults, and is recorded as a separate UTP trigger.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "REQ-D08",
+      "article": "EBA/GL/2016/07 section 5",
+      "chapter": "5 Unlikeliness to pay",
+      "text": "Unlikeliness-to-pay triggers are documented and applied consistently.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot record (section-level reference kept). Detailed basis: paras 35-65, in particular paras 58 and 64-65 (policies covering all exposure types, business lines, legal entities and locations)."
+    },
+    {
+      "id": "EBA-DOD-035",
+      "article": "EBA/GL/2016/07 para 35",
+      "chapter": "5 Unlikeliness to pay",
+      "text": "An obligor is considered unlikely to pay where interest on its credit obligations is no longer recognised in the income statement due to a decrease in credit quality (non-accrued status).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-036",
+      "article": "EBA/GL/2016/07 paras 36-37",
+      "chapter": "5 Unlikeliness to pay",
+      "text": "Specific credit risk adjustments resulting from a significant perceived decline in credit quality are treated as UTP indications, whereas adjustments for incurred-but-not-reported losses are not.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-038",
+      "article": "EBA/GL/2016/07 para 38",
+      "chapter": "5 Unlikeliness to pay",
+      "text": "An exposure treated as impaired is an indication of unlikeliness to pay and the obligor is considered defaulted, regardless of whether specific credit risk adjustments are assigned.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-039",
+      "article": "EBA/GL/2016/07 para 39",
+      "chapter": "5 Unlikeliness to pay",
+      "text": "Exposures classified as credit-impaired (Stage 3) under IFRS 9 are considered defaulted, unless impairment results from payment delay and a listed exception applies (threshold not breached, technical past due, public sector treatment).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): point (a) (180 dpd discretion) deleted following CRR3; requirement lists only the remaining exceptions."
+    },
+    {
+      "id": "EBA-DOD-042",
+      "article": "EBA/GL/2016/07 para 42",
+      "chapter": "5 UTP — sale of credit obligations",
+      "text": "The reasons for each sale of credit obligations and related losses are analysed; a sale loss is treated as not credit-related only with appropriate, documented justification.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-044",
+      "article": "EBA/GL/2016/07 paras 44-45",
+      "chapter": "5 UTP — sale of credit obligations",
+      "text": "A threshold of at most 5% is set for the credit-related economic loss on sale, L = (E - P)/E, and obligations sold with a loss above it are considered defaulted.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-047",
+      "article": "EBA/GL/2016/07 para 47",
+      "chapter": "5 UTP — sale of credit obligations",
+      "text": "Where a sale at a material credit-related loss precedes default identification, the moment of sale is the date of default, and after a partial sale all remaining exposures to the obligor are defaulted (except retail facility level).",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-051",
+      "article": "EBA/GL/2016/07 paras 51-52",
+      "chapter": "5 UTP — distressed restructuring / forbearance",
+      "text": "For each forbearance measure (distressed restructuring), the diminished financial obligation (NPV0 - NPV1)/NPV0 at the original effective interest rate is calculated, and exposures above the threshold of at most 1% are defaulted.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): para 52 now refers to 'forbearance measure' instead of 'distressed restructuring' (CRR3 Art. 178(3)(d)); paras 49-50 deleted. 1% threshold confirmed."
+    },
+    {
+      "id": "EBA-DOD-053",
+      "article": "EBA/GL/2016/07 para 53",
+      "chapter": "5 UTP — distressed restructuring / forbearance",
+      "text": "Forborne exposures below the diminished-obligation threshold are assessed for other UTP indications, such as a large final lump sum, back-loaded or irregular schedule, significant grace period or repeated forbearance.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): para 53 replaced with 'forbearance measure' wording; indicators unchanged."
+    },
+    {
+      "id": "EBA-DOD-054",
+      "article": "EBA/GL/2016/07 para 54",
+      "chapter": "5 UTP — distressed restructuring / forbearance",
+      "text": "All exposures classified as forborne non-performing are classified as defaulted.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): para 54 replaced: forborne non-performing per CRR Arts 47a-47b classified as defaulted; the 2016 text also required any concession to a defaulted obligor to be treated as distressed restructuring."
+    },
+    {
+      "id": "EBA-DOD-058",
+      "article": "EBA/GL/2016/07 para 58",
+      "chapter": "5 UTP — other indications and governance",
+      "text": "Internal policies specify additional UTP indications per type of exposures for all business lines, legal entities and locations, each triggering either automatic default classification or a case-by-case assessment.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "The specification of additional UTP indications across all business lines and entities is set in the institution's default definition policy.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-060",
+      "article": "EBA/GL/2016/07 para 60",
+      "chapter": "5 UTP — other indications and governance",
+      "text": "UTP identification takes into account external information, including credit registers, macroeconomic indicators and public sources such as press articles and analyst reports.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-061",
+      "article": "EBA/GL/2016/07 para 61",
+      "chapter": "5 UTP — other indications and governance",
+      "text": "Internal policies specify when the default of one obligor in a group of connected clients has a contagious effect on other group entities, with a case-by-case assessment where not specified.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-065",
+      "article": "EBA/GL/2016/07 para 65",
+      "chapter": "5 UTP — other indications and governance",
+      "text": "For each indication of unlikeliness to pay, the identification method, internal and external information sources and monitoring frequency are defined.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-067",
+      "article": "EBA/GL/2016/07 para 67",
+      "chapter": "6 Definition of default in external data",
+      "text": "The default definition in external data used for estimation is verified against CRR Article 178 and the internal definition (dpd counting, materiality threshold, restructuring, SCRA, cure criteria), and sources, analysis and differences are documented.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-068",
+      "article": "EBA/GL/2016/07 paras 68-69",
+      "chapter": "6 Definition of default in external data",
+      "text": "For each identified difference the direction of impact on default rates is assessed and the external data are adjusted or the difference shown negligible, demonstrating broad equivalence with the internal definition.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-070",
+      "article": "EBA/GL/2016/07 para 70",
+      "chapter": "6 Definition of default in external data",
+      "text": "Non-negligible differences in the external default definition that cannot be adjusted are covered by a margin of conservatism reflecting their materiality and impact on all risk parameters.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "REQ-D09",
+      "article": "EBA/GL/2016/07 section 7",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "Probation (cure) periods are applied before a facility returns to non-default status.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot record (section-level reference kept). Detailed minimum periods are captured in EBA-DOD-071a (3 months) and EBA-DOD-072 (1 year for forbearance)."
+    },
+    {
+      "id": "EBA-DOD-071a",
+      "article": "EBA/GL/2016/07 para 71(a)",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "A previously defaulted exposure is considered to have no default trigger only after at least 3 months have passed since the past due and UTP conditions ceased to be met.",
+      "quote": "at least 3 months have passed since the moment that the conditions referred to in Articles 178(1)(b) and 178(3)",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-071d",
+      "article": "EBA/GL/2016/07 para 71(b)-(d)",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "The obligor's behaviour and financial situation during the probation period are assessed, and the exposure stays defaulted until the improvement in credit quality is factual and permanent.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-072",
+      "article": "EBA/GL/2016/07 para 72",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "Exposures defaulted due to distressed restructuring (forbearance) remain defaulted for at least one year from the latest of the restructuring measure, the default classification or the end of the grace period.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): para 72 replaced with 'forbearance measure' wording (default under CRR Art. 178(3)(d)); one-year period and start events unchanged."
+    },
+    {
+      "id": "EBA-DOD-073a",
+      "article": "EBA/GL/2016/07 para 73(a)",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "Return to non-default after restructuring requires a material payment during the probation period, i.e. regular payments totalling the amount previously past due or written off.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-073b",
+      "article": "EBA/GL/2016/07 para 73(b)-(e)",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "Return to non-default after restructuring also requires regular payments per the new schedule, no past due obligations, no UTP indications and no other doubt about full repayment, notably for back-loaded schedules.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-076",
+      "article": "EBA/GL/2016/07 paras 76-77",
+      "chapter": "7 Return to non-defaulted status",
+      "text": "The effectiveness of return-to-non-default policies is monitored regularly through status changes, cure rates and multiple defaults, and the policies are revised where multiple defaults are extensive.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-080",
+      "article": "EBA/GL/2016/07 para 80",
+      "chapter": "8 Consistency of the definition of default",
+      "text": "The default of a single obligor is identified consistently for all its exposures across all relevant IT systems, legal entities of the group and geographical locations.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-081",
+      "article": "EBA/GL/2016/07 para 81",
+      "chapter": "8 Consistency of the definition of default",
+      "text": "Where legal impediments to intra-group client data exchange cause inconsistent default identification, the competent authority is informed and, for IRB, the materiality and impact on risk parameters are estimated.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-083",
+      "article": "EBA/GL/2016/07 para 83",
+      "chapter": "8 Consistency of the definition of default",
+      "text": "The same definition of default is used for a given type of exposures across the institution, parent and subsidiaries; different definitions are used only where justified by different risk management practices or legal requirements.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Group-wide consistency of the default definition is evidenced in the institution's default definition policy, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): point (b) (180 dpd discretion) deleted; core obligation unchanged."
+    },
+    {
+      "id": "EBA-DOD-084",
+      "article": "EBA/GL/2016/07 para 84",
+      "chapter": "8 Consistency of the definition of default",
+      "text": "Where different default definitions are used, the scope of application of each is clearly specified and each is applied consistently to all exposures within its scope.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-085",
+      "article": "EBA/GL/2016/07 para 85",
+      "chapter": "8 Consistency of the definition of default",
+      "text": "Where a rating system's scope encompasses different default definitions, this is adequately reflected in the estimation of risk parameters.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-089",
+      "article": "EBA/GL/2016/07 paras 87-89",
+      "chapter": "9 Retail exposures",
+      "text": "The level of application of the default definition (obligor or facility) for retail exposures reflects internal risk management practice, and the scope of each level is clearly specified and used consistently over time.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-092",
+      "article": "EBA/GL/2016/07 paras 92-93",
+      "chapter": "9 Retail exposures",
+      "text": "Where retail default is applied at facility level, obligor-related UTP indications, such as bankruptcy, lead to all exposures to the obligor being treated as defaulted.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-097",
+      "article": "EBA/GL/2016/07 paras 95 and 97",
+      "chapter": "9 Retail exposures",
+      "text": "Where retail default is applied at obligor level, internal policies set rules for joint credit obligations and contagion, including defaulting individual exposures when a joint obligation defaults unless para 97 exceptions apply.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-103",
+      "article": "EBA/GL/2016/07 paras 103-105",
+      "chapter": "9 Retail exposures",
+      "text": "Where retail default is applied at obligor level, the materiality threshold is applied at obligor level, with a joint obligor treated as a separate obligor in the threshold calculation.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-106a",
+      "article": "EBA/GL/2016/07 para 106(a)",
+      "chapter": "10 Timeliness of default identification",
+      "text": "Automatic default identification processes, such as counting of days past due, are performed on a daily basis.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-106b",
+      "article": "EBA/GL/2016/07 para 106(b)",
+      "chapter": "10 Timeliness of default identification",
+      "text": "Manual default identification processes (external sources, watch lists, forborne exposure lists, SCRA) are updated with a frequency that guarantees timely identification of default.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-107",
+      "article": "EBA/GL/2016/07 para 107",
+      "chapter": "10 Timeliness of default identification",
+      "text": "It is regularly verified that all forborne non-performing exposures are classified as defaulted, and forborne performing exposures are regularly analysed for indications of unlikeliness to pay.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2016/07. Amended by EBA/GL/2026/05 (applies from 19.10.2026): para 107 replaced (drops 'distressed restructuring' wording, cross-refers to paras 51-55); obligation unchanged."
+    },
+    {
+      "id": "EBA-DOD-108",
+      "article": "EBA/GL/2016/07 para 108",
+      "chapter": "10 Timeliness of default identification",
+      "text": "All exposures to a defaulted obligor are flagged as defaulted in all relevant IT systems without undue delay, and any recording delays do not cause errors in the data used for risk quantification.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-110",
+      "article": "EBA/GL/2016/07 paras 109(a) and 110",
+      "chapter": "10 Documentation and internal governance",
+      "text": "The operationalisation of every indication of default is documented in detail, including the process, sources of information and responsibilities for its identification.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-113",
+      "article": "EBA/GL/2016/07 para 113",
+      "chapter": "10 Documentation and internal governance",
+      "text": "An updated register of all current and past default definitions is kept, with scope, approving body and date, implementation date, description of changes and, for IRB, change category and supervisory dates.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "The register of default definitions is an institution-level register maintained under the default definition policy.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-114a",
+      "article": "EBA/GL/2016/07 para 114(a)",
+      "chapter": "10 Documentation and internal governance",
+      "text": "The definition of default and its scope of application are approved by the management body (or a designated committee) and senior management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Approval of the default definition is a governance obligation of the management body, evidenced in the approved default definition policy.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-114b",
+      "article": "EBA/GL/2016/07 para 114(b)",
+      "chapter": "10 Documentation and internal governance",
+      "text": "The definition of default is used consistently for own funds requirements and plays a meaningful role in internal risk management, at least in exposure monitoring and internal reporting to management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Consistent use of the default definition in risk management is evidenced in the institution's credit risk management framework and internal reporting.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    },
+    {
+      "id": "EBA-DOD-114c",
+      "article": "EBA/GL/2016/07 para 114(c)",
+      "chapter": "10 Documentation and internal governance",
+      "text": "Internal audit or a comparable independent unit regularly reviews the robustness, effectiveness and timeliness of the default identification process and reports conclusions directly to the management body.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Review of the default identification process is an obligation of internal audit, evidenced in audit plans and reports.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to institutions using the IRB Approach (risk parameter estimation) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the official EN text of EBA/GL/2016/07; paragraph not changed by amending Guidelines EBA/GL/2026/05 (apply from 19.10.2026)."
+    }
+  ]
+}

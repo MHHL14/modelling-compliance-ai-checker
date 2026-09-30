@@ -1,0 +1,318 @@
+{
+  "docId": "EXT-SR117",
+  "requirements": [
+    {
+      "id": "SR117-III-def",
+      "article": "SR 11-7, Section III (Overview of Model Risk Management)",
+      "chapter": "Model definition and model risk",
+      "text": "The institution applies a model definition covering any quantitative method, system or approach that applies statistical, economic, financial or mathematical theories, techniques and assumptions to process input data into quantitative estimates.",
+      "quote": "a quantitative method, system, or approach that applies statistical, economic, financial, or mathematical theories, techniques, and assumptions to process input data into quantitative estimates",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's model risk management framework; evidenced in the MRM policy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference. Same definition adopted in PRA SS1/23 Principle 1.1(a)."
+    },
+    {
+      "id": "SR117-III-mr",
+      "article": "SR 11-7, Section III (Overview of Model Risk Management)",
+      "chapter": "Model definition and model risk",
+      "text": "Model risk is managed like other types of risk: the institution identifies its sources and assesses its magnitude, for individual models and in aggregate.",
+      "quote": "Model risk should be managed like other types of risk.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's management of model risk in aggregate; evidenced in the MRM framework and aggregate model risk reporting, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-III-ec",
+      "article": "SR 11-7, Section III (Overview of Model Risk Management)",
+      "chapter": "Model definition and model risk",
+      "text": "Model risk management is guided by effective challenge, performed by objective, informed parties with the competence, influence and incentives to identify model limitations and assumptions and produce appropriate changes.",
+      "quote": "critical analysis by objective, informed parties who can identify model limitations and assumptions and produce appropriate changes",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Framework-level principle of the institution's model risk management; evidenced in the MRM policy and governance arrangements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-IV-data",
+      "article": "SR 11-7, Section IV (Model Development, Implementation, and Use)",
+      "chapter": "Model development, implementation and use",
+      "text": "Data used to develop the model are rigorously assessed for quality and relevance, and any data proxies or adjustments are justified and documented.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-IV-design",
+      "article": "SR 11-7, Section IV (Model Development, Implementation, and Use)",
+      "chapter": "Model development, implementation and use",
+      "text": "Model development starts from a clear statement of purpose, and the design, theory and logic are documented and supported by published research and sound industry practice.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-IV-test",
+      "article": "SR 11-7, Section IV (Model Development, Implementation, and Use)",
+      "chapter": "Model development, implementation and use",
+      "text": "Model developers test the accuracy, robustness and stability of the model, assess its limitations and behaviour over a range of input values, and document the testing.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-IV-use",
+      "article": "SR 11-7, Section IV (Model Development, Implementation, and Use)",
+      "chapter": "Model development, implementation and use",
+      "text": "Model users account for model uncertainty and limitations, for example through conservative adjustments or buffers, and understand the model's limitations when relying on its output.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-V-ind",
+      "article": "SR 11-7, Section V (Model Validation)",
+      "chapter": "Model validation",
+      "text": "Model validation is performed by staff independent of model development and use, with the requisite knowledge, skills, expertise and authority to challenge.",
+      "quote": "Validation involves a degree of independence from model development and use.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation and staffing of the validation function; evidenced in its organisational documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-V-cs",
+      "article": "SR 11-7, Section V (Model Validation)",
+      "chapter": "Model validation",
+      "text": "Validation evaluates the conceptual soundness of the model, including the quality of design and construction, the documentation, and the empirical evidence supporting methods and variable selection.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference. First of the three core validation elements."
+    },
+    {
+      "id": "SR117-V-om",
+      "article": "SR 11-7, Section V (Model Validation)",
+      "chapter": "Model validation",
+      "text": "Ongoing monitoring, including process verification and benchmarking, confirms that the model is appropriately implemented and performs as intended as products, exposures and market conditions change.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference. Second core validation element."
+    },
+    {
+      "id": "SR117-V-oa",
+      "article": "SR 11-7, Section V (Model Validation)",
+      "chapter": "Model validation",
+      "text": "Outcomes analysis, including back-testing, compares model outputs with actual outcomes, with pre-defined thresholds for acceptable performance.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference. Third core validation element."
+    },
+    {
+      "id": "SR117-V-vendor",
+      "article": "SR 11-7, Section V (Model Validation)",
+      "chapter": "Model validation",
+      "text": "Vendor and other third-party models are incorporated into the model risk management framework under the same principles as in-house models, with the institution validating its own use of the vendor product.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-V-periodic",
+      "article": "SR 11-7, Section V (Model Validation)",
+      "chapter": "Model validation",
+      "text": "Each model is reviewed periodically, at least annually and more frequently if warranted, to determine whether it is working as intended and whether existing validation activities are sufficient.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-VI-inv",
+      "article": "SR 11-7, Section VI (Governance, Policies, and Controls)",
+      "chapter": "Governance, policies and controls",
+      "text": "The institution maintains a comprehensive firm-wide inventory of models in use, under development or recently retired.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain a firm-wide model inventory; evidenced in the model inventory, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-VI-doc",
+      "article": "SR 11-7, Section VI (Governance, Policies, and Controls)",
+      "chapter": "Governance, policies and controls",
+      "text": "Model development and validation documentation is sufficiently detailed for parties unfamiliar with the model to understand how it operates, its limitations and its key assumptions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    },
+    {
+      "id": "SR117-VI-ia",
+      "article": "SR 11-7, Section VI (Governance, Policies, and Controls)",
+      "chapter": "Governance, policies and controls",
+      "text": "Internal audit assesses the overall effectiveness of the model risk management framework, including whether validation is performed independently and effectively.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the internal audit function; evidenced in internal audit plans and reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "SR 11-7 (4 Apr 2011) attachment; rescinded 17 Apr 2026 and replaced by SR 26-2 / OCC Bulletin 2026-13, kept as industry reference."
+    }
+  ]
+}

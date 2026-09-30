@@ -1,0 +1,639 @@
+{
+  "docId": "INT-VAL-AI",
+  "requirements": [
+    {
+      "id": "MV-STD-020-4.1",
+      "article": "MV-STD-020 §4.1",
+      "chapter": "Validation approach",
+      "text": "The AI Act classification of the model under AI-POL-001 is verified as correct and documented, including the assessment against Annex III point 5(b) of Regulation (EU) 2024/1689.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §4.1."
+    },
+    {
+      "id": "MV-STD-020-4.1-b",
+      "article": "MV-STD-020 §4.1",
+      "chapter": "Validation approach",
+      "text": "For high-risk AI systems the validation covers the requirements of AI Act Articles 10, 14 and 15 relevant to the model.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to high-risk AI systems (creditworthiness assessment of natural persons) only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §4.1."
+    },
+    {
+      "id": "MV-STD-020-4.2",
+      "article": "MV-STD-020 §4.2",
+      "chapter": "Validation approach",
+      "text": "The use of an ML technique is justified against an interpretable alternative, considering the measured performance uplift, the explainability achieved and the intended use.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §4.2."
+    },
+    {
+      "id": "MV-STD-020-5.1",
+      "article": "MV-STD-020 §5.1",
+      "chapter": "Data and features",
+      "text": "The model is tested for target leakage and for leakage between training, test and out-of-time samples, including the same obligor or customer appearing in more than one sample.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §5.1."
+    },
+    {
+      "id": "MV-STD-020-5.2",
+      "article": "MV-STD-020 §5.2",
+      "chapter": "Data and features",
+      "text": "Each feature has a documented definition, lineage and business rationale, and at least the 20 most important features are independently reproduced from source data.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §5.2."
+    },
+    {
+      "id": "MV-STD-020-5.4",
+      "article": "MV-STD-020 §5.4",
+      "chapter": "Data and features",
+      "text": "Protected characteristics are not used as features unless permitted under AI-POL-001, and features are screened for proxies of protected characteristics.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs affect natural persons only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §5.4."
+    },
+    {
+      "id": "MV-STD-020-5.5",
+      "article": "MV-STD-020 §5.5",
+      "chapter": "Data and features",
+      "text": "Training, validation and testing data are relevant and sufficiently representative for the intended use (AI Act Art. 10(3)), assessed with the tests of MV-HB-003 §6.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §5.5."
+    },
+    {
+      "id": "MV-STD-020-6.1",
+      "article": "MV-STD-020 §6.1",
+      "chapter": "Explainability review",
+      "text": "Global feature importance is independently computed with at least one model-agnostic method, such as SHAP or permutation importance, and compared with the developer's results.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §6.1."
+    },
+    {
+      "id": "MV-STD-020-6.2",
+      "article": "MV-STD-020 §6.2",
+      "chapter": "Explainability review",
+      "text": "The direction and shape of the main feature effects are assessed with partial dependence or ALE plots, and violations of expected monotonic relationships are justified or constrained.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §6.2."
+    },
+    {
+      "id": "MV-STD-020-6.3",
+      "article": "MV-STD-020 §6.3",
+      "chapter": "Explainability review",
+      "text": "Local explanations and reason codes for outputs affecting individual customers are stable, faithful to the model and meaningful to the user.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs affect natural persons only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §6.3."
+    },
+    {
+      "id": "MV-STD-020-7.1",
+      "article": "MV-STD-020 §7.1",
+      "chapter": "Fairness testing",
+      "text": "Fairness testing is performed across protected characteristics for which data is lawfully available, in line with AI-POL-001 and PRIV-POL-001.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs affect natural persons only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §7.1."
+    },
+    {
+      "id": "MV-STD-020-7.2",
+      "article": "MV-STD-020 §7.2",
+      "chapter": "Fairness testing",
+      "text": "Fairness metrics include the adverse-impact ratio (amber below 0.80), the true-positive-rate difference between groups (amber above 5 percentage points) and within-group calibration.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs affect natural persons only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §7.2."
+    },
+    {
+      "id": "MV-STD-020-7.3",
+      "article": "MV-STD-020 §7.3",
+      "chapter": "Fairness testing",
+      "text": "A disparity beyond the thresholds is accepted only if explained by a documented legitimate risk factor with no less discriminatory alternative of comparable performance; otherwise it is at least a Medium finding.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs affect natural persons only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §7.3."
+    },
+    {
+      "id": "MV-STD-020-7.4",
+      "article": "MV-STD-020 §7.4",
+      "chapter": "Fairness testing",
+      "text": "Processing of special categories of personal data for fairness testing is limited to what AI Act Art. 10(5) and PRIV-POL-001 permit.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs affect natural persons only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §7.4."
+    },
+    {
+      "id": "MV-STD-020-8.1",
+      "article": "MV-STD-020 §8.1",
+      "chapter": "Robustness and adversarial tests",
+      "text": "Perturbation tests apply changes of at least ±5% to continuous inputs, and a share of changed grades or decisions above 5% is rated amber.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §8.1."
+    },
+    {
+      "id": "MV-STD-020-8.2",
+      "article": "MV-STD-020 §8.2",
+      "chapter": "Robustness and adversarial tests",
+      "text": "Model behaviour for missing, out-of-range and extreme input values is tested, and the implemented handling matches the documentation.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §8.2."
+    },
+    {
+      "id": "MV-STD-020-8.3",
+      "article": "MV-STD-020 §8.3",
+      "chapter": "Robustness and adversarial tests",
+      "text": "For models exposed to adversarial behaviour, adversarial tests simulating evasion or manipulation are performed and the resulting performance degradation is reported.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud",
+          "aml",
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud, AML and GenAI models exposed to adversarial behaviour only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §8.3."
+    },
+    {
+      "id": "MV-STD-020-8.4",
+      "article": "MV-STD-020 §8.4",
+      "chapter": "Robustness and adversarial tests",
+      "text": "Risks of data poisoning, model extraction and model inversion are assessed with Information Security, in support of AI Act Art. 15(5).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §8.4."
+    },
+    {
+      "id": "MV-STD-020-9.1",
+      "article": "MV-STD-020 §9.1",
+      "chapter": "GenAI evaluation",
+      "text": "The GenAI evaluation set contains at least 300 use-case-specific prompts covering typical, edge-case and adversarial inputs, with reference answers prepared or reviewed by subject-matter experts.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI applications only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §9.1."
+    },
+    {
+      "id": "MV-STD-020-9.2",
+      "article": "MV-STD-020 §9.2",
+      "chapter": "GenAI evaluation",
+      "text": "Groundedness is measured on the evaluation set; groundedness below 95% is amber and below 90% red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI applications only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §9.2."
+    },
+    {
+      "id": "MV-STD-020-9.3",
+      "article": "MV-STD-020 §9.3",
+      "chapter": "GenAI evaluation",
+      "text": "The hallucination rate is measured on the evaluation set; a rate above 2% is amber and above 5% red, with a red threshold of 2% for customer-facing applications.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI applications only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §9.3."
+    },
+    {
+      "id": "MV-STD-020-9.4",
+      "article": "MV-STD-020 §9.4",
+      "chapter": "GenAI evaluation",
+      "text": "Guardrails are tested against prompt injection, jailbreaks, toxic content, data leakage and out-of-scope requests; a red-team block rate below 98% or any personal data leakage is red.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI applications only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §9.4."
+    },
+    {
+      "id": "MV-STD-020-9.5",
+      "article": "MV-STD-020 §9.5",
+      "chapter": "GenAI evaluation",
+      "text": "An LLM used as automated evaluator agrees with human evaluation on at least 100 samples with agreement of at least 85%; otherwise its results are invalid.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI applications only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §9.5."
+    },
+    {
+      "id": "MV-STD-020-9.7",
+      "article": "MV-STD-020 §9.7",
+      "chapter": "GenAI evaluation",
+      "text": "A change of foundation model or version, system prompt or retrieval configuration is treated as a model change and groundedness, hallucination and guardrail tests are re-executed before deployment.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to generative AI applications only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §9.7."
+    },
+    {
+      "id": "MV-STD-020-10.1",
+      "article": "MV-STD-020 §10.1",
+      "chapter": "Third-party model validation",
+      "text": "Vendor documentation is sufficient to assess methodology, training data, performance and limitations; where it is not, compensating outcome-based testing is performed and a finding is raised.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to third-party AI models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §10.1."
+    },
+    {
+      "id": "MV-STD-020-10.2",
+      "article": "MV-STD-020 §10.2",
+      "chapter": "Third-party model validation",
+      "text": "A third-party model is outcome-tested on the bank's own data before first use.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to third-party AI models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §10.2."
+    },
+    {
+      "id": "MV-STD-020-10.3",
+      "article": "MV-STD-020 §10.3",
+      "chapter": "Third-party model validation",
+      "text": "The vendor contract provides access to validation-relevant information and notification of model changes, and notified changes trigger a change validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to third-party AI models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §10.3."
+    },
+    {
+      "id": "MV-STD-020-11.1",
+      "article": "MV-STD-020 §11.1",
+      "chapter": "Monitoring expectations",
+      "text": "The monitoring plan contains AI-specific metrics with consistent thresholds: feature drift, performance, fairness and, for GenAI, sampled hallucination rate, guardrail triggers and user feedback.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §11.1."
+    },
+    {
+      "id": "MV-STD-020-11.3",
+      "article": "MV-STD-020 §11.3",
+      "chapter": "Monitoring expectations",
+      "text": "Human oversight under AI Act Art. 14 is effective, as evidenced by override logs and a sample of human reviews of model outputs.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §11.3."
+    },
+    {
+      "id": "MV-STD-020-11.4",
+      "article": "MV-STD-020 §11.4",
+      "chapter": "Monitoring expectations",
+      "text": "Automatic retraining follows a validated protocol defining permitted changes and performance boundaries, and retrained versions outside these boundaries are subject to change validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to machine-learning models only.",
+      "layer": "2lod",
+      "verification": "verified",
+      "verification_note": "Internal standard authored by Model Validation; provision MV-STD-020 §11.4."
+    }
+  ]
+}

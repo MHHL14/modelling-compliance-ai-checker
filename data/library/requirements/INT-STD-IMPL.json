@@ -1,0 +1,555 @@
+{
+  "docId": "INT-STD-IMPL",
+  "requirements": [
+    {
+      "id": "MRM-STD-030-4.1",
+      "article": "MRM-STD-030 §4.1",
+      "chapter": "Implementation specification",
+      "text": "An implementation specification consistent with the approved MDD is prepared before implementation starts and approved by the Model Owner.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §4.1."
+    },
+    {
+      "id": "MRM-STD-030-4.2",
+      "article": "MRM-STD-030 §4.2",
+      "chapter": "Implementation specification",
+      "text": "The implementation specification defines the production source field and lineage of every input variable and identifies any difference between development and production data sources.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §4.2."
+    },
+    {
+      "id": "MRM-STD-030-4.3",
+      "article": "MRM-STD-030 §4.3",
+      "chapter": "Implementation specification",
+      "text": "The implementation specification defines every transformation, missing value and outlier treatment, formula, coefficient, lookup table, rating scale mapping, floor, cap and override rule, with precision and rounding conventions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §4.3."
+    },
+    {
+      "id": "MRM-STD-030-4.4",
+      "article": "MRM-STD-030 §4.4",
+      "chapter": "Implementation specification",
+      "text": "The implementation specification includes test cases with expected outputs produced with the development code, covering typical cases, boundary values, missing and invalid inputs and every segment and grade.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §4.4."
+    },
+    {
+      "id": "MRM-STD-030-5.1",
+      "article": "MRM-STD-030 §5.1",
+      "chapter": "Code management and version control",
+      "text": "Development and production code are held in an approved version control system, and every version used for reported or production outputs is tagged and retrievable.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §5.1."
+    },
+    {
+      "id": "MRM-STD-030-5.2",
+      "article": "MRM-STD-030 §5.2",
+      "chapter": "Code management and version control",
+      "text": "The MDD records the development code version, RDS version and parameter set that produced the reported results.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §5.2."
+    },
+    {
+      "id": "MRM-STD-030-5.3",
+      "article": "MRM-STD-030 §5.3",
+      "chapter": "Code management and version control",
+      "text": "Changes to production code follow change management with four-eyes code review by a person other than the author and documented approval before deployment.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §5.3."
+    },
+    {
+      "id": "MRM-STD-030-5.4",
+      "article": "MRM-STD-030 §5.4",
+      "chapter": "Code management and version control",
+      "text": "Parameter tables (coefficients, scorecard points, calibration mappings, master scale) are version controlled, access restricted and changed only through change management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §5.4."
+    },
+    {
+      "id": "MRM-STD-030-5.5",
+      "article": "MRM-STD-030 §5.5",
+      "chapter": "Code management and version control",
+      "text": "Model developers do not have write access to the production environment of the model.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §5.5."
+    },
+    {
+      "id": "MRM-STD-030-6.1",
+      "article": "MRM-STD-030 §6.1",
+      "chapter": "Independent implementation testing",
+      "text": "The implementation is tested before go-live by a tester independent of the production code author and, for Tier 1 models, independent of the model development team.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §6.1."
+    },
+    {
+      "id": "MRM-STD-030-6.2",
+      "article": "MRM-STD-030 §6.2",
+      "chapter": "Independent implementation testing",
+      "text": "Implementation testing covers all specified test cases, input data mapping and transformations, handling of missing, invalid and boundary values, and outputs for every segment.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §6.2."
+    },
+    {
+      "id": "MRM-STD-030-6.3",
+      "article": "MRM-STD-030 §6.3",
+      "chapter": "Independent implementation testing",
+      "text": "Test plan, cases, results and defects are documented in a test report, and all defects affecting model outputs are resolved and retested before go-live.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §6.3."
+    },
+    {
+      "id": "MRM-STD-030-7.1",
+      "article": "MRM-STD-030 §7.1; CRR Art. 174",
+      "chapter": "Parallel runs",
+      "text": "A parallel run is performed before a new or materially changed Tier 1 model or IRB model is used for decisions or regulatory reporting.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §7.1."
+    },
+    {
+      "id": "MRM-STD-030-7.2",
+      "article": "MRM-STD-030 §7.2",
+      "chapter": "Parallel runs",
+      "text": "The parallel run covers at least one full production cycle and three monthly reference dates for Tier 1 models, and one monthly reference date for Tier 2 models.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §7.2."
+    },
+    {
+      "id": "MRM-STD-030-7.3",
+      "article": "MRM-STD-030 §7.3",
+      "chapter": "Parallel runs",
+      "text": "Parallel run results are analysed and documented, including migration between old and new outputs, impact on key risk measures and operational issues.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §7.3."
+    },
+    {
+      "id": "MRM-STD-030-8.1",
+      "article": "MRM-STD-030 §8.1",
+      "chapter": "Reconciliation with development",
+      "text": "Production outputs are reconciled at record level with development code outputs on identical input data covering the full RDS or at least 10,000 records per segment.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §8.1."
+    },
+    {
+      "id": "MRM-STD-030-8.2",
+      "article": "MRM-STD-030 §8.2",
+      "chapter": "Reconciliation with development",
+      "text": "Reconciliation meets predefined tolerances: continuous outputs within 10^-6 absolute or 0.01% relative difference, categorical outputs such as rating grade identical for all records.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §8.2."
+    },
+    {
+      "id": "MRM-STD-030-8.3",
+      "article": "MRM-STD-030 §8.3",
+      "chapter": "Reconciliation with development",
+      "text": "All reconciliation differences outside tolerance are investigated and explained, and unexplained differences block go-live.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §8.3."
+    },
+    {
+      "id": "MRM-STD-030-8.4",
+      "article": "MRM-STD-030 §8.4; DATA-POL-001 §5.7",
+      "chapter": "Reconciliation with development",
+      "text": "The lineage of development data and production input data is compared and the effect of any difference on model outputs is quantified.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §8.4."
+    },
+    {
+      "id": "MRM-STD-030-8.5",
+      "article": "MRM-STD-030 §8.5",
+      "chapter": "Reconciliation with development",
+      "text": "Model outputs are reconciled with the downstream systems consuming them at go-live and at least annually thereafter.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §8.5."
+    },
+    {
+      "id": "MRM-STD-030-9.1",
+      "article": "MRM-STD-030 §9.1",
+      "chapter": "User acceptance",
+      "text": "User acceptance testing by model user representatives confirms that the implemented model supports its intended use, outputs are presented correctly and override processes function as designed.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §9.1."
+    },
+    {
+      "id": "MRM-STD-030-9.2",
+      "article": "MRM-STD-030 §9.2",
+      "chapter": "User acceptance",
+      "text": "UAT results are documented and signed off by the Model Owner and the head of the principal user function before go-live.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §9.2."
+    },
+    {
+      "id": "MRM-STD-030-10.1",
+      "article": "MRM-STD-030 §10.1",
+      "chapter": "Go-live and production controls",
+      "text": "The model is used in production only after implementation testing, reconciliation, parallel run where required and UAT are completed and the model is approved for use under MRM-POL-001.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §10.1."
+    },
+    {
+      "id": "MRM-STD-030-10.2a",
+      "article": "MRM-STD-030 §10.2",
+      "chapter": "Go-live and production controls",
+      "text": "Production input data is subject to completeness and validity checks applying the DQ rules of MRM-STD-022.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §10.2."
+    },
+    {
+      "id": "MRM-STD-030-10.2b",
+      "article": "MRM-STD-030 §10.2",
+      "chapter": "Go-live and production controls",
+      "text": "Production controls ensure each run uses the approved code and parameter version and log every run with reference date, input data version and code version.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §10.2."
+    },
+    {
+      "id": "MRM-STD-030-10.3",
+      "article": "MRM-STD-030 §10.3",
+      "chapter": "Go-live and production controls",
+      "text": "Manual reruns, manual output adjustments and fallback procedures are documented, authorised and logged.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §10.3."
+    },
+    {
+      "id": "MRM-STD-030-10.4",
+      "article": "MRM-STD-030 §10.4",
+      "chapter": "Go-live and production controls",
+      "text": "Model outputs used for regulatory reporting are retained with the input data and code version used to produce them.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "capital",
+          "risk_reporting"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs are used for regulatory or risk reporting.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §10.4."
+    },
+    {
+      "id": "MRM-STD-030-11.1",
+      "article": "MRM-STD-030 §11.1",
+      "chapter": "Code and documentation consistency",
+      "text": "The production code is consistent with the MDD and implementation specification, and any difference is treated as a defect or submitted as a model change under MRM-STD-050.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §11.1."
+    },
+    {
+      "id": "MRM-STD-030-11.2",
+      "article": "MRM-STD-030 §11.2",
+      "chapter": "Code and documentation consistency",
+      "text": "The Model Owner confirms consistency between production code, implementation specification and MDD after each change and at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §11.2."
+    },
+    {
+      "id": "MRM-STD-030-13.2",
+      "article": "MRM-STD-030 §13.2",
+      "chapter": "Exceptions and dispensations",
+      "text": "Emergency changes deployed before completion of all tests are approved by the Model Owner and Model Risk Management and the outstanding tests are completed within 30 calendar days.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (MRM-STD-030 v2.0), §13.2."
+    }
+  ]
+}

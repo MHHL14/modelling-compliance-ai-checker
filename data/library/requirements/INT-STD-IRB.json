@@ -1,0 +1,725 @@
+{
+  "docId": "INT-STD-IRB",
+  "requirements": [
+    {
+      "id": "CRM-STD-100-4.1",
+      "article": "CRM-STD-100 §4.1",
+      "chapter": "Rating system design and philosophy",
+      "text": "The rating philosophy of each rating system is documented, including the risk drivers that make grade assignment sensitive to current conditions and the expected dynamics of grade migration and grade-level default rates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-5.1",
+      "article": "CRM-STD-100 §5.1; CRR Art. 170(1)(b)",
+      "chapter": "Master scale",
+      "text": "Non-retail PD rating systems map to the Bank master scale of 20 non-defaulted grades and one default grade.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": [
+          "irb_pd"
+        ]
+      },
+      "not_applicable_reason": "Applies to non-retail PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-5.2",
+      "article": "CRM-STD-100 §5.2",
+      "chapter": "Master scale",
+      "text": "Retail PD rating systems map to the retail master scale of 12 non-defaulted grades (R01–R12) and one default grade, using the PD boundaries of CRM-STD-100 §5.2.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": [
+          "irb_pd"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-5.3",
+      "article": "CRM-STD-100 §5.3",
+      "chapter": "Master scale",
+      "text": "Each grade or pool maps to exactly one master scale grade, and PDs increase monotonically with grade.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-5.4",
+      "article": "CRM-STD-100 §5.4",
+      "chapter": "Master scale",
+      "text": "No non-defaulted grade contains more than 30% of the obligors (non-retail) or exposures (retail) of the rating system unless the concentration is justified and approved by Model Risk Management.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal threshold authored for the library; the cross-reference to CRR Art. 170(1)(d) for undue grade concentrations should be confirmed against the consolidated CRR text."
+    },
+    {
+      "id": "CRM-STD-100-6.2a",
+      "article": "CRM-STD-100 §6.2; CRR Art. 180(1)(h)",
+      "chapter": "Reference data set",
+      "text": "The RDS for non-retail PD estimation covers an observation period of at least five years.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": [
+          "irb_pd"
+        ]
+      },
+      "not_applicable_reason": "Applies to non-retail PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; minimum period consistent with CRR Art. 180(1)(h). Retail PD minimum covered by pilot REQ-D01 (EXT-CRR-IRB)."
+    },
+    {
+      "id": "CRM-STD-100-6.2b",
+      "article": "CRM-STD-100 §6.2; CRR Art. 181(1)(j) and 181(2)",
+      "chapter": "Reference data set",
+      "text": "The RDS for LGD estimation covers an observation period of at least five years for retail exposures and at least seven years for non-retail exposures.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; minimum periods consistent with CRR Art. 181(1)(j) and 181(2)."
+    },
+    {
+      "id": "CRM-STD-100-6.2c",
+      "article": "CRM-STD-100 §6.2; CRR Art. 182",
+      "chapter": "Reference data set",
+      "text": "The RDS for CCF estimation covers an observation period of at least five years for retail exposures and at least seven years for non-retail exposures.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to EAD/CCF models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; minimum periods consistent with CRR Art. 182 (paragraph numbering as amended by CRR3 not cited)."
+    },
+    {
+      "id": "CRM-STD-100-6.4",
+      "article": "CRM-STD-100 §6.4",
+      "chapter": "Reference data set",
+      "text": "Every RDS exclusion is approved by the Model Owner, and the aggregate effect of all exclusions on the long-run average default rate, realised LGD or CCF is quantified and reported.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-6.5",
+      "article": "CRM-STD-100 §6.5",
+      "chapter": "Reference data set",
+      "text": "A PSI above 0.10 between the RDS and the current portfolio on any risk driver is explained, and a PSI above 0.25 is followed by an assessment of the effect on the estimates.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-6.9",
+      "article": "CRM-STD-100 §6.9",
+      "chapter": "Reference data set",
+      "text": "External or pooled data is used only where its comparability with the Bank portfolio is demonstrated, including an analysis of differences in the default definition.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-7.1a",
+      "article": "CRM-STD-100 §7.1; CRR Art. 179(1)(a)",
+      "chapter": "Risk differentiation",
+      "text": "The long list of candidate risk drivers combines statistical analysis and expert input and covers all material drivers of the risk parameter.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-7.1b",
+      "article": "CRM-STD-100 §7.1",
+      "chapter": "Risk differentiation",
+      "text": "The expected direction of the effect of each risk driver is stated before estimation and confirmed in the final model.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-7.2",
+      "article": "CRM-STD-100 §7.2",
+      "chapter": "Risk differentiation",
+      "text": "Discriminatory power (AUC or Gini) is measured on the development sample and on an out-of-time sample and assessed against the thresholds of MV-HB-003.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-7.3",
+      "article": "CRM-STD-100 §7.3",
+      "chapter": "Risk differentiation",
+      "text": "Homogeneity within grades and heterogeneity between adjacent grades are tested, and grades that are not statistically distinct are merged or justified.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-8.1",
+      "article": "CRM-STD-100 §8.1; CRR Art. 180(1)(a) and 180(2)(a)",
+      "chapter": "PD calibration",
+      "text": "PD estimates are calibrated per calibration segment to the long-run average of one-year default rates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-8.2",
+      "article": "CRM-STD-100 §8.2",
+      "chapter": "PD calibration",
+      "text": "One-year default rates are calculated at least quarterly using overlapping one-year windows, and the LRA is their arithmetic average over the observation period.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-8.3",
+      "article": "CRM-STD-100 §8.3",
+      "chapter": "PD calibration",
+      "text": "Where the observation period is not representative of the likely range of variability of default rates, the LRA is adjusted upward and the adjustment is documented and justified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-8.4",
+      "article": "CRM-STD-100 §8.4",
+      "chapter": "PD calibration",
+      "text": "Calibration is tested per grade and for the portfolio with a binomial or Jeffreys test against the thresholds of MV-HB-003.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-9.1",
+      "article": "CRM-STD-100 §9.1",
+      "chapter": "LGD estimation",
+      "text": "LGD is estimated from realised LGDs of all defaults in the RDS, including defaults with incomplete recovery processes for which future recoveries are estimated.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-9.2",
+      "article": "CRM-STD-100 §9.2",
+      "chapter": "LGD estimation",
+      "text": "Realised LGD includes material direct and indirect costs and additional drawings after default, and cash flows are discounted at the primary interbank rate at default plus five percentage points.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; discount rate consistent with EBA/GL/2017/16 (interbank rate plus 5 percentage points add-on)."
+    },
+    {
+      "id": "CRM-STD-100-9.3",
+      "article": "CRM-STD-100 §9.3",
+      "chapter": "LGD estimation",
+      "text": "The long-run average LGD is calculated as the default-weighted average of realised LGDs over the observation period.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-9.6",
+      "article": "CRM-STD-100 §9.6",
+      "chapter": "LGD estimation",
+      "text": "The downturn period for LGD estimation is identified from the economic factors of Commission Delegated Regulation (EU) 2021/930, and the downturn LGD is documented per calibration segment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-9.7",
+      "article": "CRM-STD-100 §9.7",
+      "chapter": "LGD estimation",
+      "text": "Where neither observed nor estimated downturn impact can be derived, the downturn LGD equals the long-run average LGD plus 15 percentage points, capped at 105%.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; reference-value approach consistent with EBA/GL/2019/03."
+    },
+    {
+      "id": "CRM-STD-100-9.8",
+      "article": "CRM-STD-100 §9.8",
+      "chapter": "LGD estimation",
+      "text": "ELBE and LGD in-default are estimated per reference date in default, with the difference reflecting unexpected loss during the recovery period.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-10.2",
+      "article": "CRM-STD-100 §10.2",
+      "chapter": "EAD and CCF estimation",
+      "text": "Realised CCFs are calculated with a fixed 12-month horizon before the default date, and drawings after default are included in LGD rather than CCF.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to EAD/CCF models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-10.3",
+      "article": "CRM-STD-100 §10.3",
+      "chapter": "EAD and CCF estimation",
+      "text": "The long-run average CCF is the default-weighted average of realised CCFs, and final CCF estimates are not negative.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to EAD/CCF models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-10.4",
+      "article": "CRM-STD-100 §10.4",
+      "chapter": "EAD and CCF estimation",
+      "text": "CCF estimates reflect economic downturn conditions in accordance with EBA/GL/2019/03.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to EAD/CCF models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-11.1",
+      "article": "CRM-STD-100 §11.1; CRR Art. 160(1) and 163(1)",
+      "chapter": "Input floors",
+      "text": "The PD applied to each exposure is at least 0.05%, and at least 0.10% for qualifying revolving retail exposures to revolvers.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; floors checked against CRR Art. 160(1) and 163(1) as amended by Regulation (EU) 2024/1623."
+    },
+    {
+      "id": "CRM-STD-100-11.2",
+      "article": "CRM-STD-100 §11.2; CRR Art. 164(4)",
+      "chapter": "Input floors",
+      "text": "The LGD applied to retail exposures is at least the input floors of CRR Article 164(4), including 5% for residential property, 50% for QRRE and 30% for other unsecured retail.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": [
+          "irb_lgd"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; floors checked against CRR Art. 164(4) as amended by Regulation (EU) 2024/1623."
+    },
+    {
+      "id": "CRM-STD-100-11.3",
+      "article": "CRM-STD-100 §11.3; CRR Art. 161(5)",
+      "chapter": "Input floors",
+      "text": "The LGD applied to non-retail exposures with own LGD estimates is at least the input floors of CRR Article 161(5), including 25% for unsecured exposures.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": [
+          "irb_lgd"
+        ]
+      },
+      "not_applicable_reason": "Applies to non-retail LGD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text; floor checked against CRR Art. 161(5) as amended by Regulation (EU) 2024/1623."
+    },
+    {
+      "id": "CRM-STD-100-11.5",
+      "article": "CRM-STD-100 §11.5",
+      "chapter": "Input floors",
+      "text": "Floors are applied at exposure level after the MoC and downturn adjustment, and the share of exposures and EAD to which a floor is binding is reported.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-12.2",
+      "article": "CRM-STD-100 §12.2",
+      "chapter": "Use test",
+      "text": "Differences between the risk parameters used for own funds requirements and those used for internal purposes are documented and justified.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-13.1",
+      "article": "CRM-STD-100 §13.1; CRR Art. 179(1)",
+      "chapter": "Review of estimates",
+      "text": "Estimates are reviewed when new information comes to light and at least annually, covering back-testing, representativeness, the need for recalibration and the adequacy of the MoC.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    },
+    {
+      "id": "CRM-STD-100-13.3",
+      "article": "CRM-STD-100 §13.3",
+      "chapter": "Review of estimates",
+      "text": "A red monitoring outcome, or an annual review concluding that estimates are inadequate, leads to a recalibration or redevelopment plan approved by the Model Risk Committee within three months.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard (CRM-STD-100 v5.2) text authored for the library."
+    }
+  ]
+}

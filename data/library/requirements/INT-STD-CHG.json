@@ -1,0 +1,572 @@
+{
+  "docId": "INT-STD-CHG",
+  "requirements": [
+    {
+      "id": "MRM-STD-050-4.1",
+      "article": "MRM-STD-050 §4.1",
+      "chapter": "Change identification and recording",
+      "text": "Every planned model change is recorded in the change log of the model inventory before implementation in production.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-4.2",
+      "article": "MRM-STD-050 §4.2",
+      "chapter": "Change identification and recording",
+      "text": "The change memorandum describes the change and rationale, affected components and documents, internal and regulatory classification with analysis, quantitative impact, required validation and implementation plan.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-4.3",
+      "article": "MRM-STD-050 §4.3",
+      "chapter": "Change identification and recording",
+      "text": "Related changes planned together or addressing the same deficiency are recorded and assessed as a single change.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.1",
+      "article": "MRM-STD-050 §5.1",
+      "chapter": "Change classification",
+      "text": "Every change is classified by internal materiality and, for models requiring supervisory permission, by regulatory class (A, B or C).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.2",
+      "article": "MRM-STD-050 §5.2",
+      "chapter": "Change classification",
+      "text": "A change is classified as internally material if it alters methodology, drivers, default or target definition, range of application or use, introduces a new material input source, or exceeds the output-impact thresholds of §5.2(e).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.2e",
+      "article": "MRM-STD-050 §5.2(e)",
+      "chapter": "Change classification",
+      "text": "The change impact on aggregate model output at the most recent reference date and on grade or class assignments is quantified against the 5% and 10% thresholds.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.3",
+      "article": "MRM-STD-050 §5.3",
+      "chapter": "Change classification",
+      "text": "The regulatory class follows Delegated Regulation 529/2014: Class A if a qualitative material-change criterion is met or RWEA decreases by at least 1.5% overall or 15% in the range of application.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision implementing Delegated Regulation (EU) No 529/2014. Thresholds and criteria restated from knowledge of the RTS (Art. 4 and Annex I); verify against EUR-Lex and check whether a CRR3 successor RTS under CRR Art. 143(5) applies."
+    },
+    {
+      "id": "MRM-STD-050-5.4",
+      "article": "MRM-STD-050 §5.4",
+      "chapter": "Change classification",
+      "text": "The quantitative impact is calculated on the same most recent reference date before and after the change, at Bank-wide RWEA level and at the level of the rating system’s range of application.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.5",
+      "article": "MRM-STD-050 §5.5",
+      "chapter": "Change classification",
+      "text": "Changes are not split, sequenced or combined to avoid a higher classification, and the cumulative impact of changes since the last permission or full validation is assessed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.6",
+      "article": "MRM-STD-050 §5.6",
+      "chapter": "Change classification",
+      "text": "The change classification proposed by the model developer is approved by MRM, with disagreements escalated to the MRC.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-5.7",
+      "article": "MRM-STD-050 §5.7",
+      "chapter": "Change classification",
+      "text": "Where the classification is uncertain, the higher internal materiality or regulatory class is applied.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-6.1",
+      "article": "MRM-STD-050 §6.1",
+      "chapter": "Re-validation triggers",
+      "text": "Every internally material change is independently validated before implementation.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-6.2",
+      "article": "MRM-STD-050 §6.2",
+      "chapter": "Re-validation triggers",
+      "text": "A Class A or Class B change is validated before the application or ex ante notification is submitted, and the validation report is part of the submission.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-6.3",
+      "article": "MRM-STD-050 §6.3",
+      "chapter": "Re-validation triggers",
+      "text": "For a non-material change to a Tier 1 model, Model Validation decides within ten business days whether a review before implementation is required.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-6.4",
+      "article": "MRM-STD-050 §6.4",
+      "chapter": "Re-validation triggers",
+      "text": "A re-validation is triggered by an unresolved red monitoring outcome, a material change in portfolio composition or external environment, a relevant regulatory change or a change in intended use.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-6.5",
+      "article": "MRM-STD-050 §6.5",
+      "chapter": "Re-validation triggers",
+      "text": "The next validation is full-scope where cumulative non-material changes since the last full validation together meet the internal materiality criteria.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-7.1",
+      "article": "MRM-STD-050 §7.1",
+      "chapter": "Internal approval",
+      "text": "An internally material change passes gates G1 to G4 and is approved by the authority for the model tier; a Class A change is approved by the MRC before submission.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-7.2",
+      "article": "MRM-STD-050 §7.2",
+      "chapter": "Internal approval",
+      "text": "A non-material change is approved by the model owner after MRM has confirmed its classification, and the new model version is recorded in the inventory.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-8.1",
+      "article": "MRM-STD-050 §8.1",
+      "chapter": "Regulatory notification and application",
+      "text": "A Class A change is used to calculate own funds requirements only after the ECB has granted permission.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-8.2",
+      "article": "MRM-STD-050 §8.2",
+      "chapter": "Regulatory notification and application",
+      "text": "A Class B change is notified to the ECB at least two months before intended implementation and is not implemented before that period ends or if the ECB indicates that permission is required.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution towards the ECB; evidenced in the ex ante notification and its submission records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Two-month ex ante notification period restated from Delegated Regulation 529/2014 as known; confirm article reference and whether a CRR3 successor RTS changes it."
+    },
+    {
+      "id": "MRM-STD-050-8.3",
+      "article": "MRM-STD-050 §8.3",
+      "chapter": "Regulatory notification and application",
+      "text": "A Class C change is notified to the ECB after implementation, at the latest in the quarterly aggregated ex post notification following implementation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution towards the ECB; evidenced in the quarterly ex post notification, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Quarterly aggregation is an internal rule; confirm consistency with the ex post notification timing in Delegated Regulation 529/2014 and current ECB practice."
+    },
+    {
+      "id": "MRM-STD-050-8.5",
+      "article": "MRM-STD-050 §8.5",
+      "chapter": "Regulatory notification and application",
+      "text": "ECB obligations, limitations and recommendations attached to a permission are recorded in the inventory with owner and deadline and tracked as MRC conditions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-9.1",
+      "article": "MRM-STD-050 §9.1",
+      "chapter": "ECB application readiness",
+      "text": "The application package contains the change description, classification and impact analysis, self-assessment against CRR, RTS 2022/439, EBA guidelines and ECB guide, approved MDD and RDS documentation, validation report, implementation plan, deficiencies list and approvals.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the supervisory application; evidenced in the application package submitted to the ECB, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-9.2",
+      "article": "MRM-STD-050 §9.2",
+      "chapter": "ECB application readiness",
+      "text": "MRM completes an application readiness review at least six weeks before submission, confirming completeness, consistency of figures across documents and use of approved document versions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the MRM function in the application process; evidenced in the application readiness review, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-9.3",
+      "article": "MRM-STD-050 §9.3",
+      "chapter": "ECB application readiness",
+      "text": "An application is not submitted with an open high-severity finding on the changed model unless the finding, impact and remediation plan are disclosed and the MRC has approved submission.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution in the supervisory application process; evidenced in the application submission and MRC minutes, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-9.5",
+      "article": "MRM-STD-050 §9.5",
+      "chapter": "ECB application readiness",
+      "text": "Data, code and documentation supporting the application remain available, and the RDS and model estimation remain reproducible, throughout the ECB assessment.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-STD-050-10.2",
+      "article": "MRM-STD-050 §10.2",
+      "chapter": "Implementation of changes",
+      "text": "A post-implementation review comparing realised with estimated impact is performed within six months of implementing an internally material change and reported to MRM.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    }
+  ]
+}

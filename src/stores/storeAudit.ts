@@ -1,6 +1,7 @@
 'use client';
 import { create } from 'zustand';
-import { createJSONStorage, persist } from 'zustand/middleware';
+import { persist } from 'zustand/middleware';
+import { workspaceStorage } from '@/lib/storage';
 import { nowISO } from '@/lib/clock';
 import { PERSONAS } from '@/lib/seed';
 import { uid } from '@/lib/rng';
@@ -53,7 +54,7 @@ export const useAudit = create<AuditState>()(
           ],
         })),
     }),
-    { name: 'mcw-storeAudit', version: 2, storage: createJSONStorage(() => localStorage) },
+    { name: 'mcw-storeAudit', version: 2, storage: workspaceStorage },
   ),
 );
 

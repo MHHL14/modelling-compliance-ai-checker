@@ -1,0 +1,250 @@
+{
+  "docId": "EXT-CRD-101",
+  "requirements": [
+    {
+      "id": "CRD-101-1",
+      "article": "CRD Art. 101(1)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "The institution maintains documentation and evidence of continued compliance with the requirements of its internal approaches, supporting the competent authority's regular review, at least every three years.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRD text (Art. 101 unchanged in substance by CRD V/VI)."
+    },
+    {
+      "id": "CRD-101-1-b",
+      "article": "CRD Art. 101(1)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "The institution assesses and reports the implications of changes in its business and of new products for the continued appropriateness of its internal approaches.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Assessment and reporting of business changes on the appropriateness of internal approaches is an obligation of the institution towards the competent authority.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed: the review has particular regard to changes in the institution's business and the implementation of approaches to new products."
+    },
+    {
+      "id": "CRD-101-2",
+      "article": "CRD Art. 101(2)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "Where material deficiencies in the risk capture of an internal approach are identified, the institution rectifies them or implements the mitigating measures required, such as higher multiplication factors or capital add-ons.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRD text (Art. 101 unchanged in substance by CRD V/VI)."
+    },
+    {
+      "id": "CRD-101-3",
+      "article": "CRD Art. 101(3)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "The institution monitors back-testing overshootings of its internal market risk model and promptly improves the model where numerous overshootings indicate it is not sufficiently accurate.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal market risk models (IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRD text (Art. 101 unchanged in substance by CRD V/VI)."
+    },
+    {
+      "id": "CRD-101-4-a",
+      "article": "CRD Art. 101(4)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "Where the institution no longer meets the requirements for an internal approach, it demonstrates that the effect of non-compliance is immaterial or presents a plan, with a deadline, for restoring compliance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Demonstrating immateriality or presenting a compliance restoration plan is an obligation of the institution towards the competent authority.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRD text (Art. 101 unchanged in substance by CRD V/VI)."
+    },
+    {
+      "id": "CRD-101-4-b",
+      "article": "CRD Art. 101(4)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "The institution improves its plan for restoring compliance where the competent authority considers it unlikely to achieve full compliance or the deadline inappropriate.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Improving the compliance restoration plan is an obligation of the institution towards the competent authority, evidenced in supervisory correspondence.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against the CRD text (Art. 101 unchanged in substance by CRD V/VI)."
+    },
+    {
+      "id": "CRD-101-4-c",
+      "article": "CRD Art. 101(4)",
+      "chapter": "Ongoing review of internal approaches (Art. 101)",
+      "text": "Where compliance is not restored within the deadline and non-compliance is not shown to be immaterial, the institution applies the revocation or limitation of its permission to compliant areas as decided by the competent authority.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Revocation or limitation of a permission is a supervisory decision applied by the institution, evidenced in permission records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Substance confirmed (revocation or limitation of permission to compliant areas / those where compliance can be achieved within an appropriate deadline); exact subparagraph wording to be confirmed in the CRD VI consolidated text."
+    },
+    {
+      "id": "CRD-78-1-a",
+      "article": "CRD Art. 78(1)",
+      "chapter": "Supervisory benchmarking (Art. 78)",
+      "text": "The institution permitted to use internal approaches reports the results of the calculations of its internal approaches for its exposures or positions included in the benchmark portfolios.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory benchmarking submissions are an institution-level reporting obligation evidenced in regulatory reporting records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against CRD Art. 78 as amended by CRD V; CRD VI amendments to Art. 78 not checked against the consolidated text."
+    },
+    {
+      "id": "CRD-78-1-b",
+      "article": "CRD Art. 78(1)",
+      "chapter": "Supervisory benchmarking (Art. 78)",
+      "text": "Benchmarking results are submitted at least annually, together with an explanation of the methodologies used to produce them.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Supervisory benchmarking submissions are an institution-level reporting obligation evidenced in regulatory reporting records.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Confirmed against CRD Art. 78 as amended by CRD V; CRD VI amendments to Art. 78 not checked against the consolidated text."
+    },
+    {
+      "id": "CRD-78-1-c",
+      "article": "CRD Art. 78(1)–(2); Implementing Regulation (EU) 2016/2070",
+      "chapter": "Supervisory benchmarking (Art. 78)",
+      "text": "Benchmarking submissions follow the templates, definitions and IT solutions laid down in the implementing technical standards on supervisory benchmarking.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Compliance with benchmarking reporting templates is evidenced in regulatory reporting processes, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "ITS 2016/2070 (as amended) is the reporting basis; the CRD paragraph containing the ITS mandate after CRD V renumbering to be confirmed."
+    },
+    {
+      "id": "CRD-78-4",
+      "article": "CRD Art. 78(4)",
+      "chapter": "Supervisory benchmarking (Art. 78)",
+      "text": "Where the institution's results diverge significantly from its peers, the institution provides the analysis needed to explain the divergence, including whether it reflects differences in underlying risk.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Substance confirmed (investigation of significant divergence by the competent authority); paragraph number (78(3) or 78(4)) after CRD V amendments to be confirmed."
+    },
+    {
+      "id": "CRD-78-4-b",
+      "article": "CRD Art. 78(4)",
+      "chapter": "Supervisory benchmarking (Art. 78)",
+      "text": "Where the competent authority determines that the institution's approach underestimates own funds requirements for reasons not attributable to underlying risk, the institution takes the required corrective action.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Corrective action following a supervisory benchmarking assessment is an obligation of the institution towards the competent authority.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Substance confirmed; paragraph number after CRD V amendments to be confirmed."
+    }
+  ]
+}

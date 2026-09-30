@@ -1,0 +1,619 @@
+{
+  "docId": "INT-POL-CREDIT",
+  "requirements": [
+    {
+      "id": "CR-POL-001-4.2",
+      "article": "CR-POL-001 §4.2",
+      "chapter": "Credit risk appetite",
+      "text": "The credit risk appetite is expressed in quantitative metrics with limits and early-warning triggers, covering at least expected loss, RWA density, concentrations, rating-grade distribution and the non-performing exposure ratio.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Bank's credit risk appetite framework; evidenced in the risk appetite statement, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-4.4",
+      "article": "CR-POL-001 §4.4",
+      "chapter": "Credit risk appetite",
+      "text": "Risk parameters used to measure credit risk appetite metrics (PD, LGD, EAD, ECL) are produced by models registered in the model inventory and approved under MRM-POL-001.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Requirement on the sourcing of credit risk appetite metrics; evidenced in the risk appetite framework documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-5.2",
+      "article": "CR-POL-001 §5.2",
+      "chapter": "Credit decision authority",
+      "text": "Credit decisions outside fully automated processes follow the four-eyes principle, with independent approval by Credit Risk Management above the business-line authority threshold.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the credit approval process; evidenced in the credit authority framework and credit files, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "credit_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in credit decision processes.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-5.3",
+      "article": "CR-POL-001 §5.3",
+      "chapter": "Credit decision authority",
+      "text": "Fully automated credit decisions are used only for retail products, within policy rules, cut-offs and affordability parameters approved under CR-STD-120, and the automated process is approved by the Retail Credit Committee.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit_origination",
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in credit acceptance decisions.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-5.5",
+      "article": "CR-POL-001 §5.5",
+      "chapter": "Credit decision authority",
+      "text": "Every credit decision is documented with the rating, the rationale, the approved limits, conditions and covenants, and the collateral taken.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the credit approval process; evidenced in individual credit files, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "credit_origination",
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in credit acceptance decisions.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-6.1",
+      "article": "CR-POL-001 §6.1",
+      "chapter": "Rating assignment and use of models",
+      "text": "No credit decision is taken without a valid obligor rating (non-retail) or pool or grade assignment (retail) produced by the approved rating system for the portfolio.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Control in the credit approval process; evidenced in credit process controls and credit files, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-6.3a",
+      "article": "CR-POL-001 §6.3",
+      "chapter": "Rating assignment and use of models",
+      "text": "Non-retail ratings are reviewed at least annually and at least semi-annually for watchlist obligors, and no new credit is granted to an obligor with a rating older than 12 months.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to non-retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-6.3b",
+      "article": "CR-POL-001 §6.3",
+      "chapter": "Rating assignment and use of models",
+      "text": "Retail behavioural ratings are refreshed at least monthly.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": [
+          "irb"
+        ]
+      },
+      "not_applicable_reason": "Applies to retail IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-6.4",
+      "article": "CR-POL-001 §6.4; CRR Art. 173(1)(b)",
+      "chapter": "Rating assignment and use of models",
+      "text": "Non-retail rating assignments are completed or approved by a party in Credit Risk Management that does not benefit directly from the decision to extend the credit.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Organisational requirement on the credit process; evidenced in the credit authority framework and rating process controls, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to non-retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library; cross-reference to CRR Art. 173(1)(b) (independent rating assignment) checked."
+    },
+    {
+      "id": "CR-POL-001-6.5",
+      "article": "CR-POL-001 §6.5",
+      "chapter": "Rating assignment and use of models",
+      "text": "Models used in credit decisions (rating, acceptance, pricing, limit setting) are approved and independently validated before use and are used only within their approved scope of application.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-6.6",
+      "article": "CR-POL-001 §6.6; CRR Art. 144(1)(b)",
+      "chapter": "Rating assignment and use of models",
+      "text": "IRB ratings and risk parameters play an essential role in credit approval, limit setting, risk-adjusted pricing, internal capital allocation, provisioning and management reporting (use test).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library; implements the use test of CRR Art. 144(1)(b)."
+    },
+    {
+      "id": "CR-POL-001-6.7",
+      "article": "CR-POL-001 §6.7",
+      "chapter": "Rating assignment and use of models",
+      "text": "Known model limitations, conditions of approval and compensating controls are communicated to the users of the model in credit decision processes.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-7.1",
+      "article": "CR-POL-001 §7.1; CRR Art. 172(3)",
+      "chapter": "Rating overrides",
+      "text": "Admissible override reasons are defined per rating system in a closed list, and overrides are permitted only on the basis of relevant information not captured by the model.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-7.2",
+      "article": "CR-POL-001 §7.2",
+      "chapter": "Rating overrides",
+      "text": "Every override is documented with reason code, written rationale, proposer and approver, and is approved by Credit Risk Management independently of the proposer.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-7.3",
+      "article": "CR-POL-001 §7.3",
+      "chapter": "Rating overrides",
+      "text": "Upward overrides of non-retail ratings by more than two notches on the Bank master scale are approved by the Group Credit Committee.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to non-retail rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-7.4",
+      "article": "CR-POL-001 §7.4",
+      "chapter": "Rating overrides",
+      "text": "Override rates are monitored per rating system at least quarterly; rates above 10% (non-retail) or 5% (retail) are analysed by the Model Owner and reported to Model Risk Management.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-7.5",
+      "article": "CR-POL-001 §7.5",
+      "chapter": "Rating overrides",
+      "text": "The performance of overrides is analysed at least annually by comparing default rates of overridden and non-overridden assignments per grade, and systematic overrides are treated as an indication of model deficiency.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-8.1",
+      "article": "CR-POL-001 §8.1",
+      "chapter": "Collateral and credit risk mitigation",
+      "text": "Credit decisions are based on the obligor's capacity to repay from its primary source of repayment; collateral does not by itself justify a credit decision.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit_origination",
+          "mortgage_origination"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in credit acceptance decisions.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-8.3",
+      "article": "CR-POL-001 §8.3; CRR Art. 208(3)",
+      "chapter": "Collateral and credit risk mitigation",
+      "text": "Immovable property is valued independently at origination and its value monitored at least annually (commercial) or every three years (residential), with statistical indexation in the intervening years.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the collateral management process; evidenced in collateral valuation procedures and valuation records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models that use immovable property collateral values.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library; frequencies consistent with CRR Art. 208(3)(a)."
+    },
+    {
+      "id": "CR-POL-001-8.4",
+      "article": "CR-POL-001 §8.4",
+      "chapter": "Collateral and credit risk mitigation",
+      "text": "Collateral data (type, value, valuation date and method, lien rank and link to the secured facilities) is recorded in the collateral system and meets the data quality requirements of MRM-STD-022.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage",
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models that use collateral data.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "REQ-D26",
+      "article": "CR-POL-001 §9 (fair treatment)",
+      "chapter": "Fair treatment of customers",
+      "text": "Protected attributes are excluded and proxy variables are screened.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "retail",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models using data on natural persons or retail customers.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Pilot requirement (kept verbatim); implemented by CR-POL-001 §9.2 (exclusion) and §9.3 (proxy screening)."
+    },
+    {
+      "id": "CR-POL-001-9.2",
+      "article": "CR-POL-001 §9.2",
+      "chapter": "Fair treatment of customers",
+      "text": "Age is used in a credit model only where legally permitted and objectively justified by the credit characteristics of the product, with approval by Credit Risk Management and documentation.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "retail",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models using data on natural persons or retail customers.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-9.4",
+      "article": "CR-POL-001 §9.4",
+      "chapter": "Fair treatment of customers",
+      "text": "A variable identified as a potential proxy is used only with a documented credit-risk rationale and restricted to the minimum needed, for example aggregation of postcode to regional level.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "retail",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models using data on natural persons or retail customers.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-9.5",
+      "article": "CR-POL-001 §9.5",
+      "chapter": "Fair treatment of customers",
+      "text": "Credit models used in decisions on natural persons are tested for disparate outcomes across groups defined by protected attributes before approval and at least annually, using the metrics and thresholds of AI-STD-700.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit models used in decisions on natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-9.6",
+      "article": "CR-POL-001 §9.6",
+      "chapter": "Fair treatment of customers",
+      "text": "The results of proxy screening and outcome testing are documented in the reference data set and model development documentation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit",
+          "retail",
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models using data on natural persons or retail customers.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-9.7",
+      "article": "CR-POL-001 §9.7",
+      "chapter": "Fair treatment of customers",
+      "text": "Declined applicants are informed of the decision and of its main reasons in understandable terms.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Customer communication obligation of the credit process; evidenced in customer notification procedures, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit decisions on natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-9.8",
+      "article": "CR-POL-001 §9.8; AI Act Annex III",
+      "chapter": "Fair treatment of customers",
+      "text": "Models evaluating the creditworthiness of natural persons that qualify as AI systems are treated as high-risk AI systems and are subject to AI-POL-001.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "natural_person_credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to creditworthiness models for natural persons.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library; AI Act Annex III (creditworthiness of natural persons) cross-reference checked."
+    },
+    {
+      "id": "CR-POL-001-10.1",
+      "article": "CR-POL-001 §10.1",
+      "chapter": "Credit monitoring",
+      "text": "Each portfolio has documented early-warning indicators; obligors triggering them are assessed within 30 days and placed on the watchlist where credit deterioration is confirmed.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the credit monitoring and watchlist process; evidenced in early-warning procedures and watchlist records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    },
+    {
+      "id": "CR-POL-001-10.6",
+      "article": "CR-POL-001 §10.6",
+      "chapter": "Credit monitoring",
+      "text": "Credit Risk Management receives the monitoring results under MRM-STD-040 of all models used in credit decisions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy (CR-POL-001 v8.1) text authored for the library."
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "docId": "INT-POL-CLIM",
+  "requirements": [
+    {
+      "id": "CER-POL-001-4.3",
+      "article": "CER-POL-001 §4.3; ECB C&E Guide Expectation 4",
+      "chapter": "Governance",
+      "text": "Material C&E risks are reflected in the risk appetite statement through key risk indicators with limits or thresholds, monitored at least quarterly.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Bank's risk appetite framework; evidenced in the risk appetite statement and its quarterly monitoring, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-5.1",
+      "article": "CER-POL-001 §5.1; EBA/GL/2025/01; ECB C&E Guide Expectation 7",
+      "chapter": "Materiality assessment",
+      "text": "A C&E materiality assessment is performed at least annually and whenever a material change in business model or external environment occurs.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide risk identification process; evidenced in the Bank's C&E materiality assessment report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-5.2",
+      "article": "CER-POL-001 §5.2",
+      "chapter": "Materiality assessment",
+      "text": "The materiality assessment covers transition and physical risk drivers and their impact on credit, market, operational, liquidity, reputational and business model risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the institution-wide C&E materiality assessment; evidenced in the materiality assessment report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-5.3",
+      "article": "CER-POL-001 §5.3; EBA/GL/2025/01",
+      "chapter": "Materiality assessment",
+      "text": "The materiality assessment considers short-term (up to three years), medium-term (three to ten years) and long-term (at least ten years) horizons.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Content requirement for the institution-wide C&E materiality assessment; evidenced in the materiality assessment report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1). Long-term horizon of at least ten years consistent with EBA/GL/2025/01."
+    },
+    {
+      "id": "CER-POL-001-5.4",
+      "article": "CER-POL-001 §5.4; EBA/GL/2025/01",
+      "chapter": "Materiality assessment",
+      "text": "The materiality assessment combines exposure-based, portfolio-based and scenario-based methods, with methods, thresholds and data limitations documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Methodological requirement for the institution-wide C&E materiality assessment; evidenced in the materiality assessment report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-5.5",
+      "article": "CER-POL-001 §5.5",
+      "chapter": "Materiality assessment",
+      "text": "Any conclusion that a C&E risk is not material is justified and documented with the evidence and thresholds applied.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Documentation requirement for the institution-wide C&E materiality assessment; evidenced in the materiality assessment report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-5.6",
+      "article": "CER-POL-001 §5.6",
+      "chapter": "Materiality assessment",
+      "text": "The approved materiality assessment outcome feeds the ICAAP risk inventory, the stress testing programme and the model development plan.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide process linking the materiality assessment to the ICAAP and planning; evidenced in the ICAAP risk inventory and model development plan, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-6.2",
+      "article": "CER-POL-001 §6.2; ECB C&E Guide Expectation 8",
+      "chapter": "Integration in credit risk",
+      "text": "Real estate collateral valuation takes into account the energy label and the physical risk exposure of the property.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering real estate secured exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-6.3",
+      "article": "CER-POL-001 §6.3",
+      "chapter": "Integration in credit risk",
+      "text": "Each credit risk model documents whether material C&E risk drivers are captured by its risk drivers and calibration data, repeated at each model review.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-6.4",
+      "article": "CER-POL-001 §6.4",
+      "chapter": "Integration in credit risk",
+      "text": "Where a material C&E driver is not captured, the model owner proposes inclusion of the driver, a documented adjustment or, for IFRS 9 models, an overlay under FIN-STD-200 §10.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-7.2",
+      "article": "CER-POL-001 §7.2; ECB C&E Guide Expectation 7",
+      "chapter": "Integration in the ICAAP",
+      "text": "Internal capital for material C&E risks is quantified in the economic perspective within risk-category models or through a documented add-on methodology.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP obligation of the institution; evidenced in the ICAAP documentation of the economic perspective, not in the documentation of an individual model.",
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in the ICAAP only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-7.3",
+      "article": "CER-POL-001 §7.3",
+      "chapter": "Integration in the ICAAP",
+      "text": "The ICAAP normative adverse scenario includes C&E risk drivers where they are material over the ICAAP horizon.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP obligation of the institution; evidenced in the ICAAP scenario documentation approved by the Management Board, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in the ICAAP only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-8.1",
+      "article": "CER-POL-001 §8.1; EBA/GL/2025/04; ECB C&E Guide Expectation 11",
+      "chapter": "Climate stress testing",
+      "text": "Climate stress testing and scenario analysis are performed at least annually in accordance with ERM-STD-300 §10 and EBA/GL/2025/04.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Frequency requirement for the Bank's stress testing programme; evidenced in the stress testing programme and its results, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-8.2",
+      "article": "CER-POL-001 §8.2",
+      "chapter": "Climate stress testing",
+      "text": "Climate scenario analysis includes at least orderly transition, disorderly transition and hot-house-world scenarios covering both transition and physical risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-8.3",
+      "article": "CER-POL-001 §8.3",
+      "chapter": "Climate stress testing",
+      "text": "Scenario analysis identifies transmission channels to the portfolios, including energy-label-driven collateral and affordability effects, carbon-price-driven PD changes and physical collateral damage.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.1",
+      "article": "CER-POL-001 §9.1",
+      "chapter": "Data",
+      "text": "Registered energy labels from the national register are used for real estate collateral; estimated labels are flagged and their estimation method documented and validated.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering real estate secured exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.2",
+      "article": "CER-POL-001 §9.2",
+      "chapter": "Data",
+      "text": "Energy label coverage and quality, including the share of registered versus estimated labels per portfolio, are monitored quarterly.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Portfolio-level data monitoring obligation of the Bank; evidenced in quarterly C&E data quality reporting, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering real estate secured exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.3",
+      "article": "CER-POL-001 §9.3",
+      "chapter": "Data",
+      "text": "Financed emissions are estimated with a recognised financed-emissions methodology covering Scope 1 and 2 and material Scope 3, each estimate carrying a data quality score.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering corporate or SME counterparties only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.4",
+      "article": "CER-POL-001 §9.4",
+      "chapter": "Data",
+      "text": "Physical risk is assessed using address-level or asset-level geolocation data for flood, subsidence, drought and extreme weather hazards.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.5",
+      "article": "CER-POL-001 §9.5",
+      "chapter": "Data",
+      "text": "Proxies for missing C&E data are documented, the share of proxied data is reported, and the resulting uncertainty is reflected in risk measurement.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.6",
+      "article": "CER-POL-001 §9.6",
+      "chapter": "Data",
+      "text": "C&E data used in models comply with MRM-STD-022 and DATA-POL-001, including lineage and data quality controls.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-9.7",
+      "article": "CER-POL-001 §9.7; EBA/GL/2020/06",
+      "chapter": "Data",
+      "text": "Counterparty C&E data (emissions, transition plans, physical asset locations) are collected at origination and updated at least at each annual credit review.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the credit origination and annual review process; evidenced in credit files and process controls, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering corporate or SME counterparties only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-10.1",
+      "article": "CER-POL-001 §10.1; CRD Art. 76(2); EBA/GL/2025/01",
+      "chapter": "Transition planning",
+      "text": "A prudential transition plan with quantified targets and intermediate milestones for the financial risks from the transition is maintained, consistent with the Bank's sustainability disclosures.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Strategic obligation of the institution; evidenced in the prudential transition plan approved by the Management Board, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1). Transition plan requirement introduced by Directive (EU) 2024/1619; confirm article reference (Art. 76(2) / Art. 87a) against the consolidated CRD."
+    },
+    {
+      "id": "CER-POL-001-10.2",
+      "article": "CER-POL-001 §10.2",
+      "chapter": "Transition planning",
+      "text": "Forward-looking metrics such as sectoral alignment and the mortgage energy label distribution are monitored at least annually against transition plan milestones.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide monitoring of the transition plan; evidenced in transition plan progress reporting, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-11.2",
+      "article": "CER-POL-001 §11.2",
+      "chapter": "Models",
+      "text": "C&E model documentation describes methodological uncertainty (long horizons, absence of loss history, scenario dependence) and the sensitivity of results to key assumptions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    },
+    {
+      "id": "CER-POL-001-11.3",
+      "article": "CER-POL-001 §11.3",
+      "chapter": "Models",
+      "text": "Expert judgement in C&E models, such as the translation of scenario variables into PD and LGD shocks, is documented and approved under MRM-STD-023.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (CER-POL-001 v2.1)."
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "docId": "EXT-WWFT",
+  "requirements": [
+    {
+      "id": "WWFT-2a-1",
+      "article": "Wwft art. 2a(1)",
+      "chapter": "General obligations and risk assessment",
+      "text": "The institution pays particular attention to unusual transaction patterns and to transactions that by their nature carry a higher risk of money laundering or terrorist financing.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-2b-1",
+      "article": "Wwft art. 2b(1)-(2)",
+      "chapter": "General obligations and risk assessment",
+      "text": "The institution identifies and assesses its ML/TF risks, proportionate to its nature and size, taking into account at least risk factors relating to customer, product, service, transaction and delivery channel types and to countries or geographic areas.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-2b-3",
+      "article": "Wwft art. 2b(3)",
+      "chapter": "General obligations and risk assessment",
+      "text": "The institution records the results of its ML/TF risk identification and assessment, keeps them up to date and provides them to the supervisor on request.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "AML programme-level obligation; evidenced in the institution's systematic integrity risk analysis (SIRA), not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-2c-1",
+      "article": "Wwft art. 2c(1)-(2)",
+      "chapter": "Internal policies, procedures and compliance",
+      "text": "The institution has policies, procedures and measures, proportionate to its nature and size, to mitigate and effectively manage its ML/TF risks and the risks identified in the latest supranational and national risk assessments.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "AML programme-level obligation; evidenced in the institution's AML/CFT policies and procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-2c-4",
+      "article": "Wwft art. 2c(4)",
+      "chapter": "Internal policies, procedures and compliance",
+      "text": "The institution systematically tests its AML/CFT policies, procedures and measures and adjusts them where necessary.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "AML programme-level obligation; evidenced in compliance testing of the AML/CFT framework, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-2d-2",
+      "article": "Wwft art. 2d(2)-(3)",
+      "chapter": "Internal policies, procedures and compliance",
+      "text": "Where appropriate to its nature and size, the institution has an independent and effective compliance function that monitors compliance with statutory and internal rules, including the provision of unusual transaction reports to FIU-NL.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation of the compliance function; evidenced in the compliance charter and monitoring plan, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027. Note: internal policies and procedures are in art. 2c; art. 2d covers the responsible board member, compliance function and audit function."
+    },
+    {
+      "id": "WWFT-2d-4",
+      "article": "Wwft art. 2d(4)",
+      "chapter": "Internal policies, procedures and compliance",
+      "text": "Where applicable and appropriate to its nature and size, the institution ensures an independent audit function that checks compliance with the Wwft and the functioning of the compliance function.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation of the internal audit function; evidenced in internal audit plans and reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-3-2-d",
+      "article": "Wwft art. 3(2)(d)",
+      "chapter": "Customer due diligence",
+      "text": "Customer due diligence enables continuous monitoring of the business relationship and the transactions conducted during it, to ensure they match the institution's knowledge of the customer and its risk profile, investigating the source of funds where necessary.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-3-7",
+      "article": "Wwft art. 3(7)",
+      "chapter": "Customer due diligence",
+      "text": "The institution demonstrably tailors its customer due diligence to the ML/TF risk sensitivity of the type of customer, business relationship, product or transaction.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027. Legal basis for customer risk classification in the Netherlands; art. 3(8) adds that at least the Annex I risk variables of the fourth AML Directive are considered."
+    },
+    {
+      "id": "WWFT-3-10",
+      "article": "Wwft art. 3(10)",
+      "chapter": "Customer due diligence",
+      "text": "The institution takes reasonable measures to keep customer due diligence data up to date and updates them in any case when the customer's relevant circumstances change.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-8-1",
+      "article": "Wwft art. 8(1)-(2)",
+      "chapter": "Enhanced customer due diligence",
+      "text": "The institution applies enhanced customer due diligence at least where the relationship or transaction by its nature carries a higher ML/TF risk, assessed using at least the Annex III factors of the fourth AML Directive, or involves an EU-designated high-risk third country.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-8-3",
+      "article": "Wwft art. 8(3)",
+      "chapter": "Enhanced customer due diligence",
+      "text": "The institution takes reasonable measures to examine the background and purpose of complex or unusually large transactions, transactions with an unusual pattern, or without clear economic or lawful purpose, and then subjects the entire relationship to enhanced monitoring.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-15-1",
+      "article": "Wwft art. 15(1) jo. art. 1(1) (definition of unusual transaction)",
+      "chapter": "Reporting of unusual transactions",
+      "text": "The institution assesses whether a transaction is unusual against the indicators set by order in council (Wwft Implementation Decree 2018), covering both objective indicators and the subjective indicator.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027. The indicators themselves are in the annex to art. 4 of the Uitvoeringsbesluit Wwft 2018, not in the Act."
+    },
+    {
+      "id": "WWFT-16-1",
+      "article": "Wwft art. 16(1)-(2)",
+      "chapter": "Reporting of unusual transactions",
+      "text": "The institution reports an executed or intended unusual transaction to FIU-NL without delay once its unusual nature has become known, including the prescribed data such as the circumstances on which the transaction is deemed unusual.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Reporting obligation of the institution towards FIU-NL; evidenced in the unusual transaction reporting process and records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-33-3",
+      "article": "Wwft art. 33(1) and (3)",
+      "chapter": "Record keeping",
+      "text": "The institution records the documents and data used for customer due diligence in a retrievable manner and retains them accessibly for five years after the end of the business relationship or the relevant transaction.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level record-keeping obligation for customer due diligence; evidenced in the CDD retention procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    },
+    {
+      "id": "WWFT-34",
+      "article": "Wwft art. 34(1)-(2)",
+      "chapter": "Record keeping",
+      "text": "The institution records, retrievably, the data needed to reconstruct each reported unusual transaction, a copy of the report and FIU-NL's acknowledgement, and retains them accessibly for five years after the report or acknowledgement.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level record-keeping obligation for reported transactions; evidenced in the FIU-NL reporting records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased from the consolidated Wwft on wetten.overheid.nl (version in force from 01-07-2026). Expected to be largely superseded by the AMLR from 10 July 2027."
+    }
+  ]
+}

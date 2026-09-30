@@ -1,0 +1,309 @@
+{
+  "docId": "EXT-PSD2-RTS",
+  "requirements": [
+    {
+      "id": "PSD2-RTS-2-1",
+      "article": "RTS SCA Art. 2(1), first subparagraph",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "The payment service provider has transaction monitoring mechanisms that enable it to detect unauthorised or fraudulent payment transactions for the purpose of implementing strong customer authentication security measures.",
+      "quote": "transaction monitoring mechanisms in place that enable them to detect unauthorised or fraudulent payment transactions",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    },
+    {
+      "id": "PSD2-RTS-2-1-sub2",
+      "article": "RTS SCA Art. 2(1), second subparagraph",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "The transaction monitoring mechanisms are based on the analysis of payment transactions, taking into account elements typical of the payment service user in normal use of the personalised security credentials.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Implies user-level behavioural baselines as model inputs."
+    },
+    {
+      "id": "PSD2-RTS-2-2-a",
+      "article": "RTS SCA Art. 2(2)(a)",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "The transaction monitoring mechanisms take into account lists of compromised or stolen authentication elements.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    },
+    {
+      "id": "PSD2-RTS-2-2-b",
+      "article": "RTS SCA Art. 2(2)(b)",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "The transaction monitoring mechanisms take into account the amount of each payment transaction.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    },
+    {
+      "id": "PSD2-RTS-2-2-c",
+      "article": "RTS SCA Art. 2(2)(c)",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "The transaction monitoring mechanisms take into account known fraud scenarios in the provision of payment services.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    },
+    {
+      "id": "PSD2-RTS-2-2-d",
+      "article": "RTS SCA Art. 2(2)(d)",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "The transaction monitoring mechanisms take into account signs of malware infection in any session of the authentication procedure.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    },
+    {
+      "id": "PSD2-RTS-2-2-e",
+      "article": "RTS SCA Art. 2(2)(e)",
+      "chapter": "Transaction monitoring mechanisms",
+      "text": "Where the payment service provider supplies the access device or software, the transaction monitoring mechanisms take into account a log of its use and any abnormal use.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    },
+    {
+      "id": "PSD2-RTS-3-2",
+      "article": "RTS SCA Art. 3(2), second subparagraph",
+      "chapter": "Review and audit of security measures",
+      "text": "A provider using the TRA exemption has the methodology, the model and the reported fraud rates audited at least yearly by an operationally independent auditor, and by a qualified external auditor in the first year and at least every three years.",
+      "quote": "shall be subject to an audit of the methodology, the model and the reported fraud rates at a minimum on a yearly basis",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning audit by independent and external auditors; evidenced in the audit reports on the TRA methodology, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18."
+    },
+    {
+      "id": "PSD2-RTS-18-2-a",
+      "article": "RTS SCA Art. 18(2)(a) and Annex",
+      "chapter": "Transaction risk analysis exemption",
+      "text": "A transaction is exempted as low risk only if the provider's fraud rate for that transaction type is at or below the Annex reference fraud rate for the applicable exemption threshold value band.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18. Annex reference rates: remote card payments 0.13% / 0.06% / 0.01% and remote credit transfers 0.015% / 0.01% / 0.005% for ETV EUR 100 / 250 / 500."
+    },
+    {
+      "id": "PSD2-RTS-18-2-c",
+      "article": "RTS SCA Art. 18(2)(c)",
+      "chapter": "Transaction risk analysis exemption",
+      "text": "A transaction is exempted as low risk only if real-time risk analysis has not identified abnormal spending or behaviour, unusual device or software access, malware, a known fraud scenario, an abnormal payer location or a high-risk payee location.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18."
+    },
+    {
+      "id": "PSD2-RTS-18-3",
+      "article": "RTS SCA Art. 18(3), first subparagraph",
+      "chapter": "Transaction risk analysis exemption",
+      "text": "The TRA assessment takes into account at least the user's previous spending patterns, the transaction history of each user, payer and payee location where the provider supplies the device or software, and abnormal payment patterns relative to the user's history.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18."
+    },
+    {
+      "id": "PSD2-RTS-18-3-sub2",
+      "article": "RTS SCA Art. 18(3), second subparagraph",
+      "chapter": "Transaction risk analysis exemption",
+      "text": "The provider combines all required risk-based factors into a risk score for each individual transaction to determine whether it may be executed without strong customer authentication.",
+      "quote": "combine all those risk-based factors into a risk scoring for each individual transaction",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18."
+    },
+    {
+      "id": "PSD2-RTS-19-1",
+      "article": "RTS SCA Art. 19(1)",
+      "chapter": "Fraud rate calculation and monitoring",
+      "text": "The overall fraud rate per transaction type is calculated as the value of unauthorised or fraudulent remote transactions, recovered or not, divided by the value of all remote transactions of that type, including SCA and exempted transactions, on a rolling quarterly (90-day) basis.",
+      "quote": "on a rolling quarterly basis (90 days)",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18."
+    },
+    {
+      "id": "PSD2-RTS-19-3",
+      "article": "RTS SCA Art. 19(3)",
+      "chapter": "Fraud rate calculation and monitoring",
+      "text": "The methodology and any model used to calculate the fraud rates, and the fraud rates themselves, are adequately documented and made fully available to competent authorities and the EBA on request.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18."
+    },
+    {
+      "id": "PSD2-RTS-20-2",
+      "article": "RTS SCA Art. 20(2)",
+      "chapter": "Fraud rate calculation and monitoring",
+      "text": "The provider immediately ceases to use the TRA exemption for a transaction type and exemption threshold band where its monitored fraud rate exceeds the reference fraud rate for two consecutive quarters.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019. Relevant only where the payment service provider applies the transaction risk analysis (TRA) exemption of Art. 18. Art. 20(1) additionally requires immediate reporting to the competent authority when a reference rate is exceeded."
+    },
+    {
+      "id": "PSD2-RTS-21-1",
+      "article": "RTS SCA Art. 21(1)",
+      "chapter": "Fraud rate calculation and monitoring",
+      "text": "To use any SCA exemption, the provider records and monitors at least quarterly, per payment type and split remote/non-remote, fraud and total values and fraud rate, average transaction value, and the number and share of transactions per exemption.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level exemption monitoring and reporting obligation across payment types; evidenced in fraud and exemption monitoring reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2018/389 (Cellar/EUR-Lex); applicable since 14 September 2019."
+    }
+  ]
+}

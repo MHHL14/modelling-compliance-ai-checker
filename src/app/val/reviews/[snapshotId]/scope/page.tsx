@@ -1,4 +1,7 @@
 'use client';
+import { useContent } from '@/components/common/useContent';
+import { libraryReqs } from '@/lib/content';
+import { tagMatch } from '@/lib/engine/sources';
 import { Flag, Info, Lock, Plus, Settings2 } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import { useMemo, useState } from 'react';
@@ -54,23 +57,14 @@ export default function ValScope() {
   const challenge = use2lod((s) => s.addScopingChallenge);
   const [challengeFor, setChallengeFor] = useState<Requirement | null>(null);
 
+  const ready = useContent(model ? [model.id] : []);
   const valOptions: Requirement[] = useMemo(() => {
-    if (!model) return [];
-    return applicableDocs(model)
-      .filter((d) => d.type === 'validation_standard')
-      .flatMap((d, di) =>
-        d.key_topics.slice(0, 3).map((t, i) => ({
-          id: `VAL-L${di + 1}${i + 1}`,
-          text: `${t.charAt(0).toUpperCase()}${t.slice(1)} is tested by validation and documented in the validation report.`,
-          source_doc: d.id,
-          article: d.reference,
-          category: 'validation' as const,
-          check_type: 'ai+script' as const,
-          applicability_rationale: `${d.title} applies.`,
-          layer: '2lod' as const,
-        })),
-      );
-  }, [model]);
+    if (!model || !ready) return [];
+    const docIds = new Set(applicableDocs(model).filter((d) => d.type === 'validation_standard').map((d) => d.id));
+    return libraryReqs()
+      .filter((r) => docIds.has(r.docId) && tagMatch(model.tags, r.applies_if))
+      .map((r) => ({ ...r, layer: '2lod' as const }));
+  }, [model, ready]);
 
   if (!review || !model) return null;
   const shared = review.pkg.requirements ?? [];
@@ -100,13 +94,13 @@ export default function ValScope() {
             <CardHeader title="Validation layer — the how strict (owned by the 2nd line)" subtitle="From internal validation standards. Not visible to, and not configurable by, the 1st line." />
             <ReqTable reqs={review.validationLayer} />
             <div className="border-t border-line px-4 py-3">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-2">Add from validation standards in the library</p>
-              <ul className="space-y-1.5">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink-2">Add from validation standards in the library ({valOptions.length})</p>
+              <ul className="max-h-[440px] space-y-1.5 overflow-y-auto pr-1">
                 {valOptions.map((r) => (
                   <li key={r.id} className="flex items-start justify-between gap-3 rounded-lg border border-line px-3 py-2 text-sm">
                     <span>
                       <span className="font-mono text-xs font-semibold text-lod2">{r.id}</span> {r.text}
-                      <span className="block text-xs text-ink-2">{DOCUMENTS.find((d) => d.id === r.source_doc)?.title}</span>
+                      <span className="block text-xs text-ink-2">{DOCUMENTS.find((d) => d.id === r.source_doc)?.title} · {r.article}</span>
                     </span>
                     {inLayer.has(r.id) ? (
                       <span className="shrink-0 text-xs font-medium text-green-600">Added</span>

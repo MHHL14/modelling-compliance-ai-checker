@@ -1,0 +1,748 @@
+{
+  "docId": "EXT-EBA-IRRBB",
+  "requirements": [
+    {
+      "id": "EBA-IRRBB-019",
+      "article": "EBA/GL/2022/14 para 19",
+      "chapter": "Perimeter of IRRBB",
+      "text": "The IRRBB measurement perimeter covers all interest rate sensitive banking book instruments, including assets, liabilities, interest rate derivatives, non-interest rate derivatives referencing an interest rate and off-balance sheet items such as loan commitments.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-020",
+      "article": "EBA/GL/2022/14 para 20",
+      "chapter": "Perimeter of IRRBB",
+      "text": "Non-performing exposures are included, net of provisions, as interest rate sensitive instruments whose modelling reflects expected cash flows and their timing.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Repeated for the IMS in para 83."
+    },
+    {
+      "id": "EBA-IRRBB-037",
+      "article": "EBA/GL/2022/14 para 37",
+      "chapter": "IRRBB governance strategy",
+      "text": "The institution using customer behaviour models as input to IRRBB measurement possesses the necessary knowledge and expertise and can demonstrate that it understands the consequences of modelling the behaviour of its customer base.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-047-e",
+      "article": "EBA/GL/2022/14 para 47(e)",
+      "chapter": "IRRBB policies",
+      "text": "The IRRBB policy specifies whether conditional or unconditional cash flow modelling approaches are used.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-047-f",
+      "article": "EBA/GL/2022/14 para 47(f)",
+      "chapter": "IRRBB policies",
+      "text": "The IRRBB policy specifies the treatment of pipeline transactions, including any related hedging.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Footnote 13 explains that pipeline management relies on accurate application data and modelling of expected drawdowns."
+    },
+    {
+      "id": "EBA-IRRBB-047-j",
+      "article": "EBA/GL/2022/14 para 47(j)",
+      "chapter": "IRRBB policies",
+      "text": "The IRRBB policy specifies the behavioural treatment of current and savings accounts, i.e. the maturity assumed for liabilities with short contractual but long behavioural maturity.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-055",
+      "article": "EBA/GL/2022/14 para 55",
+      "chapter": "IT systems and data quality",
+      "text": "The transaction system records, per transaction, the repricing date(s), interest rate type or index including spread, embedded options (including early repayment or redemption) and the fees relating to their exercise.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-059",
+      "article": "EBA/GL/2022/14 para 59",
+      "chapter": "IT systems and data quality",
+      "text": "Data inputs are automated as far as possible and data mapping is periodically reviewed and tested against an approved model version.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-066",
+      "article": "EBA/GL/2022/14 para 66",
+      "chapter": "Internal reporting",
+      "text": "The institution regularly compares past forecasts or risk estimates with actual results and, in particular, assesses modelled prepayment losses against historical realised losses.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-070",
+      "article": "EBA/GL/2022/14 para 70",
+      "chapter": "Model governance",
+      "text": "IRRBB measurement methods are reviewed and validated independently of their development, under a formal validation and model risk policy approved by the management body or its delegates and integrated in model risk management governance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The validation and model risk policy and its approval are institution-level governance evidenced in the model risk management framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Management body responsibility also in para 41(e)."
+    },
+    {
+      "id": "EBA-IRRBB-071-a",
+      "article": "EBA/GL/2022/14 para 71(a)",
+      "chapter": "Model governance — validation framework",
+      "text": "The validation of IRRBB models evaluates conceptual and methodological soundness, including developmental evidence.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-071-b",
+      "article": "EBA/GL/2022/14 para 71(b)",
+      "chapter": "Model governance — validation framework",
+      "text": "The validation framework includes ongoing model monitoring, including process verification and benchmarking.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-071-c",
+      "article": "EBA/GL/2022/14 para 71(c)",
+      "chapter": "Model governance — validation framework",
+      "text": "The validation includes outcomes analysis with back-testing of key internal parameters such as deposit stability, loan prepayment rates, early redemption of deposits and pricing of instruments.",
+      "quote": "outcomes analysis, including back-testing of key internal parameters",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-071-d",
+      "article": "EBA/GL/2022/14 para 71(d)",
+      "chapter": "Model governance — validation framework",
+      "text": "The validation thoroughly assesses any expert opinions and judgements used in the IRRBB models.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-071-e",
+      "article": "EBA/GL/2022/14 para 71(e)",
+      "chapter": "Model governance — validation framework",
+      "text": "The validation covers the diversification assumptions used in IRRBB measurement.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-073",
+      "article": "EBA/GL/2022/14 para 73",
+      "chapter": "Model governance",
+      "text": "Before internal approval for use, the process for determining model inputs, assumptions, modelling methodologies and outputs is reviewed and validated independently of IRRBB model development.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-077",
+      "article": "EBA/GL/2022/14 para 77",
+      "chapter": "Model governance — third-party models",
+      "text": "Third-party IRRBB models are customised to the institution, their analytics and assumptions are fully understood, third-party behavioural inputs are assessed for reasonableness, and their use and customisation are documented.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-078",
+      "article": "EBA/GL/2022/14 para 78",
+      "chapter": "Model governance",
+      "text": "Model inputs and assumptions, whether internal or from third parties, are included in the validation, and model specification choices are documented and explained.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-081",
+      "article": "EBA/GL/2022/14 para 81",
+      "chapter": "Measurement — general approach",
+      "text": "Where commercial margins and other spread components are excluded from economic value measures, the risk-free rate at inception is identified with a transparent methodology applied consistently across all instruments and business units.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-082",
+      "article": "EBA/GL/2022/14 para 82",
+      "chapter": "Measurement — general approach",
+      "text": "Net interest income measures used to evaluate IRRBB include commercial margins.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-088",
+      "article": "EBA/GL/2022/14 para 88",
+      "chapter": "Measurement methods",
+      "text": "The institution uses at least one net interest income plus market value change measure and at least one economic value measure that together capture gap, basis and option risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Components per Table 1 (para 87); multiple methods expected for SREP category 1–2 institutions (Annex II)."
+    },
+    {
+      "id": "EBA-IRRBB-089",
+      "article": "EBA/GL/2022/14 para 89",
+      "chapter": "Interest rate shock scenarios",
+      "text": "IRRBB exposure is measured at least quarterly, and more frequently in volatile conditions, under shock scenarios for changes in the level and shape of yield curves and in the relationship between rates (basis risk).",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-091",
+      "article": "EBA/GL/2022/14 para 91",
+      "chapter": "Interest rate shock scenarios",
+      "text": "Currency-specific shock scenarios are applied at least for each currency representing 5 % or more of non-trading book financial assets or liabilities, or smaller currencies until 90 % coverage is reached.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-094",
+      "article": "EBA/GL/2022/14 para 94",
+      "chapter": "Interest rate stress scenarios",
+      "text": "IRRBB stress testing includes changes in the behaviour of the customer base and is integrated in the overall stress-testing framework, including reverse stress testing.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Frequency at least annually per para 95."
+    },
+    {
+      "id": "EBA-IRRBB-099-c",
+      "article": "EBA/GL/2022/14 para 99(c)",
+      "chapter": "Interest rate stress scenarios",
+      "text": "Stress scenarios include breakdowns of key assumptions about the behaviour of asset and liability classes.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-103",
+      "article": "EBA/GL/2022/14 para 103",
+      "chapter": "Measurement assumptions",
+      "text": "Key behavioural and modelling assumptions are fully understood, documented, aligned with business strategies and regularly tested, applying materiality thresholds of the standardised-approach RTS proportionately.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Para 103 cites draft-RTS articles 7(12), 8(2), 9(4), 11(3), 21(1); final numbering in Delegated Regulation (EU) 2024/857 differs (e.g. Art. 8(10), 9(2), 10(4))."
+    },
+    {
+      "id": "EBA-IRRBB-106-d",
+      "article": "EBA/GL/2022/14 para 106(d)",
+      "chapter": "Measurement assumptions",
+      "text": "Assumptions for the treatment of fixed rate loans and fixed rate loan commitments are defined and taken into account for each IRRBB measure.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Covers loan-commitment and pipeline drawdown assumptions."
+    },
+    {
+      "id": "EBA-IRRBB-107",
+      "article": "EBA/GL/2022/14 para 107",
+      "chapter": "Measurement assumptions",
+      "text": "Significant measurement assumptions are reviewed at least annually and more frequently during rapidly changing market conditions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-108-a",
+      "article": "EBA/GL/2022/14 para 108(a)",
+      "chapter": "Behavioural assumptions — prepayment",
+      "text": "Prepayment modelling reflects the impact of the interest rate scenario, the underlying economic environment and contractual features on current and future loan prepayment speeds.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-109-c",
+      "article": "EBA/GL/2022/14 para 109(c)",
+      "chapter": "Behavioural assumptions — embedded options",
+      "text": "Key behavioural assumptions are justifiable in relation to the underlying historical data and based on prudent hypotheses.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-109-d",
+      "article": "EBA/GL/2022/14 para 109(d)",
+      "chapter": "Behavioural assumptions — embedded options",
+      "text": "The institution demonstrates the accuracy of its behavioural modelling through back-testing against experience.",
+      "quote": "Be able to demonstrate that they have accurate modelling (back-tested against experience)",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-109-f",
+      "article": "EBA/GL/2022/14 para 109(f)",
+      "chapter": "Behavioural assumptions — embedded options",
+      "text": "The sensitivity of risk measurement outputs to behavioural assumptions is understood through stress testing of those assumptions, with results taken into account in internal capital allocation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-110",
+      "article": "EBA/GL/2022/14 para 110",
+      "chapter": "Behavioural assumptions — non-maturity deposits",
+      "text": "Non-maturity deposits from financial customers are not behaviourally modelled unless they are operational deposits as defined in Article 27(1)(a) of the LCR Delegated Regulation.",
+      "quote": "Non-maturity deposits from financial customers should not be subject to behavioural modelling except if they are operational deposits",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-111",
+      "article": "EBA/GL/2022/14 para 111",
+      "chapter": "Behavioural assumptions — non-maturity deposits",
+      "text": "The weighted average behavioural repricing date of retail, non-financial wholesale and operational NMDs, core and non-core combined, is capped at 5 years per currency, except regulated savings and deposits with material withdrawal constraints.",
+      "quote": "should be constrained to a maximum weighted average repricing date of 5 years",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-112-a",
+      "article": "EBA/GL/2022/14 para 112(a)",
+      "chapter": "Behavioural assumptions — non-maturity deposits",
+      "text": "The NMD model identifies core balances, i.e. deposits that are stable and unlikely to reprice even under significant changes in the interest rate environment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-112-b",
+      "article": "EBA/GL/2022/14 para 112(b)",
+      "chapter": "Behavioural assumptions — non-maturity deposits",
+      "text": "NMD modelling assumptions reflect depositor and account characteristics, distinguishing at least retail transactional, retail non-transactional and wholesale deposits.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-112-h",
+      "article": "EBA/GL/2022/14 para 112(h)",
+      "chapter": "Behavioural assumptions — non-maturity deposits",
+      "text": "The institution periodically runs sensitivity analyses on key NMD parameters (core percentage and maturity, pass-through rate) and compares measures on contractual terms to isolate the impact of behavioural assumptions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-121",
+      "article": "EBA/GL/2022/14 para 121",
+      "chapter": "CSRBB — perimeter",
+      "text": "The CSRBB measure excludes credit migration effects, gives no positive impact to deterioration of the institution's own credit quality and avoids overlap with the CVA risk framework.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022). Section 4.5 applies from 31 December 2023."
+    },
+    {
+      "id": "EBA-IRRBB-124",
+      "article": "EBA/GL/2022/14 para 124",
+      "chapter": "CSRBB — perimeter",
+      "text": "No banking book instrument is excluded ex ante from the CSRBB perimeter; any exclusion is justified by absence of credit spread sensitivity and documented, and fair-valued assets are never excluded.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    },
+    {
+      "id": "EBA-IRRBB-159",
+      "article": "EBA/GL/2022/14 para 159",
+      "chapter": "CSRBB — monitoring assumptions",
+      "text": "Diversification between CSRBB and IRRBB is recognised only where its reliability and stability are validated and documented, and separate assessments of CSRBB and IRRBB are maintained.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the EBA/GL/2022/14 final report (EBA website, 20 Oct 2022)."
+    }
+  ]
+}

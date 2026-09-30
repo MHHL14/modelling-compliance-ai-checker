@@ -1,0 +1,997 @@
+{
+  "docId": "EXT-RTS-ASSESS",
+  "requirements": [
+    {
+      "id": "RTS-ASSESS-3",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 3",
+      "chapter": "General provisions",
+      "text": "Rating system documentation is complete, sufficiently detailed, up to date, approved at the appropriate management level and subject to version control, so that the competent authority can assess compliance.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-4",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 4",
+      "chapter": "General provisions",
+      "text": "Where a third party is involved in the design, development, data provision or operation of a rating system, the institution retains full responsibility and sufficient in-house understanding, and documents the third-party involvement.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-5",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 5",
+      "chapter": "General provisions",
+      "text": "Where the institution temporarily does not comply with IRB requirements, it presents a remediation plan with realistic timelines and monitors its execution, or demonstrates that the effect of non-compliance is immaterial.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution towards the competent authority under the IRB permission; evidenced in the IRB remediation plan, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked; operationalises CRR Art. 146. Paraphrased at article level."
+    },
+    {
+      "id": "RTS-ASSESS-7",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 7",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "The sequential implementation plan specifies the exposure classes, types of exposures and business units covered, the order and timeline of roll-out, and is adhered to, with deviations justified and approved.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution towards the competent authority; evidenced in the IRB sequential implementation (roll-out) plan, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-8",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 8",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "Exposures under permanent partial use of the Standardised Approach meet the applicable conditions of CRR Art. 150, and the institution monitors and documents on an ongoing basis that those conditions remain fulfilled.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level obligation concerning permanent partial use; evidenced in the PPU monitoring documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-10",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 10",
+      "chapter": "Validation function",
+      "text": "The validation function is independent from the personnel and management functions responsible for model development and for originating or renewing exposures, and reports its findings to senior management.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation of the validation function; evidenced in the validation function charter and organisational arrangements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-11",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 11",
+      "chapter": "Validation function",
+      "text": "The validation covers all rating systems and all their components, including data, model design, risk quantification, assignment processes and use, and the institution's full validation cycle is complete and performed with appropriate frequency.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-12",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 12",
+      "chapter": "Validation function",
+      "text": "Validation methods and procedures are adequate and documented, combining quantitative analyses (discriminatory power, calibration and back-testing, stability, benchmarking) with qualitative analyses, and use thresholds to trigger action.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-13",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 13",
+      "chapter": "Validation function",
+      "text": "Validation conclusions, findings and recommendations are reported to senior management and the management body or designated committee, and are addressed through a documented remediation process with follow-up.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-14",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 14",
+      "chapter": "Internal governance and oversight",
+      "text": "The management body and senior management approve all material aspects of the rating systems, understand their design and operation, and are informed of material changes, exceptions and deficiencies.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-15",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 15",
+      "chapter": "Internal governance and oversight",
+      "text": "Management reporting on the rating systems has adequate content, frequency and recipients, including the risk profile by grade, rating migrations, parameter estimates and comparison of realised values with estimates.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning management reporting across rating systems; evidenced in the periodic IRB management reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-16",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 16",
+      "chapter": "Internal governance and oversight",
+      "text": "The credit risk control unit is independent, adequately resourced and effectively performs its responsibilities for the design or selection, implementation, oversight and performance of rating systems.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation and resourcing of the credit risk control unit; evidenced in its mandate and organisational documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-17",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 17",
+      "chapter": "Internal governance and oversight",
+      "text": "Internal audit reviews at least annually the rating systems and their operation, including the validation function and adherence to all IRB requirements, with a scope and depth commensurate with risk.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the internal audit function; evidenced in internal audit plans and reports, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-19",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 19",
+      "chapter": "Use test and experience test",
+      "text": "Internal ratings and risk parameters used for own funds are applied in risk management, decision-making and the credit approval process, including limits, monitoring and reporting of credit risk.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-19-b",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 19",
+      "chapter": "Use test and experience test",
+      "text": "Where risk parameters used for internal purposes differ from those used for own funds requirements, the differences are documented and justified, and the internal parameters are consistent with the IRB parameters.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Article number checked; whether the justification of differing internal parameters sits in Art. 18 or Art. 19 to be confirmed."
+    },
+    {
+      "id": "RTS-ASSESS-20",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 20",
+      "chapter": "Use test and experience test",
+      "text": "IRB ratings and risk parameters are used in the institution's internal capital allocation process.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level use of IRB parameters in internal capital allocation; evidenced in the capital allocation framework, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-21",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 21",
+      "chapter": "Use test and experience test",
+      "text": "IRB ratings and risk parameters are used in the corporate governance functions, including internal reporting to the management body and senior management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level use of IRB parameters in corporate governance; evidenced in management body and senior management reporting, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-22",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 22",
+      "chapter": "Use test and experience test",
+      "text": "The institution has used rating systems broadly in line with IRB requirements for internal risk measurement and management for at least three years before IRB permission (experience test).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Experience test obligation of the institution for the IRB permission; evidenced in the permission application, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number checked; operationalises CRR Art. 145."
+    },
+    {
+      "id": "RTS-ASSESS-24",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 24",
+      "chapter": "Assignment of exposures to grades or pools",
+      "text": "Assignment definitions, processes and criteria are documented, sufficiently detailed and applied consistently across business lines, departments and locations.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-25",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 25",
+      "chapter": "Assignment of exposures to grades or pools",
+      "text": "The assignment process has integrity: ratings are approved independently, updated timely and at least annually, and overrides are governed, recorded and monitored.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-27",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 27",
+      "chapter": "Identification of defaults",
+      "text": "The default triggers of CRR Art. 178, including days-past-due and unlikeliness-to-pay indications, are implemented and applied consistently across all relevant entities, systems and portfolios.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-28",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 28",
+      "chapter": "Identification of defaults",
+      "text": "The process for identifying defaults is robust, timely and effective, with automated identification where possible, documented manual processes, and controls ensuring completeness of default identification.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-29",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 29",
+      "chapter": "Identification of defaults",
+      "text": "Reclassification of defaulted exposures to non-default status follows documented policies and is applied only when no default trigger continues to apply.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-31",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 31",
+      "chapter": "Rating system design and documentation",
+      "text": "The documentation of each rating system covers its rationale, design and operational details, including the model, risk quantification, data, assignment process and use, completely enough for a third party to understand it.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-32",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 32",
+      "chapter": "Rating system design and documentation",
+      "text": "The institution maintains a register of all current and historical versions of its rating systems, recording approvals, changes and their dates.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain an institution-wide register of rating system versions; evidenced in the model inventory, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-33",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 33",
+      "chapter": "Rating system design and documentation",
+      "text": "The selection of risk drivers and rating criteria is supported by statistical and expert analysis demonstrating their relevance and predictive power.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-35",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 35",
+      "chapter": "Rating system design and documentation",
+      "text": "The rating system differentiates risk adequately between grades or pools, as shown by appropriate discriminatory power analyses.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-36",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 36",
+      "chapter": "Rating system design and documentation",
+      "text": "Exposures within the same grade or pool are sufficiently homogeneous in terms of risk.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-37",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 37",
+      "chapter": "Rating system design and documentation",
+      "text": "Data used to develop statistical models are representative of the institution's portfolio, of adequate quality and sufficient in length and depth.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-38",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 38",
+      "chapter": "Rating system design and documentation",
+      "text": "The model design is conceptually sound, justified against relevant alternatives and consistent with the business and risk rationale.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-39",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 39",
+      "chapter": "Rating system design and documentation",
+      "text": "Human judgement used in model development and in the application of the model is justified, documented and its impact monitored.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-40",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 40",
+      "chapter": "Rating system design and documentation",
+      "text": "Model performance, including discriminatory power and stability, is assessed in development and on an ongoing basis, including on out-of-sample and out-of-time data.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-42",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 42",
+      "chapter": "Risk quantification",
+      "text": "Data used for risk quantification are representative, complete and of sufficient length, and any data deficiencies are identified and treated.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-43",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 43",
+      "chapter": "Risk quantification",
+      "text": "Risk parameter estimates are reviewed at least annually and whenever new information becomes available.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number checked; annual review derives from CRR Art. 179(1)(c)."
+    },
+    {
+      "id": "RTS-ASSESS-44",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 44",
+      "chapter": "Risk quantification",
+      "text": "The institution has a framework to identify deficiencies in data and methods, apply appropriate adjustments and quantify a margin of conservatism commensurate with the expected range of estimation errors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-45",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 45",
+      "chapter": "Risk quantification",
+      "text": "The historical observation period used for PD estimation meets the minimum length requirements and includes a longer period where relevant data are available.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-46",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 46",
+      "chapter": "Risk quantification",
+      "text": "PDs are estimated from long-run averages of one-year default rates using an appropriate calibration method that is consistent with the default definition.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-47",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 47",
+      "chapter": "Risk quantification",
+      "text": "The historical observation period used for LGD estimation meets the minimum length requirements and includes a longer period where relevant data are available.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-48",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 48",
+      "chapter": "Risk quantification",
+      "text": "Realised LGDs are calculated appropriately, including all relevant recoveries, direct and indirect costs and discounting, and LGD estimates are based on the average realised LGDs of all observed defaults.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-49",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 49",
+      "chapter": "Risk quantification",
+      "text": "The treatment of multiple defaults of the same obligor in LGD estimation is documented and applied consistently.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-50",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 50",
+      "chapter": "Risk quantification",
+      "text": "LGD estimates appropriate for an economic downturn are used where more conservative than the long-run average, and the downturn identification and quantification are justified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-51",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 51",
+      "chapter": "Risk quantification",
+      "text": "The institution has appropriate methods for estimating ELBE and LGD in-default, including their consistency with each other and with the LGD for performing exposures.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-54",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 54",
+      "chapter": "Risk quantification",
+      "text": "Conversion factors are estimated using realised conversion factors of all observed defaults with an appropriate method, reflecting possible additional drawings up to default.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-60",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 60",
+      "chapter": "Exposure classes, stress testing and own funds calculation",
+      "text": "The institution has a documented methodology for assigning exposures to exposure classes that is appropriate, consistently implemented and applies the assignment sequence consistently over time.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level exposure class assignment obligation; evidenced in the exposure class assignment policy and capital calculation process, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-62",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 62",
+      "chapter": "Exposure classes, stress testing and own funds calculation",
+      "text": "Exposures assigned to the retail exposure class meet the retail criteria, including the monitoring of thresholds and the management of exposures on a pooled basis.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-64",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 64",
+      "chapter": "Exposure classes, stress testing and own funds calculation",
+      "text": "Credit risk stress tests used for capital adequacy use adequate methods and severe but plausible scenarios, and their results are integrated into risk and capital management.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level IRB stress-testing obligation; evidenced in the credit risk stress-testing framework used for capital adequacy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-68",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 68",
+      "chapter": "Exposure classes, stress testing and own funds calculation",
+      "text": "The system used for the calculation of own funds requirements is reliable and correctly implements the IRB methodology, including the risk weight formulas, for each exposure class.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's own funds calculation system; evidenced in the capital calculation engine documentation and controls, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    },
+    {
+      "id": "RTS-ASSESS-73",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 73",
+      "chapter": "Data maintenance",
+      "text": "The institution has a data quality management framework ensuring completeness, accuracy, consistency, timeliness, uniqueness, validity, availability and traceability of data used in the rating systems.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain an institution-wide data quality management framework; evidenced in the data quality policy and procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Article number checked; the exact list of data quality dimensions assessed under Art. 73 to be confirmed against the text."
+    },
+    {
+      "id": "RTS-ASSESS-74",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 74",
+      "chapter": "Data maintenance",
+      "text": "Data used in the rating systems are documented, including a data dictionary and data lineage, and data quality is reported to the relevant management levels.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Article number checked; specific documentation elements (data dictionary, lineage) paraphrased and to be confirmed against the text."
+    },
+    {
+      "id": "RTS-ASSESS-84",
+      "article": "Delegated Regulation (EU) 2022/439 Art. 84",
+      "chapter": "Management of changes",
+      "text": "The institution has a change policy for rating systems setting out how changes are identified, classified by materiality, approved, documented, notified to the competent authority and implemented.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain a bank-wide change policy; evidenced in the rating system change policy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Article number and title checked against the table of contents of Delegated Regulation (EU) 2022/439; obligation paraphrased at article level from the assessment criteria."
+    }
+  ]
+}

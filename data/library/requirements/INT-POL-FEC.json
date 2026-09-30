@@ -1,0 +1,461 @@
+{
+  "docId": "INT-POL-FEC",
+  "requirements": [
+    {
+      "id": "FEC-POL-001-4.1",
+      "article": "FEC-POL-001 §4.1",
+      "chapter": "Risk-based approach and SIRA",
+      "text": "The intensity of the FEC controls supported by the model is commensurate with the risks identified for customers, products, transactions, delivery channels and geographies.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-4.2",
+      "article": "FEC-POL-001 §4.2; Wwft Art. 2b; AMLR Art. 10",
+      "chapter": "Risk-based approach and SIRA",
+      "text": "The SIRA is performed at least annually and on material change, identifying inherent risks, control effectiveness and residual risks against risk appetite.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide risk assessment obligation; evidenced in the Systematic Integrity Risk Analysis report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision authored; Wwft Art. 2b checked; AMLR Art. 10 (business-wide risk assessment) numbering to be confirmed."
+    },
+    {
+      "id": "FEC-POL-001-4.4",
+      "article": "FEC-POL-001 §4.4",
+      "chapter": "Risk-based approach and SIRA",
+      "text": "Each material risk scenario identified in the SIRA is mapped to one or more detection controls, and coverage gaps are recorded with remediation plans.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-5.1",
+      "article": "FEC-POL-001 §5.1; Wwft Art. 3",
+      "chapter": "Customer due diligence",
+      "text": "CDD comprises identification and verification of the customer, identification and verification of the beneficial owner, assessment of purpose and intended nature of the relationship, and PEP determination.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the customer due diligence process; evidenced in KYC procedures and customer files, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0); Wwft article reference paraphrased, not quoted."
+    },
+    {
+      "id": "FEC-POL-001-5.2",
+      "article": "FEC-POL-001 §5.2; FEC-STD-600",
+      "chapter": "Customer due diligence",
+      "text": "Every customer is assigned a Customer Risk Rating at onboarding using the approved CRR methodology, which considers at least customer, product and service, delivery channel and geographic risk factors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-5.3",
+      "article": "FEC-POL-001 §5.3; Wwft Art. 8",
+      "chapter": "Customer due diligence",
+      "text": "Enhanced due diligence, including source of funds and wealth and senior management approval, is applied to High-risk customers, PEPs and customers linked to high-risk third countries.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the customer due diligence process; evidenced in EDD procedures and customer files, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0); Wwft article reference paraphrased, not quoted."
+    },
+    {
+      "id": "FEC-POL-001-5.5",
+      "article": "FEC-POL-001 §5.5",
+      "chapter": "Customer due diligence",
+      "text": "Customer information is periodically reviewed at least annually for High, every three years for Medium and every five years for Low-risk customers, and upon event-driven triggers.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the periodic customer review process; evidenced in KYC review records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-5.6",
+      "article": "FEC-POL-001 §5.6",
+      "chapter": "Customer due diligence",
+      "text": "Manual overrides of a model-assigned CRR are justified, approved by a person independent of the relationship manager and monitored for frequency and direction.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-6.1",
+      "article": "FEC-POL-001 §6.1; Wwft Art. 3(2)(d)",
+      "chapter": "Transaction monitoring",
+      "text": "Transactions and customer behaviour are monitored throughout the business relationship to detect transactions unusual in relation to the customer's profile and risk.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0); Wwft article reference paraphrased, not quoted."
+    },
+    {
+      "id": "FEC-POL-001-6.2",
+      "article": "FEC-POL-001 §6.2",
+      "chapter": "Transaction monitoring",
+      "text": "Transaction monitoring coverage of customers, accounts, products and payment channels is documented in a coverage matrix linking SIRA risks to scenarios, with uncovered populations justified.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-6.3",
+      "article": "FEC-POL-001 §6.3; FEC-STD-600",
+      "chapter": "Transaction monitoring",
+      "text": "Scenarios, thresholds and alert-prioritisation models are designed, calibrated, tested and periodically tuned in accordance with FEC-STD-600.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-6.4",
+      "article": "FEC-POL-001 §6.4",
+      "chapter": "Transaction monitoring",
+      "text": "Level-1 review of each alert is completed within 30 calendar days of generation and documented so that the decision can be reconstructed.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Operational obligation of the alert handling process; evidenced in case management records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-6.5",
+      "article": "FEC-POL-001 §6.5",
+      "chapter": "Transaction monitoring",
+      "text": "Alerts are closed automatically by a model only where the auto-closure logic is validated, approved by the Financial Economic Crime Committee and subject to sample-based quality assurance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-7.1",
+      "article": "FEC-POL-001 §7.1; Sanctiewet 1977",
+      "chapter": "Sanctions screening",
+      "text": "Customers, beneficial owners, representatives and counterparties are screened against at least the EU, Dutch national and UN sanctions lists at onboarding, on list updates and on customer data changes.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-7.3",
+      "article": "FEC-POL-001 §7.3",
+      "chapter": "Sanctions screening",
+      "text": "Screening configurations, including fuzzy-matching algorithms, thresholds and list selections, are tested at least annually for effectiveness and efficiency.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-8.1",
+      "article": "FEC-POL-001 §8.1; Wwft Art. 16",
+      "chapter": "Reporting to FIU-Nederland",
+      "text": "Unusual transactions are reported to FIU-Nederland without delay, with an internal target of fourteen calendar days after the conclusion that a transaction is unusual.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Reporting obligation of the institution towards FIU-Nederland; evidenced in unusual transaction reports and case records, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0); Wwft article reference paraphrased, not quoted."
+    },
+    {
+      "id": "FEC-POL-001-9.1",
+      "article": "FEC-POL-001 §9.1; Delegated Regulation (EU) 2018/389 Art. 2(2)",
+      "chapter": "Fraud prevention",
+      "text": "Fraud transaction monitoring takes into account at least compromised authentication elements, transaction amount, known fraud scenarios, signs of malware infection and abnormal device or software use.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud prevention and detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0); PSD2 RTS article reference checked."
+    },
+    {
+      "id": "FEC-POL-001-9.2",
+      "article": "FEC-POL-001 §9.2; Delegated Regulation (EU) 2018/389 Art. 18–21",
+      "chapter": "Fraud prevention",
+      "text": "Where the transaction-risk-analysis exemption is applied, fraud rates are monitored quarterly per payment type and use of the exemption ceases when reference fraud rates are exceeded.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution under the PSD2 exemption regime; evidenced in quarterly fraud-rate reporting, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud prevention and detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0); PSD2 RTS article reference checked."
+    },
+    {
+      "id": "FEC-POL-001-9.3",
+      "article": "FEC-POL-001 §9.3",
+      "chapter": "Fraud prevention",
+      "text": "Customer-facing effects of fraud blocking are covered by documented customer contact and payment release procedures.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Operational customer-handling obligation; evidenced in customer contact and payment release procedures, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud prevention and detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    },
+    {
+      "id": "FEC-POL-001-10.1",
+      "article": "FEC-POL-001 §10.1; Wwft Art. 33",
+      "chapter": "Record keeping and data",
+      "text": "CDD records, transaction records, alert investigations and reports are retained for five years after the end of the relationship or occasional transaction.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide record-keeping obligation; evidenced in the Bank's records retention schedule and archives, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering and sanctions models only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision authored; Wwft Art. 33 retention period to be confirmed against the consolidated Wwft."
+    },
+    {
+      "id": "FEC-POL-001-10.2",
+      "article": "FEC-POL-001 §10.2",
+      "chapter": "Record keeping and data",
+      "text": "Data feeds used for CRR, transaction monitoring, screening and fraud detection are reconciled with source systems at least monthly and data gaps are reported to Financial Crime Compliance.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal policy text authored for the library (FEC-POL-001 v6.0)."
+    }
+  ]
+}

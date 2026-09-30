@@ -8,7 +8,7 @@ import { caseSegments, caseStageLabel } from '@/components/dev/caseProgress';
 import { useCaseCtx } from '@/components/dev/useCaseCtx';
 import { Button } from '@/components/ui/button';
 import { COMPONENT_LABEL } from '@/lib/ai/generic';
-import { applicableDocs } from '@/lib/applicability';
+import { resolveSelection } from '@/lib/engine/assess';
 import { fmtDateTime } from '@/lib/clock';
 import type { Verdict } from '@/lib/types';
 import { finalVerdict } from '@/stores/store1lod';
@@ -18,8 +18,8 @@ const STAGE_PATHS = ['scope', 'draft', 'assess', 'submit', 'findings'];
 
 export default function CaseOverview() {
   const { caseId } = useParams<{ caseId: string }>();
-  const { id, uc, model, sc, inSet } = useCaseCtx(caseId);
-  if (!uc || !model || !sc) return null;
+  const { id, uc, model, inSet, ready } = useCaseCtx(caseId);
+  if (!uc || !model || !ready) return null;
   const rows = uc.run?.rows ?? [];
   const counts = ORDER.map((v) => [v, rows.filter((r) => finalVerdict(r) === v).length] as const);
   const decided = rows.filter((r) => r.decision).length;
@@ -41,7 +41,7 @@ export default function CaseOverview() {
       />
       <div className="mb-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
         <Kpi label="Requirements in set" value={uc.generatedAt ? inSet.length : '—'} hint={uc.lockedAt ? `${uc.reqSetId} locked` : 'Not locked yet'} />
-        <Kpi label="Applicable documents" value={applicableDocs({ tags: uc.attributes.tags }).length + uc.addedDocuments.length} hint={`${uc.addedDocuments.length} user added`} />
+        <Kpi label="Requirement sources" value={uc.sources.length} hint="Selected by you" />
         <Kpi label="Reviewed" value={uc.run ? `${decided}/${rows.length}` : '—'} hint="Rows with a human decision" tone="good" />
         <Kpi label="Findings received" value={uc.findings.length} tone={uc.findings.length ? 'bad' : 'default'} />
       </div>
@@ -80,7 +80,7 @@ export default function CaseOverview() {
                 ['Methodology', uc.attributes.methodology],
                 ['Portfolio', uc.attributes.portfolio],
                 ['Regulatory use', `${uc.attributes.regulatory_use} · Tier ${uc.attributes.tier}`],
-                ['Assessed document', `${sc.document.title} (v${sc.document.finalVersion})`],
+                ['Documentation assessed', uc.submissionSelection?.length ? resolveSelection(uc.submissionSelection).map((d) => `${d.title} v${d.version}`).join(' · ') : 'Not yet selected'],
                 ['Owner (1st line)', model.owner_1lod],
                 ['Validator (2nd line)', model.validator_2lod],
                 ['AI Act', model.ai_act_assessment],

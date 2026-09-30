@@ -1,0 +1,440 @@
+{
+  "docId": "EXT-EBA-ESG",
+  "requirements": [
+    {
+      "id": "EBA-ESG-011",
+      "article": "EBA/GL/2025/01 para 11",
+      "chapter": "Materiality assessment",
+      "text": "A materiality assessment of ESG risks is performed at least annually (every two years for SNCIs) and updated earlier upon material ESG-related changes in the business environment, business model, portfolios or operations.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The ESG materiality assessment is an institution-wide exercise evidenced in the ICAAP and ESG risk framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 11. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-012",
+      "article": "EBA/GL/2025/01 para 12",
+      "chapter": "Materiality assessment",
+      "text": "The ESG materiality assessment is institution-specific, assesses financial materiality supported by a mapping of ESG factors and transmission channels to traditional financial risk categories, and is integrated into the ICAAP materiality assessment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The ESG materiality assessment is an institution-wide exercise evidenced in the ICAAP materiality assessment.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 12. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-013",
+      "article": "EBA/GL/2025/01 para 13",
+      "chapter": "Materiality assessment",
+      "text": "The materiality assessment is risk-based, considering the likelihood and potential magnitude of the financial effects of ESG risks in the short and medium term and over a long-term horizon of at least 10 years.",
+      "quote": "over a long-term horizon of at least 10 years",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The ESG materiality assessment is an institution-wide exercise evidenced in the ICAAP materiality assessment.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 13. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-015",
+      "article": "EBA/GL/2025/01 para 15",
+      "chapter": "Materiality assessment",
+      "text": "The environmental materiality assessment uses qualitative and quantitative information, covers at least climate, ecosystem degradation and biodiversity loss, and assesses transition drivers (sectors, policy and technology shifts, portfolio misalignment) and physical drivers (location, hazard vulnerability).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The environmental materiality assessment is an institution-wide exercise evidenced in the ICAAP and ESG risk framework.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 15. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-016",
+      "article": "EBA/GL/2025/01 para 16",
+      "chapter": "Materiality assessment",
+      "text": "The ESG materiality assessment is substantiated and documented within the ICAAP, including methodologies, thresholds, inputs and factors considered, main results and non-materiality conclusions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Documentation of the ESG materiality assessment is evidenced within the ICAAP, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 16. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-017",
+      "article": "EBA/GL/2025/01 para 17",
+      "chapter": "Materiality assessment",
+      "text": "ESG risk measurement methods are commensurate with and informed by the materiality assessment outcomes, with more sophisticated arrangements for material ESG risks, and measurement results feed back into regular materiality updates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 17. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-018",
+      "article": "EBA/GL/2025/01 paras 18–19",
+      "chapter": "Identification and measurement",
+      "text": "Tools and methodologies assess ESG risk drivers and their transmission channels into prudential risk categories and financial risk metrics, with a forward-looking perspective over the short, medium and long term.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 18–19. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-020-a",
+      "article": "EBA/GL/2025/01 para 20(a)",
+      "chapter": "Identification and measurement",
+      "text": "Internal methodologies quantify climate-related risks, for example by estimating the probability of materialisation and the magnitude of financial impacts stemming from climate-related factors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 20(a). Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-023",
+      "article": "EBA/GL/2025/01 para 23",
+      "chapter": "Data processes",
+      "text": "Sound information management systems identify, collect, structure and analyse the data needed for ESG risk assessment as part of overall data governance and IT infrastructure, with arrangements to assess and improve data quality.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 23. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-026",
+      "article": "EBA/GL/2025/01 para 26",
+      "chapter": "Data processes",
+      "text": "Where third-party ESG data providers are used, the institution has sufficient understanding of their sources, data and methodologies, including potential limitations.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 26. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-027",
+      "article": "EBA/GL/2025/01 para 27",
+      "chapter": "Data processes",
+      "text": "ESG data gaps are assessed for their impact and remediated through documented actions, including estimates or proxies (e.g. sectoral or regional) adjusted for counterparty specifics where feasible, with the use of proxies reduced over time.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 27. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-030",
+      "article": "EBA/GL/2025/01 para 30",
+      "chapter": "Reference methodologies",
+      "text": "A combination of exposure-based, sector-based, portfolio-based and scenario-based methodologies is used so that ESG risks are assessed over all relevant time horizons, including at least exposure-based methods for the short-term view.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 30. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-031",
+      "article": "EBA/GL/2025/01 para 31",
+      "chapter": "Reference methodologies — exposure-based",
+      "text": "ESG factors, in particular environmental factors, are reflected in risk classification and in the assessment of borrower default risk and, where justified by materiality, embedded in risk indicators, internal credit scoring or rating models and collateral valuation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 31. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-032",
+      "article": "EBA/GL/2025/01 para 32",
+      "chapter": "Reference methodologies — exposure-based",
+      "text": "Exposure-level environmental risk assessment includes physical and transition risk criteria such as hazard vulnerability of assets and collateral, GHG emissions, energy efficiency of real estate with debt service capacity, supply-chain disruption, litigation exposure, maturity and mitigants.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 32 (minimum set for large institutions). Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-037",
+      "article": "EBA/GL/2025/01 paras 37–38",
+      "chapter": "Reference methodologies — portfolio alignment",
+      "text": "At least one portfolio alignment methodology assesses, on a sectoral basis, the alignment of portfolios with science-based climate pathways or benchmark scenarios consistent with applicable policy objectives.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 37–38. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-040",
+      "article": "EBA/GL/2025/01 para 40",
+      "chapter": "Reference methodologies — portfolio alignment",
+      "text": "Methodological choices for alignment assessments, including scenarios, base year, sector selection and any sample of exposures, and significant changes over time, are justified and documented.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 40. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-042",
+      "article": "EBA/GL/2025/01 para 42",
+      "chapter": "Reference methodologies — scenario-based",
+      "text": "Scenario-based analyses are used to test the institution's resilience to ESG risks, starting with climate-related risks, under various scenarios.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 42; detailed in EBA/GL/2025/04. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-062",
+      "article": "EBA/GL/2025/01 para 62",
+      "chapter": "ICAAP",
+      "text": "Insights from ESG risk assessment methodologies are used to identify and measure internal capital needs for exposures or portfolios more vulnerable to ESG risks.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ICAAP models and processes only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 62. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-063",
+      "article": "EBA/GL/2025/01 para 63",
+      "chapter": "ICAAP",
+      "text": "The ICAAP includes a forward-looking view of capital adequacy under an adverse scenario containing specific environmental risk elements.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The forward-looking capital adequacy view is evidenced in the ICAAP, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ICAAP models and processes only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 63. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-069",
+      "article": "EBA/GL/2025/01 para 69",
+      "chapter": "Credit risk policies",
+      "text": "Credit risk policies for environmental risks combine qualitative and quantitative aspects, with quantitative credit risk metrics covering the most significant client segments, collateral types and risk mitigation instruments.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Credit risk policies for environmental risks are institution-wide policies evidenced in the credit risk policy framework.",
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 69. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-098",
+      "article": "EBA/GL/2025/01 paras 94, 98",
+      "chapter": "Transition planning — scenarios",
+      "text": "Scenarios and pathways used in transition planning, including disorderly-transition and high-physical-risk scenarios, are applied consistently across the organisation and time horizons, and their selection and any change are documented and justified.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Scenario consistency across transition planning is evidenced in the institution's transition plan, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 94 and 98. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    },
+    {
+      "id": "EBA-ESG-103",
+      "article": "EBA/GL/2025/01 paras 103–104",
+      "chapter": "Transition planning — metrics",
+      "text": "A range of risk-based and forward-looking metrics supports target-setting and monitoring of the plans, including metrics evaluating the financial implications of transition planning on profitability and portfolio risk over the short, medium and long term.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Metrics for transition plan target-setting are evidenced in the institution's transition plan and its monitoring.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against EBA/GL/2025/01 final report (8 January 2025), para 103–104. Applies from 11 January 2026 (SNCIs: 11 January 2027)."
+    }
+  ]
+}

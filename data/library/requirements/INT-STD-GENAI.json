@@ -1,0 +1,560 @@
+{
+  "docId": "INT-STD-GENAI",
+  "requirements": [
+    {
+      "id": "AI-STD-710-4.1",
+      "article": "AI-STD-710 §4.1; AI-POL-001 §7.2",
+      "chapter": "Use-case approval",
+      "text": "The GenAI use case is registered in the AI Inventory and approved under AI-POL-001 §7.2 before any production use, including pilots with real customer or employee data.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-4.2",
+      "article": "AI-STD-710 §4.2",
+      "chapter": "Use-case approval",
+      "text": "The use-case approval form describes purpose, users, affected persons, input data classifications, foundation model and provider, design, supported outputs, human-in-the-loop design, AI Act classification, AI Risk Class and evaluation plan.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-4.3",
+      "article": "AI-STD-710 §4.3",
+      "chapter": "Use-case approval",
+      "text": "The approval defines the boundaries of intended use; an application supporting credit processes does not produce a credit decision, rating or approve/decline recommendation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-5.1",
+      "article": "AI-STD-710 §5.1",
+      "chapter": "Model, prompt and configuration versioning",
+      "text": "The foundation model is identified by provider, model name and pinned version; auto-updating provider aliases are not used in production.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-5.2",
+      "article": "AI-STD-710 §5.2",
+      "chapter": "Model, prompt and configuration versioning",
+      "text": "System prompts, prompt templates, retrieval and guardrail configurations and generation parameters are version-controlled and released through change management.",
+      "category": "documentation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-5.3",
+      "article": "AI-STD-710 §5.3",
+      "chapter": "Model, prompt and configuration versioning",
+      "text": "Changes to the foundation model version, system prompt or retrieval configuration are preceded by a regression evaluation on the golden set meeting the §8.3 thresholds.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-6.1",
+      "article": "AI-STD-710 §6.1",
+      "chapter": "Prompt and retrieval design",
+      "text": "The system prompt states the role and task, permitted sources, output format, the instruction to answer only from supplied sources and to state when information is unavailable, and prohibited content.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-6.2",
+      "article": "AI-STD-710 §6.2",
+      "chapter": "Prompt and retrieval design",
+      "text": "RAG knowledge sources are listed, owned and subject to data quality and access controls, and retrieval respects the access entitlements of the requesting user.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-6.3",
+      "article": "AI-STD-710 §6.3",
+      "chapter": "Prompt and retrieval design",
+      "text": "The chunking, embedding, ranking approach and number of retrieved passages are documented, and retrieval recall of relevant passages is at least 90% on the retrieval test set.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-6.4",
+      "article": "AI-STD-710 §6.4",
+      "chapter": "Prompt and retrieval design",
+      "text": "Outputs presenting facts from source documents include references to the source passages used.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-6.5",
+      "article": "AI-STD-710 §6.5; PRIV-POL-001; GDPR Art. 5(1)(c) and 35",
+      "chapter": "Prompt and retrieval design",
+      "text": "Personal data are included in prompts only where necessary for the approved purpose and covered by the DPIA.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "personal_data"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only where personal data can enter prompts or retrieval sources.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-7.1",
+      "article": "AI-STD-710 §7.1",
+      "chapter": "Guardrails",
+      "text": "An automated grounding check flags statements not supported by the source material before the output is shown to the user or reviewer.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-7.2",
+      "article": "AI-STD-710 §7.2",
+      "chapter": "Guardrails",
+      "text": "Every numeric value in an output is automatically compared with the source material, and numbers not matching a source value or documented calculation are flagged to the reviewer.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-7.3",
+      "article": "AI-STD-710 §7.3",
+      "chapter": "Guardrails",
+      "text": "Inputs and outputs are screened for personal data and confidential identifiers not permitted for the use case, with detections masked or blocked and logged.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-7.4",
+      "article": "AI-STD-710 §7.4",
+      "chapter": "Guardrails",
+      "text": "Inputs, including retrieved documents, are screened for prompt injection, and outputs for harmful, discriminatory or out-of-scope content.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.1",
+      "article": "AI-STD-710 §8.1",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "The application is evaluated before production on a versioned, SME-labelled golden set of at least 200 representative cases, including edge cases and cases requiring abstention.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.2",
+      "article": "AI-STD-710 §8.2",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "The evaluation measures groundedness, hallucination rate, numeric accuracy, completeness against reference and correct abstention rate.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.3a",
+      "article": "AI-STD-710 §8.3",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "Groundedness is at least 95% for AI Risk Class High or Elevated and at least 90% for Standard.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.3b",
+      "article": "AI-STD-710 §8.3",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "The hallucination rate does not exceed 2% for AI Risk Class High or Elevated and 5% for Standard.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.3c",
+      "article": "AI-STD-710 §8.3",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "For AI Risk Class High or Elevated, 100% of numeric values are correct or flagged by the guardrail; for Standard, numeric accuracy is at least 98%.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.4",
+      "article": "AI-STD-710 §8.4",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "A model-as-judge evaluator is used only after calibration against human labels on at least 100 cases with at least 85% agreement, documented.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-8.5",
+      "article": "AI-STD-710 §8.5",
+      "chapter": "Hallucination and groundedness evaluation",
+      "text": "Evaluations run at production generation parameters and report output variability across at least three repeated runs on a subset of the golden set.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-9.1",
+      "article": "AI-STD-710 §9.1",
+      "chapter": "Red-teaming",
+      "text": "Applications of AI Risk Class Elevated or High are red-teamed before production, at least annually and after each foundation model version change, covering prompt injection, jailbreaking, data extraction, PII leakage, harmful content and out-of-scope use.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-10.1",
+      "article": "AI-STD-710 §10.1; AI-POL-001 §4.5; AI Act Art. 14",
+      "chapter": "Human-in-the-loop",
+      "text": "Outputs used in business decisions or sent to customers are reviewed and approved by a competent person before use, unless automated release is explicitly approved with compensating guardrails.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0); AI Act cross-reference checked."
+    },
+    {
+      "id": "AI-STD-710-10.3",
+      "article": "AI-STD-710 §10.3",
+      "chapter": "Human-in-the-loop",
+      "text": "Effectiveness of human review is tested monthly by second-line quality review of at least 5% of approved outputs or 30 outputs, whichever is higher.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-11.1",
+      "article": "AI-STD-710 §11.1; AI Act Art. 50",
+      "chapter": "Output labelling and logging",
+      "text": "GenAI content is labelled as AI-generated, with application name and generation date, in the document or interface in which it is used until approved by a human reviewer.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0); AI Act cross-reference checked."
+    },
+    {
+      "id": "AI-STD-710-12.1",
+      "article": "AI-STD-710 §12.1; AI Act Art. 12 and 26(6)",
+      "chapter": "Output labelling and logging",
+      "text": "Each interaction is logged with user identifier, timestamp, component versions, input, retrieved source identifiers, output, guardrail results and reviewer decision, retained for at least twelve months.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0); AI Act cross-reference checked."
+    },
+    {
+      "id": "AI-STD-710-13.1",
+      "article": "AI-STD-710 §13.1; TPR-POL-001; AI Act Art. 53",
+      "chapter": "Third-party model due diligence",
+      "text": "Due diligence on the third-party foundation model covers provider documentation, data-use terms, data location, security certifications, sub-processors, incident notification and advance notice of model change or deprecation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to foundation models or GenAI services sourced from a third party.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0); AI Act cross-reference checked."
+    },
+    {
+      "id": "AI-STD-710-13.2",
+      "article": "AI-STD-710 §13.2; TPR-POL-001",
+      "chapter": "Third-party model due diligence",
+      "text": "The contract prohibits use of the Bank's inputs and outputs for training the provider's models without consent and requires notification of material model changes.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to foundation models or GenAI services sourced from a third party.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    },
+    {
+      "id": "AI-STD-710-14.1",
+      "article": "AI-STD-710 §14.1; MRM-STD-040",
+      "chapter": "Monitoring",
+      "text": "The monitoring plan covers monthly groundedness and hallucination sampling of production outputs, guardrail trigger rates, reviewer edit and rejection rates, user feedback, availability and incidents.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (AI-STD-710 v1.0)."
+    }
+  ]
+}

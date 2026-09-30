@@ -66,8 +66,8 @@ export default function DevHome() {
       </div>
       {shown.length === 0 && (
         <div className="mt-4">
-          <EmptyState title={filter === 'in_progress' ? 'Start your first use case' : 'Nothing here yet'}>
-            {filter === 'in_progress' ? 'Choose one of the 20 models in the inventory and take it through scoping, draft check, self-assessment and submission.' : 'Use cases move here as they progress.'}
+          <EmptyState title={filter === 'in_progress' ? 'No use case in progress' : 'Nothing here yet'}>
+            {filter === 'in_progress' ? 'Start a new use case: choose one of the 20 models and take it through scoping, draft check, self-assessment and submission.' : 'Use cases move here as they progress.'}
           </EmptyState>
         </div>
       )}

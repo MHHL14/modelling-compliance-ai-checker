@@ -61,6 +61,9 @@ for (const f of files) {
     const layer = r.layer ?? 'shared';
     if (docId.startsWith('INT-VAL-') ? layer !== '2lod' : layer !== 'shared') errors.push(`${at}: layer should be ${docId.startsWith('INT-VAL-') ? '2lod' : 'shared'}`);
     if (!['verified', 'to_review'].includes(r.verification)) errors.push(`${at}: verification must be verified or to_review`);
+    if (r.level !== undefined && r.level !== 'institution') errors.push(`${at}: level must be "institution" when set`);
+    if (r.level === 'institution' && !r.level_reason) errors.push(`${at}: institution-level requirement needs level_reason`);
+    if (r.level === 'institution' && PILOT_SOURCE[r.id]) errors.push(`${at}: pilot requirements are model-level`);
     if (r.quote && NO_QUOTE.test(docId)) errors.push(`${at}: quotes not allowed for this source — paraphrase`);
     if (r.quote && r.quote.split(/\s+/).length > 30) errors.push(`${at}: quote longer than 25 words`);
     if (PILOT_SOURCE[r.id] && PILOT_SOURCE[r.id] !== docId) errors.push(`${at}: pilot requirement belongs in ${PILOT_SOURCE[r.id]}`);

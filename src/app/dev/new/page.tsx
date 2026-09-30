@@ -1,9 +1,13 @@
 'use client';
-import { ArrowLeft, ArrowRight, BookOpen, Check, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Check, FileUp, Search } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useEffect, useMemo, useState } from 'react';
-import { Chip, FamilyBadge } from '@/components/common/badges';
+import { FamilyBadge } from '@/components/common/badges';
+import { FileDrop } from '@/components/common/FileDrop';
+import { SourcePicker } from '@/components/common/SourcePicker';
+import { useContent } from '@/components/common/useContent';
+import { toast } from 'sonner';
 import { Card, PageHeader } from '@/components/common/ui-bits';
 import { defaultCycle } from '@/components/dev/caseProgress';
 import { Button } from '@/components/ui/button';
@@ -12,16 +16,18 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { COMPONENT_LABEL } from '@/lib/ai/generic';
-import { applicableDocs } from '@/lib/applicability';
-import { getScenario } from '@/lib/scenario/engine';
-import type { Component } from '@/lib/scenario/types';
-import { getModel, MODELS } from '@/lib/seed';
+import { extractFromUpload } from '@/lib/ai/pilot';
+import { simulateShort } from '@/lib/ai/provider';
+import { nowISO } from '@/lib/clock';
+import { docsOf, finalVersionOf } from '@/lib/engine/assess';
+import { MANDATORY_SOURCES, type Component } from '@/lib/engine/sources';
+import { uid } from '@/lib/rng';
+import { getModel, MODELS, PILOT, PILOT_MODEL_ID } from '@/lib/seed';
 import { cn } from '@/lib/utils';
 import type { Model } from '@/lib/types';
 import { attributesFromModel, use1lod, type CaseAttributes } from '@/stores/store1lod';
 
-const STEPS = ['Choose model', 'Confirm characteristics', 'Scope of assessment'] as const;
-const ALL_TAGS = [...new Set(MODELS.flatMap((m) => m.tags))].sort();
+const STEPS = ['Choose model', 'Model details', 'Requirement sources', 'Scope of assessment'] as const;
 const FAMILIES: Model['model_family'][] = ['statistical', 'ml', 'genai', 'expert'];
 const FAMILY_LABEL: Record<Model['model_family'], string> = { statistical: 'Statistical', ml: 'Machine learning', genai: 'Generative AI', expert: 'Expert-based' };
 
@@ -36,6 +42,10 @@ function Wizard() {
   const [attrs, setAttrs] = useState<CaseAttributes | null>(null);
   const [component, setComponent] = useState<Component>('rds');
   const [cycle, setCycle] = useState('');
+  const [sources, setSources] = useState<string[]>(MANDATORY_SOURCES);
+  const [files, setFiles] = useState<File[]>([]);
+  const [creating, setCreating] = useState(false);
+  const ready = useContent(modelId ? [modelId] : []);
 
   const activeCase = (id: string) => Object.values(cases).find((c) => c.modelId === id && c.status === 'active');
 
@@ -56,8 +66,7 @@ function Wizard() {
 
   const model = modelId ? getModel(modelId) : undefined;
   const list = MODELS.filter((m) => !q.trim() || `${m.id} ${m.name} ${m.portfolio} ${m.regulatory_use}`.toLowerCase().includes(q.trim().toLowerCase()));
-  const docCount = attrs ? applicableDocs({ tags: attrs.tags }).length : 0;
-  const scenarioDoc = useMemo(() => (model && attrs ? getScenario(model.id, component, attrs.tags).document : undefined), [model, attrs, component]);
+  const modelDocs = useMemo(() => (model && ready ? (docsOf(model.id)?.documents ?? []) : []), [model, ready]);
   const set = <K extends keyof CaseAttributes>(k: K, v: CaseAttributes[K]) => setAttrs((a) => (a ? { ...a, [k]: v } : a));
 
   return (
@@ -168,25 +177,11 @@ function Wizard() {
               </Select>
             </div>
           </div>
-          <div className="mt-5">
-            <p className="text-sm font-medium text-ink">Characteristics</p>
-            <p className="mb-2 text-xs text-ink-2">These determine which regulation and internal standards apply.</p>
-            <div className="flex flex-wrap gap-1.5">
-              {ALL_TAGS.map((t) => (
-                <Chip key={t} active={attrs.tags.includes(t)} onClick={() => set('tags', attrs.tags.includes(t) ? attrs.tags.filter((x) => x !== t) : [...attrs.tags, t])}>
-                  {t.replace(/_/g, ' ')}
-                </Chip>
-              ))}
-            </div>
-            <p className="mt-3 flex items-center gap-1.5 text-sm text-ink-2" aria-live="polite">
-              <BookOpen className="size-4" aria-hidden /> {docCount} applicable documents
-            </p>
-          </div>
           <div className="mt-5 flex justify-between">
             <Button variant="outline" onClick={() => setStep(0)}>
               <ArrowLeft aria-hidden /> Back
             </Button>
-            <Button onClick={() => setStep(2)} disabled={!attrs.portfolio.trim() || !attrs.purpose.trim() || attrs.tags.length === 0}>
+            <Button onClick={() => setStep(2)} disabled={!attrs.portfolio.trim() || !attrs.purpose.trim()}>
               Next <ArrowRight aria-hidden />
             </Button>
           </div>
@@ -194,6 +189,52 @@ function Wizard() {
       )}
 
       {step === 2 && model && attrs && (
+        <Card className="px-5 py-5">
+          <p className="text-base font-semibold text-ink">Requirement sources</p>
+          <p className="mb-4 text-sm text-ink-2">
+            Select the regulation, guidelines, standards and policies {model.name} must be assessed against. The mandatory internal base is pre-selected; everything else is your choice. The AI derives the requirements from exactly these sources.
+          </p>
+          {ready ? (
+            <SourcePicker selected={sources} onToggle={(id, on) => setSources((s) => (on ? [...new Set([...s, id])] : s.filter((x) => x !== id)))} />
+          ) : (
+            <p className="text-sm text-ink-2">Loading the requirement library…</p>
+          )}
+          <div className="mt-5 space-y-2">
+            <p className="text-sm font-medium text-ink">Additional requirement sources (upload)</p>
+            <p className="text-xs text-ink-2">A supervisory decision, previous validation report, letter or memo with obligations. Requirements are extracted after the use case is created.</p>
+            <FileDrop compact label="Upload a requirement source" onFiles={(f) => setFiles((x) => [...x, ...f])} />
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
+              <span className="text-ink-3">Demo files:</span>
+              {(model.id === PILOT_MODEL_ID ? PILOT.upload_examples.filter((u) => u.kind === 'requirement_source').map((u) => u.name) : [`Supervisory letter – ${model.id} (2027).pdf`]).map((n) => (
+                <button key={n} type="button" className="flex items-center gap-1 text-green-800 hover:underline" onClick={() => setFiles((x) => [...x.filter((y) => y.name !== n), new File([new Uint8Array(184_320)], n, { type: 'application/pdf' })])}>
+                  <FileUp className="size-3" aria-hidden /> {n}
+                </button>
+              ))}
+            </div>
+            {files.length > 0 && (
+              <ul className="text-xs text-ink-2">
+                {files.map((f) => (
+                  <li key={f.name}>{f.name}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+          <div className="mt-5 flex items-center justify-between">
+            <Button variant="outline" onClick={() => setStep(1)}>
+              <ArrowLeft aria-hidden /> Back
+            </Button>
+            <span className="text-sm text-ink-2">
+              <BookOpen className="mr-1 inline size-4" aria-hidden />
+              {sources.length} sources selected{files.length ? ` · ${files.length} upload(s)` : ''}
+            </span>
+            <Button onClick={() => setStep(3)}>
+              Next <ArrowRight aria-hidden />
+            </Button>
+          </div>
+        </Card>
+      )}
+
+      {step === 3 && model && attrs && (
         <Card className="px-5 py-5">
           <p className="text-base font-semibold text-ink">{model.name}</p>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -204,7 +245,7 @@ function Wizard() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  {(Object.keys(COMPONENT_LABEL) as Component[]).map((c) => (
+                  {(['rds', 'mdd', 'full'] as Component[]).map((c) => (
                     <SelectItem key={c} value={c}>
                       {COMPONENT_LABEL[c]}
                     </SelectItem>
@@ -218,23 +259,35 @@ function Wizard() {
               {!cycle.trim() && <p className="text-xs text-red">Enter a cycle, for example “Annual review 2027”.</p>}
             </div>
           </div>
-          {scenarioDoc && (
-            <div className="mt-4 rounded-lg border border-line bg-bg/60 px-4 py-3 text-sm">
-              <p className="text-xs font-medium uppercase tracking-wide text-ink-2">Document to be assessed</p>
-              <p className="mt-1 font-medium text-ink">{scenarioDoc.title}</p>
-              <p className="text-xs text-ink-2">
-                Draft v{scenarioDoc.draftVersion} and final v{scenarioDoc.finalVersion} available · {docCount} applicable library documents
-              </p>
-            </div>
-          )}
+          <div className="mt-4 rounded-lg border border-line bg-bg/60 px-4 py-3 text-sm">
+            <p className="text-xs font-medium uppercase tracking-wide text-ink-2">Model documentation in the library</p>
+            {modelDocs.length ? (
+              <ul className="mt-1 space-y-0.5">
+                {modelDocs.map((d) => (
+                  <li key={d.id} className="text-ink">
+                    {d.title} <span className="text-xs text-ink-2">· {d.type} · v{finalVersionOf(d).version}{d.versions.some((v) => v.status === 'draft') ? ' (draft available)' : ''}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-1 text-ink-2">No documentation in the library yet; you can upload it in the draft check and the self-assessment.</p>
+            )}
+            <p className="mt-1 text-xs text-ink-2">You select which documents to assess in the draft check and the self-assessment.</p>
+          </div>
           <div className="mt-5 flex justify-between">
-            <Button variant="outline" onClick={() => setStep(1)}>
+            <Button variant="outline" onClick={() => setStep(2)}>
               <ArrowLeft aria-hidden /> Back
             </Button>
             <Button
-              disabled={!cycle.trim()}
-              onClick={() => {
-                const id = createCase({ modelId: model.id, cycle: cycle.trim(), component, attributes: attrs });
+              disabled={!cycle.trim() || creating}
+              onClick={async () => {
+                setCreating(true);
+                const id = createCase({ modelId: model.id, cycle: cycle.trim(), component, attributes: attrs, sources });
+                for (const f of files) {
+                  await simulateShort(`Extracting requirements from ${f.name}`, ['Reading document…', 'Extracting text…', 'Identifying obligations and limitations…'], 1400);
+                  use1lod.getState().addUpload(id, { id: uid('UPL'), name: f.name, size: f.size, kind: 'requirement_source', uploadedAt: nowISO(), mime: f.type, extractedRequirements: extractFromUpload(f.name, model.id) });
+                }
+                if (files.length) toast.success(`${files.length} requirement source(s) processed`, { description: 'Review the extracted requirements in Scoping → Sources.' });
                 router.push(`/dev/cases/${encodeURIComponent(id)}/scope`);
               }}
             >

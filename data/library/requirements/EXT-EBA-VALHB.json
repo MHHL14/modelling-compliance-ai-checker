@@ -1,0 +1,701 @@
+{
+  "docId": "EXT-EBA-VALHB",
+  "requirements": [
+    {
+      "id": "EBA-VALHB-014",
+      "article": "EBA/REP/2023/29 para 14",
+      "chapter": "Scope and objectives of validation",
+      "text": "The validation function performs internal validation at each level (consolidated, sub-consolidated, individual) at which the rating system is approved or approval is sought.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-017-a",
+      "article": "EBA/REP/2023/29 para 17(a)",
+      "chapter": "Scope and objectives of validation",
+      "text": "The validation function provides a list of all identified deficiencies with an assessment of their materiality and severity, usable by the CRCU to prioritise remediation.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-017-b",
+      "article": "EBA/REP/2023/29 para 17(b)",
+      "chapter": "Scope and objectives of validation",
+      "text": "The validation function assesses the combined effect of identified deficiencies on overall rating system performance and on its usability for regulatory purposes.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-018-a",
+      "article": "EBA/REP/2023/29 para 18(a)",
+      "chapter": "Independence of the validation function",
+      "text": "The validation function is structurally independent of the CRCU; large and complex institutions place it in a unit reporting to a different member of senior management than the CRCU.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The structural independence of the validation function is an organisational requirement evidenced in its mandate and organisational chart.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-018-b",
+      "article": "EBA/REP/2023/29 para 18(b)",
+      "chapter": "Independence of the validation function",
+      "text": "The number, seniority and expertise of validation staff are commensurate with the complexity and materiality of the rating systems in scope, enabling effective challenge of the CRCU.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Validation staffing is an organisational requirement evidenced in the validation function's resourcing plans.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-023-a",
+      "article": "EBA/REP/2023/29 para 23(a)",
+      "chapter": "Validation policy and report",
+      "text": "The validation policy describes how the validation function forms its overall opinion on the rating system, including the aggregation methodology across the different analyses.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The content of the validation policy is evidenced in the institution's validation policy, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-023-b",
+      "article": "EBA/REP/2023/29 para 23(b)",
+      "chapter": "Validation policy and report",
+      "text": "The validation policy describes the data collection and selection process underlying all data sets used for validation (the validation data set), including validation samples.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The content of the validation policy is evidenced in the institution's validation policy, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-023-c",
+      "article": "EBA/REP/2023/29 para 23(c)",
+      "chapter": "Validation policy and report",
+      "text": "The validation policy lists each analysis with its purpose, limitations, scope, frequency (first, regular, full validation) and, for quantitative tests, fixed targets and tolerance thresholds.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The content of the validation policy is evidenced in the institution's validation policy, not in a specific model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-024-b",
+      "article": "EBA/REP/2023/29 para 24(b)",
+      "chapter": "Validation policy and report",
+      "text": "The validation report describes all tests performed and the validation samples used, including sizes, comparison with the application portfolio and overlap with the RDS.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-024-c",
+      "article": "EBA/REP/2023/29 para 24(c)",
+      "chapter": "Validation policy and report",
+      "text": "The validation report expresses a clear opinion on rating system performance, with verifiable outcomes and findings and recommendations categorised by materiality.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-027",
+      "article": "EBA/REP/2023/29 para 27",
+      "chapter": "Validation tasks",
+      "text": "The validation function reviews the materiality classification of all rating system changes and extensions since the last validation, and their combined effect, qualitatively and quantitatively.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-030",
+      "article": "EBA/REP/2023/29 para 30",
+      "chapter": "Core model performance",
+      "text": "The validation function assesses whether IRB metrics (realised DR, economic loss and realised LGD, realised CF) follow regulatory definitions and compares its own metrics with those of the CRCU.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-033-b",
+      "article": "EBA/REP/2023/29 para 33(b)",
+      "chapter": "Risk differentiation",
+      "text": "The validation function assesses the comprehensiveness of the rating assignment, including the materiality of missing and outdated ratings in the application portfolio and the CRCU's resolution plan.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-034",
+      "article": "EBA/REP/2023/29 para 34",
+      "chapter": "Risk differentiation",
+      "text": "The validation function forms an opinion on discriminatory power and on homogeneity within and heterogeneity between grades or pools.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-035-d",
+      "article": "EBA/REP/2023/29 para 35(d)",
+      "chapter": "Risk differentiation",
+      "text": "The validation function analyses representativeness of the development sample against the application portfolio for scope, definition of default, risk characteristics, lending standards and recovery policies.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-037",
+      "article": "EBA/REP/2023/29 para 37",
+      "chapter": "Risk differentiation",
+      "text": "Validation statistical tests are documented in the validation policy, use regulatory IRB metrics and all available data, are run at all relevant levels and cover performance under various economic conditions.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-038-a",
+      "article": "EBA/REP/2023/29 para 38(a)",
+      "chapter": "Risk differentiation",
+      "text": "The validation function assesses the impact of overrides by comparing model performance before and after overrides.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-038-b",
+      "article": "EBA/REP/2023/29 para 38(b)",
+      "chapter": "Risk differentiation",
+      "text": "The validation function assesses the materiality of overrides (number, exposure value, RWEA) in the application portfolio and reviews the maximum acceptable override rate.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-038-c",
+      "article": "EBA/REP/2023/29 para 38(c)",
+      "chapter": "Risk differentiation",
+      "text": "The validation function analyses rating stability (e.g. migration matrices) in relation to the economic cycle and compares it with the outcome expected from the rating philosophy.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-040",
+      "article": "EBA/REP/2023/29 para 40",
+      "chapter": "Risk quantification",
+      "text": "The validation function reviews the input data used for risk quantification, including RDS completeness and data cleansing, to ensure that uncertainty from identified deficiencies is covered by MoC.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-041-c",
+      "article": "EBA/REP/2023/29 para 41(c)",
+      "chapter": "Risk quantification",
+      "text": "The validation function challenges the choices underlying the long-run average default rate, in particular the length of the historical period used.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-043-b",
+      "article": "EBA/REP/2023/29 para 43(b)",
+      "chapter": "Risk quantification",
+      "text": "The validation function assesses whether Category A and B MoC cover the uncertainty from all identified deficiencies and Category C MoC covers the general estimation error.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-044-a",
+      "article": "EBA/REP/2023/29 para 44(a)",
+      "chapter": "Risk quantification",
+      "text": "The validation function challenges the identification of the economic downturn under the RTS on downturn: nature (economic factors), severity (historical period) and duration (12 months unless justified).",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd",
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD or conversion factor estimates only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-046-a",
+      "article": "EBA/REP/2023/29 para 46(a)",
+      "chapter": "Risk quantification",
+      "text": "The validation function back-tests PD estimates against realised default rates per grade or pool, using the longest available history and, as best practice, sub-periods.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-046-c",
+      "article": "EBA/REP/2023/29 para 46(c)",
+      "chapter": "Risk quantification",
+      "text": "LGD back-testing compares estimates with realised LGDs on closed cases, on all cases including estimated future recoveries, and compares estimated future costs and recoveries with realisations.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimates only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-047-b",
+      "article": "EBA/REP/2023/29 para 47(b)",
+      "chapter": "Risk quantification",
+      "text": "The validation function back-tests PD best estimates (without conservative adjustments) per grade or pool to assess the accuracy of model predictions.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-048",
+      "article": "EBA/REP/2023/29 para 48",
+      "chapter": "Risk quantification",
+      "text": "The validation function performs benchmarking against relevant external data sources where available, e.g. default rates of external rating grades for low-default portfolios.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-052-a",
+      "article": "EBA/REP/2023/29 para 52(a)",
+      "chapter": "Defaulted exposures",
+      "text": "The validation function checks that ELBE estimates include neither MoC nor any other conservative adjustment.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimates only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-073",
+      "article": "EBA/REP/2023/29 para 73",
+      "chapter": "Data quality and IT implementation",
+      "text": "The validation function forms an opinion on data quality dimensions and processes and checks whether identified deficiencies bias the risk parameters or require MoC.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-075",
+      "article": "EBA/REP/2023/29 para 75",
+      "chapter": "Data quality and IT implementation",
+      "text": "The validation function has access to all relevant IRB data and databases independently of the CRCU, with sufficient data extraction and manipulation capabilities.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Independent data access of the validation function is an organisational requirement evidenced in its mandate and access arrangements.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-076-b",
+      "article": "EBA/REP/2023/29 para 76(b)",
+      "chapter": "Data quality and IT implementation",
+      "text": "The validation function ensures that the IT implementation reproduces exactly the documented rating system, including that user acceptance tests were concluded with no material errors.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-079",
+      "article": "EBA/REP/2023/29 para 79",
+      "chapter": "First validation",
+      "text": "A rating system submitted for supervisory approval has been validated beforehand and is not assessed by the validation function as materially non-compliant.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-084-a",
+      "article": "EBA/REP/2023/29 para 84(a)",
+      "chapter": "First validation",
+      "text": "At first validation, the validation function checks that overfitting was addressed in development and that out-of-time and out-of-sample testing was performed.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-100",
+      "article": "EBA/REP/2023/29 para 100",
+      "chapter": "On-going validation",
+      "text": "The periodic full validation assesses alternative modelling possibilities for key methodological choices and reviews analyses not performed in regular validations.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF). Challenger models are cited as good practice; Focus Box 9 lists the full-validation analyses."
+    },
+    {
+      "id": "EBA-VALHB-121",
+      "article": "EBA/REP/2023/29 para 121",
+      "chapter": "Specific challenges – external data and outsourcing",
+      "text": "Where external data are used, the validation function assesses their representativeness for the application portfolio, challenges their appropriateness and reviews the Category A MoC.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    },
+    {
+      "id": "EBA-VALHB-127",
+      "article": "EBA/REP/2023/29 para 127",
+      "chapter": "Specific challenges – external data and outsourcing",
+      "text": "Where validation tasks are outsourced, only sufficiently specified operational tasks are outsourced and the validation function retains responsibility for its policy, methodology and opinion.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "The outsourcing of validation tasks is governed by the validation function's policy and outsourcing arrangements.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against EBA/REP/2023/29 (PDF)."
+    }
+  ]
+}

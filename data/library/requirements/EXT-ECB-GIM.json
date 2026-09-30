@@ -1,0 +1,1934 @@
+{
+  "docId": "EXT-ECB-GIM",
+  "requirements": [
+    {
+      "id": "ECB-GIM-OP-4",
+      "article": "ECB guide to internal models, Overarching principles, para 4",
+      "chapter": "Documentation of internal models",
+      "text": "Model documentation enables a qualified third party to independently understand the methodology, assumptions, limitations and use of the model and to replicate its development and implementation.",
+      "quote": "All internal models should be documented to allow a qualified third party to independently understand the methodology, assumptions, limitations and use of the model",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-9",
+      "article": "ECB guide to internal models, Overarching principles, para 9",
+      "chapter": "Data governance",
+      "text": "Sound data governance practices, as set out in chapter 3.2 of the ECB Guide on effective risk data aggregation and risk reporting, are in place for all data used as model inputs.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-11",
+      "article": "ECB guide to internal models, Overarching principles, para 11",
+      "chapter": "Data governance",
+      "text": "Where the target variable is determined by human judgement (e.g. unlikeliness-to-pay flags), a data governance process with clear labelling guidelines and regular analyses ensures no systematic labelling differences between individuals.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-12a",
+      "article": "ECB guide to internal models, Overarching principles, para 12(a)",
+      "chapter": "Model risk management framework",
+      "text": "The institution has a written model risk management policy that defines what constitutes a model, sets out its interpretation of model risk and describes the components of the model risk framework and their policies.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain a bank-wide model risk management policy; evidenced in the MRM policy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-13",
+      "article": "ECB guide to internal models, Overarching principles, para 13",
+      "chapter": "Model risk management framework",
+      "text": "Each internal model undergoes a regular complexity assessment that classifies it by complexity and explicitly identifies models labelled highly complex (e.g. due to ML techniques) or dynamic.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-18",
+      "article": "ECB guide to internal models, Overarching principles, para 18",
+      "chapter": "Internal validation – general principles",
+      "text": "The internal model and its estimates are subject to an initial validation (new models, material changes and extensions) and subsequently to an annual internal validation.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-19",
+      "article": "ECB guide to internal models, Overarching principles, para 19",
+      "chapter": "Internal validation – general principles",
+      "text": "Organisational arrangements ensure the effective independence of the validation function from model design, development, implementation and monitoring, chosen in view of the institution's nature, size, scale and risk complexity.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation of the validation function; evidenced in the validation function charter and organisational arrangements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text. Para 20 adds that large and complex institutions should apply the most robust option (separate units reporting to different senior managers)."
+    },
+    {
+      "id": "ECB-GIM-OP-23",
+      "article": "ECB guide to internal models, Overarching principles, para 23",
+      "chapter": "Internal validation – general principles",
+      "text": "Staff of the validation function are separate from the staff involved in the model development process.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the staffing and organisation of the validation function; evidenced in the validation function's organisational documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-29",
+      "article": "ECB guide to internal models, Overarching principles, para 29",
+      "chapter": "Climate-related and environmental risks",
+      "text": "The institution assesses the materiality of climate-related and environmental risks over the model life cycle and includes such risk drivers in the internal model where they are relevant and material.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-39",
+      "article": "ECB guide to internal models, Overarching principles, para 39",
+      "chapter": "Machine learning – model changes",
+      "text": "The initial switch of an internal model from a largely traditional approach to a mostly ML-based approach is classified as a material model change.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-41",
+      "article": "ECB guide to internal models, Overarching principles, para 41",
+      "chapter": "Machine learning – model changes",
+      "text": "Where dynamic ML-based models or components are used, the institution justifies this approach and monitors, at an appropriate frequency, their performance and whether updates cause unexpected or undesired changes in model logic.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-43a",
+      "article": "ECB guide to internal models, Overarching principles, para 43(a)",
+      "chapter": "Machine learning – internal validation",
+      "text": "Internal validation challenges ML modelling decisions, including whether complexity is justified, robustness to hyperparameters and training randomness, and overfitting, with particular attention to out-of-sample and out-of-time performance.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-43d",
+      "article": "ECB guide to internal models, Overarching principles, para 43(d)",
+      "chapter": "Machine learning – internal validation",
+      "text": "Internal validation analyses, at least yearly, the adequacy and appropriateness of the explainability techniques and tools used in conjunction with ML-based models.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-51",
+      "article": "ECB guide to internal models, Overarching principles, para 51",
+      "chapter": "Machine learning – data",
+      "text": "Input data for ML techniques undergo an additional exploratory analysis covering data formats, the treatment of missing values and potential sources of bias.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-57",
+      "article": "ECB guide to internal models, Overarching principles, para 57",
+      "chapter": "Machine learning – model development",
+      "text": "All relevant hyperparameters of ML components are identified and, unless otherwise justified, set based on generalisation ability measured on a sample independent of the training sample.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-59",
+      "article": "ECB guide to internal models, Overarching principles, para 59",
+      "chapter": "Machine learning – model development",
+      "text": "Documentation of ML components allows replication, including parameters and hyperparameters, stored random seeds where training relies on simulation and, where needed, the ordering of training observations.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-60",
+      "article": "ECB guide to internal models, Overarching principles, para 60",
+      "chapter": "Machine learning – complexity and explainability",
+      "text": "The institution motivates the complexity of its ML-based model and avoids unnecessarily complex approaches, weighing complexity against performance gains and organisational objectives.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-62",
+      "article": "ECB guide to internal models, Overarching principles, para 62",
+      "chapter": "Machine learning – complexity and explainability",
+      "text": "Where input-output relationships are not straightforward, explainability tools quantify risk-driver contributions globally (across all predictions, including the output-driver relationship) and locally (key drivers of each prediction).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-63",
+      "article": "ECB guide to internal models, Overarching principles, para 63",
+      "chapter": "Machine learning – complexity and explainability",
+      "text": "The institution documents its explainability techniques and tools, including evaluation dimensions and criteria, weaknesses and limits of the resulting explanations, and stakeholders' explainability requirements.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies only to internal models that use machine learning techniques.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-79a",
+      "article": "ECB guide to internal models, Overarching principles, para 79",
+      "chapter": "Implementation of changed or extended models",
+      "text": "An approved material model change or extension is implemented within three months of notification of the permission, unless an exception has been requested and granted.",
+      "quote": "The ECB generally expects this time frame to be no longer than three months from the date of the notification.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-79b",
+      "article": "ECB guide to internal models, Overarching principles, para 79",
+      "chapter": "Implementation of changed or extended models",
+      "text": "Any exception to the three-month implementation expectation is requested with reasons as early as possible, at the latest when submitting comments in the model decision process.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the institution towards the competent authority within the model decision process; evidenced in supervisory correspondence, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-OP-87",
+      "article": "ECB guide to internal models, Overarching principles, para 87",
+      "chapter": "Third-party involvement",
+      "text": "Where model-related tasks are outsourced, the institution maintains adequate in-house knowledge and core competence and has access to all relevant information to take direct control in extremis.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level outsourcing governance obligation; evidenced in the outsourcing policy and outsourcing register, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-14a",
+      "article": "ECB guide to internal models, Credit risk, para 14(a)",
+      "chapter": "Roll-out and permanent partial use",
+      "text": "The institution has measures and triggers to reassess, per IRB exposure class, whether exposure types under permanent partial use remain suitable (e.g. number of obligors, EAD share, average risk weight).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level obligation concerning permanent partial use; evidenced in the IRB roll-out and PPU monitoring framework, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-24",
+      "article": "ECB guide to internal models, Credit risk, para 24",
+      "chapter": "Internal governance",
+      "text": "The institution assesses the materiality of each rating system, communicates it to the competent authority and reviews the classification regularly.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level classification of rating systems communicated to the competent authority; evidenced in the model inventory and supervisory communications, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-26",
+      "article": "ECB guide to internal models, Credit risk, para 26",
+      "chapter": "Internal governance",
+      "text": "Material aspects of the rating and estimation processes are approved by the management body (or a designated committee) and by senior management.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-34",
+      "article": "ECB guide to internal models, Credit risk, para 34",
+      "chapter": "Internal governance",
+      "text": "Management reporting on each rating system covers at least its materiality, perceived strengths and limitations, and current status in light of validation and/or audit actions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning management reporting across rating systems; evidenced in the periodic IRB management reports, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-51",
+      "article": "ECB guide to internal models, Credit risk, para 51",
+      "chapter": "Internal validation",
+      "text": "The validation policy sets proven procedures and methods to validate the accuracy, robustness and stability of all relevant risk parameter estimates, differentiated by rating system materiality and complexity.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain a bank-wide validation policy; evidenced in the validation policy, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52a",
+      "article": "ECB guide to internal models, Credit risk, para 52(a)",
+      "chapter": "Internal validation",
+      "text": "The validation assesses rating system performance with qualitative and quantitative methods, covering both ranking power and calibration appropriateness.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52c",
+      "article": "ECB guide to internal models, Credit risk, para 52(c)",
+      "chapter": "Internal validation",
+      "text": "Quantitative validation analyses include thresholds; a breach triggers further investigation and, where necessary, adequate measures or actions.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52g",
+      "article": "ECB guide to internal models, Credit risk, para 52(g)",
+      "chapter": "Internal validation",
+      "text": "For material rating systems, a full validation is performed at least once every three years, with full-validation frequency defined in the validation policy.",
+      "quote": "with respect to material rating systems, institutions should perform a full validation at least once every three years.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52h",
+      "article": "ECB guide to internal models, Credit risk, para 52(h)",
+      "chapter": "Internal validation",
+      "text": "Validation analyses are performed by the validation function without CRCU input, except where the guide explicitly allows CRCU analyses to be taken into account (mainly for non-material rating systems).",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52h-iii",
+      "article": "ECB guide to internal models, Credit risk, para 52(h)(iii)",
+      "chapter": "Internal validation",
+      "text": "The validation analyses representativeness of the development data for actual obligors or exposures, including range of application, changes to the definition of default, and lending standards or workout procedures.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52h-vi",
+      "article": "ECB guide to internal models, Credit risk, para 52(h)(vi)",
+      "chapter": "Internal validation",
+      "text": "The validation challenges model specifications and analyses design stability, including differences between development risk-driver weights and weights re-estimated on another sample, at initial validation and at least in each full validation.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-52h-x",
+      "article": "ECB guide to internal models, Credit risk, para 52(h)(x)",
+      "chapter": "Internal validation",
+      "text": "Quality assurance of the code confirms, at least at initial validation, that the IT implementation reproduces exactly the documented model and that data sources, variables and risk drivers are properly documented.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-53",
+      "article": "ECB guide to internal models, Credit risk, para 53",
+      "chapter": "Internal validation",
+      "text": "The annual validation, from the reference date of the data to approval of the validation results, takes no more than one year; deviations are justified, documented and reported to senior management.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-54",
+      "article": "ECB guide to internal models, Credit risk, para 54",
+      "chapter": "Internal validation",
+      "text": "Quantitative thresholds are set at least for back-testing, discriminatory power, override analyses and stability analyses of internal ratings and risk parameters over time.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-56",
+      "article": "ECB guide to internal models, Credit risk, para 56",
+      "chapter": "Internal validation",
+      "text": "Senior management and the management body are informed of validation conclusions and recommendations, in particular any exceeded thresholds and identified deficiencies, via an aggregated summary across rating systems.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to report aggregated validation conclusions across rating systems to senior management; evidenced in validation function management reporting, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-62",
+      "article": "ECB guide to internal models, Credit risk, para 62",
+      "chapter": "Internal audit",
+      "text": "Internal audit annually performs, on up-to-date information, a general risk assessment of all aspects of the rating systems to draw up its work plan, and executes that plan.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the internal audit function; evidenced in the internal audit risk assessment and work plan, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-74",
+      "article": "ECB guide to internal models, Credit risk, para 74",
+      "chapter": "Model use",
+      "text": "Internal ratings and default and loss estimates are used, as formalised in internal policies, in the approval, restructuring and renewal of credit facilities, lending policies and monitoring of obligors and exposures.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-90b",
+      "article": "ECB guide to internal models, Credit risk, para 90(b)",
+      "chapter": "Model use – overrides",
+      "text": "The override policy defines the maximum extent of overrides (e.g. maximum notches and maximum share of overridden exposures) and is more restrictive for positive than for negative overrides.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-92a",
+      "article": "ECB guide to internal models, Credit risk, para 92(a)",
+      "chapter": "Model use – overrides",
+      "text": "The institution analyses the performance of overridden exposures, assessing whether judgemental adjustments improve discriminatory power by comparing pre-override and post-override performance.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-97",
+      "article": "ECB guide to internal models, Credit risk, para 97",
+      "chapter": "Management of changes",
+      "text": "The institution has a change policy with detailed criteria ensuring that the materiality classification of rating system changes is consistent and free of arbitrage.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain a bank-wide change policy; evidenced in the rating system change policy, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-101",
+      "article": "ECB guide to internal models, Credit risk, para 101",
+      "chapter": "Management of changes",
+      "text": "In case of doubt, extensions and changes are assigned to the category of highest potential materiality.",
+      "quote": "in case of doubt institutions shall assign extensions and changes to the category of the highest potential materiality",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-123",
+      "article": "ECB guide to internal models, Credit risk, para 123",
+      "chapter": "Data maintenance – IT and implementation testing",
+      "text": "A documented, organisation-wide process tests the relevant IRB systems and applications upon first implementation and on an ongoing basis.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning an organisation-wide IRB systems testing process; evidenced in the institution's IT testing framework, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-130",
+      "article": "ECB guide to internal models, Credit risk, para 130",
+      "chapter": "Data maintenance – data quality",
+      "text": "An effective data quality management framework, formalised in policies and procedures, covers all data used in IRB-related processes, including internal, external and pooled data.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain an institution-wide data quality management framework; evidenced in the data quality policy and procedures, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-137",
+      "article": "ECB guide to internal models, Credit risk, para 137",
+      "chapter": "Data maintenance – data quality",
+      "text": "Data quality standards are defined for all model data inputs at each life-cycle stage for completeness, accuracy, consistency, timeliness, uniqueness, validity, availability and traceability.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-140",
+      "article": "ECB guide to internal models, Credit risk, para 140",
+      "chapter": "Data maintenance – data quality",
+      "text": "Data quality checks and controls operate from data entry to reporting and include reconciliations across and within systems, including between accounting and IRB data.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-142",
+      "article": "ECB guide to internal models, Credit risk, para 142",
+      "chapter": "Data maintenance – data quality",
+      "text": "Data quality incidents are recorded and monitored, each with an appointed owner and a priority-based action plan, and resolved at source or otherwise mitigated prudently.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide data quality incident management obligation; evidenced in the data quality incident register and procedures, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-145",
+      "article": "ECB guide to internal models, Credit risk, para 145",
+      "chapter": "Data maintenance – data quality",
+      "text": "Data quality reports are produced and submitted to senior management more frequently than annually.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning data quality reporting to senior management; evidenced in the institution's data quality management reports, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-154",
+      "article": "ECB guide to internal models, Credit risk, para 154",
+      "chapter": "Definition of default",
+      "text": "When the days-past-due criterion is met, the default flag is activated for all affected exposures at the onset of the 91st consecutive day of material arrears; 'months in arrears' proxies are not used.",
+      "quote": "at the onset of the 91st consecutive day after the materiality threshold is exceeded for the first time",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-174",
+      "article": "ECB guide to internal models, Credit risk, para 174",
+      "chapter": "Definition of default",
+      "text": "Where external or pooled data follow a different definition of default, the institution fully understands that definition and demonstrates representativeness or adjusts the data to achieve broad equivalence.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-178",
+      "article": "ECB guide to internal models, Credit risk, para 178",
+      "chapter": "Definition of default",
+      "text": "After a change to the definition of default, risk differentiation is demonstrated on a time series of realised default rates (or LGD/CCF) reflecting the new definition; otherwise the model is redeveloped.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-180",
+      "article": "ECB guide to internal models, Credit risk, para 180",
+      "chapter": "Definition of default",
+      "text": "After a change to the definition of default, a definition-of-default-related MoC covers RDS deficiencies and adjustment uncertainty, including where the impact is assessed as negligible.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-185",
+      "article": "ECB guide to internal models, Credit risk, para 185",
+      "chapter": "Use of data",
+      "text": "Where several data sources are used for risk quantification, common obligors are identified so that each counts only once in one-year default rates, or the resulting bias is analysed and reflected.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-187",
+      "article": "ECB guide to internal models, Credit risk, para 187",
+      "chapter": "Use of data",
+      "text": "Where representativeness of external data cannot be sufficiently proven, the institution shows that model performance does not deteriorate, estimates are not biased and an appropriate MoC is applied.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-196",
+      "article": "ECB guide to internal models, Credit risk, para 196",
+      "chapter": "Use of data",
+      "text": "Where human judgement is used to a greater extent because few relevant observations are available, a higher MoC is applied to the estimates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-207a",
+      "article": "ECB guide to internal models, Credit risk, para 207(a)",
+      "chapter": "Probability of default – risk differentiation",
+      "text": "Risk differentiation metrics have well-specified targets and tolerance levels reflecting metric uncertainty, and action is taken when deviations exceed the tolerances.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-207b",
+      "article": "ECB guide to internal models, Credit risk, para 207(b)",
+      "chapter": "Probability of default – risk differentiation",
+      "text": "Risk differentiation is demonstrated on time series of realised default rates per grade or pool under different economic conditions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-209b",
+      "article": "ECB guide to internal models, Credit risk, para 209(b)",
+      "chapter": "Probability of default – risk differentiation",
+      "text": "No grade or pool has an excessive concentration of obligors or facilities unless supported by convincing empirical evidence of homogeneity of risk.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-210",
+      "article": "ECB guide to internal models, Credit risk, para 210",
+      "chapter": "Probability of default – risk differentiation",
+      "text": "Grades are homogeneous: no material subset of obligors or facilities within a grade or pool yields a significantly different default rate from the rest of that grade or pool.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-211",
+      "article": "ECB guide to internal models, Credit risk, para 211",
+      "chapter": "Probability of default – risk differentiation",
+      "text": "Default rates are meaningfully differentiated across grades, with no significant overlaps in the distribution of default risk between grades or pools.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-234",
+      "article": "ECB guide to internal models, Credit risk, para 234",
+      "chapter": "Probability of default – use of external data",
+      "text": "Where external or pooled data complement internal data, the internal-only LRA default rate is compared with the average PD before MoC; material segment-level or systematic grade-level differences indicate bias.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-236a",
+      "article": "ECB guide to internal models, Credit risk, para 236(a)",
+      "chapter": "Probability of default – long-run average",
+      "text": "The historical observation period for the LRA default rate contains at least the five most recent years, with any additional relevant years added as a continuous time span.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "REQ-D02",
+      "article": "ECB guide to internal models – credit risk, LRA calibration",
+      "chapter": "Probability of default – long-run average",
+      "text": "The observation period covers a representative mix of good and bad years, including a downturn.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Pilot record; id, text and article kept as seeded. Substance maps to Credit risk para 236(b)–(d) (v4.0). The guide requires a representative mix of good and bad years (bad years defined via adverse economic indicators); 'downturn' is pilot wording, not the guide's term."
+    },
+    {
+      "id": "REQ-D55",
+      "article": "ECB guide to internal models, Credit risk, LRA calibration",
+      "chapter": "Probability of default – long-run average",
+      "text": "The correlation between yearly default rates and relevant macroeconomic indicators is analysed to support the LRA window.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Library change v3.2 to v3.3 (new requirement). Substance checked against Credit risk para 236(b) (v4.0): select exposure-relevant economic indicators and analyse their correlation with internal default rates over the longest common period, including time lags.",
+      "introduced_in": "3.3"
+    },
+    {
+      "id": "ECB-GIM-CR-236d-i",
+      "article": "ECB guide to internal models, Credit risk, para 236(d)(i)",
+      "chapter": "Probability of default – long-run average",
+      "text": "Where default rates correlate significantly with economic indicators, a documented criterion classifies years as good or bad, with bad years showing actually adverse indicator values.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-236d-iii",
+      "article": "ECB guide to internal models, Credit risk, para 236(d)(ii)-(iii)",
+      "chapter": "Probability of default – long-run average",
+      "text": "The proportion of bad years in the historical observation period is not smaller than the reference proportion computed over the last 20 years of the economic indicator series.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-236d-iv",
+      "article": "ECB guide to internal models, Credit risk, para 236(d)(iv)",
+      "chapter": "Probability of default – long-run average",
+      "text": "The institution verifies whether the maximum observed one-year default rate is included in the historical observation period and documents and justifies any exclusion.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-237",
+      "article": "ECB guide to internal models, Credit risk, para 237",
+      "chapter": "Probability of default – long-run average",
+      "text": "At calibration-segment level, the LRA default rate before MoC is compared with a reference LRA default rate (best practice period 2008–2018); a lower LRA is justified or revised.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text. Para 238: the reference LRA DR guides the assessment but is not a quantification floor."
+    },
+    {
+      "id": "ECB-GIM-CR-246",
+      "article": "ECB guide to internal models, Credit risk, para 246",
+      "chapter": "Probability of default – calibration",
+      "text": "Calibration tests compare, for each LRA calculation date, the average PD before MoC at calibration-segment level with the one-year default rate and the LRA default rate.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-259",
+      "article": "ECB guide to internal models, Credit risk, para 259",
+      "chapter": "Loss given default – realised LGD",
+      "text": "Realised LGD is calculated at single facility level for each default; where data are held at a more aggregated level, this is justified and recoveries and costs are properly allocated.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-289",
+      "article": "ECB guide to internal models, Credit risk, para 289",
+      "chapter": "Loss given default – risk quantification",
+      "text": "The maximum recovery period (time-to-workout) is documented and supported by evidence on the observed pace of recoveries, consistent with product, exposure type and recovery process.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-290",
+      "article": "ECB guide to internal models, Credit risk, para 290",
+      "chapter": "Loss given default – risk quantification",
+      "text": "Information from incomplete recovery processes is taken into account conservatively, using a documented and justified methodology.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-293",
+      "article": "ECB guide to internal models, Credit risk, para 293",
+      "chapter": "Loss given default – risk quantification",
+      "text": "The LRA LGD is calculated as the arithmetic average of realised LGDs over the historical observation period, weighted by the number of defaults.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-298",
+      "article": "ECB guide to internal models, Credit risk, para 298",
+      "chapter": "Loss given default – downturn",
+      "text": "Downturn LGD estimates are based on an economic downturn characterised under Delegated Regulation (EU) 2021/930 and derived in accordance with the EBA Guidelines on downturn LGD.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-304",
+      "article": "ECB guide to internal models, Credit risk, para 304",
+      "chapter": "Loss given default – downturn",
+      "text": "A reference value, the average realised LGD of the two years with the highest observed economic loss using all loss data, is computed and compared with the final downturn LGD.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text. Para 305: comparison at least at calibration-segment level."
+    },
+    {
+      "id": "ECB-GIM-CR-315a",
+      "article": "ECB guide to internal models, Credit risk, para 315(a)",
+      "chapter": "Conversion factors",
+      "text": "The CCF reference data set is not capped at the principal amount outstanding or the available facility limit.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-322c",
+      "article": "ECB guide to internal models, Credit risk, para 322(c)",
+      "chapter": "Conversion factors",
+      "text": "Realised CCFs far above 100% are treated appropriately (data quality, risk drivers, grade or segment assignment) but are not capped at a predefined value.",
+      "quote": "institutions are not expected to cap realised CCF values.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-323",
+      "article": "ECB guide to internal models, Credit risk, para 323",
+      "chapter": "Conversion factors",
+      "text": "Downturn CCFs reflect the identified downturn period most strongly evidenced by elevated realised CCFs, taking into account any lag between the downturn and its impact.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own estimates of conversion factors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-325",
+      "article": "ECB guide to internal models, Credit risk, para 325",
+      "chapter": "Margin of conservatism",
+      "text": "The MoC is quantified in line with paragraphs 36–52 of EBA/GL/2017/16 and reflects estimation uncertainty at the level of the final grade or pool estimates.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-327a",
+      "article": "ECB guide to internal models, Credit risk, para 327(a)",
+      "chapter": "Margin of conservatism",
+      "text": "The PD MoC for general estimation error is based on the distribution of the grade-level LRA estimator and increases with fewer observations per grade and shorter time series.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-328",
+      "article": "ECB guide to internal models, Credit risk, para 328",
+      "chapter": "Review of estimates",
+      "text": "A review-of-estimates framework in line with paragraphs 217–221 of EBA/GL/2017/16 reviews the estimates whenever new information comes to light and at least annually.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-330a",
+      "article": "ECB guide to internal models, Credit risk, para 330(a)",
+      "chapter": "Review of estimates",
+      "text": "In the review of PD estimates, predictive power is analysed at grade level using a range of metrics, including statistical tests and graphical analysis of default rates and PDs.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_pd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to PD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-330c",
+      "article": "ECB guide to internal models, Credit risk, para 330(c)",
+      "chapter": "Review of estimates",
+      "text": "For LGD models combining components (e.g. secured and unsecured), back-testing in the review of estimates is run at both component and facility level.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own LGD estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-CR-332",
+      "article": "ECB guide to internal models, Credit risk, para 332",
+      "chapter": "Review of estimates",
+      "text": "Where defaults are few, individual defaults (or a sample) are analysed to verify that the main drivers are reflected in the model, without adapting the model to singular events.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-MR3-70",
+      "article": "ECB guide to internal models, Market risk (CRR3), para 70",
+      "chapter": "Market risk – internal validation",
+      "text": "Internal risk measurement models for market risk are validated at least once a year.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to market risk internal models (IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-MR3-71",
+      "article": "ECB guide to internal models, Market risk (CRR3), para 71",
+      "chapter": "Market risk – internal validation",
+      "text": "The market risk validation process lasts no longer than one year from the data reference date to approval of the results; deviations are justified, documented and reported to senior management.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to market risk internal models (IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-MR3-76",
+      "article": "ECB guide to internal models, Market risk (CRR3), para 76(a)",
+      "chapter": "Market risk – internal validation",
+      "text": "Periodic internal validation includes statistical tests on overshootings (e.g. Kupiec, Christoffersen) at top-of-the-house and IMA trading-desk level, including analysis of the tests' underlying hypotheses.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to market risk internal models (IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text. Presented in the guide as best practice."
+    },
+    {
+      "id": "ECB-GIM-MR3-102",
+      "article": "ECB guide to internal models, Market risk (CRR3), para 102",
+      "chapter": "Market risk – data quality",
+      "text": "Quality checks on each risk factor time series identify filled missing data points, replaced data points, days with no daily change and the maximum consecutive days with no change.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to market risk internal models (IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    },
+    {
+      "id": "ECB-GIM-MR3-158",
+      "article": "ECB guide to internal models, Market risk (CRR3), para 158",
+      "chapter": "Market risk – risks not in the model engines",
+      "text": "A documented RNIME framework of policies and controls governs identification, quantification and management of risks not in the model engines, with defined tasks, responsibilities and frequencies.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's market risk RNIME framework; evidenced in the RNIME policy and control documentation, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to market risk internal models (IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paragraph number and substance checked against the ECB guide to internal models, July 2025 (v4.0), PDF text."
+    }
+  ]
+}

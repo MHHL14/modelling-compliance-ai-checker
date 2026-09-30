@@ -1,0 +1,261 @@
+{
+  "docId": "EXT-RTS-IRRBB-SOT",
+  "requirements": [
+    {
+      "id": "RTS-SOT-1-1",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 1(1)",
+      "chapter": "Supervisory shock scenarios",
+      "text": "The EVE supervisory outlier test applies the six scenarios: parallel up, parallel down, steepener, flattener, short rates up and short rates down.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024). The EVE outlier threshold (decline of more than 15 % of Tier 1) is set in CRD Art. 98(5), first point, not in this RTS."
+    },
+    {
+      "id": "RTS-SOT-1-2",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 1(2)",
+      "chapter": "Supervisory shock scenarios",
+      "text": "The NII supervisory outlier test applies the parallel shock up and parallel shock down scenarios.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-1-3",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 1(3)",
+      "chapter": "Supervisory shock scenarios",
+      "text": "Shock sizes are taken from Annex Part A per currency (EUR: parallel 200 bp, short 250 bp, long 100 bp) or calibrated per Annex Part B for other currencies, recalibrated at least every five years.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024). EUR values checked in Annex Part A."
+    },
+    {
+      "id": "RTS-SOT-1-4",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 1(4)",
+      "chapter": "Supervisory shock scenarios",
+      "text": "Shocks are applied separately per currency with accounting value of 5 % or more of non-trading book financial assets or liabilities, or smaller currencies until 90 % of such assets (excluding tangible assets) or liabilities are covered.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-3-2",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(2)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "Key behavioural assumptions (including NMDs, prepayments and early redemptions) are adjusted to each shock scenario, applying the materiality thresholds of Delegated Regulation (EU) 2024/857 Art. 8(10), 9(2), 10(4), 12(2) and 23(1).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024). The adopted RTS contains no separate NMD repricing cap; the 5-year cap is in EBA/GL/2022/14 para 111 (IMS) and core-maturity caps in 2024/857 Art. 8(9). Confirm which cap the bank applies in SOT."
+    },
+    {
+      "id": "RTS-SOT-3-4",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(4)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "Institutions with a non-performing exposures ratio of 2 % or more include NPEs, net of provisions, as interest rate sensitive instruments reflecting expected cash flows and their timing.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-3-5",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(5)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "Where commercial margins are excluded from EVE cash flows, the risk-free rate at inception is identified transparently, applied consistently, aligned with hedging practice and the exclusion is notified to the competent authority.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-3-6",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(6)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "The change in EVE is computed on a run-off balance sheet.",
+      "quote": "computed with the assumption of a run-off balance sheet, where existing positions mature and are not replaced",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-3-7",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(7)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "A post-shock rate floor is applied per currency, starting at -150 bp for immediate maturity and rising by 3 bp per year to 0 % at 50 years; lower observed rates are used where applicable.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-3-8",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(8)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "Per scenario, currency results are aggregated with positive changes weighted by 50 % (80 % for ERM II currencies with a narrower band), converted at the ECB spot rate on the reference date.",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-3-9",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 3(9)",
+      "chapter": "EVE — common modelling assumptions",
+      "text": "Cash flows are discounted with a general risk-free yield curve per currency excluding instrument-, sector- or entity-specific credit and liquidity spreads.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-4-2",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 4(2)",
+      "chapter": "NII — common modelling assumptions",
+      "text": "The NII test covers interest income and expenses over a one-year horizon regardless of the maturity and accounting treatment of the instruments.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024). Commercial margins must be included in NII per Art. 4(3) (not split out to stay within 14 requirements)."
+    },
+    {
+      "id": "RTS-SOT-4-4",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 4(4)",
+      "chapter": "NII — common modelling assumptions",
+      "text": "The change in NII is computed on a constant balance sheet, replacing maturing or repricing instruments with instruments of comparable currency, amount and repricing period, priced at recent (not historical) margins.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    },
+    {
+      "id": "RTS-SOT-5-1",
+      "article": "Delegated Regulation (EU) 2024/856 Art. 5(1)",
+      "chapter": "Large decline in NII",
+      "text": "The NII outlier test flags a large decline where one-year NII falls by more than 5 % of Tier 1 capital under either parallel scenario.",
+      "quote": "a decline of an institution’s one-year net interest income by more than 5 % of its Tier 1 capital",
+      "category": "methodology",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Delegated Regulation (EU) 2024/856 (OJ L, 24.4.2024)."
+    }
+  ]
+}

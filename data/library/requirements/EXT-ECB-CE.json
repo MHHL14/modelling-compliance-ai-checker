@@ -1,0 +1,387 @@
+{
+  "docId": "EXT-ECB-CE",
+  "requirements": [
+    {
+      "id": "ECB-CE-6.1",
+      "article": "ECB C&E Guide, Expectation 6.1",
+      "chapter": "Reporting and data",
+      "text": "The institution has a holistic data governance approach for climate-related and environmental risks, integrating them into risk data reporting governance, IT infrastructure, risk data aggregation capabilities and reporting procedures.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide data governance and risk data aggregation obligation; evidenced in the data governance framework and RDARR documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 6.1; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-6.2",
+      "article": "ECB C&E Guide, Expectation 6.2",
+      "chapter": "Reporting and data",
+      "text": "IT systems are adapted to systematically collect and aggregate the data needed to assess exposures to climate-related and environmental risks; where not yet feasible, interim qualitative risk metrics are used and their limitations made known to the management body.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's IT infrastructure and management body reporting; evidenced in the IT and risk data aggregation strategy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 6.2; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7",
+      "article": "ECB C&E Guide, Expectation 7",
+      "chapter": "Risk management framework",
+      "text": "Climate-related and environmental risks are incorporated as drivers of existing risk categories into the risk management framework over a sufficiently long-term horizon, and are identified and quantified within the capital adequacy process.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's overall risk management framework and ICAAP; evidenced in the risk management framework and ICAAP documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7.1",
+      "article": "ECB C&E Guide, Expectation 7.1",
+      "chapter": "Risk management framework",
+      "text": "The institution has a holistic, well-documented view of the impact of climate-related and environmental risks on existing risk categories, covering on- and off-balance-sheet, current and prospective risks.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide risk identification obligation; evidenced in the institution's climate risk identification and risk inventory documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7.1; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7.2",
+      "article": "ECB C&E Guide, Expectation 7.2",
+      "chapter": "Risk management framework — materiality",
+      "text": "Climate-related and environmental risks are included in the materiality assessment of all business areas over the short, medium and long term under various scenarios, documenting transmission channels and justifying any non-materiality conclusion.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide materiality assessment across all business areas; evidenced in the climate and environmental materiality assessment, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7.2; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7.3",
+      "article": "ECB C&E Guide, Expectation 7.3",
+      "chapter": "Risk management framework — quantification",
+      "text": "Climate-related and environmental risks are adequately quantified; they are not excluded because they are difficult to quantify or data are lacking, and plausible assumptions and proxies may be used while methodologies mature.",
+      "quote": "risks are not expected to be excluded from the assessment because they are difficult to quantify or because the relevant data are not available",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7.3; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7.5",
+      "article": "ECB C&E Guide, Expectation 7.5",
+      "chapter": "Risk management framework — due diligence",
+      "text": "Climate-related and environmental due diligence at client onboarding and on an ongoing basis collects the information and data needed to assess exposure vulnerabilities, with reasonability checks on that information and data.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7.5; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7.6",
+      "article": "ECB C&E Guide, Expectation 7.6",
+      "chapter": "ICAAP",
+      "text": "The impact of climate-related and environmental risks on capital adequacy is assessed under both the economic perspective (effects on economic value) and the normative perspective (baseline and adverse projections of regulatory capital ratios).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP framework-level capital adequacy assessment; evidenced in the ICAAP documentation under the economic and normative perspectives, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to ICAAP models and processes only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7.6; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-7.7",
+      "article": "ECB C&E Guide, Expectation 7.7",
+      "chapter": "Risk management framework — review",
+      "text": "The appropriateness of identification, measurement and mitigation instruments for climate-related and environmental risks, including data sources and methods, is evaluated in regular internal reviews.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 7.7; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-8.1",
+      "article": "ECB C&E Guide, Expectation 8.1",
+      "chapter": "Credit risk management",
+      "text": "Climate-related and environmental risks are included at all relevant stages of the credit-granting process, with the factors material to the borrower's default risk identified and assessed.",
+      "quote": "institutions are expected to form an opinion on how climate-related and environmental risks affect the borrower’s default risk",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 8.1; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-8.2",
+      "article": "ECB C&E Guide, Expectation 8.2",
+      "chapter": "Credit risk management",
+      "text": "Risk classification procedures are adjusted to identify and evaluate, at least qualitatively, climate-related and environmental risks, including indicators or ratings for counterparties and identification of borrowers directly or indirectly exposed.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 8.2; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-8.3",
+      "article": "ECB C&E Guide, Expectation 8.3",
+      "chapter": "Credit risk management",
+      "text": "Collateral valuation and revaluation processes consider climate-related and environmental risks, in particular the physical location and energy efficiency of commercial and residential real estate.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 8.3; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-8.4",
+      "article": "ECB C&E Guide, Expectation 8.4",
+      "chapter": "Credit risk management",
+      "text": "Credit portfolios are monitored for sectoral, geographic and single-name concentrations stemming from climate-related and environmental risks, using exposure limits or deleveraging strategies where needed.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Portfolio-level concentration management obligation; evidenced in the credit risk appetite, limit framework and portfolio monitoring reports, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "credit"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to credit risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 8.4; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-11-a",
+      "article": "ECB C&E Guide, Expectation 11",
+      "chapter": "Scenario analysis and stress testing",
+      "text": "Institutions with material climate-related and environmental risks evaluate their stress testing with a view to incorporating these risks into baseline and adverse scenarios, under both the normative and economic ICAAP perspectives.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 11 (no sub-expectations); sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-11-b",
+      "article": "ECB C&E Guide, Expectation 11",
+      "chapter": "Scenario analysis and stress testing",
+      "text": "Climate stress scenarios consider physical and transition risk, the possibility that these risks are not reflected in historical data, and their materialisation over the short, medium and long term, using science-based pathways (e.g. NGFS, IPCC).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 11; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-11-c",
+      "article": "ECB C&E Guide, Expectation 11",
+      "chapter": "Scenario analysis and stress testing",
+      "text": "Given that these risks mostly materialise in the medium to long term, the institution considers a time horizon beyond the minimum three-year normative horizon, in particular for economic-perspective stress testing.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "stress_test",
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to stress testing and ICAAP models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 11; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-13",
+      "article": "ECB C&E Guide, Expectation 13",
+      "chapter": "Disclosure",
+      "text": "Regulatory disclosures include meaningful information and key metrics on climate-related and environmental risks deemed material.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Public disclosure obligation of the institution; evidenced in the Pillar 3 and sustainability disclosures, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "risk_reporting"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs feed regulatory disclosures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 13; sub-expectation number taken from the margin labels in the official PDF."
+    },
+    {
+      "id": "ECB-CE-13.1",
+      "article": "ECB C&E Guide, Expectation 13.1",
+      "chapter": "Disclosure",
+      "text": "The disclosure policy specifies how the materiality of climate-related and environmental risks is assessed, and the frequency and means of disclosure.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's disclosure policy; evidenced in the approved disclosure policy, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "risk_reporting"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models whose outputs feed regulatory disclosures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against ECB Guide on climate-related and environmental risks (November 2020), Expectation 13.1; sub-expectation number taken from the margin labels in the official PDF."
+    }
+  ]
+}

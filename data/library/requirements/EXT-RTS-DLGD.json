@@ -1,0 +1,576 @@
+{
+  "docId": "EXT-RTS-DLGD",
+  "requirements": [
+    {
+      "id": "RTS-DLGD-1-1-LGD",
+      "article": "Reg. (EU) 2021/930 Art. 1(1)",
+      "chapter": "Scope of downturn identification",
+      "text": "The institution identifies an economic downturn for the purposes of downturn LGD estimation (CRR Art. 181(1)(b)) separately for each type of exposures as defined in CRR Art. 142(1)(2).",
+      "quote": "an economic downturn shall be identified for each type of exposure, as defined in Article 142(1), point (2)",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_lgd"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own-LGD (downturn LGD) estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-1-1-CF",
+      "article": "Reg. (EU) 2021/930 Art. 1(1)",
+      "chapter": "Scope of downturn identification",
+      "text": "The institution identifies an economic downturn for the purposes of downturn conversion factor estimation (CRR Art. 182(1)(b)) separately for each type of exposures as defined in CRR Art. 142(1)(2).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb_ead"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to own conversion factor (downturn CF) estimation only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-1-2-a",
+      "article": "Reg. (EU) 2021/930 Art. 1(2)(a)",
+      "chapter": "Nature of an economic downturn",
+      "text": "The nature of the economic downturn for each type of exposures is characterised by a documented relevant indicator set, composed of the economic indicators classified as relevant in accordance with Art. 2.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-1-2-b",
+      "article": "Reg. (EU) 2021/930 Art. 1(2)(b)",
+      "chapter": "Severity of an economic downturn",
+      "text": "For each economic indicator in the relevant indicator set, the institution determines the most severe value relating to a 12-month period observed over the applicable time-span determined in accordance with Art. 3.",
+      "quote": "the most severe value relating to a 12-month period (‘the most severe 12-month value’)",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-1-3",
+      "article": "Reg. (EU) 2021/930 Art. 1(3)",
+      "chapter": "Severity of an economic downturn",
+      "text": "The search for the most severe 12-month value considers 12-month periods starting at any point in time within the applicable time-span, not only calendar or reporting years.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text). Art. 1(3) is permissive ('may start at any point'); formulated as a check that rolling windows were not unduly restricted."
+    },
+    {
+      "id": "RTS-DLGD-1-2-c",
+      "article": "Reg. (EU) 2021/930 Art. 1(2)(c)",
+      "chapter": "Downturn periods",
+      "text": "The economic downturn is specified as one or more distinct downturn periods covering the peaks and troughs related to the most severe 12-month values of the indicators, each with a duration determined in accordance with Art. 4.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-1-4-a",
+      "article": "Reg. (EU) 2021/930 Art. 1(4)(a)",
+      "chapter": "Downturn periods",
+      "text": "Each downturn period is identified as a period in which an economic indicator of the relevant indicator set reaches its most severe 12-month value.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-1-4-b",
+      "article": "Reg. (EU) 2021/930 Art. 1(4)(b)",
+      "chapter": "Downturn periods",
+      "text": "Where significantly correlated indicators reach their most severe 12-month values simultaneously or shortly after each other, the institution treats their downturn periods as one single downturn period covering all those values.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-a-i-ii",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(a)(i)-(ii)",
+      "chapter": "Relevant indicator set — mandatory indicators",
+      "text": "The relevant indicator set includes, for all types of exposures, gross domestic product (GDP) and the unemployment rate.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-a-iii-iv",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(a)(iii)-(iv)",
+      "chapter": "Relevant indicator set — mandatory indicators",
+      "text": "The relevant indicator set includes, for all types of exposures, externally provided aggregate default rates and externally provided aggregate credit losses, where available.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-b-i",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(b)(i)",
+      "chapter": "Relevant indicator set — exposure-specific indicators",
+      "text": "For exposures to corporates or to retail SMEs, the relevant indicator set additionally includes sector- or industry-specific indices.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate",
+          "sme"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to exposures to corporates or retail SMEs only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-b-ii",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(b)(ii)",
+      "chapter": "Relevant indicator set — exposure-specific indicators",
+      "text": "For residential property exposures to corporates or retail obligors, the relevant indicator set additionally includes house prices or house price indices.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to exposures secured by residential property only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-b-iii",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(b)(iii)",
+      "chapter": "Relevant indicator set — exposure-specific indicators",
+      "text": "For commercial immovable property exposures to corporates or SME retail obligors, the relevant indicator set additionally includes commercial property prices (or indices) and commercial property rental prices (or indices).",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate",
+          "sme"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to commercial immovable property exposures to corporates or SME retail obligors only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-b-iv",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(b)(iv)",
+      "chapter": "Relevant indicator set — exposure-specific indicators",
+      "text": "For retail exposures other than SME, residential property and commercial property exposures, the relevant indicator set additionally includes total household debt and disposable personal income, where available.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "retail"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to other retail exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-b-v",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(b)(v)",
+      "chapter": "Relevant indicator set — exposure-specific indicators",
+      "text": "For specialised lending exposures, the relevant indicator set additionally includes property prices or rental indices (IPRE), prices of underlying products (project finance), collateral indices (object finance) or commodity prices (commodity finance), as applicable.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "corporate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to specialised lending exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-1-b-vi",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(b)(vi)",
+      "chapter": "Relevant indicator set — exposure-specific indicators",
+      "text": "For exposures to institutions, the relevant indicator set additionally includes financial credit indices.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text). No model tag exists for exposures to institutions; the condition is stated in the text and must be assessed manually."
+    },
+    {
+      "id": "RTS-DLGD-2-1-c",
+      "article": "Reg. (EU) 2021/930 Art. 2(1)(c)",
+      "chapter": "Relevant indicator set — additional indicators",
+      "text": "The relevant indicator set includes any other economic indicators that are explanatory variables for, or indicators of, the economic cycle specific to the type of exposures under consideration.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-2-a",
+      "article": "Reg. (EU) 2021/930 Art. 2(2), second subpara, point (a)",
+      "chapter": "Geographical and sectoral granularity",
+      "text": "Each economic indicator is included in the relevant indicator set once for each jurisdiction, or where appropriate each geographical area within a jurisdiction, covered by a material share of the type of exposures.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-2-b",
+      "article": "Reg. (EU) 2021/930 Art. 2(2), second subpara, point (b)",
+      "chapter": "Geographical and sectoral granularity",
+      "text": "Where applicable, each economic indicator is included in the relevant indicator set once for each sector covered by a material share of the type of exposures.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-2-2-common",
+      "article": "Reg. (EU) 2021/930 Art. 2(2), third subpara",
+      "chapter": "Geographical and sectoral granularity",
+      "text": "A common economic indicator replaces jurisdiction-, area- or sector-specific indicators only where the institution demonstrates strong co-movement of those indicators across the jurisdictions, areas or sectors concerned.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-3-20Y",
+      "article": "Reg. (EU) 2021/930 Art. 3, first sentence",
+      "chapter": "Applicable time-span",
+      "text": "The historical time-span for each economic indicator covers at least the 20 years ending at the point in time at which the institution identifies the economic downturn.",
+      "quote": "the period of 20 years ending at the point in time at which the institution identifies the economic downturn",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-3-EXT",
+      "article": "Reg. (EU) 2021/930 Art. 3, second sentence",
+      "chapter": "Applicable time-span",
+      "text": "Where the variability of an indicator over the 20-year period is not representative of its likely future range of variability, the institution extends the time-span until the values are representative, and documents this assessment.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-4-a",
+      "article": "Reg. (EU) 2021/930 Art. 4(a)",
+      "chapter": "Duration of a downturn period",
+      "text": "Where downturn periods of correlated indicators are merged (Art. 1(4)(b)), the single downturn period is long enough to cover all peaks or troughs related to the most severe 12-month values of the associated indicators.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-4-b",
+      "article": "Reg. (EU) 2021/930 Art. 4(b)",
+      "chapter": "Duration of a downturn period",
+      "text": "Where 12-month values do not significantly deviate from the most severe 12-month value over a continuous period, the downturn period is extended to reflect the prolonged severity observed.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-4-c",
+      "article": "Reg. (EU) 2021/930 Art. 4(c)",
+      "chapter": "Duration of a downturn period",
+      "text": "Where adjacent peaks or troughs do not significantly deviate from the most severe 12-month value and relate to the same overall economic condition, the downturn period covers the whole prolonged period over which they are observed.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text)."
+    },
+    {
+      "id": "RTS-DLGD-4-d",
+      "article": "Reg. (EU) 2021/930 Art. 4(d)",
+      "chapter": "Duration of a downturn period",
+      "text": "Where none of Art. 4(a)-(c) applies, the downturn period equals the 12-month period to which the most severe 12-month value relates; no downturn period is shorter than 12 months.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against Commission Delegated Regulation (EU) 2021/930, OJ L 204, 10.6.2021 (official text). Minimum 12-month duration follows from Art. 4(d) read with recital (14)."
+    },
+    {
+      "id": "RTS-DLGD-REC4",
+      "article": "Reg. (EU) 2021/930 recital (4)",
+      "chapter": "Nature of an economic downturn",
+      "text": "The downturn specification is based on historically observed economic conditions and not on hypothetical stress-test scenarios.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Recital (non-binding interpretive text) of Reg. (EU) 2021/930; checked against OJ L 204, 10.6.2021. The operative obligation rests on the CRR provisions cited."
+    },
+    {
+      "id": "RTS-DLGD-REC9-10",
+      "article": "Reg. (EU) 2021/930 recitals (9)-(10); CRR Art. 179(1)",
+      "chapter": "Data sources for economic indicators",
+      "text": "The institution documents the data source of each economic indicator, demonstrates its accuracy and reliability, and justifies any available indicator not acquired because of disproportionate cost relative to the materiality of the type of exposures.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Recital (non-binding interpretive text) of Reg. (EU) 2021/930; checked against OJ L 204, 10.6.2021. The operative obligation rests on the CRR provisions cited."
+    },
+    {
+      "id": "RTS-DLGD-REC11",
+      "article": "Reg. (EU) 2021/930 recital (11)",
+      "chapter": "Nature of an economic downturn",
+      "text": "For each economic indicator, the institution specifies and justifies whether it is analysed in levels or in changes of levels, considering how it is commonly reported and its ability to reveal cyclicality.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Recital (non-binding interpretive text) of Reg. (EU) 2021/930; checked against OJ L 204, 10.6.2021. The operative obligation rests on the CRR provisions cited."
+    },
+    {
+      "id": "RTS-DLGD-REC14-15",
+      "article": "Reg. (EU) 2021/930 recitals (14)-(15); CRR Art. 179(1)(c)",
+      "chapter": "Documentation and review",
+      "text": "The downturn identification process and its outcome are documented, reflect cyclical rather than structural effects, and are reviewed when new information comes to light and at least annually.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Recital (non-binding interpretive text) of Reg. (EU) 2021/930; checked against OJ L 204, 10.6.2021. The operative obligation rests on the CRR provisions cited."
+    }
+  ]
+}

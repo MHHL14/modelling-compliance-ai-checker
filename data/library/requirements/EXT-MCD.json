@@ -1,0 +1,315 @@
+{
+  "docId": "EXT-MCD",
+  "requirements": [
+    {
+      "id": "MCD-18-1",
+      "article": "MCD Art. 18(1), first sentence",
+      "chapter": "Creditworthiness assessment",
+      "text": "Before concluding a credit agreement, the creditor makes a thorough assessment of the consumer's creditworthiness.",
+      "quote": "before concluding a credit agreement, the creditor makes a thorough assessment of the consumer’s creditworthiness",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-18-1-b",
+      "article": "MCD Art. 18(1), second sentence",
+      "chapter": "Creditworthiness assessment",
+      "text": "The creditworthiness assessment takes appropriate account of the factors relevant to verifying the prospect of the consumer meeting their obligations under the credit agreement.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition. Recital 55 indicates these include future payment increases, other regular expenditure, debts, income, savings and assets, and future events such as reduced income in retirement."
+    },
+    {
+      "id": "MCD-18-2",
+      "article": "MCD Art. 18(2)",
+      "chapter": "Creditworthiness assessment",
+      "text": "The procedures and information on which the creditworthiness assessment is based are established, documented and maintained.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-18-3",
+      "article": "MCD Art. 18(3)",
+      "chapter": "Creditworthiness assessment",
+      "text": "The creditworthiness assessment does not rely predominantly on the property value exceeding the credit amount or on assumed property value increases, unless the credit is to construct or renovate the residential property.",
+      "quote": "shall not rely predominantly on the value of the residential immovable property exceeding the amount of the credit",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-18-5-a",
+      "article": "MCD Art. 18(5)(a)",
+      "chapter": "Creditworthiness assessment",
+      "text": "The creditor makes the credit available only where the creditworthiness assessment indicates that the obligations under the credit agreement are likely to be met in the manner required.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition. Constrains decision cut-offs and overrides in automated approval."
+    },
+    {
+      "id": "MCD-18-5-b",
+      "article": "MCD Art. 18(5)(b)",
+      "chapter": "Creditworthiness assessment",
+      "text": "The creditor informs the consumer in advance that a database is to be consulted for the creditworthiness assessment.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Customer information obligation of the creditor; evidenced in the mortgage origination process and pre-contractual information, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-18-5-c",
+      "article": "MCD Art. 18(5)(c)",
+      "chapter": "Creditworthiness assessment",
+      "text": "Where a credit application is rejected, the creditor informs the consumer without delay and, where applicable, that the decision is based on automated processing of data, and, where the rejection is based on a database consultation, of its result and the database consulted.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Customer information obligation of the creditor; evidenced in the credit application rejection procedures and customer correspondence, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-18-6",
+      "article": "MCD Art. 18(6)",
+      "chapter": "Creditworthiness assessment",
+      "text": "Creditworthiness is reassessed on updated information before any significant increase in the total amount of credit after conclusion, unless the additional credit was included in the original assessment.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-19-1",
+      "article": "MCD Art. 19(1)",
+      "chapter": "Property valuation",
+      "text": "The creditor uses reliable standards for the valuation of residential immovable property for mortgage lending, or takes reasonable steps to ensure they are applied where a third party carries out the valuation.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition. Applies to valuation methods including automated valuation models used in origination."
+    },
+    {
+      "id": "MCD-19-2-a",
+      "article": "MCD Art. 19(2)",
+      "chapter": "Property valuation",
+      "text": "Internal and external appraisers conducting property valuations are professionally competent and sufficiently independent from the credit underwriting process to provide an impartial and objective valuation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation and competence of property appraisers; evidenced in the collateral valuation policy and appraiser panel management, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-19-2-b",
+      "article": "MCD Art. 19(2)",
+      "chapter": "Property valuation",
+      "text": "Each property valuation is documented in a durable medium and a record of it is kept by the creditor.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Record-keeping obligation for individual property valuations; evidenced in loan files and collateral management procedures, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-20-1",
+      "article": "MCD Art. 20(1), first sentence",
+      "chapter": "Disclosure and verification of consumer information",
+      "text": "The creditworthiness assessment is based on necessary, sufficient and proportionate information on the consumer's income and expenses and other financial and economic circumstances.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-20-1-b",
+      "article": "MCD Art. 20(1), second sentence",
+      "chapter": "Disclosure and verification of consumer information",
+      "text": "The creditor obtains the information from relevant internal or external sources, including the consumer and information provided to the credit intermediary or appointed representative.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-20-1-c",
+      "article": "MCD Art. 20(1), third sentence",
+      "chapter": "Disclosure and verification of consumer information",
+      "text": "The information used for the creditworthiness assessment is appropriately verified, including through independently verifiable documentation when necessary.",
+      "quote": "The information shall be appropriately verified, including through reference to independently verifiable documentation when necessary.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition."
+    },
+    {
+      "id": "MCD-20-3",
+      "article": "MCD Art. 20(3), first subparagraph",
+      "chapter": "Disclosure and verification of consumer information",
+      "text": "The creditor's request for consumer information and evidence is specified clearly at the pre-contractual phase and is proportionate and limited to what is necessary for a proper creditworthiness assessment.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition. Supports data minimisation in model feature selection."
+    },
+    {
+      "id": "MCD-21-1",
+      "article": "MCD Art. 21(1)",
+      "chapter": "Database access",
+      "text": "Credit databases used to assess consumer creditworthiness are accessed under non-discriminatory conditions and used only for creditworthiness assessment and for monitoring the consumer's compliance with credit obligations.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Checked against the OJ text of Directive 2014/17/EU (Cellar/EUR-Lex). Obligations addressed to Member States; they apply to creditors through national transposition. Art. 21 is outside the Art. 18-20 scope of this entry. The MCD has no explicit non-discrimination rule for the creditworthiness assessment itself; its only express non-discrimination provision concerns database access (a Member State duty). Confirm whether the 'non-discrimination' key topic should instead be covered by Directive (EU) 2023/2225 Art. 6 or EBA/GL/2020/06."
+    }
+  ]
+}

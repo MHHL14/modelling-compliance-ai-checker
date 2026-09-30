@@ -1,0 +1,488 @@
+{
+  "docId": "INT-STD-ST",
+  "requirements": [
+    {
+      "id": "ERM-STD-300-4.1",
+      "article": "ERM-STD-300 §4.1; EBA/GL/2018/04",
+      "chapter": "Programme and governance",
+      "text": "An annual stress testing programme approved by the Management Board describes the stress tests, their purpose, scope, frequency, methodologies, responsibilities and use of results.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Management Board; evidenced in the approved stress testing programme, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-4.3",
+      "article": "ERM-STD-300 §4.3",
+      "chapter": "Programme and governance",
+      "text": "The Management Board is involved in defining the ICAAP adverse scenario and reverse stress test outcome, and the use of results in strategic, capital and risk appetite decisions is documented.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Management Board; evidenced in Management Board minutes and ICAAP documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-4.4",
+      "article": "ERM-STD-300 §4.4",
+      "chapter": "Programme and governance",
+      "text": "Stress test results are used in risk appetite limits, capital planning, the management buffer, recovery plan indicators and, for the baseline, IFRS 9 forward-looking information.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-wide use of stress test results; evidenced in risk appetite, capital planning and recovery plan documentation, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-5.1",
+      "article": "ERM-STD-300 §5.1; EBA/GL/2018/04",
+      "chapter": "Scenario design",
+      "text": "Scenarios are severe but plausible and address the Bank's material risks and vulnerabilities identified in the annual risk identification process.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-5.2",
+      "article": "ERM-STD-300 §5.2",
+      "chapter": "Scenario design",
+      "text": "Each scenario has a written narrative explaining triggering events and transmission, and the quantified variable paths are consistent with that narrative.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-5.3",
+      "article": "ERM-STD-300 §5.3",
+      "chapter": "Scenario design",
+      "text": "Adverse scenario severity is calibrated against historical episodes and hypothetical events, documenting the percentile or historical analogue of each key variable.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-5.4",
+      "article": "ERM-STD-300 §5.4",
+      "chapter": "Scenario design",
+      "text": "The scenario generation model ensures consistency between variables, and expert adjustments to model-generated paths are documented and approved under MRM-STD-023.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-5.5",
+      "article": "ERM-STD-300 §5.5",
+      "chapter": "Scenario design",
+      "text": "Scenarios cover at least GDP, unemployment, residential and commercial real estate prices, the interest rate term structure, credit spreads, equity prices, exchange rates and inflation.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.1",
+      "article": "ERM-STD-300 §6.1",
+      "chapter": "Satellite models",
+      "text": "Each satellite model documents its macro linkage: the economic rationale, expected sign and lag structure of every explanatory variable.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.2",
+      "article": "ERM-STD-300 §6.2",
+      "chapter": "Satellite models",
+      "text": "Explanatory variables in satellite models are statistically significant with the expected sign; variables with counter-intuitive signs are not retained.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.3",
+      "article": "ERM-STD-300 §6.3",
+      "chapter": "Satellite models",
+      "text": "Satellite model development data cover at least one full economic cycle including a downturn, or the representativeness of external or proxy data is justified.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.4",
+      "article": "ERM-STD-300 §6.4",
+      "chapter": "Satellite models",
+      "text": "Satellite models are tested under scenario values outside the historical data range, and the treatment of implausible extrapolation is documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.5",
+      "article": "ERM-STD-300 §6.5",
+      "chapter": "Satellite models",
+      "text": "Satellite model performance is assessed out of sample and out of time, including a back-test of projections under realised historical macroeconomic paths.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.6",
+      "article": "ERM-STD-300 §6.6",
+      "chapter": "Satellite models",
+      "text": "A benchmark or challenger model is maintained for every Tier 1 satellite model, and the champion-challenger difference under the adverse scenario is reported as model uncertainty.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-6.7",
+      "article": "ERM-STD-300 §6.7",
+      "chapter": "Satellite models",
+      "text": "The same satellite model is used where a risk parameter is projected for stress testing, IFRS 9 and ICAAP, and purpose-driven differences are documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-7.2",
+      "article": "ERM-STD-300 §7.2",
+      "chapter": "Macro linkages and projection",
+      "text": "Second-round and feedback effects, such as rating migration on RWA and rate paths on prepayment and deposit behaviour, are captured or their omission justified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-7.3",
+      "article": "ERM-STD-300 §7.3",
+      "chapter": "Macro linkages and projection",
+      "text": "Management actions are credible, feasible and documented with expected impact and implementation time, and results are reported before and after management actions.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Bank's stress testing programme; evidenced in the stress test results report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-8.2",
+      "article": "ERM-STD-300 §8.2; EBA/GL/2018/04",
+      "chapter": "Reverse stress testing",
+      "text": "A reverse stress test is performed at least annually at Group level and identifies the scenarios leading to a breach of the total SREP capital requirement and to non-viability.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Group-level obligation of the stress testing programme; evidenced in the reverse stress test report, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-8.3",
+      "article": "ERM-STD-300 §8.3",
+      "chapter": "Reverse stress testing",
+      "text": "The plausibility of reverse stress test scenarios is assessed and the results are used to challenge the business model, recovery plan indicators and adverse scenario severity.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Group-level obligation of the stress testing programme; evidenced in the reverse stress test report and its use in management decisions, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-9.1",
+      "article": "ERM-STD-300 §9.1; ECB Guide to the ICAAP, Principles 3 and 7",
+      "chapter": "Use in the ICAAP",
+      "text": "The ICAAP normative perspective includes at least a baseline and an adverse scenario over three years, projecting material risks, own funds and capital ratios against requirements and buffers.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP obligation of the institution; evidenced in the ICAAP normative perspective documentation, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in the ICAAP only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2). Normative perspective (Principle 3) and stress testing (Principle 7) of the ECB ICAAP Guide (2018)."
+    },
+    {
+      "id": "ERM-STD-300-9.3",
+      "article": "ERM-STD-300 §9.3",
+      "chapter": "Use in the ICAAP",
+      "text": "Limitations of stress test models used in the ICAAP are reflected through documented adjustments or capital add-ons.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "icaap"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models used in the ICAAP only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-10.2",
+      "article": "ERM-STD-300 §10.2; EBA/GL/2025/04",
+      "chapter": "Climate scenarios",
+      "text": "Climate scenarios are based on recognised reference pathways and include at least an orderly transition, a disorderly transition and a hot-house-world scenario, adapted to the Bank's portfolios.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "climate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to climate scenario and climate risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-10.3",
+      "article": "ERM-STD-300 §10.3",
+      "chapter": "Climate scenarios",
+      "text": "Climate scenario analysis covers a short-term ICAAP horizon and a long-term horizon of at least ten years, and explicitly identifies its transmission channels.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "climate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to climate scenario and climate risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-10.4",
+      "article": "ERM-STD-300 §10.4",
+      "chapter": "Climate scenarios",
+      "text": "Short-term climate stress test results are incorporated into the ICAAP adverse scenario where climate risk is material under CER-POL-001.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "ICAAP obligation of the institution; evidenced in the ICAAP scenario documentation, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "climate"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to climate scenario and climate risk models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    },
+    {
+      "id": "ERM-STD-300-11.4",
+      "article": "ERM-STD-300 §11.4",
+      "chapter": "Documentation, validation and data",
+      "text": "Baseline projections for the first projection year are compared with realised outcomes after each ICAAP cycle, and material deviations are analysed and reported.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ERM-STD-300 v2.2)."
+    }
+  ]
+}

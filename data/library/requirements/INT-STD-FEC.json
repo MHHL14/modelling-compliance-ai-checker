@@ -1,0 +1,628 @@
+{
+  "docId": "INT-STD-FEC",
+  "requirements": [
+    {
+      "id": "FEC-STD-600-4.2",
+      "article": "FEC-STD-600 §4.2; AI-POL-001 §5.2",
+      "chapter": "General requirements",
+      "text": "The FEC model is assessed against the AI system definition and registered in the AI Inventory, with the reasoning documented where it is concluded not to be an AI system.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-4.3",
+      "article": "FEC-STD-600 §4.3; FEC-POL-001 §4.4",
+      "chapter": "General requirements",
+      "text": "Every material SIRA risk is covered by at least one scenario or model in the coverage matrix, or the gap is recorded with a remediation plan approved by Financial Crime Compliance.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-5.1",
+      "article": "FEC-STD-600 §5.1",
+      "chapter": "Scenario and rule design",
+      "text": "Each scenario has a documented objective identifying the typology addressed, the SIRA risk mapped and the customer, product and channel population covered.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-5.2",
+      "article": "FEC-STD-600 §5.2",
+      "chapter": "Scenario and rule design",
+      "text": "The scenario specification defines logic, parameters, look-back periods, aggregation rules and exclusions precisely enough to allow independent re-implementation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-5.3",
+      "article": "FEC-STD-600 §5.3",
+      "chapter": "Scenario and rule design",
+      "text": "Exclusions from the scenario population are justified and their volume quantified.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-5.4",
+      "article": "FEC-STD-600 §5.4",
+      "chapter": "Scenario and rule design",
+      "text": "New or changed scenarios are tested on historical data before production, reporting expected alert volumes, share of historical productive cases detected and overlap with existing scenarios.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-6.1",
+      "article": "FEC-STD-600 §6.1",
+      "chapter": "Segmentation and threshold calibration",
+      "text": "Customers and accounts are segmented into behaviourally homogeneous groups, distinguishing at least natural persons, small businesses and corporates, with documented statistical support reviewed annually.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-6.2",
+      "article": "FEC-STD-600 §6.2",
+      "chapter": "Segmentation and threshold calibration",
+      "text": "Initial thresholds are calibrated per segment on the statistical distribution of the parameter, with the rationale for the selected percentile and the expected alert volume documented.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-6.3",
+      "article": "FEC-STD-600 §6.3",
+      "chapter": "Segmentation and threshold calibration",
+      "text": "Threshold settings or adjustments based on expert judgement have a documented risk-based rationale, and no threshold is raised on operational capacity grounds alone.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-7.1",
+      "article": "FEC-STD-600 §7.1",
+      "chapter": "Above/below-the-line testing",
+      "text": "ATL testing is performed per scenario at least annually, reporting alert volume, productive share, FIU-report share and disposition quality from a QA sample of closed non-productive alerts.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-7.2",
+      "article": "FEC-STD-600 §7.2",
+      "chapter": "Above/below-the-line testing",
+      "text": "BTL testing is performed for each threshold-based scenario at least annually and after any threshold increase, in bands down to at least 20% below the threshold, reviewed blind by trained analysts.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-7.3",
+      "article": "FEC-STD-600 §7.3",
+      "chapter": "Above/below-the-line testing",
+      "text": "At least 59 events per BTL band are reviewed, so that zero productive events supports a productive rate below 5% at 95% confidence.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-7.4",
+      "article": "FEC-STD-600 §7.4",
+      "chapter": "Above/below-the-line testing",
+      "text": "Where BTL testing finds productive events, the threshold is lowered or the decision not to lower it is justified by a documented risk assessment approved by Financial Crime Compliance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-7.5",
+      "article": "FEC-STD-600 §7.5",
+      "chapter": "Above/below-the-line testing",
+      "text": "The ATL and BTL methodology, samples, reviewer decisions and conclusions are documented in a testing report retained with the model documentation.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-8.2",
+      "article": "FEC-STD-600 §8.2",
+      "chapter": "Alert prioritisation and auto-closure",
+      "text": "The feedback-loop bias of analyst-decision labels is assessed, and at least 2% of low-priority alerts are reviewed monthly irrespective of score.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-8.3",
+      "article": "FEC-STD-600 §8.3; FEC-POL-001 §6.5",
+      "chapter": "Alert prioritisation and auto-closure",
+      "text": "Prioritisation scores determine only the order of alert handling and do not suppress alerts outside an approved auto-closure band.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-8.4",
+      "article": "FEC-STD-600 §8.4",
+      "chapter": "Alert prioritisation and auto-closure",
+      "text": "An auto-closure band contains no more than 1% of productive alerts in the out-of-time test sample, and at least 50 auto-closed alerts are QA-reviewed monthly.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-8.5",
+      "article": "FEC-STD-600 §8.5",
+      "chapter": "Alert prioritisation and auto-closure",
+      "text": "Discriminatory power of the prioritisation model is measured out-of-time per scenario group, together with the recall of productive alerts per priority band.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-9.1",
+      "article": "FEC-STD-600 §9.1; Wwft Art. 3; AMLR Art. 20",
+      "chapter": "Customer risk rating methodology",
+      "text": "The CRR methodology assesses at least customer, product and service, delivery channel and geographic risk factors, with factor selection and weights justified by the SIRA and legislative risk factors.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "to_review",
+      "verification_note": "Internal provision authored; AMLR article on individual risk assessment of the customer (Art. 20) to be confirmed."
+    },
+    {
+      "id": "FEC-STD-600-9.2",
+      "article": "FEC-STD-600 §9.2",
+      "chapter": "Customer risk rating methodology",
+      "text": "Mandatory high-risk triggers, including PEPs, links to high-risk third countries and adverse FIU or law-enforcement information, override the calculated score to at least the High class.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-9.4",
+      "article": "FEC-STD-600 §9.4",
+      "chapter": "Customer risk rating methodology",
+      "text": "The CRR is back-tested at least annually, showing incidence of FIU reports, integrity exits and confirmed cases increasing monotonically from Low to High class.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-9.5",
+      "article": "FEC-STD-600 §9.5",
+      "chapter": "Customer risk rating methodology",
+      "text": "CRR overrides are monitored and the methodology is reviewed where more than 5% of customers in a segment are overridden in a year.",
+      "category": "governance",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-10.1",
+      "article": "FEC-STD-600 §10.1",
+      "chapter": "Fraud detection models",
+      "text": "Fraud labels include confirmed fraud from customer claims, chargebacks and investigations, and a documented label maturity window of at least 90 days for card fraud is applied.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-10.2",
+      "article": "FEC-STD-600 §10.2",
+      "chapter": "Fraud detection models",
+      "text": "Fraud model performance is measured at the operating threshold by count detection rate, value detection rate and false-positive ratio per payment channel, against documented targets.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-10.3",
+      "article": "FEC-STD-600 §10.3",
+      "chapter": "Fraud detection models",
+      "text": "The operating threshold is set through a documented analysis of fraud losses prevented, false-positive customer impact and operational capacity, approved by the model owner and Fraud Risk Management.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-10.4",
+      "article": "FEC-STD-600 §10.4",
+      "chapter": "Fraud detection models",
+      "text": "The false-positive ratio is monitored weekly, and a breach of target for four consecutive weeks triggers root-cause analysis and, where necessary, recalibration.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-10.6",
+      "article": "FEC-STD-600 §10.6; Delegated Regulation (EU) 2018/389 Art. 18–19",
+      "chapter": "Fraud detection models",
+      "text": "Where the model supports the transaction-risk-analysis exemption, the documentation shows how real-time risk analysis meets Art. 18 and how fraud rates are calculated under Art. 19 of the PSD2 RTS.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "fraud"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to fraud detection models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8); PSD2 RTS article references checked."
+    },
+    {
+      "id": "FEC-STD-600-11.1",
+      "article": "FEC-STD-600 §11.1",
+      "chapter": "Periodic tuning and monitoring",
+      "text": "Every transaction monitoring scenario is tuned at least annually and after material changes in products, customers, typologies or data, using ATL and BTL results.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-12.1",
+      "article": "FEC-STD-600 §12.1",
+      "chapter": "Data and implementation",
+      "text": "Data feeds are reconciled monthly against source systems on transaction counts and values, and unexplained differences above 0.1% are investigated and reported.",
+      "category": "data",
+      "check_type": "script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    },
+    {
+      "id": "FEC-STD-600-13.1",
+      "article": "FEC-STD-600 §13.1; MRM-STD-021",
+      "chapter": "Documentation",
+      "text": "For transaction monitoring, the documentation includes a scenario library giving per scenario the objective, SIRA mapping, specification, segments, thresholds and rationale, exclusions, test results and tuning history.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "aml"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to anti-money laundering models (transaction monitoring, CRR, screening) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal standard text authored for the library (FEC-STD-600 v1.8)."
+    }
+  ]
+}

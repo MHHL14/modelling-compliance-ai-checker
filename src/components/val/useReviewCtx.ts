@@ -1,5 +1,6 @@
 'use client';
 import { useMemo } from 'react';
+import { useContent } from '@/components/common/useContent';
 import { getModel } from '@/lib/seed';
 import type { ViewerDoc } from '@/lib/types';
 import { reviewRequirements, use2lod } from '@/stores/store2lod';
@@ -13,6 +14,8 @@ export function useReviewCtx(snapshotId: string) {
     () => (review ? review.pkg.documents.map((d) => ({ id: d.id, version: d.version, title: d.title ?? d.id, sections: d.sections })) : []),
     [review],
   );
+  /** the model documentation library supplies the evidence maps, code facts and validation tests */
+  const ready = useContent(review ? [review.modelId] : []);
   const reqs = useMemo(() => (review ? reviewRequirements(review) : []), [review]);
-  return { review, model, docs, reqs, seeded, id: decodeURIComponent(snapshotId) };
+  return { review, model, docs, reqs, seeded, ready, id: decodeURIComponent(snapshotId) };
 }

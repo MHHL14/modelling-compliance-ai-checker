@@ -1,0 +1,558 @@
+{
+  "docId": "INT-STD-IFRS9",
+  "requirements": [
+    {
+      "id": "FIN-STD-200-4.1a",
+      "article": "FIN-STD-200 §4.1; IFRS 9 para 5.5.17",
+      "chapter": "General principles",
+      "text": "ECL estimates are unbiased and probability-weighted, reflect a range of possible outcomes and the time value of money, and use reasonable and supportable information available without undue cost or effort.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0). Paraphrases the IFRS 9 measurement objective; no IFRS text quoted."
+    },
+    {
+      "id": "FIN-STD-200-4.1b",
+      "article": "FIN-STD-200 §4.1",
+      "chapter": "General principles",
+      "text": "ECL risk parameters exclude prudential conservatism: margins of conservatism, downturn components and regulatory floors are not included.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-4.2",
+      "article": "FIN-STD-200 §4.2; CRR Art. 178; EBA/GL/2016/07",
+      "chapter": "General principles",
+      "text": "The IFRS 9 definition of default equals the prudential definition of CR-STD-110, and Stage 3 comprises all exposures in default under that definition, with POCI assets identified separately.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0). Consistency with the IRB definition of default checked against CRR Art. 178 and EBA/GL/2016/07."
+    },
+    {
+      "id": "FIN-STD-200-4.3",
+      "article": "FIN-STD-200 §4.3",
+      "chapter": "General principles",
+      "text": "Where IRB parameters are reused, each adjustment (removal of MoC and downturn, TTC-to-PIT conversion, removal of floors, discount rate, lifetime extension) is documented, justified and quantified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-5.2",
+      "article": "FIN-STD-200 §5.2; IFRS 9 para 5.5.9",
+      "chapter": "Stage allocation and SICR",
+      "text": "The SICR assessment compares remaining-lifetime PD at the reporting date with the lifetime PD expected at initial recognition for the same remaining term; use of 12-month PD as a proxy is evidenced as not materially different.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0). Consistent with IFRS 9 paras 5.5.9 and B5.5.13 (paraphrased)."
+    },
+    {
+      "id": "FIN-STD-200-5.3",
+      "article": "FIN-STD-200 §5.3",
+      "chapter": "Stage allocation and SICR",
+      "text": "A SICR is identified when the ratio of current to origination annualised lifetime PD exceeds a portfolio-specific relative threshold and the absolute PD increase exceeds a minimum absolute threshold.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-5.4",
+      "article": "FIN-STD-200 §5.4",
+      "chapter": "Stage allocation and SICR",
+      "text": "Relative and absolute SICR thresholds are calibrated per portfolio, the calibration demonstrates the trade-off between default capture and stage volatility, and thresholds are re-assessed at least annually.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-5.5a",
+      "article": "FIN-STD-200 §5.5; IFRS 9 para 5.5.11",
+      "chapter": "Stage allocation and SICR",
+      "text": "Performing exposures more than 30 days past due on a material amount are allocated to Stage 2; the IFRS 9 rebuttable presumption is not rebutted without an approved dispensation.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0). 30 dpd rebuttable presumption per IFRS 9 para 5.5.11 (paraphrased)."
+    },
+    {
+      "id": "FIN-STD-200-5.5b",
+      "article": "FIN-STD-200 §5.5",
+      "chapter": "Stage allocation and SICR",
+      "text": "Performing exposures with forbearance measures are allocated to Stage 2 for at least the two-year forborne-performing probation period.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-5.5c",
+      "article": "FIN-STD-200 §5.5",
+      "chapter": "Stage allocation and SICR",
+      "text": "Performing exposures of obligors on the watchlist are allocated to Stage 2.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-5.8",
+      "article": "FIN-STD-200 §5.8",
+      "chapter": "Stage allocation and SICR",
+      "text": "Exposures return to Stage 1 only when no Stage 2 criterion is met, and leave Stage 3 only after completion of the probation period defined in CR-STD-110.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-5.9",
+      "article": "FIN-STD-200 §5.9",
+      "chapter": "Stage allocation and SICR",
+      "text": "The origination PD or rating is stored for every facility for its full life; for legacy facilities the proxy approach is documented and its impact on stage allocation analysed.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-6.1",
+      "article": "FIN-STD-200 §6.1",
+      "chapter": "PD term structures",
+      "text": "PD models provide point-in-time PD term structures over the expected life of each exposure, using the behavioural life for revolving facilities.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-6.3",
+      "article": "FIN-STD-200 §6.3",
+      "chapter": "PD term structures",
+      "text": "The 12-month PIT PD is calibrated to recently observed portfolio default rates adjusted to current conditions, not to the long-run average default rate.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-6.4",
+      "article": "FIN-STD-200 §6.4",
+      "chapter": "PD term structures",
+      "text": "Cumulative PD curves are monotonically non-decreasing, marginal PDs are non-negative, and PDs revert to long-run levels beyond the forecast period over a documented reversion period.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-7.1",
+      "article": "FIN-STD-200 §7.1",
+      "chapter": "LGD",
+      "text": "LGD estimates are best estimates without downturn adjustment, MoC or regulatory floors, and recoveries and directly attributable costs are discounted at the effective interest rate.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-7.2",
+      "article": "FIN-STD-200 §7.2",
+      "chapter": "LGD",
+      "text": "Collateral values of residential mortgages are indexed to the reporting date and projected with the scenario-specific house price index paths of each macroeconomic scenario.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-8.3",
+      "article": "FIN-STD-200 §8.3; IFRS 9 para 5.5.20",
+      "chapter": "EAD",
+      "text": "For revolving facilities, the ECL measurement period is the behavioural period of exposure to credit risk estimated from historical data, not the contractual notice period.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0). Revolving-facility exception per IFRS 9 para 5.5.20 (paraphrased)."
+    },
+    {
+      "id": "FIN-STD-200-9.1",
+      "article": "FIN-STD-200 §9.1; EBA/GL/2017/06",
+      "chapter": "Forward-looking information and scenarios",
+      "text": "ECL is computed under at least a baseline, an upside and a downside scenario from the ERM-STD-300 scenario models, with the baseline consistent with the financial planning scenario.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-9.2",
+      "article": "FIN-STD-200 §9.2",
+      "chapter": "Forward-looking information and scenarios",
+      "text": "Scenario probability weights are set quarterly with a documented quantitative rationale, and no scenario carries a weight below 10%.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-9.3",
+      "article": "FIN-STD-200 §9.3",
+      "chapter": "Forward-looking information and scenarios",
+      "text": "ECL is calculated separately per scenario and then probability-weighted, and the non-linearity effect versus baseline ECL is reported quarterly.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-9.5",
+      "article": "FIN-STD-200 §9.5",
+      "chapter": "Forward-looking information and scenarios",
+      "text": "Macroeconomic variables in satellite models are economically intuitive, have the expected sign, are statistically significant and are tested out of sample, with rejected alternatives documented.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-10.2",
+      "article": "FIN-STD-200 §10.2",
+      "chapter": "Management overlays",
+      "text": "Every overlay is recorded in the overlay register with rationale, model limitation addressed, affected portfolio and stages, quantification method, amount, approval, review date and remediation plan.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-10.3",
+      "article": "FIN-STD-200 §10.3",
+      "chapter": "Management overlays",
+      "text": "Overlays are quantified with an evidence-based method, and expert judgement in the quantification complies with MRM-STD-023.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-10.4",
+      "article": "FIN-STD-200 §10.4",
+      "chapter": "Management overlays",
+      "text": "Overlays above EUR 5 million or 5% of the portfolio loss allowance are approved by the Group Impairment Committee after review by Model Validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-10.5",
+      "article": "FIN-STD-200 §10.5",
+      "chapter": "Management overlays",
+      "text": "Where an overlay reflects a SICR not captured by the staging model, the affected exposures are also transferred to Stage 2.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-10.6",
+      "article": "FIN-STD-200 §10.6",
+      "chapter": "Management overlays",
+      "text": "Overlays are re-assessed quarterly, and an overlay in place for four consecutive quarters triggers a model change assessment under MRM-STD-050.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-11.2",
+      "article": "FIN-STD-200 §11.2",
+      "chapter": "Data",
+      "text": "PD development data cover at least five years and, where available, a full economic cycle, and representativeness for the current portfolio is analysed.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-12.2",
+      "article": "FIN-STD-200 §12.2; EBA/GL/2017/06 Principle 5",
+      "chapter": "Validation, monitoring and back-testing",
+      "text": "Back-testing is performed at least annually for PIT PD per grade, LGD on closed workouts, CCF, and staging performance including the share of defaults in Stage 2 at least six months before default.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    },
+    {
+      "id": "FIN-STD-200-12.3",
+      "article": "FIN-STD-200 §12.3",
+      "chapter": "Validation, monitoring and back-testing",
+      "text": "A red monitoring outcome under MV-HB-003 leads to a Model Risk Committee-approved remediation plan within three months and an assessment of the need for a temporary overlay.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (FIN-STD-200 v4.0)."
+    }
+  ]
+}

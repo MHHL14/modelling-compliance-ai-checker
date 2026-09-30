@@ -1,0 +1,349 @@
+{
+  "docId": "EXT-PRA-SS123",
+  "requirements": [
+    {
+      "id": "SS123-1.1-a",
+      "article": "PRA SS1/23 Principle 1.1(a)",
+      "chapter": "Principle 1 – Model identification and classification",
+      "text": "The institution applies a formal model definition, aligned with SS1/23, as the basis for the scope of its model risk management framework.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the institution's model risk management framework; evidenced in the MRM policy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-1.2-a",
+      "article": "PRA SS1/23 Principle 1.2(a)",
+      "chapter": "Principle 1 – Model identification and classification",
+      "text": "The model inventory holds complete and accurate information for all models implemented for use, under development or decommissioned, including purpose, intended versus actual use and operating boundaries.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation to maintain a firm-wide model inventory; evidenced in the model inventory, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-1.3-a",
+      "article": "PRA SS1/23 Principle 1.3(a)-(c)",
+      "chapter": "Principle 1 – Model identification and classification",
+      "text": "Each model receives a firm-wide consistent risk tier based on materiality (quantitative size and qualitative importance) and complexity (data, methodology, implementation and use).",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-2.1-c",
+      "article": "PRA SS1/23 Principle 2.1(c)",
+      "chapter": "Principle 2 – Governance",
+      "text": "The board sets a model risk appetite stating the level and types of model risk the institution is willing to accept, with measures proportionate to the models used.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the board; evidenced in the approved model risk appetite statement, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-2.2-a",
+      "article": "PRA SS1/23 Principle 2.2(a)",
+      "chapter": "Principle 2 – Governance",
+      "text": "A designated senior manager is accountable for the model risk management framework, its implementation and maintenance.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Institution-level accountability arrangement; evidenced in the senior management responsibilities map and MRM policy, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024). UK SMF regime; map to the equivalent accountable executive in an EU bank."
+    },
+    {
+      "id": "SS123-2.4-c",
+      "article": "PRA SS1/23 Principle 2.4(c)",
+      "chapter": "Principle 2 – Governance",
+      "text": "A model owner is documented for each model and is accountable for performance monitoring, correct tiering, appropriate validation and providing validators with all necessary information.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-2.6-b",
+      "article": "PRA SS1/23 Principle 2.6(b)",
+      "chapter": "Principle 2 – Governance",
+      "text": "For vendor models the institution confirms validation to its own standards, verifies the relevance of vendor data and assumptions, and validates and monitors its own use with its own outcomes.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-3.1-a",
+      "article": "PRA SS1/23 Principle 3.1(a)",
+      "chapter": "Principle 3 – Model development, implementation and use",
+      "text": "Each model has a clear statement of purpose and design objectives, and its design, variables and parameters are conceptually sound and suitable for the intended use.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-3.2-a",
+      "article": "PRA SS1/23 Principle 3.2(a)",
+      "chapter": "Principle 3 – Model development, implementation and use",
+      "text": "The development process shows that the data are suitable for the intended use, consistent with the chosen methodology and representative of the portfolio or customer base the model will be applied to.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-3.2-b",
+      "article": "PRA SS1/23 Principle 3.2(b)",
+      "chapter": "Principle 3 – Model development, implementation and use",
+      "text": "The development process ensures there is no inappropriate bias in the development data and that use of the data complies with data privacy and other data regulations.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-3.3-a",
+      "article": "PRA SS1/23 Principle 3.3(a)-(b)",
+      "chapter": "Principle 3 – Model development, implementation and use",
+      "text": "Development testing uses clear, pre-defined criteria to measure model quality and select between candidates, and assesses performance against design objectives across relevant conditions.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-3.4-c",
+      "article": "PRA SS1/23 Principle 3.4(b)-(c)",
+      "chapter": "Principle 3 – Model development, implementation and use",
+      "text": "Expert-judgement model adjustments are adequately justified and recorded in the model inventory, including the reasons and how the adjustment is calculated over time.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-3.5-a",
+      "article": "PRA SS1/23 Principle 3.5(a)-(b)",
+      "chapter": "Principle 3 – Model development, implementation and use",
+      "text": "Model development documentation is comprehensive and current, detailed enough for an independent expert third party to understand how the model operates, its limitations and key assumptions.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-4.1-d",
+      "article": "PRA SS1/23 Principle 4.1(d)",
+      "chapter": "Principle 4 – Independent model validation",
+      "text": "The validation function operates independently from the model development process and from model owners.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation concerning the organisation of the validation function; evidenced in the validation function charter and organisational arrangements, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-4.2-a",
+      "article": "PRA SS1/23 Principle 4.2(a)-(b)",
+      "chapter": "Principle 4 – Independent model validation",
+      "text": "Every model is independently reviewed for suitability for its intended use, covering inputs, calculations and outputs, with depth set by the model tier.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-4.4-a",
+      "article": "PRA SS1/23 Principle 4.4(a) and (d)",
+      "chapter": "Principle 4 – Independent model validation",
+      "text": "Model performance is monitored against thresholds for acceptable performance derived from the development testing criteria, at a frequency determined by the model tier.",
+      "category": "validation",
+      "check_type": "script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-5.1-d",
+      "article": "PRA SS1/23 Principle 5.1(d)",
+      "chapter": "Principle 5 – Model risk mitigants",
+      "text": "Post-model adjustments are applied systematically and transparently, and model results used for decisions are reported both with and without them.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    },
+    {
+      "id": "SS123-5.2-a",
+      "article": "PRA SS1/23 Principle 5.2(a)",
+      "chapter": "Principle 5 – Model risk mitigants",
+      "text": "The institution considers restrictions on model use when validation finds significant deficiencies or performance tests show a significant breach has occurred or is likely.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Paraphrased; checked against PRA SS1/23 (May 2023, effective 17 May 2024)."
+    }
+  ]
+}

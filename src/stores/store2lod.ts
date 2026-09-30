@@ -1,10 +1,11 @@
 'use client';
 // 2nd line store. Never imports the 1st line store; 1st line content only arrives via imported packages.
 import { create } from 'zustand';
-import { createJSONStorage, persist } from 'zustand/middleware';
-import { assess2lod, findingTemplate, getScenario } from '@/lib/scenario/engine';
-import { historicBlindRows, historicFindings, historicPackage, HISTORY } from '@/lib/scenario/history';
-import type { Component } from '@/lib/scenario/types';
+import { persist } from 'zustand/middleware';
+import { workspaceStorage } from '@/lib/storage';
+import { loadContent } from '@/lib/content';
+import { assess2lod, findingTemplate } from '@/lib/engine/assess';
+import { historicBlindRows, historicFindings, historicPackage, HISTORY, validationLayerFor } from '@/lib/engine/history';
 import { nowISO } from '@/lib/clock';
 import { uid } from '@/lib/rng';
 import { getModel, PERSONAS } from '@/lib/seed';
@@ -35,13 +36,6 @@ export interface Review {
   opinion?: { rating: OpinionRating; rationale: string; conditions: string[]; issuedAt?: string; drafted: boolean };
 }
 
-const LABEL_TO_COMPONENT: Record<string, Component> = { 'RDS documentation': 'rds', 'Methodology (MDD)': 'mdd', 'Full model': 'full' };
-
-export function reviewScenario(r: { modelId: string; pkg: SubmissionPackage }) {
-  const comp = r.pkg.requirementSet.componentKey ?? LABEL_TO_COMPONENT[r.pkg.requirementSet.component] ?? 'full';
-  return getScenario(r.modelId, comp, r.pkg.requirementSet.tags);
-}
-
 export function reviewRequirements(r: Review): Requirement[] {
   const shared = r.pkg.requirements ?? [];
   return [...shared, ...r.validationLayer];
@@ -63,7 +57,6 @@ async function buildSeedReviews(): Promise<Record<string, Review>> {
   const out: Record<string, Review> = {};
   for (const spec of HISTORY) {
     const pkg = await historicPackage(spec);
-    const sc = getScenario(spec.modelId, spec.component);
     const rows = historicBlindRows(spec, pkg);
     const completed = spec.status === 'completed';
     const findings = completed ? historicFindings(spec) : [];
@@ -71,7 +64,7 @@ async function buildSeedReviews(): Promise<Record<string, Review>> {
     out[pkg.manifest.packageId] = {
       snapshotId: pkg.manifest.packageId, modelId: spec.modelId, importedAt: spec.submittedAt, updatedAt: spec.closedAt ?? spec.blindRunAt,
       completedAt: completed ? spec.closedAt : undefined, sha256: pkg.manifest.sha256, pkg, status: completed ? 'opinion_issued' : 'in_review',
-      validationLayer: sc.validationLayer, scopingChallenges: [],
+      validationLayer: validationLayerFor(spec.modelId), scopingChallenges: [],
       run: {
         id: `RUN-2L-${spec.modelId.slice(4)}${spec.blindRunAt.slice(2, 4)}`, line: '2lod', modelId: spec.modelId, requirementSetId: pkg.manifest.requirementSetId,
         libraryVersion: pkg.manifest.libraryVersion, documentVersions: pkg.manifest.documentVersions, startedAt: spec.blindRunAt, provider: 'simulated',
@@ -131,6 +124,7 @@ export const use2lod = create<State2>()(
           if (get().seeded || seeding) return;
           seeding = true;
           try {
+            await loadContent(HISTORY.map((h) => h.modelId));
             const seed = await buildSeedReviews();
             set((s) => ({ seeded: true, reviews: { ...seed, ...s.reviews } }));
           } finally {
@@ -146,7 +140,7 @@ export const use2lod = create<State2>()(
           }
           const review: Review = {
             snapshotId: id, modelId: pkg.manifest.modelId, importedAt: nowISO(), updatedAt: nowISO(), sha256, pkg, status: 'imported',
-            validationLayer: getModel(pkg.manifest.modelId) ? reviewScenario({ modelId: pkg.manifest.modelId, pkg }).validationLayer : [],
+            validationLayer: validationLayerFor(pkg.manifest.modelId),
             scopingChallenges: [], findings: [], findingExports: [], responseImports: [],
           };
           set((s) => ({ reviews: { ...s.reviews, [id]: review } }));
@@ -177,9 +171,8 @@ export const use2lod = create<State2>()(
         },
         runBlind: (id) => {
           const r = rev(id);
-          const sc = reviewScenario(r);
           const reqs = reviewRequirements(r);
-          const rows = reqs.map((req) => assess2lod(sc, req, r.pkg.documents));
+          const rows = reqs.map((req) => assess2lod(r.modelId, req, r.pkg.documents));
           const run: AssessmentRun = {
             id: uid('RUN-2L'), line: '2lod', modelId: r.modelId, requirementSetId: r.pkg.manifest.requirementSetId, libraryVersion: r.pkg.manifest.libraryVersion,
             documentVersions: r.pkg.manifest.documentVersions, startedAt: nowISO(), provider: 'simulated',
@@ -214,7 +207,7 @@ export const use2lod = create<State2>()(
           const r = rev(id);
           const existing = r.findings.find((f) => f.requirementRefs.includes(reqId) && f.kind !== 'scoping_gap');
           if (existing) return existing.id;
-          const seed = findingTemplate(reviewScenario(r), reqId);
+          const seed = findingTemplate(r.modelId, reqId);
           const req = reviewRequirements(r).find((x) => x.id === reqId);
           const row = r.run?.rows.find((x) => x.requirementId === reqId);
           const owner = getModel(r.modelId)?.owner_1lod ?? '1st line';
@@ -283,7 +276,7 @@ export const use2lod = create<State2>()(
         },
       };
     },
-    { name: 'mcw-store2lod', version: 2, storage: createJSONStorage(() => localStorage) },
+    { name: 'mcw-store2lod', version: 4, storage: workspaceStorage },
   ),
 );
 

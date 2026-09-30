@@ -1,0 +1,594 @@
+{
+  "docId": "INT-POL-MRM",
+  "requirements": [
+    {
+      "id": "MRM-POL-001-2.1",
+      "article": "MRM-POL-001 §2.1",
+      "chapter": "Scope and applicability",
+      "text": "The model is managed under the Model Risk Management Policy irrespective of whether it is developed internally, acquired from a vendor, provided by a group entity or operated as a service by a third party.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-3",
+      "article": "MRM-POL-001 §3 (definition of model); §2.2",
+      "chapter": "Definitions",
+      "text": "Any quantitative method whose output is used for decision-making, risk measurement, valuation or reporting, including expert-based, ML and GenAI methods, is treated as a model and managed across the full model lifecycle.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Scope definition of the MRM framework; evidenced in the Policy and the model identification process, not in an individual model's documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-4.3",
+      "article": "MRM-POL-001 §4.3",
+      "chapter": "Model risk appetite",
+      "text": "The model risk appetite statement contains at least the metrics of §4.3, including zero tolerance for models in use without a valid validation opinion, each with green, amber and red thresholds.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of the Management Board and MRM; evidenced in the approved model risk appetite statement, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-5.3a",
+      "article": "MRM-POL-001 §5.3(a)",
+      "chapter": "Roles and responsibilities",
+      "text": "A 1LoD model owner is accountable for use of the model within its approved scope, the accuracy of its inventory record, ongoing monitoring, remediation of findings and fulfilment of approval conditions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-5.3b",
+      "article": "MRM-POL-001 §5.3(b)",
+      "chapter": "Roles and responsibilities",
+      "text": "The model developer develops the model in accordance with MRM-STD-020 and documents it in accordance with MRM-STD-021.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-5.5",
+      "article": "MRM-POL-001 §5.5",
+      "chapter": "Roles and responsibilities",
+      "text": "The model is validated by Model Validation staff who did not develop or contribute to the model within the preceding two years and whose remuneration is not linked to model approval.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Organisational requirement on the independence of the Model Validation function; evidenced in validation function governance and staffing records, not in model documentation.",
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-5.6",
+      "article": "MRM-POL-001 §5.6; CRR Art. 191",
+      "chapter": "Roles and responsibilities",
+      "text": "Internal Audit reviews the rating system and its operations at least annually.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "level": "institution",
+      "level_reason": "Obligation of Internal Audit; evidenced in the internal audit plan and audit reports, not in model documentation.",
+      "applies_if": {
+        "any": [
+          "irb"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to IRB rating systems only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal provision; annual internal audit review consistent with CRR Art. 191."
+    },
+    {
+      "id": "MRM-POL-001-6.2",
+      "article": "MRM-POL-001 §6.2",
+      "chapter": "Model lifecycle and gates",
+      "text": "The new model or material model change passes the lifecycle gates G0 (registration), G1 (development sign-off), G2 (validation), G3 (approval for use) and G4 (go-live) with the evidence and approver specified for each gate.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-6.3",
+      "article": "MRM-POL-001 §6.3",
+      "chapter": "Model lifecycle and gates",
+      "text": "No gate is passed before all preceding gates are completed, and each gate decision and its supporting evidence are recorded in the model inventory.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-6.4",
+      "article": "MRM-POL-001 §6.4",
+      "chapter": "Model lifecycle and gates",
+      "text": "Before submission to Model Validation, the model developer completes a self-assessment against the applicable requirement set from the requirement library, with an evidence reference for each requirement.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-6.5",
+      "article": "MRM-POL-001 §6.5",
+      "chapter": "Model lifecycle and gates",
+      "text": "The model is decommissioned only with the approval of the approval authority for its tier, and its inventory record and documentation are retained for at least ten years.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-7.1",
+      "article": "MRM-POL-001 §7.1",
+      "chapter": "Model identification, inventory and tiering",
+      "text": "The model is registered in the model inventory before its development starts and in any case before its output is used.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-7.2",
+      "article": "MRM-POL-001 §7.2",
+      "chapter": "Model identification, inventory and tiering",
+      "text": "The model is assigned a tier (1, 2 or 3) based on materiality and complexity, subject to the minimum tiers for regulatory use in MRM-STD-010.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-8.1",
+      "article": "MRM-POL-001 §8.1",
+      "chapter": "Approval authorities",
+      "text": "The model and its material changes are approved for use by the authority for its tier: the MRC for Tier 1, the Model Approval Panel for Tier 2 and the Head of Model Risk Management for Tier 3.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-8.2",
+      "article": "MRM-POL-001 §8.2",
+      "chapter": "Approval authorities",
+      "text": "The approval decision is based on the validation opinion, the 1LoD self-assessment, open findings, known limitations and proposed post-model adjustments, and records any conditions.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-8.3",
+      "article": "MRM-POL-001 §8.3",
+      "chapter": "Approval authorities",
+      "text": "Internal approval (G3) precedes the application to the ECB, and the model is used to calculate own funds requirements only after supervisory permission has been granted.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "irb",
+          "market_ima"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to internal models requiring supervisory permission (IRB rating systems and market risk IMA) only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-8.4",
+      "article": "MRM-POL-001 §8.4",
+      "chapter": "Approval authorities",
+      "text": "A model with a Not fit for purpose validation opinion is not approved for use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-9.1",
+      "article": "MRM-POL-001 §9.1",
+      "chapter": "Independent validation",
+      "text": "The model is independently validated before first use and after every material change.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-9.2",
+      "article": "MRM-POL-001 §9.2",
+      "chapter": "Independent validation",
+      "text": "The model is validated periodically at the frequency for its tier (Tier 1 annually, Tier 2 every two years, Tier 3 every three years), and at least annually if used for own funds requirements.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-9.4",
+      "article": "MRM-POL-001 §9.4",
+      "chapter": "Independent validation",
+      "text": "Validation of a vendor or third-party model is not waived for lack of transparency; the model owner obtains documentation sufficient for validation or MRM-approved compensating controls are in place.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-10.1",
+      "article": "MRM-POL-001 §10.1",
+      "chapter": "Use of models with open findings",
+      "text": "A model with a Not fit for purpose opinion is not used, except for MRC-approved temporary use of at most six months with compensating measures and an approved remediation plan.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-10.2",
+      "article": "MRM-POL-001 §10.2",
+      "chapter": "Use of models with open findings",
+      "text": "A model with a Fit for purpose with conditions opinion is used only subject to its conditions, each recorded in the MRC conditions register with an owner and a deadline.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-10.3",
+      "article": "MRM-POL-001 §10.3",
+      "chapter": "Use of models with open findings",
+      "text": "For every open high- or medium-severity finding, the model owner submits a remediation plan within 20 business days of the final validation report.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-10.4",
+      "article": "MRM-POL-001 §10.4",
+      "chapter": "Use of models with open findings",
+      "text": "Post-model adjustments are documented, quantified, approved by the approval authority for the model tier and reported quarterly to the MRC.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-10.5",
+      "article": "MRM-POL-001 §10.5",
+      "chapter": "Use of models with open findings",
+      "text": "Known model limitations are recorded in the limitations log of the model documentation and in the model inventory, and are communicated to model users.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-11.1",
+      "article": "MRM-POL-001 §11.1",
+      "chapter": "Monitoring and reporting",
+      "text": "The model in use is subject to ongoing performance monitoring with defined thresholds; a red outcome triggers a review by the model owner and notification of MRM and Model Validation.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-12.1",
+      "article": "MRM-POL-001 §12.1",
+      "chapter": "AI and machine learning models",
+      "text": "The AI or ML model additionally meets the explainability, fairness, robustness and human oversight requirements of AI-STD-700 and AI-POL-001.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "ml",
+          "genai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to AI, ML and GenAI models only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-12.2",
+      "article": "MRM-POL-001 §12.2",
+      "chapter": "AI and machine learning models",
+      "text": "Before gate G1, the model inventory records whether the model is or is part of an AI system and, if so, its risk classification under the AI Act.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-12.3",
+      "article": "MRM-POL-001 §12.3",
+      "chapter": "AI and machine learning models",
+      "text": "The GenAI use case or third-party AI component is approved in accordance with AI-STD-710 and TPR-POL-001 before use.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "genai",
+          "third_party_ai"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to GenAI use cases and third-party AI components only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    },
+    {
+      "id": "MRM-POL-001-13.1",
+      "article": "MRM-POL-001 §13.1",
+      "chapter": "Exceptions and dispensations",
+      "text": "Any deviation from the Policy or an MRM standard for the model is covered by an approved, time-bound dispensation that states the rationale, risk assessment, compensating measures and end date.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document authored for the library; requirement derived from the cited numbered provision."
+    }
+  ]
+}

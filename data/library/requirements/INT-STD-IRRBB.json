@@ -1,0 +1,497 @@
+{
+  "docId": "INT-STD-IRRBB",
+  "requirements": [
+    {
+      "id": "ALM-STD-400-4.1",
+      "article": "ALM-STD-400 §4.1; EBA/GL/2022/14",
+      "chapter": "General requirements",
+      "text": "Behavioural assumptions are based on the Bank's own historical data, and expert judgement used where data are insufficient complies with MRM-STD-023 with its EVE and NII impact quantified.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-4.2",
+      "article": "ALM-STD-400 §4.2; EBA/GL/2022/14",
+      "chapter": "General requirements",
+      "text": "Prepayment speeds, deposit volumes and pass-through rates respond to the rate paths of each EVE, NII and SOT scenario rather than being held constant.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-4.3",
+      "article": "ALM-STD-400 §4.3",
+      "chapter": "General requirements",
+      "text": "The same behavioural models and parameters are used for EVE, NII, the SOT, ICAAP, hedging and FTP, and any difference is documented and quantified.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-4.5",
+      "article": "ALM-STD-400 §4.5",
+      "chapter": "General requirements",
+      "text": "The modelled portfolio is segmented into behaviourally homogeneous segments; NMD segments distinguish at least retail transactional, retail non-transactional, SME and non-financial wholesale deposits.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-5.1",
+      "article": "ALM-STD-400 §5.1",
+      "chapter": "Non-maturity deposits",
+      "text": "For NMD models, balances are split into a volatile and a stable part estimated from historical balance dynamics at a defined confidence level over the modelling horizon.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-5.2",
+      "article": "ALM-STD-400 §5.2",
+      "chapter": "Non-maturity deposits",
+      "text": "For NMD models, volume stability is assessed under stress including rapid digital outflows and rate-driven migration, and stable-part assumptions are at least as conservative as in liquidity stress testing.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-5.3",
+      "article": "ALM-STD-400 §5.3",
+      "chapter": "Non-maturity deposits",
+      "text": "The pass-through model estimates long-term beta and adjustment speed, allows for asymmetry and client-rate floors, and is estimated over rising and falling rate periods.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-5.4",
+      "article": "ALM-STD-400 §5.4",
+      "chapter": "Non-maturity deposits",
+      "text": "The core part is derived from the stable part and pass-through estimate, and replicating portfolio tenors and weights are justified by pass-through behaviour, not by margin targets.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-5.5a",
+      "article": "ALM-STD-400 §5.5; Delegated Regulation (EU) 2024/856",
+      "chapter": "Non-maturity deposits",
+      "text": "The average repricing maturity of retail and non-financial wholesale NMD used in the SOT does not exceed five years.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1). Five-year cap per the SOT RTS (Delegated Regulation (EU) 2024/856); exact article not cited."
+    },
+    {
+      "id": "ALM-STD-400-5.5b",
+      "article": "ALM-STD-400 §5.5",
+      "chapter": "Non-maturity deposits",
+      "text": "For internal measurement no NMD segment is allocated a tenor above ten years, and the average repricing maturity per segment is reported quarterly to ALCO.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-5.6",
+      "article": "ALM-STD-400 §5.6",
+      "chapter": "Non-maturity deposits",
+      "text": "NMD development data cover at least ten years, or the longest available period, and include at least one period of rising interest rates.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-6.1",
+      "article": "ALM-STD-400 §6.1",
+      "chapter": "Prepayment models",
+      "text": "The mortgage prepayment model uses at least refinancing incentive, loan seasoning, the penalty-free allowance, and relocation and property sale as drivers.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-6.2",
+      "article": "ALM-STD-400 §6.2",
+      "chapter": "Prepayment models",
+      "text": "Full prepayments, partial prepayments and rate resets at the end of the fixed-rate period are modelled or analysed separately.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-6.3",
+      "article": "ALM-STD-400 §6.3",
+      "chapter": "Prepayment models",
+      "text": "EVE and NII projections reflect contractual prepayment penalties, the penalty-free allowance and compensation received on penalty-bearing prepayments.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-6.4",
+      "article": "ALM-STD-400 §6.4",
+      "chapter": "Prepayment models",
+      "text": "Prepayment models are calibrated on at least five years of loan-level history and recalibrated when back-testing shows a structural deviation.",
+      "category": "data",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-7.1",
+      "article": "ALM-STD-400 §7.1",
+      "chapter": "Pipeline risk",
+      "text": "The pipeline model estimates the take-up of mortgage offers as a function of the market rate change since the offer date and the remaining offer validity.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-7.2",
+      "article": "ALM-STD-400 §7.2",
+      "chapter": "Pipeline risk",
+      "text": "Pipeline exposures are included in EVE, NII and the hedging strategy from the offer date using expected take-up under each rate scenario.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [
+          "mortgage"
+        ],
+        "all": []
+      },
+      "not_applicable_reason": "Applies to models covering residential mortgage exposures only.",
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-8.1",
+      "article": "ALM-STD-400 §8.1; EBA/GL/2022/14",
+      "chapter": "Back-testing of behavioural assumptions",
+      "text": "All behavioural models are back-tested at least annually, comparing predicted and realised NMD volumes, deposit rates, prepayment rates per cohort and pipeline take-up.",
+      "category": "validation",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-8.2",
+      "article": "ALM-STD-400 §8.2",
+      "chapter": "Back-testing of behavioural assumptions",
+      "text": "Back-testing results are assessed against documented thresholds derived from MV-HB-003, and a red outcome triggers recalibration or an ALCO-approved rationale.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-8.3",
+      "article": "ALM-STD-400 §8.3; EBA/GL/2022/14",
+      "chapter": "Back-testing of behavioural assumptions",
+      "text": "Sensitivity of EVE and NII to alternative key behavioural assumptions is quantified at least annually and reported to ALCO.",
+      "category": "validation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-8.4",
+      "article": "ALM-STD-400 §8.4",
+      "chapter": "Back-testing of behavioural assumptions",
+      "text": "Model risk from behavioural assumptions is reflected in the ICAAP internal capital for IRRBB based on the sensitivity analysis.",
+      "category": "methodology",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-9.2",
+      "article": "ALM-STD-400 §9.2; CRD Art. 98(5); Delegated Regulation (EU) 2024/856",
+      "chapter": "Supervisory outlier tests",
+      "text": "The SOT is computed at least quarterly for the six EVE and two NII supervisory shock scenarios and compared with the regulatory thresholds and ALCO early-warning levels.",
+      "category": "methodology",
+      "check_type": "ai+script",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1). EVE threshold of 15% of Tier 1 and NII large-decline test per CRD Art. 98(5) and Delegated Regulation (EU) 2024/856."
+    },
+    {
+      "id": "ALM-STD-400-9.3",
+      "article": "ALM-STD-400 §9.3",
+      "chapter": "Supervisory outlier tests",
+      "text": "The documentation demonstrates consistent application of behavioural models to the prescribed shock scenarios, including rate floors and post-shock pass-through and prepayment behaviour.",
+      "category": "documentation",
+      "check_type": "ai",
+      "components": [
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-10.1",
+      "article": "ALM-STD-400 §10.1",
+      "chapter": "Governance",
+      "text": "ALCO approves the key behavioural assumptions (stable and core proportions, betas, replicating portfolio tenors, prepayment calibration) at least annually and on material change.",
+      "category": "governance",
+      "check_type": "ai",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-10.3",
+      "article": "ALM-STD-400 §10.3",
+      "chapter": "Governance",
+      "text": "Behavioural model changes follow MRM-STD-050, and a change affecting the worst SOT EVE outcome by more than 2% of Tier 1 capital is classified as material.",
+      "category": "governance",
+      "check_type": "ai+script",
+      "components": [
+        "rds",
+        "mdd"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    },
+    {
+      "id": "ALM-STD-400-10.4",
+      "article": "ALM-STD-400 §10.4",
+      "chapter": "Governance",
+      "text": "Behavioural model data comply with MRM-STD-022 and the reference data set is documented with the RDS template of MRM-STD-021.",
+      "category": "data",
+      "check_type": "ai",
+      "components": [
+        "rds"
+      ],
+      "applies_if": {
+        "any": [],
+        "all": []
+      },
+      "layer": "shared",
+      "verification": "verified",
+      "verification_note": "Internal document text authored for the library (ALM-STD-400 v2.1)."
+    }
+  ]
+}
